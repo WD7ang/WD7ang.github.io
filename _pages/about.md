@@ -45,18 +45,6 @@ Proposed a Recurrent Dynamic Submodel (RDS) for efficient Video Object Segmentat
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/cvpr2026.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[EA-ViT: Efficient Adaptation for Elastic Vision Transformer](https://arxiv.org/pdf/2507.19360)
-
-Chen Zhu, Wangbo Zhao†, Huiwen Zhang, Samir Khaki, Yuhao Zhou, **Weidong Tang**, Shuo Wang, Zhihang Yuan, Yuzhang Shang, Xiaojiang Peng, Kai Wang, Dawei Yang†
-
-[**Code**](https://github.com/zcxcf/EA-ViT) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-EA-ViT is an efficient adaptation framework for Vision Transformers, enabling a single process to generate flexible models of varying sizes for diverse resource constraints, using a nested elastic architecture and a lightweight router optimized with Pareto-optimal configurations.
-</div>
-</div>
-
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">PRCV 2025</div><img src='images/prcv2025.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -70,6 +58,17 @@ Explored inference-time scaling in discrete spaces by mapping them to continuous
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='images/iccv2025.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[EA-ViT: Efficient Adaptation for Elastic Vision Transformer](https://arxiv.org/pdf/2507.19360)
+
+Chen Zhu, Wangbo Zhao†, Huiwen Zhang, Samir Khaki, Yuhao Zhou, **Weidong Tang**, Shuo Wang, Zhihang Yuan, Yuzhang Shang, Xiaojiang Peng, Kai Wang, Dawei Yang†
+
+[**Code**](https://github.com/zcxcf/EA-ViT) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+EA-ViT is an efficient adaptation framework for Vision Transformers, enabling a single process to generate flexible models of varying sizes for diverse resource constraints, using a nested elastic architecture and a lightweight router optimized with Pareto-optimal configurations.
+</div>
+</div>
 
 
 # 🎖 Honors and Awards
