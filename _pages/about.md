@@ -44,9 +44,8 @@ Please feel free to reach out if you’d like to discuss potential collaboration
 Proposed a Recurrent Dynamic Submodel (RDS) for efficient Video Object Segmentation and Tracking (VOST). By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA (I-LoRA), it achieves an optimal trade-off between performance and FPS using minimal trainable parameters and training data.
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.09* Second-Class Scholarship. (5/99)
 
 # 📖 Educations
-- *2023.09 - Present, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
+- *2023.09* - Present, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
 
