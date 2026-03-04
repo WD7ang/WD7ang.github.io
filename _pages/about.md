@@ -61,7 +61,7 @@ Explored inference-time scaling in discrete spaces by mapping them to continuous
 
 
 # 🎖 Honors and Awards
-- *2025.09* Second-Class Scholarship. (5/99)
+- *2025.09*, Second-Class Scholarship. (5/99)
 
 # 📖 Educations
 - *2023.09* - Present, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
