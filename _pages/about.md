@@ -20,7 +20,7 @@ redirect_from:
 Hi! I am a junior (3rd-year) undergraduate student at Xidian University. 
 Currently, I am a Research Intern at the HPC-AI Lab, National University of Singapore, under the supervision of [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). I am also fortunately mentored by [Dr. Wangbo Zhao](https://wangbo-zhao.github.io/) and [Dr. Pengfei Zhou](https://lancezpf.github.io/).
 
-My research interests lie in Efficient AI, Multimodal Models, Reinforcement Learning, and other emerging and exciting fields in AI. I am highly passionate about exploring diverse research directions and am always open to collaborative opportunities.
+My research interests lie in Efficient AI, Reinforcement Learning, Multimodal Models and other emerging and exciting fields in AI. I am highly passionate about exploring diverse research directions and am always open to collaborative opportunities.
 
 Please feel free to reach out if you’d like to discuss potential collaborations or just chat about research!
 
@@ -36,7 +36,7 @@ Please feel free to reach out if you’d like to discuss potential collaboration
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2026</div><img src='images/cvpr2026.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel]
+[Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel](https://github.com/WD7ang/Efficient-Video-Object-Segmentation-and-Tracking-with-Recurrent-Dynamic-Submodel)
 
 **Weidong Tang**, Zhiyuan Liang, Xinyan Wan, Chen Zhu, Zhaopan Xu, Pengfei Zhou, Yan Song, Yang You, Wangbo Zhao.
 
@@ -52,5 +52,5 @@ Please feel free to reach out if you’d like to discuss potential collaboration
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 
 # 📖 Educations
-- *2023.09 - now, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
+- *2023.09 - Present, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
 
