@@ -15,6 +15,10 @@
 
   <div class="author__urls-wrapper">
     <!-- <button class="btn btn--inverse">More Info & Contact</button> -->
+    
+    <!-- ============================================== -->
+    <!-- 第一部分：电脑端显示的列表 (有图标、有文字、带 <li>) -->
+    <!-- ============================================== -->
     <ul class="author__urls social-icons">
       {% if site.description %}
         <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
@@ -117,9 +121,31 @@
       {% endif %}
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
-{% endif %}
+      {% endif %}
+
+      <!-- ！！这里是电脑端增加的微信和小红书！！ -->
+      {% if author.wechat %}
+        <li>
+          <a href="{{ author.wechat | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-fw fa-weixin" aria-hidden="true"></i> WeChat
+          </a>
+        </li>
+      {% endif %}
+      {% if author.xiaohongshu %}
+        <li>
+          <a href="{{ author.xiaohongshu | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-fw fa-book-open" aria-hidden="true"></i> Xiaohongshu
+          </a>
+        </li>
+      {% endif %}
+
     </ul>
-      <div class="author__urls_sm">
+
+
+    <!-- ============================================== -->
+    <!-- 第二部分：手机端/窄屏显示的列表 (只有图标、无文字、无 <li>) -->
+    <!-- ============================================== -->
+    <div class="author__urls_sm">
       {% if author.uri %}
         <a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i></a>
       {% endif %}
@@ -214,25 +240,18 @@
         <a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i></a>
       {% endif %}
 
+      <!-- ！！这里是手机端增加的微信和小红书（去掉了 <li> 和文字） ！！ -->
       {% if author.wechat %}
-        <li>
-          <a href="{{ author.wechat | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-fw fa-weixin" aria-hidden="true"></i> WeChat
-          </a>
-        </li>
+        <a href="{{ author.wechat | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-fw fa-weixin" aria-hidden="true"></i>
+        </a>
       {% endif %}
-
       {% if author.xiaohongshu %}
-        <li>
-          <a href="{{ author.xiaohongshu | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
-            <!-- 小红书没有官方的FontAwesome图标，这里用一个红色的书本图标代替 -->
-            <i class="fas fa-fw fa-book-open" aria-hidden="true"></i> Xiaohongshu
-          </a>
-        </li>
+        <a href="{{ author.xiaohongshu | prepend: site.baseurl | prepend: site.url }}" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-fw fa-book-open" aria-hidden="true"></i>
+        </a>
       {% endif %}
 
-
-        
     </div>
   </div>
 </div>
