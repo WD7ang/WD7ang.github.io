@@ -50,7 +50,7 @@ Proposed a Recurrent Dynamic Submodel (RDS) for efficient Video Object Segmentat
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">PRCV 2025</div><img src='images/prcv2025.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples](https://github.com/WD7ang/Efficient-Video-Object-Segmentation-and-Tracking-with-Recurrent-Dynamic-Submodel)
+[Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples](https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28)
 
 **Weidong Tang**, Xinyan Wan, Siyu Li, and Xiumei Wang†
 
