@@ -71,10 +71,15 @@ EA-ViT is an efficient adaptation framework for Vision Transformers, enabling a 
 </div>
 </div>
 
+# 🌍 Services
+- *2025.06 – Present*, AI Team Lead, Xidian–Inspur Club.
+
+#💻 Internships
+- *2026.01 – Present*, AI Infra, TeleAI, Beijing.
 
 # 🎖 Selected Honors and Awards
 - *2025.09*, Second-Class Scholarship. (5/99)
 
 # 📖 Educations
-- *2023.09* - Present, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
+- *2023.09 - Present*, Undergraduate Student, School of Telecommunications Engineering, Xidian University.
 
