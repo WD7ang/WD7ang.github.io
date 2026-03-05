@@ -30,6 +30,11 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=NH9USaYAAAAJ"
   email            : "wdtang0705@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
+
+  wechat           : "images/wechat-qr.jpg"
+  xiaohongshu      : "images/xiaohongshu-qr.jpg"
+
+  
   uri              :
   bitbucket        :
   codepen          :
