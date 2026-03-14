@@ -26,10 +26,10 @@ Please feel free to reach out for collaborations or internship opportunities!
 
 
 # 🔥 News
-- *2026.03*: &nbsp;📄👀 One paper submitted to ACL 2026. Received an overall score of 3.67 and a Best Paper Justification. Final decision pending.
-- *2026.02*: &nbsp;🎉🎉 One paper accepted to CVPR 2026. (Camera-ready version coming soon).
+- *2026.03*: &nbsp;📄👀 One paper submitted to ACL 2026 (First author). Received an overall score of 3.67 and a Best Paper Justification. Final decision pending.
+- *2026.02*: &nbsp;🎉🎉 One paper accepted to CVPR 2026 (First author). (Camera-ready version coming soon).
 - *2026.01*: &nbsp;🎉🎉 I begin my Internship at TeleAI.
-- *2025.08*: &nbsp;🎉🎉 One paper accepted to PRCV 2025.
+- *2025.08*: &nbsp;🎉🎉 One paper accepted to PRCV 2025 (First author).
 - *2025.07*: &nbsp;🎉🎉 One paper accepted to ICCV 2025.
 - *2024.10*: &nbsp;🎉🎉 I joined the HPC-AI Lab at NUS as a Research Intern.
   
