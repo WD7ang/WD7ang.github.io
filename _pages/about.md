@@ -75,7 +75,7 @@ EA-ViT is an efficient adaptation framework for Vision Transformers, enabling a 
 - *2025.06 – Present*, AI Team Lead, 🌊Xidian–Inspur Club.
 
 # 💻 Internships
-- *2026.01 – Present*, AI Infra, TeleAI, Beijing.
+- *2026.01 – 2026.03*, AI Infra, TeleAI, Beijing.
 
 # 🎖 Selected Honors and Awards
 - *2025.09*, Second-Class Scholarship. (5/99)
