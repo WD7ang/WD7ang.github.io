@@ -18,11 +18,11 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 Hi! I am a junior (3rd-year) undergraduate student at Xidian University. 
-Currently, I am a Research Intern at the HPC-AI Lab, National University of Singapore, under the supervision of [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). I am also fortunately mentored by [Dr. Wangbo Zhao](https://wangbo-zhao.github.io/) and [Dr. Pengfei Zhou](https://lancezpf.github.io/).
+I am currently a Research Intern at the HPC-AI Lab, National University of Singapore, working under the supervision of [Prof. Yang You](https://www.comp.nus.edu.sg/~youy/). I am also fortunately mentored by [Dr. Wangbo Zhao](https://wangbo-zhao.github.io/) and [Dr. Pengfei Zhou](https://lancezpf.github.io/).
 
-My research interests includes **Efficient AI**, **Multimodal Models**, **World Model** and other emerging and exciting fields in AI. I am highly passionate about exploring diverse research directions and am always open to collaborative opportunities. I am currently seeking research internship opportunities and PhD positions.
+My research interests include **Efficient AI**, **Multimodal Models**, **World Model** and other emerging areas in AI. I enjoy exploring diverse research directions and collaborating with researchers across different fields.
 
-Please feel free to reach out for collaborations or internship opportunities!
+I am currently seeking research internship opportunities and PhD positions. Feel free to reach out if you are interested in collaboration or potential opportunities.
 
 
 # 🔥 News
