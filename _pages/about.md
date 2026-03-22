@@ -41,8 +41,8 @@ I am currently seeking **research internship opportunities** and **PhD positions
 
 **Weidong Tang**, Zhiyuan Liang, Xinyan Wan, Chen Zhu, Zhaopan Xu, Pengfei Zhou, Yan Song, Yang You, Wangbo Zhao†
 
-[**PDF**](https://github.com/WD7ang/Recurrent-Dynamic-Submodel) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-[**Github**](https://github.com/WD7ang/Recurrent-Dynamic-Submodel) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[PDF]**](https://github.com/WD7ang/Recurrent-Dynamic-Submodel) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[Github]**](https://github.com/WD7ang/Recurrent-Dynamic-Submodel) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
 **TL;DR:** Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and FPS using minimal trainable parameters and training data.
 </div>
@@ -56,8 +56,8 @@ I am currently seeking **research internship opportunities** and **PhD positions
 
 **Weidong Tang**, Xinyan Wan, Siyu Li, and Xiumei Wang†
 
-[**PDF**](https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-[**Github**](https://github.com/WD7ang/VAR-Scaling) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[PDF]**](https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[Github]**](https://github.com/WD7ang/VAR-Scaling) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
 **TL;DR:** Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
 </div>
@@ -70,8 +70,8 @@ I am currently seeking **research internship opportunities** and **PhD positions
 
 Chen Zhu, Wangbo Zhao†, Huiwen Zhang, Samir Khaki, Yuhao Zhou, **Weidong Tang**, Shuo Wang, Zhihang Yuan, Yuzhang Shang, Xiaojiang Peng, Kai Wang, Dawei Yang†
 
-[**PDF**](https://arxiv.org/pdf/2507.19360) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-[**Github**](https://github.com/zcxcf/EA-ViT) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[PDF]**](https://arxiv.org/pdf/2507.19360) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**[Github]**](https://github.com/zcxcf/EA-ViT) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 
 **TL;DR:** EA-ViT is an efficient adaptation framework for Vision Transformers, enabling a single process to generate flexible models of varying sizes for diverse resource constraints, using a nested elastic architecture and a lightweight router optimized with Pareto-optimal configurations.
 </div>
