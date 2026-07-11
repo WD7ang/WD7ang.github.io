@@ -420,7 +420,7 @@ Experience
       <img src="images/Alibaba.png" alt="Alibaba logo" class="experience-logo">
       <div class="experience-info">
           <strong>Alibaba Group</strong><br>
-          <em>2026.05 - Present</em><br>
+          <em>2026.05 - 2026.07</em><br>
           MLLM Engineer Intern advised by <a href="https://liamding.cc/"><em>Liang Ding</em></a> and <a href="https://ethanscuter.github.io/"><em>Xintong Wang</em></a>
       </div>
   </div>
