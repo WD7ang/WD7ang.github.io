@@ -402,7 +402,7 @@ News
 ---------------
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>2026.05</em></span> 🎉🎉 I became a founding member of a startup.</li>
+    <li><span class="news-date"><em>2026.07</em></span> 🎉🎉 I became a founding member of a startup.</li>
     <li><span class="news-date"><em>2026.05</em></span> 🎉🎉 I begin my internship at Alibaba Group.</li>
     <li><span class="news-date"><em>2026.04</em></span> 🎉🎉 Two papers accepted to ACL 2026.</li>
     <li><span class="news-date"><em>2026.02</em></span> 🎉🎉 One paper accepted to CVPR 2026.</li>
