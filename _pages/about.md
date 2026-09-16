@@ -392,9 +392,8 @@ redirect_from:
 
 Hi! I am a junior (3rd-year) undergraduate student at Xidian University. 
 
-My research interests include **Multimodal learning**, **Efficient AI** and **Human-centric AI** and other emerging areas in AI. 
-My methodological preference is for approaches that are simple, clear, and extensible. I enjoy exploring diverse research directions and collaborating with researchers across different fields.
-
+My research interests span NLP, CV, and their intersection. My long-term research goal is to understand and enable the emergence of human-like intelligence, while developing unified models that bridge the physical and mental worlds.
+I enjoy exploring diverse research directions and collaborating with researchers across different fields.
 
 Feel free to reach out if you are interested in collaboration or potential opportunities.
 
