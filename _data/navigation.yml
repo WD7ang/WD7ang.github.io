@@ -7,6 +7,9 @@ main:
   - title: "Experience"
     url: "/#experience"
 
+  - title: "Blog"
+    url: "/#blog"
+
   - title: "Pub"
     url: "/#publications"
 
@@ -22,8 +25,8 @@ main:
   - title: "Talks"
     url: "/#talks"
     
-  - title: "CV-En"
-    url: "/images/cv.pdf"
+  - title: "CV"
+    url: "/cv/"
 
   # - title: "CV-Cn"
   #   url: "/files/chinese_resume.pdf"

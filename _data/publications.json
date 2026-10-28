@@ -1,0 +1,94 @@
+[
+  {
+    "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
+    "venue": "ACL 2026",
+    "authors": "<a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, Jierui Li, Yueling Hou, Zihan Mei, Zhigang Tian, Weicheng Jiao, Can Zhang, Xinyan Wan, <a href=\"https://jerryliang24.github.io/\">Zhiyuan Liang</a>, <a href=\"https://lancezpf.github.io/\">Pengfei Zhou†</a>, <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao†</a>.",
+    "links": [
+      {
+        "label": "Poster",
+        "url": "/images/GroupToM_poster.pdf"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/pdf/2606.04184"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/Twwwd/GroupToM-Bench"
+      }
+    ],
+    "selected": true,
+    "image": "/images/GroupToM.png",
+    "description": "We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap."
+  },
+  {
+    "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
+    "venue": "ACL 2026",
+    "authors": "Tang Da Huang, <a href=\"https://wd7ang.github.io\"><strong>Weidong Tang‡</strong></a>, Wen Qi Xu, Xianpeng Guo†.",
+    "links": [],
+    "selected": true,
+    "image": "/images/MagicBench.png",
+    "description": "The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive)."
+  },
+  {
+    "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
+    "venue": "CVPR 2026",
+    "authors": "<a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, <a href=\"https://jerryliang24.github.io/\">Zhiyuan Liang</a>, Xinyan Wan, <a href=\"https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&amp;hl=en\">Chen Zhu</a>, <a href=\"https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&amp;hl=en\">Zhaopan Xu</a>, <a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a>†, Yan Song, <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao†</a>.",
+    "links": [
+      {
+        "label": "Poster",
+        "url": "/images/cvpr_poster.pdf"
+      },
+      {
+        "label": "Paper",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"
+      }
+    ],
+    "selected": true,
+    "image": "/images/RDS.png",
+    "description": "Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data."
+  },
+  {
+    "title": "MDK12-Bench: a multi-discipline benchmark for evaluating reasoning in multimodal large language models",
+    "venue": "AAAI 2026",
+    "authors": "<a href=\"https://lancezpf.github.io/\">Pengfei Zhou*</a>, Xiaopeng Peng*, Fanrui Zhang*, <a href=\"https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&amp;hl=en\">Zhaopan Xu</a>, Jiaxin Ai, Yansheng Qiu, <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a>, Jiajun Song, Chuanhao Li, <a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, Zhen Li, Haoquan Zhang, Zizhen Li, Xiaofeng Mao, Yukang Feng, Jianwen Sun, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=i2II0XIAAAAJ\">Kai Wang</a>, Xiaojun Chang, Wenqi Shao, <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=4OqZBmYAAAAJ&amp;view_op=list_works&amp;sortby=pubdate\">Kaipeng Zhang†</a>.",
+    "links": [],
+    "selected": false
+  },
+  {
+    "title": "Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples",
+    "venue": "PRCV 2025",
+    "authors": "<a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, Xinyan Wan, Siyu Li, <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei Wang†</a>.",
+    "links": [
+      {
+        "label": "Poster",
+        "url": "/images/var_poster.png"
+      },
+      {
+        "label": "Paper",
+        "url": "https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/WD7ang/VAR-Scaling"
+      }
+    ],
+    "selected": true,
+    "image": "/images/var-scaling.png",
+    "description": "Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features."
+  },
+  {
+    "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
+    "venue": "ICCV 2025",
+    "authors": "<a href=\"https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&amp;hl=en\">Chen Zhu</a>, <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao†</a>, Huiwen Zhang, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=bGKF2tUAAAAJ\">Yuhao Zhou</a>, <a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, Shuo Wang, Zhihang Yuan, Yuzhang Shang, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=7oRD67kAAAAJ\">Xiaojiang Peng</a>, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=i2II0XIAAAAJ\">Kai Wang</a>, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=j2ANma0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate\">Dawei Yang†</a>.",
+    "links": [],
+    "selected": false
+  },
+  {
+    "title": "Pebench: A fictitious dataset to benchmark machine unlearning for multimodal large language models",
+    "venue": "Preprint 2025",
+    "authors": "<a href=\"https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&amp;hl=en\">Zhaopan Xu</a>, <a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a>, <a href=\"https://wd7ang.github.io\"><strong>Weidong Tang</strong></a>, Jiaxin Ai, <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a>, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=i2II0XIAAAAJ\">Kai Wang</a>, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=7oRD67kAAAAJ\">Xiaojiang Peng</a>, Wenqi Shao, Hongxun Yao, <a href=\"https://scholar.google.com/citations?hl=zh-CN&amp;user=4OqZBmYAAAAJ&amp;view_op=list_works&amp;sortby=pubdate\">Kaipeng Zhang†</a>.",
+    "links": [],
+    "selected": false
+  }
+]

@@ -1,0 +1,14 @@
+<div class="publication-body">
+  <span class="publication-venue">{{ include.pub.venue }}</span>
+  <h3>{{ include.pub.title }}</h3>
+  <p class="publication-authors">{{ include.pub.authors }}</p>
+  {% if include.detailed %}<p class="publication-description">{{ include.pub.description }}</p>{% endif %}
+  {% if include.pub.links.size > 0 %}
+  <div class="publication-links">
+    {% for link in include.pub.links %}
+    {% assign first_character = link.url | slice: 0 %}
+    <a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endif %}">{{ link.label }} <span aria-hidden="true">↗</span></a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

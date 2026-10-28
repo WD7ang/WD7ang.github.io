@@ -1,725 +1,114 @@
 ---
+layout: academic
 permalink: /
-author_profile: true
-redirect_from: 
+description: Weidong Tang — undergraduate at Xidian University, researching natural language processing, computer vision, and multimodal intelligence.
+body_class: homepage
+redirect_from:
   - /about/
   - /about.html
 ---
-<style>
-    #news,
-    #experience,
-    #publications,
-    #projects,
-    #awards,
-    #talks {
-        scroll-margin-top: 80px;
-    }
-  
-      /* ===== News Scroll Box ===== */
-    .news-box {
-      max-height: 220px;
-      overflow-y: auto;
-      padding: 10px 14px;
-      background: #f7f7f7;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .news-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .news-list li {
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-    
-    .news-date {
-      display: inline-block;
-      min-width: 70px;
-      font-weight: 400;        /* 不加粗 */
-      color: #ca6f6f;          /* 浅粉色 */
-    }
-  
-    .experience-card {
-        display: flex;
-        align-items: center;
-        background: #f9f9f9;
-        border-radius: 12px;
-        padding: 16px;
-        margin-bottom: 0px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .experience-card:hover {
-       
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    .experience-logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 20px;
-        border-radius: 8px;
-        object-fit: contain;
-    }
-    .experience-info {
-        font-family: "Segoe UI", sans-serif;
-    }
-    .experience-info strong {
-        font-size: 1.1em;
-    }
-    .experience-info a {
-        text-decoration: none;
-        color: #ca6f6f;
-    }
-    .experience-container {
-        display: flex;
-        flex-direction: column; /* 让子元素垂直排列，一行一个 */
-        gap: 20px; /* 保持每个卡片之间的间距 */
-    }
-    .experience-card {
-        box-sizing: border-box;
-    }
-    .publication-card {
-        display: flex;
-        align-items: center;
-        padding: 3px;
-        border: 1.5px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-        box-sizing: border-box;
-        margin-bottom: 20px; 
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+<section class="profile-hero" aria-labelledby="profile-name">
+  <div class="profile-copy">
+    <div class="profile-intro">
+      <p class="eyebrow">Language · Vision · Intelligence</p>
+      <h1 id="profile-name">Weidong Tang <span class="chinese-name" lang="zh">汤维栋</span></h1>
+      <p class="profile-subtitle">Undergraduate at <a href="https://www.xidian.edu.cn/">Xidian University</a> · He/Him</p>
+    </div>
+    <div class="profile-bio">
+      <p>Hi! My research interests span <strong>natural language processing</strong>, <strong>computer vision</strong>, and their intersection.</p>
+      <p>My long-term research goal is to understand and enable the emergence of human-like intelligence, while developing unified models that bridge the physical and mental worlds. I enjoy exploring diverse research directions and collaborating with researchers across different fields.</p>
+      <p>Feel free to reach out for collaborations or potential opportunities.</p>
+    </div>
+    <div class="profile-links" aria-label="Contact and profiles">
+      <a href="mailto:{{ site.author.email }}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</a>
+      <a href="{{ site.author.googlescholar }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5Z M6 10v7c4 3 8 3 12 0v-7 M22 8v9"/></svg>Google Scholar</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub ↗</a>
+      <a href="{{ '/images/vx.jpg' | relative_url }}">WeChat</a>
+      <a href="{{ '/cv/' | relative_url }}">CV ↗</a>
+    </div>
+  </div>
+  <figure class="portrait">
+    <div class="portrait-frame"><img src="{{ '/images/wx.jpg' | relative_url }}" alt="Weidong Tang standing on a street in Edinburgh" width="1440" height="2160" fetchpriority="high"></div>
+    <figcaption lang="zh">人间万象皆有数，唯此风骨世无双</figcaption>
+  </figure>
+</section>
 
-        color: #5f6368; /* 正文整体更浅 */
-    }
-    .publication-card > div > strong,
-    .publication-card > div > div > strong {
-        color: #202124;
-    }
-    .publication-card i {
-        color: #6b7280;
-    }
-
-    .pub-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35em;
-        margin-left: 8px;
-        padding: 2px 8px;
-        border-radius: 999px;
-        font-size: 11px;
-        font-weight: 650;
-        line-height: 1.4;
-        letter-spacing: 0.01em;
-        vertical-align: middle;
-        white-space: nowrap;
-        border: 1px solid transparent;
-        background: rgba(107, 114, 128, 0.08);
-        color: #6b7280;
-    }
-
-    .pub-badge::before {
-        content: "";
-        width: 0.45em;
-        height: 0.45em;
-        border-radius: 999px;
-        background: currentColor;
-        opacity: 0.75;
-    }
-
-    .pub-badge--oral {
-        margin-left: 4px;
-        vertical-align: 2px;
-        color: #4c6a94;
-        background: rgba(131, 161, 199, 0.14);
-        border-color: rgba(131, 161, 199, 0.35);
-    }
-    .publication-card:hover {
-       
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-
-    .publication-card.featured {
-        border-color: #f5bba7;       /* 更浅的哈密瓜色边框 */
-        background: #fef5f1;         /* 非常浅的哈密瓜色背景 */
-        box-shadow: 0 4px 8px rgba(242, 166, 120, 0.2); /* 更柔和的初始阴影 */
-        z-index: 10;
-    }
-
-    .publication-card.featured:hover {
-        box-shadow: 0 8px 16px rgba(242, 166, 120, 0.4); 
-    }
-    
-    /*.publication-card.non-featured {*/
-        /*display: flex;  默认隐藏非精选出版物 */
-    /*}*/
-    
-    .pub-button-container {
-        display: flex;
-        gap: 10px;
-        margin: 20px 0;
-        flex-wrap: wrap;
-    }
-    
-    .pub-button {
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        padding: 8px 16px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    
-    .pub-button:hover {
-        background-color: #e0e0e0;
-    }
-    
-    .pub-button.active {
-        background-color: #ca6f6f;
-        color: white;
-        border-color: #ca6f6f;
-    }
-
-      .publication-view[hidden] {
-        display: none !important;
-    }
-
-      #full-publications {
-        max-height: 380px;
-        overflow-y: auto;
-        padding-right: 8px;
-        margin-bottom: 24px;
-        scroll-behavior: smooth;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(185, 95, 61, 0.45) rgba(254, 245, 241, 0.7);
-    }
-
-    #full-publications::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    #full-publications::-webkit-scrollbar-track {
-        background: rgba(254, 245, 241, 0.7);
-        border-radius: 999px;
-    }
-
-    #full-publications::-webkit-scrollbar-thumb {
-        background: rgba(185, 95, 61, 0.45);
-        border-radius: 999px;
-    }
-
-    #full-publications::-webkit-scrollbar-thumb:hover {
-        background: rgba(185, 95, 61, 0.65);
-    }
-  
-    .full-publication-list {
-        margin: 0;
-        padding-left: 1.25rem;
-        color: #5f6368;
-        font-size: 15px;
-        line-height: 1.55;
-    }
-
-    .full-publication-list li {
-        margin-bottom: 14px;
-    }
-
-    .pub-list-badge {
-        display: inline-block;
-        margin-right: 6px;
-        padding: 2px 8px;
-        border-radius: 999px;
-        border: 1px solid rgba(245, 187, 167, 0.75);
-        background: #fef5f1;
-        color: #b95f3d;
-        font-size: 11px;
-        font-weight: 650;
-        line-height: 1.35;
-        vertical-align: 1px;
-        white-space: nowrap;
-    }
-
-    .full-publication-list .pub-list-title {
-        color: #202124;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 1.45;
-        text-decoration: none !important;
-    }
-
-      .pub-list-authors {
-        color: #6b7280;
-        font-size: 13px;
-        font-style: italic;
-    }
-
-    .pub-list-authors > strong {
-        color: #202124;
-    }
-
-      .pub-list-authors a strong {
-        color: inherit;
-    }
-
-    .pub-list-note {
-        color: #c7774c;
-        font-style: italic;
-        font-weight: 650;
-    }
-
-    .pub-list-links {
-        white-space: nowrap;
-    }
-
-    .pub-list-links a {
-        margin-left: 4px;
-        color: #c7774c !important;
-        font-weight: 600;
-    }
-
-      .pub-list-links a:hover {
-        color: #b65f36 !important;
-    }
-
-    /* Projects cards: keep styles independent from publications */
-    .project-card {
-        display: flex;
-        align-items: center;
-        padding: 3px;
-        border: 1.5px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-        box-sizing: border-box;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        color: #5f6368;
-    }
-
-    .project-card > div > strong,
-    .project-card > div > div > strong {
-        color: #202124;
-    }
-
-    .project-card i {
-        color: #6b7280;
-    }
-
-    .project-card:hover {
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-
-      @media (max-width: 720px) {
-        .publication-card,
-        .project-card {
-            align-items: stretch;
-            padding: 8px;
-        }
-
-        .publication-card > div,
-        .project-card > div {
-            flex-direction: column;
-            align-items: stretch !important;
-            width: 100%;
-        }
-
-        .publication-card .pub-media-rotator,
-        .project-card .pub-media-rotator {
-            width: 100% !important;
-            height: auto !important;
-            aspect-ratio: 16 / 9;
-            margin-right: 0 !important;
-            margin-bottom: 12px;
-        }
-
-        .publication-card .pub-media-rotator > img,
-        .project-card .pub-media-rotator > img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: contain;
-        }
-
-        .publication-card strong,
-        .project-card strong {
-            line-height: 1.35;
-        }
-
-        .full-publication-list {
-            padding-left: 1rem;
-        }
-
-        .pub-list-badge {
-            margin-bottom: 4px;
-        }
-    }
-
-  
-</style>
-<html> 
-<head>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-        body {
-            background-color:	 #FFFFFF;
-            font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
-            font-size: 15px;
-        }
-        .main-heading {
-            font-family: 'Permanent Marker', cursive;
-            text-align: center;
-            color: #ca6f6f;
-        }
-        div.markdown-body a,a {
-            text-decoration: none !important;
-            color: #ca6f6f;
-            transition: all 0.3s ease; /* 平滑过渡效果 */
-        }
-        div.markdown-body a:hover, a:hover {
-            color: #c71585;            /* 悬浮时变深一点的颜色 */
-            text-decoration: underline; /* 加上悬浮时的下划线 */
-        }
-    </style>
-</head>
-<body>
-<h1 class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
-</body>
-</html>
-
-Hi! I am a junior (3rd-year) undergraduate student at Xidian University. 
-
-My research interests span NLP, CV, and their intersection. My long-term research goal is to understand and enable the emergence of human-like intelligence, while developing unified models that bridge the physical and mental worlds.
-I enjoy exploring diverse research directions and collaborating with researchers across different fields.
-
-Feel free to reach out if you are interested in collaboration or potential opportunities.
-
-News
----------------
-<div class="news-box">
+<section id="news" class="home-section" aria-labelledby="news-heading">
+  <div class="section-heading"><h2 id="news-heading">News</h2><span class="section-note">Recent updates</span></div>
   <ul class="news-list">
-    <li><span class="news-date"><em>2026.07</em></span> 🎉🎉 I became a founding member of a startup.</li>
-    <li><span class="news-date"><em>2026.05</em></span> 🎉🎉 I begin my internship at Alibaba Group.</li>
-    <li><span class="news-date"><em>2026.04</em></span> 🎉🎉 Two papers accepted to ACL 2026.</li>
-    <li><span class="news-date"><em>2026.02</em></span> 🎉🎉 One paper accepted to CVPR 2026.</li>
-    <li><span class="news-date"><em>2026.01</em></span> 🎉🎉 I begin my internship at TeleAI.</li>
-    <li><span class="news-date"><em>2025.08</em></span> 🎉🎉 One paper accepted to PRCV 2025.</li>
-    <li><span class="news-date"><em>2025.07</em></span> 🎉🎉 One paper accepted to ICCV 2025.</li>
-    <li><span class="news-date"><em>2024.10</em></span> 🎉🎉 I joined the HPC-AI Lab at NUS as a Research Assistant.</li>
+    {% for item in site.data.news limit:4 %}
+    <li><time datetime="{{ item.date | replace: '.', '-' }}">{{ item.date }}</time><span>{{ item.text }}</span></li>
+    {% endfor %}
   </ul>
-</div>
+  {% if site.data.news.size > 4 %}
+  <details class="news-archive"><summary>Earlier updates <span aria-hidden="true">↓</span></summary>
+    <ul class="news-list">{% for item in site.data.news offset:4 %}<li><time datetime="{{ item.date | replace: '.', '-' }}">{{ item.date }}</time><span>{{ item.text }}</span></li>{% endfor %}</ul>
+  </details>
+  {% endif %}
+</section>
 
-Experience
---------------
-
-<div class="experience-container">
-  <div class="experience-card">
-      <img src="images/Alibaba.png" alt="Alibaba logo" class="experience-logo">
-      <div class="experience-info">
-          <strong>Alibaba Group</strong><br>
-          <em>2026.05 - 2026.07</em><br>
-          Start My Journey in MLLM
-      </div>
+<section id="experience" class="home-section" aria-labelledby="experience-heading">
+  <div class="section-heading"><h2 id="experience-heading">Experience</h2><span class="section-note">Research & education</span></div>
+  <div class="experience-grid">
+    {% for item in site.data.experience %}
+    <article class="experience-card">
+      <img class="experience-logo" src="{{ item.image | relative_url }}" alt="" width="46" height="48" loading="lazy">
+      <div class="experience-info"><h3>{{ item.name }}</h3><div class="experience-date">{{ item.date }}</div><p class="experience-description">{{ item.description }}</p></div>
+    </article>
+    {% endfor %}
   </div>
+</section>
 
+<section id="blog" class="home-section" aria-labelledby="blog-heading">
+  <div class="section-heading"><h2 id="blog-heading">Blog</h2><a class="section-link" href="{{ '/blog/' | relative_url }}">All writing ↗</a></div>
+  {% if site.posts.size > 0 %}
+  <ul class="blog-list">{% for post in site.posts limit:3 %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p></li>{% endfor %}</ul>
+  {% else %}<p class="empty-note">Research notes and ideas — coming soon.</p>{% endif %}
+</section>
 
-  
-  <div class="experience-card">
-      <img src="images/TeleAI.png" alt="TeleAI logo" class="experience-logo">
-      <div class="experience-info">
-          <strong>Institute of Artificial Intelligence of China Telecom</strong><br>
-          <em>2026.01 - 2026.03</em><br>
-          Start My Journey in LLM
-      </div>
+<section id="publications" class="home-section" aria-labelledby="publications-heading">
+  <div class="section-heading"><h2 id="publications-heading">Publications</h2><a class="section-link" href="{{ site.author.googlescholar }}">Google Scholar ↗</a></div>
+  <div class="publication-controls" role="group" aria-label="Publication view" hidden>
+    <button type="button" data-view="selected" aria-pressed="true" aria-controls="selected-publications">Selected</button>
+    <button type="button" data-view="all" aria-pressed="false" aria-controls="all-publications">All publications ({{ site.data.publications.size }})</button>
   </div>
-
-  <div class="experience-card">
-      <img src="images/NUS.png" alt="NUS logo" class="experience-logo">
-      <div class="experience-info">
-          <strong>National University of Singapore</strong><br>
-          <em>2024.10 - 2025.10</em><br>
-          Research Assistant at <a href="https://ai.comp.nus.edu.sg/"><em>HPC-AI Lab</em></a> advised by <a href="https://www.comp.nus.edu.sg/~youy/"><em>Yang You</em></a>, <a href="https://wangbo-zhao.github.io/"><em>Wangbo Zhao</em></a> and <a href="https://lancezpf.github.io/"><em>Pengfei Zhou</em></a>
-      </div>
+  <p class="publication-legend">* Equal contribution · † Corresponding author · ‡ Project leader</p>
+  <div id="selected-publications" data-publication-panel="selected" hidden>
+    {% for pub in site.data.publications %}{% if pub.selected %}
+    <article class="publication"><img class="publication-image" src="{{ pub.image | relative_url }}" alt="Overview of {{ pub.title | escape }}" loading="lazy" width="220" height="138">{% include academic-publication.html pub=pub detailed=true %}</article>
+    {% endif %}{% endfor %}
   </div>
-
-
-  <div class="experience-card">
-      <img src="images/XDU.png" alt="Xi'dian logo" class="experience-logo">
-      <div class="experience-info">
-          <strong>Xidian University</strong><br>
-          <em>2023.09 - Present</em><br>
-          B.E at <a href="https://ste.xidian.edu.cn/"><em>School of Telecommunication Engineering</em></a> & Research Assistant advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao"><em>Xiumei Wang</em></a>
-      </div>
-  </div>
-  
-</div>
-
-
-Publications
---------------
-<button class="pub-button active" onclick="filterPublications(event, 'all')">Core Publications</button>
-<button class="pub-button" onclick="filterPublications(event, 'list')">Full Publications List</button>
-
-(* equal contribution · &dagger; corresponding author · &Dagger; project leader)
-
-<div id="core-publications" class="publication-view" data-publication-view="core">
-<div class="publication-card" data-category="all"> 
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;"> 
-      <img src="images/GroupToM.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;"> 
-    </div> 
-    <div>
-      <strong>GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</strong><br>
-      <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, 
-        Jierui Li,
-        Yueling Hou, 
-        Zihan Mei, 
-        Zhigang Tian, 
-        Weicheng Jiao, 
-        Can Zhang, 
-        Xinyan Wan, 
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>, 
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>, 
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
-      </i><br> 
-      We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap. 
-      <br> 
-      <b><i style="color:#83a1c7;">ACL 2026 &nbsp;
-      </i></b> 
-      <a href="images/GroupToM_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://arxiv.org/pdf/2606.04184"><em>[arXiv]</em></a> 
-      <a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>[code]</em></a> 
-    </div>
-  </div> 
-</div>
-
-
-<div class="publication-card" data-category="all"> 
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;"> 
-      <img src="images/MagicBench.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;"> 
-    </div> 
-    <div>
-      <strong>MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</strong><br>
-      <i style="font-size: 13px;">
-        Tang Da Huang,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang&Dagger;</strong></a>, 
-        Wen Qi Xu,
-        Xianpeng Guo&dagger;
-      </i><br> 
-      The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive).
-      <br> 
-      <b><i style="color:#83a1c7;">ACL 2026 &nbsp;
-      </i></b> 
-      <a href=""><em>[arXiv]</em></a> 
-      <a href=""><em>[code]</em></a> 
-    </div>
-  </div> 
-</div>
-
-
-<div class="publication-card" data-category="all"> 
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;"> 
-      <img src="images/RDS.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;"> 
-    </div> 
-    <div>
-      <strong>Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</strong><br>
-      <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, 
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>, 
-        Xinyan Wan, 
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>, 
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>, 
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
-        Yan Song,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>, 
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
-      </i><br> 
-      Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.
-      <br> 
-      <b><i style="color:#83a1c7;">CVPR 2026 &nbsp;
-      </i></b> 
-      <a href="images/cvpr_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>[arXiv]</em></a> 
-      <a href=""><em>[code]</em></a> 
-    </div>
-  </div> 
-</div>
-
-
-<div class="publication-card" data-category="all"> 
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;"> 
-      <img src="images/var-scaling.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;"> 
-    </div> 
-    <div>
-      <strong>Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples</strong><br>
-      <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, 
-        Xinyan Wan,
-        <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao" target="_blank">Xiumei Wang&dagger;</a>
-      </i><br> 
-      Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
-      <br> 
-      <b><i style="color:#83a1c7;">PRCV 2025 &nbsp;
-      </i></b> 
-      <a href="images/var_poster.png"><em>[Poster]</em></a>
-      <a href="https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28"><em>[arXiv]</em></a> 
-      <a href="https://github.com/WD7ang/VAR-Scaling"><em>[code]</em></a> 
-    </div>
-  </div> 
-</div>
-
-
-</div>
-<div id="full-publications" class="publication-view" data-publication-view="list" hidden>
-  <ul class="full-publication-list">
-    <li>
-      <span class="pub-list-badge">ACL 2026</span>
-      <span class="pub-list-title">GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, Jierui Li, Yueling Hou, Zihan Mei, Zhigang Tian, Weicheng Jiao, Can Zhang, Xinyan Wan,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="https://arxiv.org/pdf/2606.04184">[arXiv]</a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench">[code]</a></span>
-    </li>
-    <li>
-      <span class="pub-list-badge">ACL 2026</span>
-      <span class="pub-list-title">MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</span><br>
-      <span class="pub-list-authors">
-        Tang Da Huang,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang&Dagger;</strong></a>,
-        Wen Qi Xu, Xianpeng Guo&dagger;.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-    <li>
-      <span class="pub-list-badge">CVPR 2026</span>
-      <span class="pub-list-title">Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>, Xinyan Wan,
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>&dagger;, Yan Song,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">AAAI 2026</span>
-      <span class="pub-list-title">MDK12-Bench: a multi-discipline benchmark for evaluating reasoning in multimodal large language models</span><br>
-      <span class="pub-list-authors">
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou*</a>,
-          Xiaopeng Peng*,
-           Fanrui Zhang*, 
-          <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-          Jiaxin Ai, Yansheng Qiu,
-          <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao</a>,
-            Jiajun Song, Chuanhao Li, 
-            <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-            Zhen Li, Haoquan Zhang, Zizhen Li, Xiaofeng Mao, Yukang Feng, Jianwen Sun, 
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-          Xiaojun Chang, Wenqi Shao, 
-          <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=4OqZBmYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Kaipeng Zhang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-    <li>
-      <span class="pub-list-badge">PRCV 2025</span>
-      <span class="pub-list-title">Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, Xinyan Wan, Siyu Li,
-        <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao" target="_blank">Xiumei Wang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">ICCV 2025</span>
-      <span class="pub-list-title">EA-ViT: Efficient Adaptation for Elastic Vision Transformer</span><br>
-      <span class="pub-list-authors">
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>,
-        Huiwen Zhang,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=bGKF2tUAAAAJ" target="_blank">Yuhao Zhou</a>,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, 
-        Shuo Wang,
-        Zhihang Yuan,
-        Yuzhang Shang,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=7oRD67kAAAAJ" target="_blank">Xiaojiang Peng</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=j2ANma0AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Dawei Yang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">Preprint 2025</span>
-      <span class="pub-list-title">Pebench: A fictitious dataset to benchmark machine unlearning for multimodal large language models</span><br>
-      <span class="pub-list-authors">
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, 
-        Jiaxin Ai,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=7oRD67kAAAAJ" target="_blank">Xiaojiang Peng</a>,
-        Wenqi Shao,
-        Hongxun Yao,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=4OqZBmYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Kaipeng Zhang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
+  <ul id="all-publications" class="publication-list" data-publication-panel="all">
+    {% for pub in site.data.publications %}<li class="publication">{% include academic-publication.html pub=pub %}</li>{% endfor %}
   </ul>
-</div>
+</section>
 
-<script src="assets/js/show_publications.js"></script>
-<script src="assets/js/pub_media_rotator.js"></script>
+<section id="projects" class="home-section" aria-labelledby="projects-heading">
+  <div class="section-heading"><h2 id="projects-heading">Projects</h2><a class="section-link" href="https://github.com/{{ site.author.github }}">GitHub ↗</a></div>
+  <article class="project">
+    <a href="https://github.com/WD7ang/WowPage" aria-label="WowPage on GitHub"><img class="project-image" src="{{ '/images/homepage.png' | relative_url }}" alt="Preview of the WowPage academic homepage template" loading="lazy" width="220" height="138"></a>
+    <div><span class="publication-venue">Open source · Academic homepage</span><h3><a href="https://github.com/WD7ang/WowPage">WowPage</a></h3><p><strong>Weidong Tang</strong>, <a href="https://selen-suyue.github.io/">Yue Su</a></p><p>In collaboration with Yue Su, I refined and improved his original homepage template. A clean standalone template version is coming soon.</p><a class="section-link" href="https://github.com/WD7ang/WowPage">View code ↗</a></div>
+  </article>
+</section>
 
+<section id="awards" class="home-section" aria-labelledby="awards-heading">
+  <div class="section-heading"><h2 id="awards-heading">Awards</h2></div>
+  <ul class="detail-list"><li><time datetime="2025-09">2025.09</time><strong>Second-Class Academic Scholarship</strong>, Xidian University <span class="section-note">(Ranked 5/99)</span></li></ul>
+</section>
 
-Projects
---------
-<div class="project-card" data-category="project"> 
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/homepage.png" alt="ManiUniCon" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div> 
-      <strong>WowPage</strong><br>
-      <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        <a href="https://selen-suyue.github.io/" target="_blank"><strong>Yue Su</strong></a>.
-      </i><br>
-      In collaboration with Yue Su, I refined and improved his original homepage template. A clean standalone template version is coming soon.
-      <br> 
-      <b><i style="color:#83a1c7;">Project &nbsp;</i></b> 
-      <a href="https://github.com/WD7ang/WowPage"><em>[code]</em></a> 
-    </div>
-  </div> 
-</div>
+<section id="services" class="home-section" aria-labelledby="services-heading">
+  <div class="section-heading"><h2 id="services-heading">Services</h2></div>
+  <ul class="detail-list"><li><time>2025.06 – Present</time><strong>AI Team Lead</strong>, Xidian–Inspur Club.</li><li><strong>Reviewer</strong> for ICIC 2026 and PRCV 2025, 2026.</li></ul>
+</section>
 
+<section id="talks" class="home-section" aria-labelledby="talks-heading">
+  <div class="section-heading"><h2 id="talks-heading">Talks</h2></div>
+  {% if site.talks.size > 0 %}
+  <ul class="detail-list">{% assign talks = site.talks | sort: 'date' | reverse %}{% for talk in talks %}<li><time datetime="{{ talk.date | date_to_xmlschema }}">{{ talk.date | date: '%Y.%m' }}</time><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a>{% if talk.venue %} · {{ talk.venue }}{% endif %}</li>{% endfor %}</ul>
+  {% else %}<p class="empty-note">Talks and slides will be listed here.</p>{% endif %}
+</section>
 
-Awards
---------
-- *2025.09*, Second-Class Academic Scholarship, Xidian University (Ranked 5/99)
-
-
-
-Services
---------
-- *2025.06 – Present*, AI Team Lead, 🌊Xidian–Inspur Club.
-- Reviewer for ICIC 2026, PRCV (2025,2026).
-
-Talks
---------
-
+<section id="cv" class="home-section" aria-labelledby="cv-heading">
+  <div class="section-heading"><h2 id="cv-heading">Curriculum Vitae</h2></div>
+  <div class="cv-callout"><p>Education, research experience, and publications, with automatically updated research metrics.</p><div class="button-row"><a class="button button-primary" href="{{ '/cv/' | relative_url }}">View online CV ↗</a><a class="button" href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF ↓</a></div></div>
+</section>

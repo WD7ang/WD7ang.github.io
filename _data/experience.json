@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alibaba Group",
+    "date": "2026.05 - 2026.07",
+    "image": "/images/Alibaba.png",
+    "description": "Research internship · Multimodal large language models"
+  },
+  {
+    "name": "TeleAI · China Telecom",
+    "date": "2026.01 - 2026.03",
+    "image": "/images/TeleAI.png",
+    "description": "Research internship · Large language models"
+  },
+  {
+    "name": "National University of Singapore",
+    "date": "2024.10 - 2025.10",
+    "image": "/images/NUS.png",
+    "description": "Research Assistant at <a href=\"https://ai.comp.nus.edu.sg/\"><em>HPC-AI Lab</em></a> advised by <a href=\"https://www.comp.nus.edu.sg/~youy/\"><em>Yang You</em></a>, <a href=\"https://wangbo-zhao.github.io/\"><em>Wangbo Zhao</em></a> and <a href=\"https://lancezpf.github.io/\"><em>Pengfei Zhou</em></a>"
+  },
+  {
+    "name": "Xidian University",
+    "date": "2023.09 - Present",
+    "image": "/images/XDU.png",
+    "description": "B.E at <a href=\"https://ste.xidian.edu.cn/\"><em>School of Telecommunication Engineering</em></a> &amp; Research Assistant advised by <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\"><em>Xiumei Wang</em></a>"
+  }
+]

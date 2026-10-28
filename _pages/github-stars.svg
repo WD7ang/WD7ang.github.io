@@ -1,0 +1,6 @@
+---
+layout: null
+permalink: /images/github-stars.svg
+sitemap: false
+---
+{% include stat-badge.svg label='stars' value=site.data.profile_stats.github_stars %}

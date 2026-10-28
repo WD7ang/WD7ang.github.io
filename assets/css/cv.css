@@ -1,0 +1,133 @@
+/* Standalone Jemdoc-style CV. Measurements match liamding.cc at desktop size.
+   Intentionally independent of the homepage's academic.css and box-sizing reset. */
+html { background: #eee; }
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+  text-align: left;
+  margin: 30px auto;
+  padding: 10px 50px 30px;
+  max-width: 960px;
+}
+#layout-content {
+  margin-top: 25px;
+  padding: 0 1em;
+  border: none;
+  background: white;
+  text-align: left;
+  vertical-align: top;
+}
+a { color: #224b8d; text-decoration: none; }
+a:hover { border-bottom: 1px dotted gray; }
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 2px solid #527bbd; outline-offset: 3px; }
+[hidden] { display: none !important; }
+h1, h2, h3 {
+  color: #527bbd;
+  margin-top: .7em;
+  margin-bottom: .5em;
+  padding-bottom: .2em;
+  line-height: 1;
+  padding-top: .5em;
+  border-bottom: 1px solid #aaa;
+}
+h1 { font-size: 165%; padding-bottom: .3em; }
+h2 { padding-top: .8em; font-size: 125%; }
+h3 { font-size: 110%; border-bottom: none; }
+h2 + h3 { padding-top: .2em; }
+p { margin: 0 0 .8em; padding: 0; line-height: 1.3; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+ul, ol { margin-top: .2em; padding-top: 0; margin-bottom: .8em; }
+ul { list-style-position: outside; list-style-type: square; }
+li { margin-top: .9em; }
+li p { margin-bottom: .3em; }
+p + ul, p + ol { margin-top: -.5em; }
+img { border: none; }
+.cv-profile { width: 100%; border-spacing: 2px; }
+.cv-profile td { padding: 1px; vertical-align: middle; }
+.cv-profile .profile-information { width: 670px; }
+.cv-profile .profile-photo { width: 320px; }
+.cv-portrait { width: 320px; height: 364px; object-fit: cover; object-position: 50% 85%; }
+#toptitle { padding-bottom: .2em; margin-bottom: 1.5em; }
+#toptitle h1 { margin-bottom: 0; padding-bottom: .1em; padding-top: 0; margin-top: .5em; border-bottom: none; }
+#toptitle + h3 { margin-top: 0; }
+.cv-contact { overflow-wrap: anywhere; }
+.cv-contact .cv-actions { white-space: normal; }
+.cv-stat-link { display: inline-block; vertical-align: middle; line-height: 0; }
+.cv-stat-link:hover { border-bottom: none; }
+.cv-stat-badge { display: inline-block; height: 20px; width: auto; vertical-align: middle; }
+.cv-stat-link > svg { display: inline-block; height: 20px; vertical-align: middle; }
+.cv-star-details { margin: .5em 1em 0 0; font-size: 13px; line-height: 1.4; }
+.cv-star-details summary { color: #224b8d; cursor: pointer; width: fit-content; }
+.cv-star-details p { margin: .5em 0; }
+.cv-star-details ul { margin: .5em 0; padding-left: 1.3em; }
+.cv-star-details li { margin-top: .2em; overflow-wrap: anywhere; }
+.cv-star-details li span { white-space: nowrap; }
+.cv-stats-updated { color: #666; }
+.print-link { appearance: none; background: none; border: 0; border-bottom: 1px solid transparent; padding: 0; color: #224b8d; font: inherit; cursor: pointer; }
+.print-link:hover { border-bottom: 1px dotted gray; }
+.cv-news-scroll { height: 500px; overflow: auto; }
+.cv-publications-scroll { height: 900px; overflow: auto; }
+.cv-publications { list-style-type: circle; }
+.cv-publications .paper-title { color: #0080ff; font-weight: normal; }
+.cv-publications p { font-size: inherit; line-height: normal; margin-bottom: 0; }
+.cv-venue { font-style: italic; }
+.cv-venue a { font-style: normal; }
+.cv-venue a::before { content: '['; }
+.cv-venue a::after { content: ']'; }
+.cv-venue a + a { margin-left: .3em; }
+.cv-date { font-weight: normal; white-space: nowrap; }
+.cv-entry-heading { display: grid; grid-template-columns: minmax(0, 1fr) max-content; align-items: baseline; column-gap: 1em; }
+.cv-entry-heading .cv-date { text-align: right; }
+.cv-experience-list > li > ul { margin-top: .25em; }
+.cv-experience-list > li > ul > li { margin-top: .35em; }
+.cv-footer { font-size: small; border-top: 1px solid #c0c0c0; padding-top: .1em; margin-top: 4em; color: #808080; }
+.cv-footer a { color: #608090; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 15px; top: 8px; background: white; padding: 6px; }
+@media (max-width: 760px) {
+  body { margin: 15px auto; padding: 10px 24px 30px; }
+  #layout-content { padding: 0; margin-top: 15px; }
+  .cv-profile .profile-photo { width: 220px; }
+  .cv-portrait { width: 220px; height: 250px; }
+  .profile-information h1 { font-size: 150%; }
+}
+@media (max-width: 560px) {
+  body { margin: 0; padding: 15px 20px 25px; }
+  .cv-profile, .cv-profile tbody, .cv-profile tr, .cv-profile td { display: block; width: auto !important; }
+  .cv-profile .profile-photo { padding-top: 12px; }
+  .cv-portrait { width: 220px; height: 250px; }
+  #toptitle { margin-bottom: .8em; }
+  #toptitle h1 { font-size: 165%; }
+  .cv-contact { margin-bottom: 0; }
+  ul, ol { padding-left: 24px; }
+  h2 { line-height: 1.2; }
+  .cv-news-scroll { height: auto; max-height: 500px; }
+  .cv-publications-scroll { height: auto; max-height: 900px; }
+  .cv-entry-heading { column-gap: .65em; }
+  .cv-entry-heading .cv-date { font-size: .75em; }
+  .cv-date-note { display: block; }
+}
+@page { size: A4; margin: 16mm 17mm; }
+@media print {
+  html, body { background: #fff; }
+  body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
+  #layout-content { padding: 0; margin: 0; }
+  .skip-link, .cv-actions, .cv-footer, .cv-star-details { display: none !important; }
+  .cv-profile { display: table; width: 100%; break-inside: avoid; }
+  .cv-profile tbody { display: table-row-group; }
+  .cv-profile tr { display: table-row; }
+  .cv-profile td { display: table-cell; }
+  .cv-profile .profile-photo { width: 180px !important; padding-top: 0; }
+  .cv-portrait { width: 180px; height: 205px; }
+  #toptitle h1 { font-size: 165%; }
+  #toptitle { margin-bottom: 1.1em; }
+  .cv-news-scroll, .cv-publications-scroll { height: auto; max-height: none; overflow: visible; }
+  h2 { break-after: avoid; page-break-after: avoid; }
+  .cv-publications > li, .cv-experience-list > li { break-inside: avoid; page-break-inside: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  .cv-news-scroll li { margin-top: .45em; }
+  .cv-publications li { margin-top: .7em; }
+}

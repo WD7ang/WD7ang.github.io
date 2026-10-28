@@ -1,0 +1,42 @@
+name: Update profile statistics
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/update-profile-stats.yml'
+      - 'scripts/update-profile-stats.py'
+      - '_data/github_projects.json'
+      - '_data/profile_stats.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-statistics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh and publish metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          python scripts/update-profile-stats.py
+          --previous-url https://raw.githubusercontent.com/${{ github.repository }}/profile-metrics/profile-stats.json
+          --output "${{ runner.temp }}/profile-stats.json"
+          --publish

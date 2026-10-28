@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Weidong Tang / Homepage"
 title_separator          : "-"
 name                     : Weidong Tang
-description              : &description "personal description"
+description              : &description "Weidong Tang — research in natural language processing, computer vision, and multimodal intelligence."
 url                      : https://wd7ang.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "WD7ang/wd7ang.github.io"
@@ -21,7 +21,7 @@ repository               : "WD7ang/wd7ang.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "twd.png"
+  avatar           : "wx.jpg"
   name             : "Weidong Tang 汤维栋"
   pronouns         : "He/Him"  
   bio              : "人间万象皆有数，唯此风骨世无双"
@@ -150,6 +150,8 @@ exclude:
   - config
   - gulpfile.js
   - log
+  - local
+  - scripts
   - node_modules
   - package.json
   - tmp
@@ -204,7 +206,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: academic-post
       author_profile: true
       read_time: true
       comments: true
