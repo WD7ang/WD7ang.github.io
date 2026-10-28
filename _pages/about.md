@@ -416,7 +416,7 @@ Experience
       <div class="experience-info">
           <strong>Alibaba Group</strong><br>
           <em>2026.05 - 2026.07</em><br>
-          Start My Journey in MLLM
+          Completed my MLLM research internship
       </div>
   </div>
 
@@ -427,7 +427,7 @@ Experience
       <div class="experience-info">
           <strong>Institute of Artificial Intelligence of China Telecom</strong><br>
           <em>2026.01 - 2026.03</em><br>
-          Start My Journey in LLM
+          Completed my LLM research internship
       </div>
   </div>
 
