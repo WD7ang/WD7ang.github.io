@@ -436,7 +436,7 @@ Experience
       <div class="experience-info">
           <strong>Institute of Artificial Intelligence of China Telecom</strong><br>
           <em>2026.01 - 2026.03</em><br>
-          Completed my LLM research internship in Tele-Chat post-training, instruction alignment, and efficient training/inference on Ascend.
+          Completed my internship in Huawei Ascend 910B infrastructure, focusing on numerical consistency in training and inference.
       </div>
   </div>
 

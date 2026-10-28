@@ -126,7 +126,7 @@ img { border: none; }
   #toptitle { margin-bottom: 1.1em; }
   .cv-news-scroll, .cv-publications-scroll { height: auto; max-height: none; overflow: visible; }
   h2 { break-after: avoid; page-break-after: avoid; }
-  .cv-publications > li, .cv-experience-list > li { break-inside: avoid; page-break-inside: avoid; }
+  .cv-publications > li, .cv-experience-list > li, .cv-education-list > li { break-inside: avoid; page-break-inside: avoid; }
   p, li { orphans: 3; widows: 3; }
   .cv-news-scroll li { margin-top: .45em; }
   .cv-publications li { margin-top: .7em; }
