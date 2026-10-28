@@ -3,4 +3,4 @@ layout: null
 permalink: /images/github-stars.svg
 sitemap: false
 ---
-{% include stat-badge.svg label='stars' value=site.data.profile_stats.github_stars %}
+{% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}

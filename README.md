@@ -38,6 +38,7 @@ bundle exec jekyll serve
 | 头像 | `images/wx.jpg` |
 | InfRec 经历卡片 Logo（仅鸟形图案） | `images/InfRec.png` |
 | GitHub stars 缓存、Scholar citations | `_data/profile_stats.json` |
+| CV 指定显示值（优先于自动统计） | `_data/cv_stats.json` |
 | 纳入 GitHub stars 的论文项目 | `_data/github_projects.json` |
 | 原版首页主题补充 / Blog 排版 / CV 与打印排版 | `assets/css/classic-home.css` / `assets/css/academic.css` / `assets/css/cv.css` |
 
@@ -45,9 +46,11 @@ bundle exec jekyll serve
 
 新照片在首页使用原版圆形头像框，CV 使用竖向照片；通过 CSS 的 `aspect-ratio`、`object-fit` 和 `object-position` 调整显示，原始图片没有被裁剪或修改。
 
-CV 联系方式使用与参考页同款的统计徽章。GitHub stars 统计 **WD7ang 名下公开仓库 + 已核实的论文项目**，按仓库去重；不是 GitHub 个人页中“给别人点过的星”的数量，也不是全部组织仓库的总和。原先仅统计个人名下仓库的 34 stars 不包含组织或合作者维护的论文项目。项目列表在 `_data/github_projects.json` 中维护，网页可查看每个纳入仓库的明细。
+CV 联系方式使用与参考页同款的统计徽章。当前按用户要求，在 `_data/cv_stats.json` 中设置 `manual: true`，固定显示 **52 stars / 51 citations**。网页、无 JavaScript 视图和下载 PDF 均使用这些显示值；浏览器缓存与自动抓取不会覆盖它们。手动模式不显示原自动总数的仓库明细，GitHub 徽章直接链接到个人账号。
 
-浏览器打开在线 CV 时会直接向 GitHub 公开 API 刷新 stars。Scholar citations 使用 Google Scholar 的 **Citations / All** 总数，通过后台定时抓取更新。网页同时读取 `profile-metrics` 分支的 `profile-stats.json`，获取最近一次成功采集的完整统计；加载失败时保留可用缓存，尚未核实的数值显示 `—`。
+将 `manual` 改为 `false` 可恢复下述自动统计。自动模式的 GitHub stars 统计 **WD7ang 名下公开仓库 + 已核实的论文项目**，按仓库去重。项目列表在 `_data/github_projects.json` 中维护，网页可查看每个纳入仓库的明细。
+
+自动模式下，浏览器打开在线 CV 时会直接向 GitHub 公开 API 刷新 stars。Scholar citations 使用 Google Scholar 的 **Citations / All** 总数，通过后台定时抓取更新。网页同时读取 `profile-metrics` 分支的 `profile-stats.json`，获取最近一次成功采集的完整统计；加载失败时保留可用缓存，尚未核实的数值显示 `—`。手动模式不会输出自动统计配置，因此即使浏览器仍缓存旧 JavaScript，也不会恢复自动刷新。
 
 `.github/workflows/update-profile-stats.yml` 每小时运行一次，也支持在 Actions 页面手动运行；GitHub 调度可能有延迟。工作流、脚本、项目列表或快照推送到 `master` 时也会触发更新。脚本仅使用 Python 标准库，正常访问公开的 GitHub API 和 Scholar 页面；如 Scholar 限流、要求验证码或页面格式变化，会保留上次成功的 citations 与检查日期，不会写成 0，也不会绕过验证。GitHub 只有在所有纳入仓库都成功获取后才更新总数，避免部分接口失败导致总数突然减少。历史缓存必须与当前账号、统计范围和项目列表一致，旧的 owner-only 数值不会覆盖新总数。数据发布到独立的 `profile-metrics` 分支，不修改网站源代码分支；网页直接读取该 JSON，因此统计更新不依赖重新触发 GitHub Pages 构建。
 

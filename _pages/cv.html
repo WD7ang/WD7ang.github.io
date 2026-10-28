@@ -4,6 +4,7 @@ title: Curriculum Vitae
 description: Biography, research, publications, and academic experience of Weidong Tang.
 permalink: /cv/
 ---
+{% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}
 <article class="cv-document" aria-labelledby="cv-name">
   <table class="cv-profile" role="presentation">
     <tbody><tr>
@@ -12,17 +13,17 @@ permalink: /cv/
         <h3>Chief Research Officer &amp; Founding Member<br>Cardinal AI Lab, InfRec</h3>
         <p class="cv-contact"><br>
           E-mail: <a href="mailto:wdtang0705@gmail.com">wdtang0705@gmail.com</a> &nbsp; | &nbsp; <a href="tel:+8613355168563">+86 13355168563</a><br>
-          GitHub: <a href="https://github.com/WD7ang">@WD7ang</a> <a class="cv-stat-link" data-github-badge href="#cv-github-stars" aria-label="GitHub stars across my repositories and research projects; view breakdown" title="Stars across my public repositories and research projects. View breakdown.">{% include stat-badge.svg label='stars' value=site.data.profile_stats.github_stars %}</a><br>
-          Scholar: <a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations" title="View Google Scholar citation statistics">{% include stat-badge.svg label='citations' value=site.data.profile_stats.scholar_citations %}</a><br>
+          GitHub: <a href="https://github.com/WD7ang">@WD7ang</a> <a class="cv-stat-link" data-github-badge href="{% if site.data.cv_stats.manual %}https://github.com/WD7ang{% else %}#cv-github-stars{% endif %}" aria-label="GitHub stars: {{ cv_stats.github_stars }}" title="GitHub stars: {{ cv_stats.github_stars }}">{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}</a><br>
+          Scholar: <a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a><br>
           WeChat: <a href="{{ '/images/vx.jpg' | relative_url }}">d7ang0705</a><br>
           <span class="cv-actions">CV: <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">[Download PDF]</a> <button class="print-link" type="button" data-print-cv hidden>[Print / Save as PDF]</button> <a href="{{ '/' | relative_url }}">[Homepage]</a></span>
         </p>
-        <details class="cv-star-details" id="cv-github-stars">
+        {% unless site.data.cv_stats.manual %}<details class="cv-star-details" id="cv-github-stars">
           <summary>Star breakdown</summary>
           <p>My public repositories and coauthored research projects.</p>
           <ul data-star-repositories>{% for repository in site.data.profile_stats.github_repositories %}<li><a href="{{ repository.url | escape }}">{{ repository.name | escape }}</a> <span>{{ repository.stars }} ★</span></li>{% endfor %}</ul>
           <p class="cv-stats-updated" data-stars-updated>{% if site.data.profile_stats.github_checked_on %}Updated {{ site.data.profile_stats.github_checked_on }}.{% endif %}</p>
-        </details>
+        </details>{% endunless %}
       </td>
       <td class="profile-photo"><img class="cv-portrait" src="{{ '/images/wx.jpg' | relative_url }}" width="320" height="364" alt="Weidong Tang in Edinburgh"><br></td>
     </tr><tr aria-hidden="true"></tr></tbody>
@@ -119,4 +120,4 @@ Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. P
 
   <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">Homepage</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a></footer>
 </article>
-<script type="application/json" id="profile-stats-config">{"projects":{{ site.data.github_projects | jsonify }},"snapshot":{{ site.data.profile_stats | jsonify }}}</script>
+{% unless site.data.cv_stats.manual %}<script type="application/json" id="profile-stats-config">{"projects":{{ site.data.github_projects | jsonify }},"snapshot":{{ site.data.profile_stats | jsonify }}}</script>{% endunless %}
