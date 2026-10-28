@@ -87,7 +87,7 @@ date: YYYY-MM-DD
 
 本次 CV 内容依据用户于 2026-10-28 提供的《汤维栋CV.pdf》更新，包含 5 篇 Core Publications、4 篇 Collaborative Publications 和 4 段研究经历。下载版按在线 CV 导出为三页 A4。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户此前明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
 
-CV 桌面版采用参考页的 960px 内容宽度加两侧 50px 留白、Georgia 16px 正文、蓝色标题和右侧 320px 无框照片。News 和 Publications 分别使用 500px / 900px 滚动区域；打印时自动展开全部内容。CV 不加载 `academic.css`，以免首页样式覆盖参考版式。
+CV 桌面版采用参考页的 960px 内容宽度加两侧 50px 留白、Georgia 16px 正文、蓝色标题和右侧 320px 无框照片。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动，避免内容较少时留下大块空白；打印时自动展开全部内容。CV 不加载 `academic.css`，以免首页样式覆盖参考版式。CV 样式链接携带构建时间，发布后自动获取新版样式。
 
 ## 部署
 

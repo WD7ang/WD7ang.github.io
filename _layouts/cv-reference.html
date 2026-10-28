@@ -7,7 +7,7 @@
   <meta name="description" content="{{ page.description | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   <script src="{{ '/assets/js/academic.js' | relative_url }}" defer></script>
 </head>
 <body class="cv-page">
