@@ -1,0 +1,47 @@
+{
+  "github_stars": 82,
+  "github_checked_on": "2026-10-28",
+  "github_user": "WD7ang",
+  "github_scope": "owned-and-research",
+  "github_repositories": [
+    {
+      "name": "InfRec-Cardinal/The-Trinity",
+      "stars": 21,
+      "url": "https://github.com/InfRec-Cardinal/The-Trinity",
+      "kind": "research"
+    },
+    {
+      "name": "WD7ang/VAR-Scaling",
+      "stars": 6,
+      "url": "https://github.com/WD7ang/VAR-Scaling",
+      "kind": "owned"
+    },
+    {
+      "name": "WD7ang/WD7ang-old.github.io",
+      "stars": 1,
+      "url": "https://github.com/WD7ang/WD7ang-old.github.io",
+      "kind": "owned"
+    },
+    {
+      "name": "WD7ang/WD7ang.github.io",
+      "stars": 2,
+      "url": "https://github.com/WD7ang/WD7ang.github.io",
+      "kind": "owned"
+    },
+    {
+      "name": "WD7ang/WowPage",
+      "stars": 25,
+      "url": "https://github.com/WD7ang/WowPage",
+      "kind": "owned"
+    },
+    {
+      "name": "zcxcf/EA-ViT",
+      "stars": 27,
+      "url": "https://github.com/zcxcf/EA-ViT",
+      "kind": "research"
+    }
+  ],
+  "scholar_citations": null,
+  "scholar_checked_on": null,
+  "scholar_profile_id": "NH9USaYAAAAJ"
+}
