@@ -412,11 +412,20 @@ Experience
 
 <div class="experience-container">
   <div class="experience-card">
+      <img src="images/InfRec.png" alt="InfRec cardinal logo" class="experience-logo">
+      <div class="experience-info">
+          <strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong><br>
+          <em>2026.07 - Present</em><br>
+          Chief Research Officer (Founding Member), leading research on recursive self-improvement and long-horizon world interaction.
+      </div>
+  </div>
+
+  <div class="experience-card">
       <img src="images/Alibaba.png" alt="Alibaba logo" class="experience-logo">
       <div class="experience-info">
           <strong>Alibaba Group</strong><br>
           <em>2026.05 - 2026.07</em><br>
-          Completed my MLLM research internship
+          Completed my MLLM research internship in post-training, visual-semantic alignment, and large-scale e-commerce retrieval.
       </div>
   </div>
 
@@ -427,7 +436,7 @@ Experience
       <div class="experience-info">
           <strong>Institute of Artificial Intelligence of China Telecom</strong><br>
           <em>2026.01 - 2026.03</em><br>
-          Completed my LLM research internship
+          Completed my LLM research internship in Tele-Chat post-training, instruction alignment, and efficient training/inference on Ascend.
       </div>
   </div>
 

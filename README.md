@@ -36,6 +36,7 @@ bundle exec jekyll serve
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
 | 下载版 CV | `images/cv.pdf` |
 | 头像 | `images/wx.jpg` |
+| InfRec 经历卡片 Logo（仅鸟形图案） | `images/InfRec.png` |
 | GitHub stars 缓存、Scholar citations | `_data/profile_stats.json` |
 | 纳入 GitHub stars 的论文项目 | `_data/github_projects.json` |
 | 原版首页主题补充 / Blog 排版 / CV 与打印排版 | `assets/css/classic-home.css` / `assets/css/academic.css` / `assets/css/cv.css` |
