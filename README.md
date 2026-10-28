@@ -1,6 +1,6 @@
 # Weidong Tang · Academic homepage
 
-Jekyll / GitHub Pages 个人主页。首页和 Blog 使用轻量的 `academic` 布局；CV 使用独立的 `cv-reference` 布局，按 liamding.cc 的 Jemdoc 版式复刻。无需前端打包，旧的 AcademicPages 页面继续可用。
+Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，按 liamding.cc 的 Jemdoc 版式复刻。无需前端打包，旧的 AcademicPages 页面继续可用。
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；徽章在网页中自动更新，PDF 保留导出时的快照。
 
@@ -27,22 +27,22 @@ bundle exec jekyll serve
 
 | 内容 | 文件 |
 | --- | --- |
-| 个人简介、栏目顺序、项目、奖项、服务 | `_pages/about.md` |
+| 首页简介、原版经历和论文卡片、项目、奖项、服务 | `_pages/about.md` |
 | 导航 | `_data/navigation.yml` |
 | 新闻，按新到旧排列 | `_data/news.json` |
-| 经历卡片 | `_data/experience.json` |
-| 论文、作者、链接、精选标记 | `_data/publications.json` |
+| 重设计版经历备份 | `_data/experience.json` |
+| 重设计版论文备份 | `_data/publications.json` |
 | 在线 CV | `_pages/cv.html` |
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
 | 下载版 CV | `images/cv.pdf` |
 | 头像 | `images/wx.jpg` |
 | GitHub stars 缓存、Scholar citations | `_data/profile_stats.json` |
 | 纳入 GitHub stars 的论文项目 | `_data/github_projects.json` |
-| 全站排版 / CV 与打印排版 | `assets/css/academic.css` / `assets/css/cv.css` |
+| 原版首页主题补充 / Blog 排版 / CV 与打印排版 | `assets/css/classic-home.css` / `assets/css/academic.css` / `assets/css/cv.css` |
 
-论文 `selected: true` 会显示在精选视图。没有公开资源时，保留空 `links` 数组即可，不添加空链接。已发表的完整论文列表在关闭 JavaScript 时仍可阅读。
+首页论文卡片与完整列表在 `_pages/about.md` 中维护，保留原版切换按钮和图片轮播。`_data/publications.json` 是重设计版本的数据备份，当前首页不读取它。
 
-新照片通过 CSS 的 `aspect-ratio` 和 `object-position` 显示在竖向头像框中；原始图片没有被裁剪或修改。
+新照片在首页使用原版圆形头像框，CV 使用竖向照片；通过 CSS 的 `aspect-ratio`、`object-fit` 和 `object-position` 调整显示，原始图片没有被裁剪或修改。
 
 CV 联系方式使用与参考页同款的统计徽章。GitHub stars 统计 **WD7ang 名下公开仓库 + 已核实的论文项目**，按仓库去重；不是 GitHub 个人页中“给别人点过的星”的数量，也不是全部组织仓库的总和。原先仅统计个人名下仓库的 34 stars 不包含组织或合作者维护的论文项目。项目列表在 `_data/github_projects.json` 中维护，网页可查看每个纳入仓库的明细。
 

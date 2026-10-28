@@ -8,7 +8,7 @@ main:
     url: "/#experience"
 
   - title: "Blog"
-    url: "/#blog"
+    url: "/blog/"
 
   - title: "Pub"
     url: "/#publications"
