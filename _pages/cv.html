@@ -4,6 +4,10 @@ title: Curriculum Vitae
 description: Education, experience, publications, projects, awards, and professional services of Weidong Tang.
 permalink: /cv/
 ---
+<nav class="cv-actions" aria-label="CV actions">
+  <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button>
+  <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a>
+</nav>
 <article class="cv-document" aria-labelledby="cv-name">
     <header class="cv-profile">
       <div class="profile-information">
@@ -88,5 +92,5 @@ permalink: /cv/
     </section>
   </div>
 
-  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">wd7ang.github.io</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
+  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang.</footer>
 </article>

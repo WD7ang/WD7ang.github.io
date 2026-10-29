@@ -94,6 +94,7 @@ sup { font-size: .7em; line-height: 0; }
 .cv-compact-list { list-style: none; padding: 0 0 0 42px; font-size: 14px; }
 .cv-compact-list > li { margin-bottom: 9px; }
 .cv-compact-list .cv-entry-heading { column-gap: 12px; }
+.cv-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; margin: 0 0 18px; color: var(--cv-blue); font-size: 13px; line-height: 1.5; }
 .print-link { appearance: none; border: 0; padding: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
 .print-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .cv-footer { margin-top: 36px; padding-top: 12px; border-top: 1px solid var(--cv-rule); color: var(--cv-muted); font-size: 12px; }
@@ -128,7 +129,7 @@ sup { font-size: .7em; line-height: 0; }
   html, body { background: #fff; }
   body { max-width: none; margin: 0; padding: 0; color: var(--cv-text); font-size: 12.8px; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body::before { display: none; }
-  .skip-link, .cv-footer { display: none !important; }
+  .skip-link, .cv-actions, .cv-footer { display: none !important; }
   .cv-profile { margin-bottom: 24px; break-inside: avoid; }
   #cv-name { margin-bottom: 2px; font-size: 34px; line-height: 1.2; letter-spacing: -.6px; }
   #cv-name span { margin-left: 10px; font-size: 24px; letter-spacing: 1.2px; vertical-align: 1px; }

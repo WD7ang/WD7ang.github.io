@@ -4,6 +4,8 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；两者共享同一份内容数据，PDF 在修改内容后重新导出。
 
+CV 网页顶部纵向放置 `Print / Save as PDF` 和 `Download PDF`，页脚仅显示版权。顶部操作区和页脚均不出现在打印版中。主页 Services 保留 Reviewer，并列出 2026 年西电升学经验分享群负责人经历（3,000 人）；CV 的 Professional Services 不显示 Reviewer。
+
 ## 本地运行
 
 安装 Ruby 和 Bundler 后：
