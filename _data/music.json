@@ -1,12 +1,12 @@
 [
   {
-    "id": "qian-nian-zhi-hou",
-    "title": "千年之后",
-    "artist": "艾拉拉 /  Luv4",
-    "album": "千年之后",
-    "cover": "/images/music/qian-nian-zhi-hou.jpg",
-    "source": "/media/music/qian-nian-zhi-hou.m4a",
-    "duration": 134.29333333333332
+    "id": "feng-chui-wu",
+    "title": "风吹雾",
+    "artist": "Adoreya",
+    "album": "花霧",
+    "cover": "/images/music/feng-chui-wu.jpg",
+    "source": "/media/music/feng-chui-wu.m4a",
+    "duration": 124.28383333333333
   },
   {
     "id": "yuan-fang-chuan-lai-feng-di",
@@ -16,6 +16,60 @@
     "cover": "/images/music/yuan-fang-chuan-lai-feng-di.jpg",
     "source": "/media/music/yuan-fang-chuan-lai-feng-di.m4a",
     "duration": 188.13566666666668
+  },
+  {
+    "id": "comfort-chain",
+    "title": "Comfort Chain",
+    "artist": "instupendo",
+    "album": "Comfort Chain",
+    "cover": "/images/music/comfort-chain.jpg",
+    "source": "/media/music/comfort-chain.m4a",
+    "duration": 184.36643990929704
+  },
+  {
+    "id": "icarus",
+    "title": "ICARUS",
+    "artist": "Tony Ann",
+    "album": "AWAKENING",
+    "cover": "/images/music/icarus.jpg",
+    "source": "/media/music/icarus.m4a",
+    "duration": 199.49070294784582
+  },
+  {
+    "id": "forest-mixtape",
+    "title": "Forest Mixtape",
+    "artist": "Christina Kuong",
+    "album": "Tsuki's Odyssey (Original Game Soundtrack) Vol. 2",
+    "cover": "/images/music/forest-mixtape.jpg",
+    "source": "/media/music/forest-mixtape.m4a",
+    "duration": 140.02321995464854
+  },
+  {
+    "id": "yu-zhong-wu",
+    "title": "雨中舞",
+    "artist": "Soulloom苏洛牧",
+    "album": "雨中舞",
+    "cover": "/images/music/yu-zhong-wu.jpg",
+    "source": "/media/music/yu-zhong-wu.m4a",
+    "duration": 151.808
+  },
+  {
+    "id": "born-a-stranger",
+    "title": "Born a Stranger",
+    "artist": "Kan R. Gao",
+    "album": "To the Moon",
+    "cover": "/images/music/born-a-stranger.jpg",
+    "source": "/media/music/born-a-stranger.m4a",
+    "duration": 101.73866666666666
+  },
+  {
+    "id": "qian-nian-zhi-hou",
+    "title": "千年之后",
+    "artist": "艾拉拉 /  Luv4",
+    "album": "千年之后",
+    "cover": "/images/music/qian-nian-zhi-hou.jpg",
+    "source": "/media/music/qian-nian-zhi-hou.m4a",
+    "duration": 134.29333333333332
   },
   {
     "id": "ahead-of-us",
@@ -36,58 +90,13 @@
     "duration": 136.53054421768707
   },
   {
-    "id": "yu-zhong-wu",
-    "title": "雨中舞",
-    "artist": "Soulloom苏洛牧",
-    "album": "雨中舞",
-    "cover": "/images/music/yu-zhong-wu.jpg",
-    "source": "/media/music/yu-zhong-wu.m4a",
-    "duration": 151.808
-  },
-  {
-    "id": "icarus",
-    "title": "ICARUS",
-    "artist": "Tony Ann",
-    "album": "AWAKENING",
-    "cover": "/images/music/icarus.jpg",
-    "source": "/media/music/icarus.m4a",
-    "duration": 199.49070294784582
-  },
-  {
-    "id": "feng-chui-wu",
-    "title": "风吹雾",
-    "artist": "Adoreya",
-    "album": "花霧",
-    "cover": "/images/music/feng-chui-wu.jpg",
-    "source": "/media/music/feng-chui-wu.m4a",
-    "duration": 124.28383333333333
-  },
-  {
-    "id": "forest-mixtape",
-    "title": "Forest Mixtape",
-    "artist": "Christina Kuong",
-    "album": "Tsuki's Odyssey (Original Game Soundtrack) Vol. 2",
-    "cover": "/images/music/forest-mixtape.jpg",
-    "source": "/media/music/forest-mixtape.m4a",
-    "duration": 140.02321995464854
-  },
-  {
-    "id": "comfort-chain",
-    "title": "Comfort Chain",
-    "artist": "instupendo",
-    "album": "Comfort Chain",
-    "cover": "/images/music/comfort-chain.jpg",
-    "source": "/media/music/comfort-chain.m4a",
-    "duration": 184.36643990929704
-  },
-  {
-    "id": "born-a-stranger",
-    "title": "Born a Stranger",
-    "artist": "Kan R. Gao",
-    "album": "To the Moon",
-    "cover": "/images/music/born-a-stranger.jpg",
-    "source": "/media/music/born-a-stranger.m4a",
-    "duration": 101.73866666666666
+    "id": "kai-wang-chun-tian-de-di-tie-09x",
+    "title": "开往春天的地铁 (0.9x)",
+    "artist": "昱",
+    "album": "开往春天的地铁 (0.9x)",
+    "cover": "/images/music/kai-wang-chun-tian-de-di-tie-09x.jpg",
+    "source": "/media/music/kai-wang-chun-tian-de-di-tie-09x.m4a",
+    "duration": 140.52716553287982
   },
   {
     "id": "magnolia",
@@ -97,14 +106,5 @@
     "cover": "/images/music/magnolia.jpg",
     "source": "/media/music/magnolia.m4a",
     "duration": 139.646485260771
-  },
-  {
-    "id": "kai-wang-chun-tian-de-di-tie-09x",
-    "title": "开往春天的地铁 (0.9x)",
-    "artist": "昱",
-    "album": "开往春天的地铁 (0.9x)",
-    "cover": "/images/music/kai-wang-chun-tian-de-di-tie-09x.jpg",
-    "source": "/media/music/kai-wang-chun-tian-de-di-tie-09x.m4a",
-    "duration": 140.52716553287982
   }
 ]

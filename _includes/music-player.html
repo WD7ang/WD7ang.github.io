@@ -1,24 +1,27 @@
 {% assign first_track = site.data.music | first %}
-{% assign card_step = 360.0 | divided_by: site.data.music.size %}
 <section class="home-music" id="music" aria-label="音乐 / Music" data-music-player>
   <div class="music-heading"><span>Music <span lang="zh-CN">/ 音乐</span></span><span data-music-count>01 / {{ site.data.music.size }}</span></div>
-  <div class="music-stage" role="region" aria-roledescription="carousel" aria-label="左右滑动选歌 / Swipe to choose a song" tabindex="0" data-music-stage hidden>
-    <div class="music-ring" data-music-ring>
-      {% for track in site.data.music %}
-      <button class="music-card" type="button" style="--card-angle: {{ forloop.index0 | times: card_step }}deg" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-source="{{ track.source | relative_url }}" data-duration="{{ track.duration }}" aria-label="{{ track.title | escape }} — {{ track.artist | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
-        <span class="music-disc"><img src="{{ track.cover | relative_url }}" alt="" width="160" height="160" draggable="false" loading="lazy"></span>
+  <div class="music-layout" data-music-enhanced hidden>
+    <div class="music-deck">
+      <button class="music-record" type="button" aria-label="播放 / Play" title="播放 / Play" data-music-record>
+        <span class="music-disc"><img src="{{ first_track.cover | relative_url }}" alt="{{ first_track.title | escape }}" width="160" height="160" data-music-cover></span>
       </button>
-      {% endfor %}
+      <div class="music-now-playing"><strong data-music-title>{{ first_track.title }}</strong><span data-music-artist>{{ first_track.artist }}</span></div>
+      <div class="music-transport">
+        <button class="music-button" type="button" aria-label="上一首 / Previous track" title="上一首 / Previous" data-music-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5l-9 7 9 7V5Z"/></svg></button>
+        <button class="music-button music-play" type="button" aria-label="播放 / Play" title="播放 / Play" data-music-play><svg viewBox="0 0 24 24" aria-hidden="true"><path class="music-play-symbol" d="m9 5 10 7-10 7V5Z"/><path class="music-pause-symbol" d="M9 5v14M16 5v14"/></svg></button>
+        <button class="music-button" type="button" aria-label="下一首 / Next track" title="下一首 / Next" data-music-next><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l9 7-9 7V5Z"/></svg></button>
+      </div>
     </div>
+    <ol class="music-playlist" aria-label="播放列表 / Playlist" data-music-playlist>
+      {% for track in site.data.music %}
+      <li><button class="music-track" type="button" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-source="{{ track.source | relative_url }}" data-cover="{{ track.cover | relative_url }}" data-duration="{{ track.duration }}" title="{{ track.title | escape }} — {{ track.artist | escape }}" aria-label="播放 / Play {{ track.title | escape }} — {{ track.artist | escape }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+        <img src="{{ track.cover | relative_url }}" alt="" width="24" height="24" draggable="false" loading="lazy"><span>{{ track.title }}</span>
+      </button></li>
+      {% endfor %}
+    </ol>
   </div>
-  <p class="music-gesture-hint" data-music-enhanced hidden>滑动选歌 <span lang="en">/ Swipe to browse</span></p>
-  <div class="music-now-playing"><strong data-music-title>{{ first_track.title }}</strong><span data-music-artist>{{ first_track.artist }}</span></div>
   <audio class="music-audio" controls preload="none" src="{{ first_track.source | relative_url }}" data-music-audio></audio>
-  <div class="music-transport" data-music-enhanced hidden>
-    <button class="music-button" type="button" aria-label="上一首 / Previous track" title="上一首 / Previous" data-music-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5l-9 7 9 7V5Z"/></svg></button>
-    <button class="music-button music-play" type="button" aria-label="播放 / Play" title="播放 / Play" data-music-play><svg viewBox="0 0 24 24" aria-hidden="true"><path class="music-play-symbol" d="m9 5 10 7-10 7V5Z"/><path class="music-pause-symbol" d="M9 5v14M16 5v14"/></svg></button>
-    <button class="music-button" type="button" aria-label="下一首 / Next track" title="下一首 / Next" data-music-next><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l9 7-9 7V5Z"/></svg></button>
-  </div>
   <div class="music-progress" data-music-enhanced hidden>
     <input type="range" min="0" max="100" value="0" step="0.1" aria-label="播放进度 / Playback position" data-music-seek disabled>
     <div class="music-times"><span data-music-elapsed>0:00</span><span data-music-duration>--:--</span></div>
