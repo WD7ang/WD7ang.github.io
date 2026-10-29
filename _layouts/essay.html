@@ -1,0 +1,26 @@
+---
+layout: academic
+---
+<article class="essay-reader" lang="{{ page.lang | default: 'zh-CN' }}">
+  <header class="essay-heading">
+    <a class="essay-back" href="{{ '/blog/#essays' | relative_url }}">← 回到随笔</a>
+    <p class="eyebrow">随笔 · Reading & reflection</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="essay-meta">汤维栋 <span aria-hidden="true">/</span> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time></p>
+  </header>
+  <div class="essay-content">{{ content }}</div>
+  {% if page.original_images %}
+  <details class="essay-originals">
+    <summary>查看原始图文 <span>· {{ page.original_images.size }} 页</span></summary>
+    <div class="essay-original-pages">
+      {% for original in page.original_images %}
+      <figure>
+        <img src="{{ original | relative_url }}" alt="《{{ page.title | escape }}》原始图文，第 {{ forloop.index }} 页" width="1080" height="1800" loading="lazy">
+        <figcaption>{{ forloop.index }} / {{ page.original_images.size }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </details>
+  {% endif %}
+  <footer class="essay-end"><span aria-hidden="true">✦</span><a href="{{ '/blog/#essays' | relative_url }}">合上这一页，回到书架 ↗</a></footer>
+</article>
