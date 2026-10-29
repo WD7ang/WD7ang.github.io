@@ -5,6 +5,9 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   const audio = find('audio');
   const playlist = find('playlist');
   const playButton = find('play');
+  const mobilePlayButton = find('mobile-play');
+  const toggle = find('toggle');
+  const mobileViewport = window.matchMedia('(max-width: 767px)');
   const record = find('record');
   const seek = find('seek');
   const volume = find('volume');
@@ -15,11 +18,12 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   let position = 0;
   let revision = 0;
   let lastVolume = .8;
+  let mobileExpanded = false;
 
   const setPlaying = (value) => {
     player.classList.toggle('is-playing', value);
     const label = value ? '暂停 / Pause' : '播放 / Play';
-    [playButton, record].forEach((button) => {
+    [playButton, mobilePlayButton, record].forEach((button) => {
       button.setAttribute('aria-label', label);
       button.title = label;
     });
@@ -53,10 +57,28 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
     }
   };
   const revealTrack = (button) => {
+    if (player.classList.contains('is-collapsed')) {
+      const left = button.offsetLeft;
+      const right = left + button.offsetWidth;
+      if (left < playlist.scrollLeft) playlist.scrollLeft = left;
+      else if (right > playlist.scrollLeft + playlist.clientWidth) playlist.scrollLeft = right - playlist.clientWidth;
+      return;
+    }
     const top = button.offsetTop;
     const bottom = top + button.offsetHeight;
     if (top < playlist.scrollTop) playlist.scrollTop = top;
     else if (bottom > playlist.scrollTop + playlist.clientHeight) playlist.scrollTop = bottom - playlist.clientHeight;
+  };
+  const updateLayout = () => {
+    const collapsed = mobileViewport.matches && !mobileExpanded;
+    player.classList.toggle('is-collapsed', collapsed);
+    toggle.setAttribute('aria-expanded', String(!collapsed));
+    const label = collapsed ? '展开音乐播放器 / Expand music player' : '收起音乐播放器 / Collapse music player';
+    toggle.setAttribute('aria-label', label);
+    toggle.title = label;
+    playlist.scrollTop = 0;
+    playlist.scrollLeft = 0;
+    revealTrack(tracks[position]);
   };
   const render = () => {
     const track = tracks[position].dataset;
@@ -109,7 +131,13 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   find('prev').addEventListener('click', () => select(position - 1));
   find('next').addEventListener('click', () => select(position + 1));
   playButton.addEventListener('click', togglePlayback);
+  mobilePlayButton.addEventListener('click', togglePlayback);
   record.addEventListener('click', togglePlayback);
+  toggle.addEventListener('click', () => {
+    mobileExpanded = !mobileExpanded;
+    updateLayout();
+  });
+  mobileViewport.addEventListener('change', updateLayout);
   playlist.addEventListener('click', (event) => {
     const button = event.target.closest('[data-music-track]');
     if (button) select(tracks.indexOf(button));
@@ -118,8 +146,8 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
     const current = tracks.indexOf(event.target.closest('[data-music-track]'));
     if (current < 0) return;
     let next;
-    if (event.key === 'ArrowUp') next = modulo(current - 1);
-    if (event.key === 'ArrowDown') next = modulo(current + 1);
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = modulo(current - 1);
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = modulo(current + 1);
     if (event.key === 'Home') next = 0;
     if (event.key === 'End') next = tracks.length - 1;
     if (next !== undefined) {
@@ -155,6 +183,8 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   audio.controls = false;
   audio.hidden = true;
   player.querySelectorAll('[data-music-enhanced]').forEach((element) => element.hidden = false);
+  player.classList.add('is-enhanced');
+  updateLayout();
   render();
   updateVolume();
   // Start audible playback when allowed; otherwise retain the browser's click-to-play requirement.
