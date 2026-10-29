@@ -54,7 +54,6 @@ img { border: none; }
 #toptitle h1 { margin-bottom: 0; padding-bottom: .1em; padding-top: 0; margin-top: .5em; border-bottom: none; }
 #toptitle + h3 { margin-top: 0; }
 .cv-contact { overflow-wrap: anywhere; }
-.cv-contact .cv-actions { white-space: normal; }
 .cv-stat-link { display: inline-block; vertical-align: middle; line-height: 0; }
 .cv-stat-link:hover { border-bottom: none; }
 .cv-stat-badge { display: inline-block; height: 20px; width: auto; vertical-align: middle; }
@@ -113,7 +112,7 @@ img { border: none; }
   html, body { background: #fff; }
   body { max-width: none; margin: 0; padding: 0; font-size: 10pt; }
   #layout-content { padding: 0; margin: 0; }
-  .skip-link, .cv-actions, .cv-footer, .cv-star-details { display: none !important; }
+  .skip-link, .cv-footer, .cv-star-details { display: none !important; }
   .cv-profile { display: table; width: 100%; break-inside: avoid; }
   .cv-profile tbody { display: table-row-group; }
   .cv-profile tr { display: table-row; }

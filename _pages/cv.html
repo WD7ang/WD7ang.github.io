@@ -16,7 +16,7 @@ permalink: /cv/
           GitHub: <a href="https://github.com/WD7ang">@WD7ang</a> <a class="cv-stat-link" data-github-badge href="{% if site.data.cv_stats.manual %}https://github.com/WD7ang{% else %}#cv-github-stars{% endif %}" aria-label="GitHub stars: {{ cv_stats.github_stars }}" title="GitHub stars: {{ cv_stats.github_stars }}">{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}</a><br>
           Scholar: <a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a><br>
           WeChat: <a href="{{ '/images/vx.jpg' | relative_url }}">d7ang0705</a><br>
-          <span class="cv-actions"><a href="{{ '/' | relative_url }}">[Homepage]</a> <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">[Download PDF]</a> <button class="print-link" type="button" data-print-cv hidden>[Print / Save as PDF]</button></span>
+          Homepage: <a href="https://wd7ang.github.io/">https://wd7ang.github.io/</a>
         </p>
         {% unless site.data.cv_stats.manual %}<details class="cv-star-details" id="cv-github-stars">
           <summary>Star breakdown</summary>
@@ -118,6 +118,6 @@ Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. P
   <h2 id="cv-awards">Selected Awards</h2>
   <ul><li>2025 &amp; 2026, Academic Scholarship, Xidian University (Top 5%).</li></ul>
 
-  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">Homepage</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a></footer>
+  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">Homepage</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
 </article>
 {% unless site.data.cv_stats.manual %}<script type="application/json" id="profile-stats-config">{"projects":{{ site.data.github_projects | jsonify }},"snapshot":{{ site.data.profile_stats | jsonify }}}</script>{% endunless %}
