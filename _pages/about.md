@@ -48,7 +48,7 @@ redirect_from:
 
     .experience-card {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         background: #f7f9fb;
         border-radius: 12px;
         padding: 16px;
@@ -63,12 +63,34 @@ redirect_from:
     .experience-logo {
         width: 60px;
         height: 60px;
+        flex-shrink: 0;
         margin-right: 20px;
         border-radius: 8px;
         object-fit: contain;
     }
     .experience-info {
+        flex: 1;
+        min-width: 0;
         font-family: "Segoe UI", sans-serif;
+    }
+    .experience-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 8px 20px;
+    }
+    .experience-date {
+        flex-shrink: 0;
+        color: #697386;
+        font-size: 0.9em;
+        white-space: nowrap;
+    }
+    .experience-role {
+        margin-top: 3px;
+        font-weight: 500;
+    }
+    .experience-description {
+        margin-top: 3px;
     }
     .experience-info strong {
         font-size: 1.1em;
@@ -84,6 +106,12 @@ redirect_from:
     }
     .experience-card {
         box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+        .experience-card { padding: 12px; }
+        .experience-logo { width: 40px; height: 40px; margin-right: 12px; }
+        .experience-header { flex-wrap: wrap; gap: 2px 12px; }
+        .experience-date { margin-left: auto; }
     }
     .publication-card {
         display: flex;
@@ -418,18 +446,24 @@ Experience
   <div class="experience-card">
       <img src="images/InfRec.png" alt="InfRec cardinal logo" class="experience-logo">
       <div class="experience-info">
-          <strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong><br>
-          <em>2026.07 - Present</em><br>
-          Chief Research Officer (Founding Member), leading research on recursive self-improvement and long-horizon world interaction.
+          <div class="experience-header">
+              <strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong>
+              <span class="experience-date">2026.07 - Present</span>
+          </div>
+          <div class="experience-role">Chief Research Officer (Founding Member)</div>
+          <div class="experience-description">Leading research on recursive self-improvement and long-horizon world interaction.</div>
       </div>
   </div>
 
   <div class="experience-card">
       <img src="images/Alibaba.png" alt="Alibaba logo" class="experience-logo">
       <div class="experience-info">
-          <strong>Alibaba Group</strong><br>
-          <em>2026.05 - 2026.07</em><br>
-          Completed my MLLM research internship in post-training, visual-semantic alignment, and large-scale e-commerce retrieval.
+          <div class="experience-header">
+              <strong>Alibaba Group</strong>
+              <span class="experience-date">2026.05 - 2026.07</span>
+          </div>
+          <div class="experience-role">MLLM Research Intern</div>
+          <div class="experience-description">Research on post-training, visual-semantic alignment, and large-scale e-commerce retrieval.</div>
       </div>
   </div>
 
@@ -438,18 +472,24 @@ Experience
   <div class="experience-card">
       <img src="images/TeleAI.png" alt="TeleAI logo" class="experience-logo">
       <div class="experience-info">
-          <strong>Institute of Artificial Intelligence of China Telecom</strong><br>
-          <em>2026.01 - 2026.03</em><br>
-          Completed my internship working on AI infrastructure for LLM training and inference on Huawei Ascend 910B.
+          <div class="experience-header">
+              <strong>Institute of Artificial Intelligence of China Telecom</strong>
+              <span class="experience-date">2026.01 - 2026.03</span>
+          </div>
+          <div class="experience-role">LLM Research Intern</div>
+          <div class="experience-description">AI infrastructure for LLM training and inference on Huawei Ascend 910B.</div>
       </div>
   </div>
 
   <div class="experience-card">
       <img src="images/NUS-crest.png" alt="NUS crest" class="experience-logo" width="60" height="60">
       <div class="experience-info">
-          <strong>National University of Singapore</strong><br>
-          <em>2024.10 - 2025.10</em><br>
-          Research Assistant at <a href="https://ai.comp.nus.edu.sg/"><em>HPC-AI Lab</em></a> advised by <a href="https://www.comp.nus.edu.sg/~youy/"><em>Yang You</em></a>, <a href="https://wangbo-zhao.github.io/"><em>Wangbo Zhao</em></a> and <a href="https://lancezpf.github.io/"><em>Pengfei Zhou</em></a>
+          <div class="experience-header">
+              <strong>National University of Singapore</strong>
+              <span class="experience-date">2024.10 - 2025.10</span>
+          </div>
+          <div class="experience-role">Research Assistant · <a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab</a></div>
+          <div class="experience-description">Advised by <a href="https://www.comp.nus.edu.sg/~youy/">Yang You</a>, <a href="https://wangbo-zhao.github.io/">Wangbo Zhao</a> and <a href="https://lancezpf.github.io/">Pengfei Zhou</a></div>
       </div>
   </div>
 
@@ -457,9 +497,12 @@ Experience
   <div class="experience-card">
       <img src="images/XDU.png" alt="Xi'dian logo" class="experience-logo">
       <div class="experience-info">
-          <strong>Xidian University</strong><br>
-          <em>2023.09 - Present</em><br>
-          B.E at <a href="https://ste.xidian.edu.cn/"><em>School of Telecommunication Engineering</em></a> & Research Assistant advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao"><em>Xiumei Wang</em></a>
+          <div class="experience-header">
+              <strong>Xidian University</strong>
+              <span class="experience-date">2023.09 - Present</span>
+          </div>
+          <div class="experience-role">Undergraduate Student &amp; Research Assistant</div>
+          <div class="experience-description">B.E. at <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a>; advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao">Xiumei Wang</a></div>
       </div>
   </div>
 
