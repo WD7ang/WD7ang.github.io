@@ -1,0 +1,151 @@
+[
+  {
+    "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+    "title_url": "https://arxiv.org/pdf/2610.36077",
+    "authors_html": "<strong>W. Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
+    "venue": "arXiv preprint, 2026",
+    "notes": null,
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2610.36077"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/InfRec-Cardinal/The-Trinity"
+      },
+      {
+        "label": "Project Page",
+        "url": "https://trinity-rsi.github.io/"
+      }
+    ],
+    "group": "Core"
+  },
+  {
+    "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
+    "title_url": "https://arxiv.org/pdf/2606.04184",
+    "authors_html": "<strong>W. Tang</strong>, J. Li, Y. Hou, Z. Mei, C. Zhang, X. Wan, Z. Liang, P. Zhou<sup>†</sup>, Y. You, &amp; W. Zhao<sup>†</sup>.",
+    "venue": "ACL 2026",
+    "notes": "(19% acceptance rate, CCF-A top-tier conference)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2606.04184"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/Twwwd/GroupToM-Bench"
+      }
+    ],
+    "group": "Core"
+  },
+  {
+    "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
+    "title_url": null,
+    "authors_html": "T. D. Huang, <strong>W. Tang<sup>‡</sup></strong>, W. Q. Xu, &amp; X. Guo<sup>†</sup>.",
+    "venue": "ACL 2026",
+    "notes": "(19% acceptance rate, CCF-A top-tier conference)",
+    "links": [],
+    "group": "Core"
+  },
+  {
+    "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
+    "title_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html",
+    "authors_html": "<strong>W. Tang</strong>, Z. Liang, X. Wan, C. Zhu, Z. Xu, P. Zhou<sup>†</sup>, Y. Song, Y. You, &amp; W. Zhao<sup>†</sup>.",
+    "venue": "CVPR 2026",
+    "notes": "(25% acceptance rate, CCF-A top-tier conference)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"
+      }
+    ],
+    "group": "Core"
+  },
+  {
+    "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples",
+    "title_url": "https://arxiv.org/pdf/2601.07293",
+    "authors_html": "<strong>W. Tang</strong>, X. Wan, S. Li, &amp; X. Wang<sup>†</sup>.",
+    "venue": "PRCV 2025",
+    "notes": "(29% acceptance rate, CCF-C)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2601.07293"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/WD7ang/VAR-Scaling"
+      }
+    ],
+    "group": "Core"
+  },
+  {
+    "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
+    "title_url": "https://ojs.aaai.org/index.php/AAAI/article/download/40134/44095",
+    "authors_html": "P. Zhou, X. Peng, F. Zhang, Z. Xu, J. Ai, Y. Qiu, W. Zhao, J. Song, C. Li, <strong>W. Tang</strong>, Z. Li, H. Zhang, Z. Li, X. Mao, Y. Feng, J. Sun, K. Wang, X. Chang, W. Shao, Y. You, &amp; K. Zhang<sup>†</sup>.",
+    "venue": "AAAI 2026",
+    "notes": "(17% acceptance rate, CCF-A)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/download/40134/44095"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/LanceZPF/MDK12"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
+    "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
+    "title_url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_EA-Vit_Efficient_Adaptation_for_Elastic_Vision_Transformer_ICCV_2025_paper.pdf",
+    "authors_html": "C. Zhu, W. Zhao<sup>†</sup>, H. Zhang, Y. Zhou, <strong>W. Tang</strong>, S. Wang, Z. Yuan, Y. Shang, X. Peng, K. Wang, &amp; D. Yang<sup>†</sup>.",
+    "venue": "ICCV 2025",
+    "notes": "(25% acceptance rate, CCF-A top-tier conference)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_EA-Vit_Efficient_Adaptation_for_Elastic_Vision_Transformer_ICCV_2025_paper.pdf"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/zcxcf/EA-ViT"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
+    "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
+    "title_url": "https://arxiv.org/pdf/2503.12545",
+    "authors_html": "Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, X. Peng, W. Shao, H. Yao, &amp; K. Zhang<sup>†</sup>.",
+    "venue": "arXiv preprint, 2025",
+    "notes": null,
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2503.12545"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/xuzhaopan/PEBench"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
+    "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
+    "title_url": "https://ieeexplore.ieee.org/abstract/document/11515063",
+    "authors_html": "Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. Peng, S. Zhao, H. Yao, &amp; K. Zhang<sup>†</sup>.",
+    "venue": "IEEE Transactions on Network Science and Engineering, 2025",
+    "notes": "(IF=7.9, JCR-Q1)",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11515063"
+      }
+    ],
+    "group": "Collaborative"
+  }
+]

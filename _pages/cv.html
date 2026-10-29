@@ -6,12 +6,10 @@ permalink: /cv/
 ---
 {% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}
 <article class="cv-document" aria-labelledby="cv-name">
-  <div class="cv-frontmatter">
     <header class="cv-profile">
       <div class="profile-information">
         <h1 id="cv-name">Weidong Tang <span lang="zh">汤维栋</span></h1>
-        <p class="cv-headline">Chief Research Officer &middot; Founding Member</p>
-        <p class="cv-affiliation"><img src="{{ '/images/InfRec.png' | relative_url }}" width="20" height="20" alt=""><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></p>
+        <p class="cv-headline">Chief Research Officer (Founding Member) <span class="cv-separator">&middot;</span> <span class="cv-affiliation"><img src="{{ '/images/InfRec.png' | relative_url }}" width="20" height="20" alt=""><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></span></p>
         <div class="cv-contact">
           <a class="cv-contact-item" href="mailto:wdtang0705@gmail.com">{% include cv-icon.svg name='mail' %}wdtang0705@gmail.com</a>
           <span class="cv-contact-item">{% include cv-icon.svg name='globe' %}<span>Homepage: <a href="https://wd7ang.github.io/">https://wd7ang.github.io/</a></span></span>
@@ -35,7 +33,7 @@ permalink: /cv/
         <li class="cv-overview-entry">
           <img class="cv-org-logo" src="{{ education.logo | relative_url }}" width="30" height="30" alt="">
           <div class="cv-overview-content">
-            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{{ education.organization }}</a><span class="cv-date">{{ education.date_start }} - {{ education.date_end }}{% if education.date_note %}<span class="cv-date-note"> ({{ education.date_note }})</span>{% endif %}</span></div>
+            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{{ education.organization }}</a><span class="cv-date">{% include cv-date.html value=education.date_start %} - {% include cv-date.html value=education.date_end %}{% if education.date_note %}<span class="cv-date-note"> ({{ education.date_note }})</span>{% endif %}</span></div>
             <p class="cv-entry-role">{{ education.degree }}</p>
             <p class="cv-entry-note">{{ education.details_html }}</p>
           </div>
@@ -49,82 +47,72 @@ permalink: /cv/
         <li class="cv-overview-entry">
           <img class="cv-org-logo cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="30" height="30" alt="">
           <div class="cv-overview-content">
-            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{{ experience.date_start }} - {{ experience.date_end }}</span></div>
+            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} - {% include cv-date.html value=experience.date_end %}</span></div>
             <p class="cv-entry-role">{{ experience.role }}</p>
           </div>
         </li>{% endfor %}
       </ul>
     </section>
+
+  <section aria-labelledby="cv-publications">
+    <h2 class="cv-section-title" id="cv-publications">Publications</h2>
+    <p class="cv-publication-legend">* Equal contribution &middot; &dagger; Corresponding author &middot; &Dagger; Project leader</p>
+    <ol class="cv-publications">{% for publication in site.data.cv_publications %}
+      <li class="cv-publication">
+        <span class="cv-publication-number" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <div class="cv-publication-body">
+          {% if publication.title_url %}<a class="cv-paper-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% else %}<span class="cv-paper-title">{{ publication.title }}</span>{% endif %}
+          <p class="cv-paper-authors">{{ publication.authors_html }}</p>
+          <div class="cv-paper-meta"><span class="cv-venue">{{ publication.venue }}</span>{% if publication.notes %} <span class="cv-paper-notes">{{ publication.notes }}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}</div>
+        </div>
+      </li>{% endfor %}
+    </ol>
+  </section>
+
+  <section aria-labelledby="cv-projects">
+    <h2 class="cv-section-title" id="cv-projects">Selected Projects</h2>
+    <ul class="cv-project-list"><li>
+      <h3 class="cv-project-title"><a href="https://github.com/WD7ang/WowPage">WowPage</a></h3>
+      <p class="cv-project-authors"><strong>Weidong Tang</strong>, <a href="https://selen-suyue.github.io/">Yue Su</a>.</p>
+      <p class="cv-project-description">A clean and standalone homepage template. <span class="cv-paper-links"><a href="https://github.com/WD7ang/WowPage">GitHub</a><a href="http://xhslink.cn/o/58CQ8ccmWnc">RedNote</a></span></p>
+      <p class="cv-project-description">Developed an open-source, lightweight personal homepage framework featuring customizable layouts for researchers to present publications, projects, and academic profiles.</p>
+    </li></ul>
+  </section>
+
+  <div class="cv-bottom-grid">
+    <section aria-labelledby="cv-awards">
+      <h2 class="cv-section-title" id="cv-awards">Awards</h2>
+      <ul class="cv-compact-list"><li class="cv-entry-heading"><span>Academic Scholarship, Xidian University <span class="cv-muted">(Top 5%)</span></span><span class="cv-date">2025 &amp; 2026</span></li></ul>
+    </section>
+    <section aria-labelledby="cv-services">
+      <h2 class="cv-section-title" id="cv-services">Professional Services</h2>
+      <ul class="cv-compact-list">
+        <li>AI Team Lead, Xidian-Inspur Club <span class="cv-muted">(Jun 2025 - Present)</span>.</li>
+        <li>Reviewer for ICIC 2026, PRCV 2025-2026, EMNLP 2026, and ICLR 2026.</li>
+      </ul>
+    </section>
   </div>
 
-  <h2 id="cv-biography">Biography</h2>
-  <p>I am the Chief Research Officer and a founding member of <a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a>, leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data. My research focuses on recursive self-improvement and long-horizon world interaction, enabling AI agents to accumulate long-term knowledge and autonomously control embodied robots.</p>
-  <p>I am also pursuing a B.E. in the <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a> at <a href="https://www.xidian.edu.cn/">Xidian University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao">Xiumei Wang</a>. Previously, I was a research intern at Alibaba and TeleAI, and a Research Assistant at the <a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab, National University of Singapore</a>.</p>
-
-  <h2 id="cv-news">News</h2>
-  <div class="cv-news-scroll" tabindex="0" role="region" aria-labelledby="cv-news">
-    <ul>{% for item in site.data.news %}<li>{{ item.date }}: {{ item.text }}</li>{% endfor %}</ul>
-  </div>
-
-  <h2 id="cv-publications">Publications</h2>
-  <div class="cv-publications-scroll" tabindex="0" role="region" aria-labelledby="cv-publications">
-    <p>* Equal contribution &middot; &dagger; Corresponding author &middot; &Dagger; Project leader</p>
-    <h3 class="cv-publication-group">Core Publications</h3>
-    <ul class="cv-publications">
-<li><p><a class="paper-title" href="https://arxiv.org/pdf/2610.36077">The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents</a><br>
-<strong>W. Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.<br>
-<span class="cv-venue">arXiv preprint, 2026 <a href="https://arxiv.org/pdf/2610.36077">Paper</a> <a href="https://github.com/InfRec-Cardinal/The-Trinity">GitHub</a> <a href="https://trinity-rsi.github.io/">Project Page</a></span></p></li>
-<li><p><a class="paper-title" href="https://arxiv.org/pdf/2606.04184">GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</a><br>
-<strong>W. Tang</strong>, J. Li, Y. Hou, Z. Mei, C. Zhang, X. Wan, Z. Liang, P. Zhou<sup>†</sup>, Y. You, &amp; W. Zhao<sup>†</sup>.<br>
-<span class="cv-venue">ACL 2026 <span>(19% acceptance rate, CCF-A top-tier conference)</span> <a href="https://arxiv.org/pdf/2606.04184">Paper</a> <a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench">Dataset</a></span></p></li>
-<li><p><span class="paper-title">MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</span><br>
-T. D. Huang, <strong>W. Tang<sup>‡</sup></strong>, W. Q. Xu, &amp; X. Guo<sup>†</sup>.<br>
-<span class="cv-venue">ACL 2026 <span>(19% acceptance rate, CCF-A top-tier conference)</span></span></p></li>
-<li><p><a class="paper-title" href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html">Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</a><br>
-<strong>W. Tang</strong>, Z. Liang, X. Wan, C. Zhu, Z. Xu, P. Zhou<sup>†</sup>, Y. Song, Y. You, &amp; W. Zhao<sup>†</sup>.<br>
-<span class="cv-venue">CVPR 2026 <span>(25% acceptance rate, CCF-A top-tier conference)</span> <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html">Paper</a></span></p></li>
-<li><p><a class="paper-title" href="https://arxiv.org/pdf/2601.07293">Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</a><br>
-<strong>W. Tang</strong>, X. Wan, S. Li, &amp; X. Wang<sup>†</sup>.<br>
-<span class="cv-venue">PRCV 2025 <span>(29% acceptance rate, CCF-C)</span> <a href="https://arxiv.org/pdf/2601.07293">Paper</a> <a href="https://github.com/WD7ang/VAR-Scaling">GitHub</a></span></p></li>
-    </ul>
-    <h3 class="cv-publication-group">Collaborative Publications</h3>
-    <ul class="cv-publications">
-<li><p><a class="paper-title" href="https://ojs.aaai.org/index.php/AAAI/article/download/40134/44095">MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models</a><br>
-P. Zhou, X. Peng, F. Zhang, Z. Xu, J. Ai, Y. Qiu, W. Zhao, J. Song, C. Li, <strong>W. Tang</strong>, Z. Li, H. Zhang, Z. Li, X. Mao, Y. Feng, J. Sun, K. Wang, X. Chang, W. Shao, Y. You, &amp; K. Zhang<sup>†</sup>.<br>
-<span class="cv-venue">AAAI 2026 <span>(17% acceptance rate, CCF-A)</span> <a href="https://ojs.aaai.org/index.php/AAAI/article/download/40134/44095">Paper</a> <a href="https://github.com/LanceZPF/MDK12">GitHub</a></span></p></li>
-<li><p><a class="paper-title" href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_EA-Vit_Efficient_Adaptation_for_Elastic_Vision_Transformer_ICCV_2025_paper.pdf">EA-ViT: Efficient Adaptation for Elastic Vision Transformer</a><br>
-C. Zhu, W. Zhao<sup>†</sup>, H. Zhang, Y. Zhou, <strong>W. Tang</strong>, S. Wang, Z. Yuan, Y. Shang, X. Peng, K. Wang, &amp; D. Yang<sup>†</sup>.<br>
-<span class="cv-venue">ICCV 2025 <span>(25% acceptance rate, CCF-A top-tier conference)</span> <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Zhu_EA-Vit_Efficient_Adaptation_for_Elastic_Vision_Transformer_ICCV_2025_paper.pdf">Paper</a> <a href="https://github.com/zcxcf/EA-ViT">GitHub</a></span></p></li>
-<li><p><a class="paper-title" href="https://arxiv.org/pdf/2503.12545">Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models</a><br>
-Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, X. Peng, W. Shao, H. Yao, &amp; K. Zhang<sup>†</sup>.<br>
-<span class="cv-venue">arXiv preprint, 2025 <a href="https://arxiv.org/pdf/2503.12545">Paper</a> <a href="https://huggingface.co/datasets/xuzhaopan/PEBench">Dataset</a></span></p></li>
-<li><p><a class="paper-title" href="https://ieeexplore.ieee.org/abstract/document/11515063">IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks</a><br>
-Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. Peng, S. Zhao, H. Yao, &amp; K. Zhang<sup>†</sup>.<br>
-<span class="cv-venue">IEEE Transactions on Network Science and Engineering, 2025 <span>(IF=7.9, JCR-Q1)</span> <a href="https://ieeexplore.ieee.org/abstract/document/11515063">Paper</a></span></p></li>
-    </ul>
-  </div>
-
-  <h2 id="cv-experience">Research Experience</h2>
+  <section class="cv-supplement" aria-labelledby="cv-experience">
+    <h2 class="cv-section-title" id="cv-experience">Research Details</h2>
   <ul class="cv-experience-list">{% for experience in site.data.cv_experience %}
-    <li><p class="cv-entry-heading"><span><strong><a href="{{ experience.url }}">{% if experience.affiliation %}{{ experience.affiliation }}, {% endif %}{{ experience.organization }}</a></strong> &mdash; {{ experience.role }}</span><span class="cv-date">{{ experience.date_start }} - {{ experience.date_end }}</span></p>
+    <li><p class="cv-entry-heading"><span><strong><a href="{{ experience.url }}">{% if experience.affiliation %}{{ experience.affiliation }}, {% endif %}{{ experience.organization }}</a></strong> &mdash; {{ experience.role }}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} - {% include cv-date.html value=experience.date_end %}</span></p>
       <ul>{% for detail in experience.details %}<li>{{ detail }}</li>{% endfor %}</ul>
     </li>{% endfor %}
   </ul>
 
-  <h2 id="cv-projects">Projects</h2>
-  <ul><li><p><a href="https://github.com/WD7ang/WowPage">WowPage</a><br>
-    <strong>Weidong Tang</strong>, <a href="https://selen-suyue.github.io/">Yue Su</a>.<br>
-    A clean and standalone homepage template. <a href="https://github.com/WD7ang/WowPage">[GitHub]</a> <a href="http://xhslink.cn/o/58CQ8ccmWnc">[RedNote]</a></p>
-    <p>Developed an open-source, lightweight personal homepage framework featuring customizable layouts for researchers to present publications, projects, and academic profiles.</p></li></ul>
-
-  <h2 id="cv-services">Professional Services</h2>
-  <ul>
-    <li>AI Team Lead, Xidian-Inspur Club (06/2025 - Present).</li>
-    <li>Reviewer for ICIC 2026, PRCV 2025-2026, EMNLP 2026, and ICLR 2026.</li>
-  </ul>
-
-  <h2 id="cv-awards">Selected Awards</h2>
-  <ul><li>2025 &amp; 2026, Academic Scholarship, Xidian University (Top 5%).</li></ul>
+  </section>
+  <section class="cv-supplement" aria-labelledby="cv-biography">
+    <h2 class="cv-section-title" id="cv-biography">Biography</h2>
+    <div class="cv-biography-text">
+<p>I am the Chief Research Officer and a founding member of <a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a>, leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data. My research focuses on recursive self-improvement and long-horizon world interaction, enabling AI agents to accumulate long-term knowledge and autonomously control embodied robots.</p>
+  <p>I am also pursuing a B.E. in the <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a> at <a href="https://www.xidian.edu.cn/">Xidian University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao">Xiumei Wang</a>. Previously, I was a research intern at Alibaba and TeleAI, and a Research Assistant at the <a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab, National University of Singapore</a>.</p>
+    </div>
+  </section>
+  <section class="cv-supplement" aria-labelledby="cv-news">
+    <h2 class="cv-section-title" id="cv-news">News</h2>
+    <div class="cv-news-scroll"><ul>{% for item in site.data.news %}<li>{{ item.date }}: {{ item.text }}</li>{% endfor %}</ul></div>
+  </section>
 
   <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">Homepage</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
 </article>

@@ -1,6 +1,6 @@
 # Weidong Tang · Academic homepage
 
-Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，开头按用户提供的简历截图展示个人资料、Education 和 Experience 概览。无需前端打包，旧的 AcademicPages 页面继续可用。
+Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，整体按用户提供的《Yue Su - Curriculum Vitae.pdf》排版。无需前端打包，旧的 AcademicPages 页面继续可用。
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；徽章在网页中自动更新，PDF 保留导出时的快照。
 
@@ -35,6 +35,8 @@ bundle exec jekyll serve
 | 在线 CV | `_pages/cv.html` |
 | CV 经历概览与完整研究经历（共用数据） | `_data/cv_experience.json` |
 | CV 教育信息 | `_data/cv_education.json` |
+| CV 论文（完整作者、会议信息与链接） | `_data/cv_publications.json` |
+| CV 英文月份显示 | `_includes/cv-date.html` |
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
 | 下载版 CV | `images/cv.pdf` |
 | 头像 | `images/wx.jpg` |
@@ -83,13 +85,13 @@ date: YYYY-MM-DD
 
 ## 更新 PDF
 
-1. 修改 `_pages/cv.html` 及 `_data/cv_experience.json` / `_data/cv_education.json` 中对应的内容与日期。
+1. 修改 `_pages/cv.html` 及 `_data/cv_experience.json` / `_data/cv_education.json` / `_data/cv_publications.json` 中对应的内容与日期。
 2. 构建后打开 `/cv/`，点击 **Print / Save as PDF**，选择 A4、100% 缩放、关闭浏览器自动页眉页脚。
 3. 将导出的文件保存为 `images/cv.pdf`，再次构建，检查下载按钮。
 
-本次 CV 内容依据用户于 2026-10-28 提供的《汤维栋CV.pdf》更新，包含 5 篇 Core Publications、4 篇 Collaborative Publications 和 4 段研究经历。下载版按在线 CV 导出为三页 A4。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户此前明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
+本次 CV 内容依据用户于 2026-10-28 提供的《汤维栋CV.pdf》更新，包含 5 篇 Core Publications、4 篇 Collaborative Publications 和 4 段研究经历。用户于 2026-10-29 确认按参考模板输出两页 A4 精简下载版：教育、经历概览、9 篇论文、项目、奖项与服务；详细工作说明、Biography 和 News 保留在网页，打印时隐藏 `.cv-supplement`。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户此前明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
 
-CV 桌面版采用 1000px 白色页面、两侧 70px 留白和无衬线字体。开头为大号姓名与中文名及横排联系方式，使用整行宽度，不设置照片栏；Education、Experience 使用浅蓝细分隔线、30px 机构 logo、机构名同行右对齐日期及第二行职位。详细研究经历保留在后文，与开头概览读取同一份数据。NUS logo 使用 CSS 显示原图左侧校徽。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动；打印时展开全部内容。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
+CV 采用参考 PDF 的 Segoe UI 字体、灰黑正文、浅蓝栏目线、页顶蓝粉渐变条和无照片布局。Education、Experience 使用小 logo 与同行右对齐日期，日期以英文月份显示，底层已确认的日期不变。论文按 01–09 连续编号，保留 5 篇 Core 和 4 篇 Collaborative 的数据归类，但不再分段显示；作者姓名用暗红色强调，资源链接以中点分隔。Projects 之后将 Awards、Professional Services 并列，原完整研究说明、Biography、News 保留在后续同风格栏目。页面内容自然展开，不使用内嵌滚动区域。打印使用 A4、15mm 页边距，页码在右下角。NUS logo 使用 CSS 显示原图左侧校徽。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
 
 ## 部署
 
