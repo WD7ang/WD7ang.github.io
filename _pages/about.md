@@ -241,7 +241,8 @@ redirect_from:
         font-weight: 650;
         line-height: 1.35;
         vertical-align: 1px;
-        white-space: nowrap;
+        max-width: 100%;
+        white-space: normal;
     }
 
     .full-publication-list .pub-list-title {
@@ -273,11 +274,12 @@ redirect_from:
     }
 
     .pub-list-links {
-        white-space: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 8px;
     }
 
     .pub-list-links a {
-        margin-left: 4px;
         color: #315d80 !important;
         font-weight: 600;
     }
@@ -396,9 +398,9 @@ Hi! I am a senior (4th-year) undergraduate student at Xidian University.
 
 My research interests lie at the intersection of natural language processing and computer vision, with a particular focus on **multimodal representation learning**. My long-term goal is to understand how human-like intelligence can emerge and to develop unified models that connect the physical world with human cognition.
 
-I believe that AI's role in human society will depend on its ability to understand human intentions and connect information across modalities. This motivates my interest in directions such as brain-computer interfaces (BCIs) and embodied intelligence, where shared representations may help link perception, thought, and action.
+I believe that AI’s role in human society will depend on its ability to understand human intentions and connect information across modalities. This motivates my interest in directions such as brain-computer interfaces (BCIs) and embodied intelligence, where shared representations may help link perception, thought, and action.
 
-I enjoy exploring new research directions and collaborating with researchers across disciplines. Feel free to reach out if you are interested in research collaborations or other opportunities.
+I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
 News
 ---------------
@@ -471,6 +473,23 @@ Publications
 (* equal contribution · &dagger; corresponding author · &Dagger; project leader)
 
 <div id="core-publications" class="publication-view" data-publication-view="core">
+{% assign trinity = site.data.cv_publications | where: 'title', 'The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents' | first %}
+<div class="publication-card" data-category="all">
+  <div style="display: flex; align-items: center;">
+    <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
+      <img src="images/trinity-intro.webp" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="2000" height="948" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
+    </div>
+    <div>
+      <strong><a href="{{ trinity.title_url }}">{{ trinity.title }}</a></strong><br>
+      <i style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
+      We introduce a capability-driven framework that couples world generation with agent harness evolution, enabling multimodal agents to recursively improve and transfer learned capabilities to unseen tasks.
+      <br>
+      <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
+      {% for link in trinity.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
+    </div>
+  </div>
+</div>
+
 <div class="publication-card" data-category="all">
   <div style="display: flex; align-items: center;">
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
@@ -483,8 +502,6 @@ Publications
         Jierui Li,
         Yueling Hou,
         Zihan Mei,
-        Zhigang Tian,
-        Weicheng Jiao,
         Can Zhang,
         Xinyan Wan,
         <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>,
@@ -497,8 +514,8 @@ Publications
       <b><i style="color:#315d80;">ACL 2026 &nbsp;
       </i></b>
       <a href="images/GroupToM_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://arxiv.org/pdf/2606.04184"><em>[arXiv]</em></a>
-      <a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>[code]</em></a>
+      <a href="https://aclanthology.org/2026.acl-long.1859/"><em>[Paper]</em></a>
+      <a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>[Dataset]</em></a>
     </div>
   </div>
 </div>
@@ -521,8 +538,8 @@ Publications
       <br>
       <b><i style="color:#315d80;">ACL 2026 &nbsp;
       </i></b>
-      <a href=""><em>[arXiv]</em></a>
-      <a href=""><em>[code]</em></a>
+      <a href="https://aclanthology.org/2026.acl-long.1314/"><em>[Paper]</em></a>
+      <a href="https://github.com/Ink-Dawn/MagicBench"><em>[code]</em></a>
     </div>
   </div>
 </div>
@@ -541,7 +558,7 @@ Publications
         Xinyan Wan,
         <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
         <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
+        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
         Yan Song,
         <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
         <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
@@ -551,8 +568,7 @@ Publications
       <b><i style="color:#315d80;">CVPR 2026 &nbsp;
       </i></b>
       <a href="images/cvpr_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>[arXiv]</em></a>
-      <a href=""><em>[code]</em></a>
+      <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>[Paper]</em></a>
     </div>
   </div>
 </div>
@@ -564,10 +580,11 @@ Publications
       <img src="images/var-scaling.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div>
-      <strong>Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples</strong><br>
+      <strong>Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</strong><br>
       <i style="font-size: 13px;">
         <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
         Xinyan Wan,
+        Siyu Li,
         <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao" target="_blank">Xiumei Wang&dagger;</a>
       </i><br>
       Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
@@ -575,7 +592,7 @@ Publications
       <b><i style="color:#315d80;">PRCV 2025 &nbsp;
       </i></b>
       <a href="images/var_poster.png"><em>[Poster]</em></a>
-      <a href="https://link.springer.com/chapter/10.1007/978-981-95-5699-1_28"><em>[arXiv]</em></a>
+      <a href="https://arxiv.org/pdf/2601.07293"><em>[arXiv]</em></a>
       <a href="https://github.com/WD7ang/VAR-Scaling"><em>[code]</em></a>
     </div>
   </div>
@@ -585,106 +602,14 @@ Publications
 </div>
 <div id="full-publications" class="publication-view" data-publication-view="list" hidden>
   <ul class="full-publication-list">
+    {% for publication in site.data.cv_publications %}
     <li>
-      <span class="pub-list-badge">ACL 2026</span>
-      <span class="pub-list-title">GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, Jierui Li, Yueling Hou, Zihan Mei, Zhigang Tian, Weicheng Jiao, Can Zhang, Xinyan Wan,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="https://arxiv.org/pdf/2606.04184">[arXiv]</a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench">[code]</a></span>
+      <span class="pub-list-badge">{{ publication.venue }}</span>
+      <a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a><br>
+      <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
+      <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</span>
     </li>
-    <li>
-      <span class="pub-list-badge">ACL 2026</span>
-      <span class="pub-list-title">MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</span><br>
-      <span class="pub-list-authors">
-        Tang Da Huang,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang&Dagger;</strong></a>,
-        Wen Qi Xu, Xianpeng Guo&dagger;.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-    <li>
-      <span class="pub-list-badge">CVPR 2026</span>
-      <span class="pub-list-title">Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>, Xinyan Wan,
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>&dagger;, Yan Song,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">AAAI 2026</span>
-      <span class="pub-list-title">MDK12-Bench: a multi-discipline benchmark for evaluating reasoning in multimodal large language models</span><br>
-      <span class="pub-list-authors">
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou*</a>,
-          Xiaopeng Peng*,
-           Fanrui Zhang*,
-          <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-          Jiaxin Ai, Yansheng Qiu,
-          <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao</a>,
-            Jiajun Song, Chuanhao Li,
-            <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-            Zhen Li, Haoquan Zhang, Zizhen Li, Xiaofeng Mao, Yukang Feng, Jianwen Sun,
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-          Xiaojun Chang, Wenqi Shao,
-          <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-          <a href="https://scholar.google.com/citations?hl=zh-CN&user=4OqZBmYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Kaipeng Zhang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-    <li>
-      <span class="pub-list-badge">PRCV 2025</span>
-      <span class="pub-list-title">Inference-Time Scaling for Visual AutoRegressive modeling by Searching Representative Samples</span><br>
-      <span class="pub-list-authors">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>, Xinyan Wan, Siyu Li,
-        <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao" target="_blank">Xiumei Wang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">ICCV 2025</span>
-      <span class="pub-list-title">EA-ViT: Efficient Adaptation for Elastic Vision Transformer</span><br>
-      <span class="pub-list-authors">
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>,
-        Huiwen Zhang,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=bGKF2tUAAAAJ" target="_blank">Yuhao Zhou</a>,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        Shuo Wang,
-        Zhihang Yuan,
-        Yuzhang Shang,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=7oRD67kAAAAJ" target="_blank">Xiaojiang Peng</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=j2ANma0AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Dawei Yang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
-        <li>
-      <span class="pub-list-badge">Preprint 2025</span>
-      <span class="pub-list-title">Pebench: A fictitious dataset to benchmark machine unlearning for multimodal large language models</span><br>
-      <span class="pub-list-authors">
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        Jiaxin Ai,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=i2II0XIAAAAJ" target="_blank">Kai Wang</a>,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=7oRD67kAAAAJ" target="_blank">Xiaojiang Peng</a>,
-        Wenqi Shao,
-        Hongxun Yao,
-        <a href="https://scholar.google.com/citations?hl=zh-CN&user=4OqZBmYAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Kaipeng Zhang&dagger;</a>.
-      </span>
-      <span class="pub-list-links"><a href="">[arXiv]</a><a href="">[code]</a></span>
-    </li>
+    {% endfor %}
   </ul>
 </div>
 
