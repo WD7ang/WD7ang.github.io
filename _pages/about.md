@@ -432,8 +432,6 @@ Hi! I am a senior (4th-year) undergraduate student at Xidian University.
 
 My research interests lie at the intersection of natural language processing and computer vision, with a particular focus on **multimodal representation learning**. My long-term goal is to understand how human-like intelligence can emerge and to develop unified models that connect the physical world with human cognition.
 
-I believe that AI’s role in human society will depend on its ability to understand human intentions and connect information across modalities. This motivates my interest in directions such as brain-computer interfaces (BCIs) and embodied intelligence, where shared representations may help link perception, thought, and action.
-
 I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
 News
