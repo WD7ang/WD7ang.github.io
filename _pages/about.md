@@ -12,6 +12,7 @@ redirect_from:
     #experience,
     #publications,
     #projects,
+    #blog,
     #awards,
     #talks {
         scroll-margin-top: 80px;
@@ -477,7 +478,7 @@ Publications
 <div class="publication-card" data-category="all">
   <div style="display: flex; align-items: center;">
     <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/trinity-intro.webp" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="2000" height="948" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
+      <img src="images/trinity-intro.png" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="3001" height="1423" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div>
       <strong><a href="{{ trinity.title_url }}">{{ trinity.title }}</a></strong><br>
@@ -638,6 +639,8 @@ Projects
   </div>
 </div>
 
+
+{% include blog-bookshelf.html %}
 
 Awards
 --------

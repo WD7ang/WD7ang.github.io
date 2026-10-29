@@ -7,14 +7,14 @@ main:
   - title: "Experience"
     url: "/#experience"
 
-  - title: "Blog"
-    url: "/blog/"
-
   - title: "Pub"
     url: "/#publications"
 
   - title: "Project"
     url: "/#projects"
+
+  - title: "Blog / 博客"
+    url: "/#blog"
 
   - title: "Awards"
     url: "/#awards"

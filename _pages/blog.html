@@ -1,23 +1,16 @@
 ---
-layout: academic
-title: Blog
-description: Tech 与随笔。关于研究、阅读，以及我所理解的世界。
+layout: null
 permalink: /blog/
-extra_css: /assets/css/books.css
-body_class: bookshelf-page
-lang: zh-CN
 ---
-<header class="library-heading">
-  <p class="eyebrow">Notes on research & life</p>
-  <h1>Blog</h1>
-  <p class="library-subtitle">一半探索，一半自省。</p>
-  <p class="library-hint"><span class="hover-hint">将鼠标轻放在书上，翻开一页。</span><span class="touch-hint">轻点书封，翻开一页。</span></p>
-</header>
-<div class="bookshelf" data-bookshelf>
-  {% assign tech_posts = site.posts | where_exp: 'post', 'post.categories contains "tech"' %}
-  {% assign essay_posts = site.posts | where_exp: 'post', 'post.categories contains "essays"' %}
-  {% include blog-book.html kind='tech' title='Tech' subtitle='研究与技术手记' description='关于模型、代码与研究的思考。记录探索的过程，也记录尚未解答的问题。' posts=tech_posts number='01' %}
-  {% include blog-book.html kind='essays' title='随笔' subtitle='阅读、生活与自我' description='在日常与阅读之间，留下一些思考。关于世界，也关于我所认识的自己。' posts=essay_posts number='02' %}
-</div>
-<p class="library-signoff">Thoughts in progress, one page at a time.</p>
-<script src="{{ '/assets/js/books.js' | relative_url }}" defer></script>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog / 博客 · Weidong Tang</title>
+  <link rel="canonical" href="{{ '/#blog' | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/#blog' | relative_url }}">
+  <script>window.location.replace({{ '/#blog' | relative_url | jsonify }});</script>
+</head>
+<body><p><a href="{{ '/#blog' | relative_url }}">博客已移至主页。<span lang="en">The blog is now on the homepage.</span> →</a></p></body>
+</html>
