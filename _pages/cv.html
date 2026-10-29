@@ -4,7 +4,6 @@ title: Curriculum Vitae
 description: Education, experience, publications, projects, awards, and professional services of Weidong Tang.
 permalink: /cv/
 ---
-{% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}
 <article class="cv-document" aria-labelledby="cv-name">
     <header class="cv-profile">
       <div class="profile-information">
@@ -14,7 +13,7 @@ permalink: /cv/
           <a class="cv-contact-item" href="mailto:wdtang0705@gmail.com">{% include cv-icon.svg name='mail' %}wdtang0705@gmail.com</a>
           <a class="cv-contact-item" href="https://wd7ang.github.io/">{% include cv-icon.svg name='globe' %}wd7ang.github.io</a>
           <a class="cv-contact-item" href="https://github.com/WD7ang">{% include cv-icon.svg name='github' %}GitHub</a>
-          <span class="cv-contact-item"><a href="https://scholar.google.com/citations?user=NH9USaYAAAAJ">Google Scholar</a><a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a></span>
+          <a class="cv-contact-item" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ">{% include cv-icon.svg name='scholar' %}Google Scholar</a>
           <a class="cv-contact-item" href="{{ '/images/vx.jpg' | relative_url }}">{% include cv-icon.svg name='chat' %}WeChat: d7ang0705</a>
         </div>
       </div>
@@ -75,17 +74,22 @@ permalink: /cv/
   <div class="cv-bottom-grid">
     <section aria-labelledby="cv-awards">
       <h2 class="cv-section-title" id="cv-awards">Awards</h2>
-      <ul class="cv-compact-list"><li class="cv-entry-heading"><span>Academic Scholarship, Xidian University <span class="cv-muted">(Top 5%)</span></span><span class="cv-date">2025 &amp; 2026</span></li></ul>
+      <ul class="cv-compact-list">
+        <li class="cv-entry-heading"><span>Academic Scholarship, Xidian University <span class="cv-muted">(Top 5%)</span></span><span class="cv-date">2026</span></li>
+        <li class="cv-entry-heading"><span>Academic Scholarship, Xidian University <span class="cv-muted">(Top 5%)</span></span><span class="cv-date">2025</span></li>
+      </ul>
     </section>
     <section aria-labelledby="cv-services">
       <h2 class="cv-section-title" id="cv-services">Professional Services</h2>
       <ul class="cv-compact-list">
-        <li>AI Team Lead, Xidian-Inspur Club <span class="cv-muted">(Jun 2025 - Present)</span>.</li>
-        <li>Reviewer for ICIC 2026, PRCV 2025-2026, EMNLP 2026, and ICLR 2026.</li>
+        <li class="cv-entry-heading"><span>AI Team Lead, Xidian-Inspur Club</span><span class="cv-date">Jun 2025 - Present</span></li>
+        <li class="cv-entry-heading"><span>Reviewer, ICIC</span><span class="cv-date">2026</span></li>
+        <li class="cv-entry-heading"><span>Reviewer, EMNLP</span><span class="cv-date">2026</span></li>
+        <li class="cv-entry-heading"><span>Reviewer, ICLR</span><span class="cv-date">2026</span></li>
+        <li class="cv-entry-heading"><span>Reviewer, PRCV</span><span class="cv-date">2025 - 2026</span></li>
       </ul>
     </section>
   </div>
 
   <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">wd7ang.github.io</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
 </article>
-{% unless site.data.cv_stats.manual %}<script type="application/json" id="profile-stats-config">{"projects":{{ site.data.github_projects | jsonify }},"snapshot":{{ site.data.profile_stats | jsonify }}}</script>{% endunless %}

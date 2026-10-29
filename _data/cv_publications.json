@@ -23,14 +23,14 @@
   },
   {
     "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
-    "title_url": "https://arxiv.org/pdf/2606.04184",
+    "title_url": "https://aclanthology.org/2026.acl-long.1859/",
     "authors_html": "<strong>W. Tang</strong>, J. Li, Y. Hou, Z. Mei, C. Zhang, X. Wan, Z. Liang, P. Zhou<sup>†</sup>, Y. You, &amp; W. Zhao<sup>†</sup>.",
     "venue": "ACL 2026",
     "notes": "(19% acceptance rate, CCF-A top-tier conference)",
     "links": [
       {
         "label": "Paper",
-        "url": "https://arxiv.org/pdf/2606.04184"
+        "url": "https://aclanthology.org/2026.acl-long.1859/"
       },
       {
         "label": "Dataset",
@@ -41,11 +41,20 @@
   },
   {
     "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
-    "title_url": null,
+    "title_url": "https://aclanthology.org/2026.acl-long.1314/",
     "authors_html": "T. D. Huang, <strong>W. Tang<sup>‡</sup></strong>, W. Q. Xu, &amp; X. Guo<sup>†</sup>.",
     "venue": "ACL 2026",
     "notes": "(19% acceptance rate, CCF-A top-tier conference)",
-    "links": [],
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://aclanthology.org/2026.acl-long.1314/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Ink-Dawn/MagicBench"
+      }
+    ],
     "group": "Core"
   },
   {
@@ -79,6 +88,54 @@
       }
     ],
     "group": "Core"
+  },
+  {
+    "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
+    "title_url": "https://arxiv.org/abs/2608.23525",
+    "authors_html": "Z. Cui, X. Yin, Y. Tang, X. Zhang, Y. Hu, S. Zhong, <strong>W. Tang</strong>, Y. Liang, W. Li, M. Jin, S. Pan, Y. Kang, D. Zhuang, &amp; J. Zhao.",
+    "venue": "arXiv preprint, 2026",
+    "notes": null,
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2608.23525"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/CuiZHIQ/Earth-Verse"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/miracle10/EarthVerse"
+      },
+      {
+        "label": "Project Page",
+        "url": "https://cuizhiq.github.io/EarthVerse/"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
+    "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
+    "title_url": "https://arxiv.org/abs/2606.14383",
+    "authors_html": "H. Qi, J. Cao, Y. Zhang, X. Wang, <strong>W. Tang</strong>, B. Chen, C. Huo, H. Pan, H. You, J. Li, Y. Wang, &amp; L. Ding.",
+    "venue": "arXiv preprint, 2026",
+    "notes": null,
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2606.14383"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/alibaba-multimodal-industrial-ai/IndustryBench-MIPU"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/alibaba-multimodal-industrial-ai/IndustryBench-MIPU"
+      }
+    ],
+    "group": "Collaborative"
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -130,6 +187,10 @@
       {
         "label": "Dataset",
         "url": "https://huggingface.co/datasets/xuzhaopan/PEBench"
+      },
+      {
+        "label": "Project Page",
+        "url": "https://pebench.github.io/"
       }
     ],
     "group": "Collaborative"
@@ -138,7 +199,7 @@
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
     "title_url": "https://ieeexplore.ieee.org/abstract/document/11515063",
     "authors_html": "Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. Peng, S. Zhao, H. Yao, &amp; K. Zhang<sup>†</sup>.",
-    "venue": "IEEE Transactions on Network Science and Engineering, 2025",
+    "venue": "IEEE Transactions on Network Science and Engineering, 2026",
     "notes": "(IF=7.9, JCR-Q1)",
     "links": [
       {
