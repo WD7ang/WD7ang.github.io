@@ -190,9 +190,9 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   audio.addEventListener('loadedmetadata', updateProgress);
   audio.addEventListener('ended', () => select(position + 1, true));
   const resize = () => {
-    const size = Math.max(88, Math.min(124, Math.floor(stage.clientWidth * .46)));
+    const size = Math.max(112, Math.min(158, Math.floor(stage.clientWidth * .62)));
     player.style.setProperty('--cover-size', `${size}px`);
-    const radius = size / (2 * Math.tan(Math.PI / Math.max(3, tracks.length)));
+    const radius = size * .78 / (2 * Math.tan(Math.PI / Math.max(3, tracks.length)));
     player.style.setProperty('--ring-radius', `${Math.round(radius)}px`);
   };
   audio.volume = .8;

@@ -6,7 +6,7 @@
     <div class="music-ring" data-music-ring>
       {% for track in site.data.music %}
       <button class="music-card" type="button" style="--card-angle: {{ forloop.index0 | times: card_step }}deg" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-source="{{ track.source | relative_url }}" data-duration="{{ track.duration }}" aria-label="{{ track.title | escape }} — {{ track.artist | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
-        <img src="{{ track.cover | relative_url }}" alt="" width="124" height="124" draggable="false" loading="lazy">
+        <span class="music-disc"><img src="{{ track.cover | relative_url }}" alt="" width="160" height="160" draggable="false" loading="lazy"></span>
       </button>
       {% endfor %}
     </div>
