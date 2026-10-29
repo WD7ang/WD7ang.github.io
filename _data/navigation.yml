@@ -19,14 +19,14 @@ main:
   - title: "Awards"
     url: "/#awards"
 
-  - title: "Services"
-    url: "/#services"
-    
   - title: "Talks"
     url: "/#talks"
     
   - title: "CV"
     url: "/cv/"
+
+  - title: "Services"
+    url: "/#services"
 
   # - title: "CV-Cn"
   #   url: "/files/chinese_resume.pdf"

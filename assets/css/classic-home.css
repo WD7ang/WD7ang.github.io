@@ -53,7 +53,7 @@ body::before {
   gap: 0;
   margin-bottom: 5px;
   padding: 7px 12px;
-  border-left: 3px solid #e8cfd6;
+  border-left: 3px solid #234864;
   background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
 }
 .award-date { color: var(--home-muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
