@@ -1,6 +1,6 @@
 # Weidong Tang · Academic homepage
 
-Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，按 liamding.cc 的 Jemdoc 版式复刻。无需前端打包，旧的 AcademicPages 页面继续可用。
+Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，开头按用户提供的简历截图展示个人资料、Education 和 Experience 概览。无需前端打包，旧的 AcademicPages 页面继续可用。
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；徽章在网页中自动更新，PDF 保留导出时的快照。
 
@@ -33,6 +33,8 @@ bundle exec jekyll serve
 | 重设计版经历备份 | `_data/experience.json` |
 | 重设计版论文备份 | `_data/publications.json` |
 | 在线 CV | `_pages/cv.html` |
+| CV 经历概览与完整研究经历（共用数据） | `_data/cv_experience.json` |
+| CV 教育信息 | `_data/cv_education.json` |
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
 | 下载版 CV | `images/cv.pdf` |
 | 头像 | `images/wx.jpg` |
@@ -81,13 +83,13 @@ date: YYYY-MM-DD
 
 ## 更新 PDF
 
-1. 修改 `_pages/cv.html`，同时检查 `_data/experience.json` 中的经历日期。
+1. 修改 `_pages/cv.html` 及 `_data/cv_experience.json` / `_data/cv_education.json` 中对应的内容与日期。
 2. 构建后打开 `/cv/`，点击 **Print / Save as PDF**，选择 A4、100% 缩放、关闭浏览器自动页眉页脚。
 3. 将导出的文件保存为 `images/cv.pdf`，再次构建，检查下载按钮。
 
 本次 CV 内容依据用户于 2026-10-28 提供的《汤维栋CV.pdf》更新，包含 5 篇 Core Publications、4 篇 Collaborative Publications 和 4 段研究经历。下载版按在线 CV 导出为三页 A4。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户此前明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
 
-CV 桌面版采用参考页的 960px 内容宽度加两侧 50px 留白、Georgia 16px 正文、蓝色标题和右侧 320px 无框照片。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动，避免内容较少时留下大块空白；打印时自动展开全部内容。CV 不加载 `academic.css`，以免首页样式覆盖参考版式。CV 样式链接携带构建时间，发布后自动获取新版样式。
+CV 桌面版采用 1000px 白色页面、两侧 70px 留白和无衬线字体。开头为大号姓名与中文名、横排联系方式和右侧 160px 照片；Education、Experience 使用浅蓝细分隔线、30px 机构 logo、机构名同行右对齐日期及第二行职位。详细研究经历保留在后文，与开头概览读取同一份数据。NUS logo 使用 CSS 显示原图左侧校徽。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动；打印时展开全部内容。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
 
 ## 部署
 

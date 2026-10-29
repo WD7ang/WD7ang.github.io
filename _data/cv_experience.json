@@ -1,0 +1,57 @@
+[
+  {
+    "id": "infrec",
+    "organization": "Cardinal AI Lab, InfRec",
+    "url": "https://www.cardinal-agi.com/",
+    "logo": "/images/InfRec.png",
+    "role": "Chief Research Officer (Founding Member)",
+    "date_start": "07/2026",
+    "date_end": "Present",
+    "details": [
+      "Leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data.",
+      "Spearheading research on <strong>Recursive Self-improvement (RSI)</strong> and <strong>Long-horizon World Interaction</strong>, enabling AI agents to accumulate and use long-term knowledge while autonomously controlling embodied robots.",
+      "Driving research initiatives from problem formulation to prototype development, while collaborating with engineering teams for practical deployment.",
+      "Contributing to the growth of the lab, which recently secured nearly ten million RMB in funding to advance AI research."
+    ]
+  },
+  {
+    "id": "alibaba",
+    "organization": "Alibaba",
+    "url": "https://alihome.alibaba-inc.com/en-US",
+    "logo": "/images/Alibaba.png",
+    "role": "MLLM Research Intern",
+    "date_start": "05/2026",
+    "date_end": "07/2026",
+    "details": [
+      "Researching scalable <strong>post-training</strong> techniques for multimodal foundation models, injecting e-commerce domain knowledge to improve product retrieval and find-similar-item applications.",
+      "Designed and implemented training and evaluation pipelines to improve <strong>product representation learning</strong>, <strong>visual-semantic alignment</strong>, and <strong>retrieval performance</strong> in large-scale e-commerce scenarios."
+    ]
+  },
+  {
+    "id": "teleai",
+    "organization": "TeleAI",
+    "url": "https://www.teleai.com.cn/product/AboutTeleAI",
+    "logo": "/images/TeleAI.png",
+    "role": "LLM Research Intern",
+    "date_start": "01/2026",
+    "date_end": "03/2026",
+    "details": [
+      "Worked on <strong>AI infrastructure for LLM training and inference on Huawei Ascend 910B</strong>, including precision alignment."
+    ]
+  },
+  {
+    "id": "nus",
+    "organization": "National University of Singapore",
+    "affiliation": "HPC-AI Lab",
+    "url": "https://ai.comp.nus.edu.sg/",
+    "logo": "/images/NUS.png",
+    "role": "Research Assistant",
+    "date_start": "10/2024",
+    "date_end": "10/2025",
+    "details": [
+      "Focusing on efficient machine learning and multimodal model evaluation.",
+      "Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years.",
+      "Advised by Prof. <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, Prof. <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a>, and Dr. <a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a>."
+    ]
+  }
+]

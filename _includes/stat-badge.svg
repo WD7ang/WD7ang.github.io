@@ -7,7 +7,7 @@
 {%- if include.label == 'stars' -%}{%- assign label_width = 54 -%}{%- else -%}{%- assign label_width = 74 -%}{%- endif -%}
 {%- assign badge_width = label_width | plus: value_width -%}
 {%- assign value_x = value_width | divided_by: 2.0 | plus: label_width -%}
-<svg xmlns="http://www.w3.org/2000/svg" width="{{ badge_width }}" height="20" role="img" aria-label="{{ include.label }}: {{ badge_value }}">
+<svg xmlns="http://www.w3.org/2000/svg" width="{{ badge_width }}" height="20" viewBox="0 0 {{ badge_width }} 20" role="img" aria-label="{{ include.label }}: {{ badge_value }}">
   <title>{{ include.label }}: {{ badge_value }}</title>
   <linearGradient id="shade-{{ include.label }}" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient>
   <clipPath id="round-{{ include.label }}"><rect data-badge-total="" width="{{ badge_width }}" height="20" rx="3"/></clipPath>

@@ -6,28 +6,57 @@ permalink: /cv/
 ---
 {% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}
 <article class="cv-document" aria-labelledby="cv-name">
-  <table class="cv-profile" role="presentation">
-    <tbody><tr>
-      <td class="profile-information" width="670">
-        <div id="toptitle"><h1 id="cv-name">Weidong Tang (汤维栋)</h1></div>
-        <h3>Chief Research Officer &amp; Founding Member<br>Cardinal AI Lab, InfRec</h3>
-        <p class="cv-contact"><br>
-          E-mail: <a href="mailto:wdtang0705@gmail.com">wdtang0705@gmail.com</a> &nbsp; | &nbsp; <a href="tel:+8613355168563">+86 13355168563</a><br>
-          GitHub: <a href="https://github.com/WD7ang">@WD7ang</a> <a class="cv-stat-link" data-github-badge href="{% if site.data.cv_stats.manual %}https://github.com/WD7ang{% else %}#cv-github-stars{% endif %}" aria-label="GitHub stars: {{ cv_stats.github_stars }}" title="GitHub stars: {{ cv_stats.github_stars }}">{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}</a><br>
-          Scholar: <a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a><br>
-          WeChat: <a href="{{ '/images/vx.jpg' | relative_url }}">d7ang0705</a><br>
-          Homepage: <a href="https://wd7ang.github.io/">https://wd7ang.github.io/</a>
-        </p>
+  <div class="cv-frontmatter">
+    <header class="cv-profile">
+      <div class="profile-information">
+        <h1 id="cv-name">Weidong Tang <span lang="zh">汤维栋</span></h1>
+        <p class="cv-headline">Chief Research Officer &middot; Founding Member</p>
+        <p class="cv-affiliation"><img src="{{ '/images/InfRec.png' | relative_url }}" width="20" height="20" alt=""><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></p>
+        <div class="cv-contact">
+          <a class="cv-contact-item" href="mailto:wdtang0705@gmail.com">{% include cv-icon.svg name='mail' %}wdtang0705@gmail.com</a>
+          <span class="cv-contact-item">{% include cv-icon.svg name='globe' %}<span>Homepage: <a href="https://wd7ang.github.io/">https://wd7ang.github.io/</a></span></span>
+          <span class="cv-contact-item"><a href="https://github.com/WD7ang">GitHub</a><a class="cv-stat-link" data-github-badge href="{% if site.data.cv_stats.manual %}https://github.com/WD7ang{% else %}#cv-github-stars{% endif %}" aria-label="GitHub stars: {{ cv_stats.github_stars }}" title="GitHub stars: {{ cv_stats.github_stars }}">{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}</a></span>
+          <span class="cv-contact-item"><a href="https://scholar.google.com/citations?user=NH9USaYAAAAJ">Google Scholar</a><a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a></span>
+          <a class="cv-contact-item" href="tel:+8613355168563">{% include cv-icon.svg name='phone' %}+86 13355168563</a>
+          <a class="cv-contact-item" href="{{ '/images/vx.jpg' | relative_url }}">{% include cv-icon.svg name='chat' %}WeChat: d7ang0705</a>
+        </div>
         {% unless site.data.cv_stats.manual %}<details class="cv-star-details" id="cv-github-stars">
           <summary>Star breakdown</summary>
           <p>My public repositories and coauthored research projects.</p>
           <ul data-star-repositories>{% for repository in site.data.profile_stats.github_repositories %}<li><a href="{{ repository.url | escape }}">{{ repository.name | escape }}</a> <span>{{ repository.stars }} ★</span></li>{% endfor %}</ul>
           <p class="cv-stats-updated" data-stars-updated>{% if site.data.profile_stats.github_checked_on %}Updated {{ site.data.profile_stats.github_checked_on }}.{% endif %}</p>
         </details>{% endunless %}
-      </td>
-      <td class="profile-photo"><img class="cv-portrait" src="{{ '/images/wx.jpg' | relative_url }}" width="320" height="364" alt="Weidong Tang in Edinburgh"><br></td>
-    </tr><tr aria-hidden="true"></tr></tbody>
-  </table>
+      </div>
+      <img class="cv-portrait" src="{{ '/images/wx.jpg' | relative_url }}" width="160" height="182" alt="Weidong Tang in Edinburgh">
+    </header>
+
+    <section aria-labelledby="cv-education">
+      <h2 class="cv-section-title" id="cv-education">Education</h2>
+      <ul class="cv-overview-list cv-education-list">{% for education in site.data.cv_education %}
+        <li class="cv-overview-entry">
+          <img class="cv-org-logo" src="{{ education.logo | relative_url }}" width="30" height="30" alt="">
+          <div class="cv-overview-content">
+            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{{ education.organization }}</a><span class="cv-date">{{ education.date_start }} - {{ education.date_end }}{% if education.date_note %}<span class="cv-date-note"> ({{ education.date_note }})</span>{% endif %}</span></div>
+            <p class="cv-entry-role">{{ education.degree }}</p>
+            <p class="cv-entry-note">{{ education.details_html }}</p>
+          </div>
+        </li>{% endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="cv-experience-overview">
+      <h2 class="cv-section-title" id="cv-experience-overview">Experience</h2>
+      <ul class="cv-overview-list">{% for experience in site.data.cv_experience %}
+        <li class="cv-overview-entry">
+          <img class="cv-org-logo cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="30" height="30" alt="">
+          <div class="cv-overview-content">
+            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{{ experience.date_start }} - {{ experience.date_end }}</span></div>
+            <p class="cv-entry-role">{{ experience.role }}</p>
+          </div>
+        </li>{% endfor %}
+      </ul>
+    </section>
+  </div>
 
   <h2 id="cv-biography">Biography</h2>
   <p>I am the Chief Research Officer and a founding member of <a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a>, leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data. My research focuses on recursive self-improvement and long-horizon world interaction, enabling AI agents to accumulate long-term knowledge and autonomously control embodied robots.</p>
@@ -77,31 +106,11 @@ Z. Xu, P. Zhou, <strong>W. Tang</strong>, J. Ai, W. Zhao, K. Wang, W. Shao, X. P
   </div>
 
   <h2 id="cv-experience">Research Experience</h2>
-  <ul class="cv-experience-list">
-<li><p class="cv-entry-heading"><span><strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong> &mdash; Chief Research Officer (Founding Member)</span><span class="cv-date">07/2026 - Present</span></p><ul>
-<li>Leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data.</li>
-<li>Spearheading research on <strong>Recursive Self-improvement (RSI)</strong> and <strong>Long-horizon World Interaction</strong>, enabling AI agents to accumulate and use long-term knowledge while autonomously controlling embodied robots.</li>
-<li>Driving research initiatives from problem formulation to prototype development, while collaborating with engineering teams for practical deployment.</li>
-<li>Contributing to the growth of the lab, which recently secured nearly ten million RMB in funding to advance AI research.</li>
-</ul></li>
-<li><p class="cv-entry-heading"><span><strong><a href="https://alihome.alibaba-inc.com/en-US">Alibaba</a></strong> &mdash; MLLM Research Intern</span><span class="cv-date">05/2026 - 07/2026</span></p><ul>
-<li>Researching scalable <strong>post-training</strong> techniques for multimodal foundation models, injecting e-commerce domain knowledge to improve product retrieval and find-similar-item applications.</li>
-<li>Designed and implemented training and evaluation pipelines to improve <strong>product representation learning</strong>, <strong>visual-semantic alignment</strong>, and <strong>retrieval performance</strong> in large-scale e-commerce scenarios.</li>
-</ul></li>
-<li><p class="cv-entry-heading"><span><strong><a href="https://www.teleai.com.cn/product/AboutTeleAI">TeleAI</a></strong> &mdash; LLM Research Intern</span><span class="cv-date">01/2026 - 03/2026</span></p><ul>
-<li>Worked on <strong>AI infrastructure for LLM training and inference on Huawei Ascend 910B</strong>, including precision alignment.</li>
-</ul></li>
-<li><p class="cv-entry-heading"><span><strong><a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab, National University of Singapore</a></strong> &mdash; Research Assistant</span><span class="cv-date">10/2024 - 10/2025</span></p><ul>
-<li>Focusing on efficient machine learning and multimodal model evaluation.</li>
-<li>Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years.</li>
-<li>Advised by Prof. <a href="https://www.comp.nus.edu.sg/~youy/">Yang You</a>, Prof. <a href="https://wangbo-zhao.github.io/">Wangbo Zhao</a>, and Dr. <a href="https://lancezpf.github.io/">Pengfei Zhou</a>.</li>
-</ul></li>
+  <ul class="cv-experience-list">{% for experience in site.data.cv_experience %}
+    <li><p class="cv-entry-heading"><span><strong><a href="{{ experience.url }}">{% if experience.affiliation %}{{ experience.affiliation }}, {% endif %}{{ experience.organization }}</a></strong> &mdash; {{ experience.role }}</span><span class="cv-date">{{ experience.date_start }} - {{ experience.date_end }}</span></p>
+      <ul>{% for detail in experience.details %}<li>{{ detail }}</li>{% endfor %}</ul>
+    </li>{% endfor %}
   </ul>
-
-  <h2 id="cv-education">Education</h2>
-  <ul class="cv-education-list"><li><p class="cv-entry-heading"><strong>Xidian University</strong><span class="cv-date">09/2023 - 07/2027<span class="cv-date-note"> (expected)</span></span></p><p>
-    B.E., School of Telecommunication Engineering &middot; GPA: 3.8/4.0<br>
-    Advised by Prof. <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao">Xiumei Wang</a>.</p></li></ul>
 
   <h2 id="cv-projects">Projects</h2>
   <ul><li><p><a href="https://github.com/WD7ang/WowPage">WowPage</a><br>

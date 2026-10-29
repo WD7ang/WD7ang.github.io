@@ -44,6 +44,7 @@ window.profileStatsReady = (async () => {
     const width = labelWidth + valueWidth;
     const svg = badge.querySelector('svg');
     svg.setAttribute('width', String(width));
+    svg.setAttribute('viewBox', '0 0 ' + width + ' 20');
     svg.setAttribute('aria-label', label + ': ' + count.toLocaleString('en-US'));
     svg.querySelector('title').textContent = label + ': ' + count.toLocaleString('en-US');
     svg.querySelectorAll('[data-badge-total]').forEach((rect) => rect.setAttribute('width', String(width)));
