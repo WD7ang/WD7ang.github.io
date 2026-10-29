@@ -64,7 +64,7 @@
   {
     "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
     "title_url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html",
-    "authors_html": "<strong>W. Tang</strong>, Z. Liang, X. Wan, C. Zhu, Z. Xu, P. Zhou<sup>†</sup>, Y. Song, Y. You, &amp; W. Zhao<sup>†</sup>.",
+    "authors_html": "<strong>W. Tang</strong>, Z. Liang, X. Wan, C. Zhu, Z. Xu, P. Zhou, Y. Song, Y. You, &amp; W. Zhao<sup>†</sup>.",
     "venue": "CVPR 2026",
     "notes": "(25% acceptance rate, CCF-A top-tier conference)",
     "links": [

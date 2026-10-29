@@ -559,7 +559,7 @@ Publications
         Xinyan Wan,
         <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
         <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
+        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
         Yan Song,
         <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
         <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
