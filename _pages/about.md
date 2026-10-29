@@ -247,34 +247,39 @@ redirect_from:
     }
 
     .full-publication-list {
+        list-style: none;
         margin: 0;
-        padding-left: 1.25rem;
+        padding: 0;
         color: #697386;
         font-size: 15px;
         line-height: 1.55;
     }
 
-    .full-publication-list li {
-        margin-bottom: 14px;
+    .full-publication-list .pub-list-row {
+        display: grid;
+        grid-template-columns: 106px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 5px;
+        padding: 7px 12px;
+        border-left: 3px solid #234864;
+        background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
     }
 
-    .pub-list-badge {
-        display: inline-block;
-        margin-right: 6px;
-        padding: 2px 8px;
-        border-radius: 999px;
-        border: 1px solid rgba(49, 93, 128, 0.25);
-        background: #f7f9fb;
-        color: #315d80;
-        font-size: 11px;
-        font-weight: 650;
-        line-height: 1.35;
-        vertical-align: 1px;
-        max-width: 100%;
-        white-space: normal;
+    .pub-list-venue {
+        color: #697386;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: .02em;
+    }
+
+    .pub-list-details {
+        min-width: 0;
+        overflow-wrap: anywhere;
     }
 
     .full-publication-list .pub-list-title {
+        display: block;
         color: #273444;
         font-size: 15px;
         font-weight: 700;
@@ -283,6 +288,7 @@ redirect_from:
     }
 
       .pub-list-authors {
+        display: block;
         color: #697386;
         font-size: 13px;
         font-style: italic;
@@ -380,12 +386,10 @@ redirect_from:
             line-height: 1.35;
         }
 
-        .full-publication-list {
-            padding-left: 1rem;
-        }
-
-        .pub-list-badge {
-            margin-bottom: 4px;
+        .full-publication-list .pub-list-row {
+            grid-template-columns: 76px minmax(0, 1fr);
+            gap: 10px;
+            padding: 8px 10px;
         }
     }
 
@@ -645,13 +649,15 @@ Publications
 
 </div>
 <div id="full-publications" class="publication-view" data-publication-view="list" hidden>
-  <ul class="full-publication-list">
+  <ul class="full-publication-list" role="list">
     {% for publication in site.data.cv_publications %}
-    <li>
-      <span class="pub-list-badge">{{ publication.venue }}</span>
-      <a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a><br>
-      <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-      <span class="pub-list-links">{% for link in publication.links %}{% unless link.url == 'https://huggingface.co/papers/2610.36077' %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endunless %}{% endfor %}</span>
+    <li class="pub-list-row">
+      <span class="pub-list-venue" title="{{ publication.venue | escape }}">{{ publication.venue | replace: 'arXiv preprint,', 'arXiv' | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
+      <div class="pub-list-details">
+        <a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>
+        <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
+        <span class="pub-list-links">{% for link in publication.links %}{% unless link.url == 'https://huggingface.co/papers/2610.36077' %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endunless %}{% endfor %}</span>
+      </div>
     </li>
     {% endfor %}
   </ul>
