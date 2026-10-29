@@ -392,12 +392,13 @@ redirect_from:
 
 
 
-Hi! I am a junior (3rd-year) undergraduate student at Xidian University.
+Hi! I am a senior (4th-year) undergraduate student at Xidian University.
 
-My research interests span NLP, CV, and their intersection. My long-term research goal is to understand and enable the emergence of human-like intelligence, while developing unified models that bridge the physical and mental worlds.
-I enjoy exploring diverse research directions and collaborating with researchers across different fields.
+My research interests lie at the intersection of natural language processing and computer vision, with a particular focus on **multimodal representation learning**. My long-term goal is to understand how human-like intelligence can emerge and to develop unified models that connect the physical world with human cognition.
 
-Feel free to reach out if you are interested in collaboration or potential opportunities.
+I believe that AI's role in human society will depend on its ability to understand human intentions and connect information across modalities. This motivates my interest in directions such as brain-computer interfaces (BCIs) and embodied intelligence, where shared representations may help link perception, thought, and action.
+
+I enjoy exploring new research directions and collaborating with researchers across disciplines. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
 News
 ---------------
