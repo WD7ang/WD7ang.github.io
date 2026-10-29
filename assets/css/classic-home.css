@@ -45,6 +45,26 @@ body::before {
 :focus-visible { outline-color: #7ca4c5; }
 ::selection { color: var(--home-ink); background-color: #dce8f2; }
 
+.page__content .award-list { list-style: none; margin: 0; padding: 0; }
+.award-list .award-row {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  margin-bottom: 5px;
+  padding: 7px 12px;
+  border-left: 3px solid #e8cfd6;
+  background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
+}
+.award-date { color: var(--home-muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+.award-details { min-width: 0; }
+.award-title { display: block; color: var(--home-ink); font-size: 16px; font-weight: 500; line-height: 1.45; }
+.award-meta { display: block; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
+@media (max-width: 480px) {
+  .award-list .award-row { grid-template-columns: 76px minmax(0, 1fr); padding: 8px 10px; }
+  .award-title { font-size: 15px; }
+}
+
 /* Balance the larger figures with comfortable margins around the homepage. */
 #main,
 .masthead__inner-wrap,

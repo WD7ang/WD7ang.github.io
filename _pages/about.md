@@ -644,7 +644,15 @@ Projects
 
 Awards
 --------
-- *2025.09*, Second-Class Academic Scholarship, Xidian University (Ranked 5/99)
+<ul class="award-list">
+  <li class="award-row">
+    <time class="award-date" datetime="2025-09">Sep 2025</time>
+    <div class="award-details">
+      <span class="award-title">Second-Class Academic Scholarship</span>
+      <span class="award-meta">Xidian University · Ranked 5/99</span>
+    </div>
+  </li>
+</ul>
 
 
 
