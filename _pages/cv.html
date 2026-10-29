@@ -45,6 +45,7 @@ permalink: /cv/
           <div class="cv-overview-content">
             <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} - {% include cv-date.html value=experience.date_end %}</span></div>
             <p class="cv-entry-role">{{ experience.role }}</p>
+            {% if experience.advisors_html %}<p class="cv-entry-note">{{ experience.advisors_html }}</p>{% endif %}
           </div>
         </li>{% endfor %}
       </ul>

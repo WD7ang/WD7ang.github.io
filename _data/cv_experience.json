@@ -44,14 +44,14 @@
     "organization": "National University of Singapore",
     "affiliation": "HPC-AI Lab",
     "url": "https://ai.comp.nus.edu.sg/",
-    "logo": "/images/NUS.png",
+    "logo": "/images/NUS-crest.png",
     "role": "Research Assistant",
+    "advisors_html": "Advised by Prof. <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, Prof. <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a>, and Dr. <a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a>.",
     "date_start": "10/2024",
     "date_end": "10/2025",
     "details": [
       "Focusing on efficient machine learning and multimodal model evaluation.",
-      "Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years.",
-      "Advised by Prof. <a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a>, Prof. <a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a>, and Dr. <a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a>."
+      "Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years."
     ]
   }
 ]

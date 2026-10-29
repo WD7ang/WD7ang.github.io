@@ -441,7 +441,7 @@ Experience
   </div>
 
   <div class="experience-card">
-      <img src="images/NUS.png" alt="NUS logo" class="experience-logo">
+      <img src="images/NUS-crest.png" alt="NUS crest" class="experience-logo" width="60" height="60">
       <div class="experience-info">
           <strong>National University of Singapore</strong><br>
           <em>2024.10 - 2025.10</em><br>
