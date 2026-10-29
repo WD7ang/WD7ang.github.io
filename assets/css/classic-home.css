@@ -45,12 +45,12 @@ body::before {
 :focus-visible { outline-color: #7ca4c5; }
 ::selection { color: var(--home-ink); background-color: #dce8f2; }
 
-/* Keep the wider homepage and its larger figures within the viewport. */
+/* Balance the larger figures with comfortable margins around the homepage. */
 #main,
 .masthead__inner-wrap,
 .page__footer footer {
-  max-width: 1600px;
-  width: 100%;
+  max-width: 1360px;
+  width: calc(100% - 32px);
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -62,7 +62,7 @@ body::before {
 .page__content .publication-card > div > div,
 .page__content .project-card > div > div { min-width: 0; }
 .page__content .pub-media-rotator {
-  width: clamp(300px, 29vw, 440px) !important;
+  width: clamp(300px, 26vw, 400px) !important;
   max-width: 100% !important;
   height: auto !important;
   aspect-ratio: 16 / 9;
@@ -79,8 +79,8 @@ body::before {
 @media (min-width: 925px) {
   #main {
     display: grid;
-    grid-template-columns: clamp(220px, 19vw, 280px) minmax(0, 1fr);
-    gap: 40px;
+    grid-template-columns: clamp(220px, 18vw, 250px) minmax(0, 1fr);
+    gap: 36px;
     align-items: start;
   }
   #main::before, #main::after { display: none; }
@@ -97,7 +97,7 @@ body::before {
     overflow-y: auto;
   }
   #main > .page { float: none; width: auto; min-width: 0; margin: 0; padding: 0; }
-  .author__avatar img { width: 250px; max-width: 100%; }
+  .author__avatar img { width: 230px; max-width: 100%; }
   .sidebar .author__name { font-size: 18px; }
   .sidebar p, .sidebar li { font-size: 13px; }
 }
@@ -111,7 +111,7 @@ body::before {
   .page__content .pub-media-rotator { width: min(100%, 520px) !important; }
 }
 @media (max-width: 767px) {
-  #main, .masthead__inner-wrap, .page__footer footer { padding-left: 16px; padding-right: 16px; }
+  #main, .masthead__inner-wrap, .page__footer footer { width: 100%; padding-left: 16px; padding-right: 16px; }
 }
 @media print {
   body::before { display: none; }
