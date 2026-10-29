@@ -15,7 +15,8 @@ redirect_from:
     #projects,
     #blog,
     #awards,
-    #talks {
+    #talks,
+    #services {
         scroll-margin-top: 80px;
     }
 
@@ -724,6 +725,26 @@ Talks
 
 Services
 --------
-- *2026.10 - Present*, Coordinator, Xidian Graduate Admissions Experience-Sharing Group (3,000 members).
-- *2025.06 – Present*, AI Team Lead, 🌊Xidian–Inspur Club.
-- Reviewer for ICIC 2026, PRCV (2025, 2026), ICLR 2027.
+<ul class="service-list" role="list">
+  <li class="service-row">
+    <span class="service-date">2026.10 - Present</span>
+    <div class="service-details">
+      <span class="service-title">Coordinator</span>
+      <span class="service-meta">Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
+    </div>
+  </li>
+  <li class="service-row">
+    <span class="service-date">2025.06 – Present</span>
+    <div class="service-details">
+      <span class="service-title">AI Team Lead</span>
+      <span class="service-meta">🌊Xidian–Inspur Club</span>
+    </div>
+  </li>
+  <li class="service-row">
+    <span class="service-date">2025–2027</span>
+    <div class="service-details">
+      <span class="service-title">Reviewer</span>
+      <span class="service-meta">ICIC 2026, PRCV (2025, 2026), ICLR 2027</span>
+    </div>
+  </li>
+</ul>
