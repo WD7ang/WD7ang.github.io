@@ -21,12 +21,12 @@ main:
 
   - title: "Talks"
     url: "/#talks"
-    
-  - title: "CV"
-    url: "/cv/"
 
   - title: "Services"
     url: "/#services"
+
+  - title: "CV"
+    url: "/cv/"
 
   # - title: "CV-Cn"
   #   url: "/files/chinese_resume.pdf"
