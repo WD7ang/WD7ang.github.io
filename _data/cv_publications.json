@@ -17,6 +17,10 @@
       {
         "label": "Project Page",
         "url": "https://trinity-rsi.github.io/"
+      },
+      {
+        "label": "Hugging Face (#1 Paper of the day)",
+        "url": "https://huggingface.co/papers/2610.36077"
       }
     ],
     "group": "Core"
