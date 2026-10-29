@@ -1,0 +1,40 @@
+{% assign first_track = site.data.music | first %}
+<section class="home-music" id="music" aria-label="音乐 / Music" data-music-player>
+  <div class="music-bar">
+    <a class="music-cover-link" href="{{ first_track.url }}" target="_blank" rel="noopener noreferrer" title="在网易云打开 / Open in NetEase Music" data-music-link>
+      <img class="music-cover" src="{{ first_track.cover | relative_url }}" alt="{{ first_track.title | escape }} — {{ first_track.album | escape }}" width="44" height="44" data-music-cover>
+    </a>
+    <iframe class="music-frame" title="网易云音乐播放器 — {{ first_track.title | escape }}" src="https://music.163.com/outchain/player?type=2&amp;id={{ first_track.id }}&amp;auto=0&amp;height=32" allow="autoplay" loading="lazy" data-music-frame></iframe>
+    <div class="music-controls" data-music-controls hidden>
+      <button class="music-button" type="button" aria-label="上一首 / Previous track" title="上一首 / Previous" data-music-prev>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5l-9 7 9 7V5Z"/></svg>
+      </button>
+      <button class="music-button" type="button" aria-label="下一首 / Next track" title="下一首 / Next" data-music-next>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 5l9 7-9 7V5Z"/></svg>
+      </button>
+      <button class="music-button music-list-toggle" type="button" aria-expanded="false" aria-controls="music-playlist" aria-label="歌单，{{ site.data.music.size }} 首歌曲 / Playlist, {{ site.data.music.size }} tracks" title="歌单 / Playlist" data-music-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="1"/></svg>
+        <span class="music-count" aria-hidden="true">{{ site.data.music.size }}</span>
+      </button>
+    </div>
+  </div>
+  <p class="music-live" role="status" aria-live="polite" data-music-status></p>
+  <div class="music-playlist" id="music-playlist" hidden>
+    <div class="music-list-heading"><span>我的歌单 <span lang="en">/ My playlist</span></span><span>{{ site.data.music.size }} 首 / tracks</span></div>
+    <ul class="music-track-list">
+      {% for track in site.data.music %}
+      <li>
+        <button class="music-track" type="button" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-album="{{ track.album | escape }}" data-cover="{{ track.cover | relative_url }}" data-url="{{ track.url }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+          <img src="{{ track.cover | relative_url }}" alt="" width="40" height="40" loading="lazy">
+          <span class="music-track-info"><strong>{{ track.title }}</strong><span>{{ track.artist }}</span></span>
+          <span class="music-track-selected" aria-hidden="true">♫</span>
+        </button>
+        <a class="music-track-external" href="{{ track.url }}" target="_blank" rel="noopener noreferrer" aria-label="在网易云打开 {{ track.title | escape }} / Open in NetEase Music" title="在网易云打开 / Open in NetEase Music">↗</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="music-platform-note">部分歌曲需在网易云播放。<span lang="en">Some tracks are available only on NetEase Music.</span></p>
+  </div>
+  <noscript><p class="music-noscript">在网易云收听 / Listen on NetEase Music：{% for track in site.data.music %}<a href="{{ track.url }}" target="_blank" rel="noopener noreferrer">{{ track.title }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p></noscript>
+</section>
+<script src="{{ '/assets/js/music-player.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

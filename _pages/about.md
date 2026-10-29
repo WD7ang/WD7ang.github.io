@@ -403,6 +403,8 @@ I believe that AI’s role in human society will depend on its ability to unders
 
 I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
+{% include music-player.html %}
+
 News
 ---------------
 <div class="news-box">

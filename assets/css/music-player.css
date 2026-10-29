@@ -1,0 +1,41 @@
+.home-music { position: relative; margin: 20px 0 26px; scroll-margin-top: 100px; color: #273444; font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.home-music [hidden] { display: none !important; }
+.music-bar { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; align-items: center; gap: 5px; padding: 4px 10px; min-height: 62px; border: 1px solid #dbe3ea; border-radius: 10px; background: rgba(255, 255, 255, .74); box-shadow: 0 2px 8px #263e5010; }
+.music-cover-link { display: block; border-radius: 6px; line-height: 0; }
+.page__content .music-cover { display: block; width: 44px; height: 44px; margin: 0; border-radius: 6px; object-fit: cover; }
+.music-frame { display: block; width: 100%; height: 52px; min-width: 0; border: 0; background: transparent; }
+.music-controls { display: flex; align-items: center; gap: 3px; }
+.home-music .music-button { display: inline-flex; align-items: center; justify-content: center; position: relative; width: 32px; height: 36px; margin: 0; padding: 5px; border: 0; border-radius: 6px; background: transparent; color: #315d80; cursor: pointer; }
+.music-button svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.home-music .music-button:hover, .home-music .music-button[aria-expanded="true"] { background: #e7eef4; color: #234864; }
+.music-count { position: absolute; top: 0; right: 0; min-width: 11px; padding: 0 2px; border-radius: 6px; background: #315d80; color: white; font-size: 8px; font-weight: 500; line-height: 12px; }
+.home-music .music-live { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.music-playlist { position: absolute; top: calc(100% + 7px); right: 0; z-index: 10; width: min(100%, 430px); padding: 13px 10px 10px; border: 1px solid #dbe3ea; border-radius: 10px; background: #fcfdfe; box-shadow: 0 12px 30px #27344426; }
+.music-list-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 0 6px 9px; color: #315d80; font-size: 12px; }
+.music-list-heading > span:last-child { color: #788690; font-size: 10px; white-space: nowrap; }
+.home-music .music-track-list { list-style: none; margin: 0; padding: 0; max-height: min(340px, 54vh); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.home-music .music-track-list > li { display: flex; align-items: center; gap: 2px; margin: 0; padding: 0; }
+.home-music .music-track { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; width: 100%; padding: 7px 6px; border: 0; border-radius: 6px; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.home-music .music-track:hover, .home-music .music-track[aria-pressed="true"] { background: #edf3f7; }
+.page__content .music-track img { flex: 0 0 40px; width: 40px; height: 40px; margin: 0; border-radius: 5px; object-fit: cover; }
+.music-track-info { flex: 1; min-width: 0; }
+.music-track-info strong, .music-track-info > span { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.music-track-info strong { color: #344e65; font-size: 13px; font-weight: 500; }
+.music-track-info > span { color: #788690; font-size: 11px; margin-top: 3px; }
+.music-track-selected { visibility: hidden; color: #315d80; font-size: 18px; padding-right: 4px; }
+.music-track[aria-pressed="true"] .music-track-selected { visibility: visible; }
+.music-track-external { display: grid; place-items: center; align-self: stretch; min-width: 27px; color: #718294; border-radius: 5px; text-decoration: none; }
+.music-track-external:hover { background: #edf3f7; }
+.home-music .music-platform-note { margin: 10px 6px 0; padding-top: 9px; border-top: 1px solid #e5eaf0; color: #788690; font-size: 10px; line-height: 1.6; }
+.music-platform-note span { display: block; }
+.home-music .music-noscript { margin: 8px 0; color: #697386; font-size: 12px; }
+.home-music button:focus-visible, .home-music a:focus-visible { outline: 2px solid #638baa; outline-offset: 2px; }
+@media (max-width: 480px) {
+  .music-bar { grid-template-columns: 32px minmax(0, 1fr) auto; gap: 0; padding: 2px 5px; min-height: 58px; }
+  .page__content .music-cover { width: 32px; height: 32px; border-radius: 4px; }
+  .music-controls { gap: 0; }
+  .home-music .music-button { width: 28px; height: 36px; padding: 4px; }
+  .music-button svg { width: 17px; height: 17px; }
+  .music-playlist { width: 100%; }
+}
+@media print { .home-music { display: none !important; } }
