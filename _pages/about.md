@@ -434,7 +434,17 @@ My research interests lie at the intersection of natural language processing and
 
 I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
-**Research interests:** Multimodal LLMs {RSI, Agentic Robot, HCI}, BCI, Efficient AI.
+<div class="research-interests" role="group" aria-labelledby="research-interests-label">
+  <span class="research-caption" id="research-interests-label">Research interests</span>
+  <div class="research-tags">
+    <div class="research-focus" role="group" aria-label="Multimodal LLMs research directions">
+      <span class="research-main"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>Multimodal LLMs</span>
+      <ul class="research-subtopics" role="list"><li>RSI</li><li>Agentic Robot</li><li>HCI</li></ul>
+    </div>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7L20 9h-7l1-6Z"/></svg>Efficient AI</span>
+  </div>
+</div>
 
 News
 ---------------

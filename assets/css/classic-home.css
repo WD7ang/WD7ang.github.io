@@ -45,6 +45,22 @@ body::before {
 :focus-visible { outline-color: #7ca4c5; }
 ::selection { color: var(--home-ink); background-color: #dce8f2; }
 
+.research-interests { margin: 24px 0 28px; }
+.research-caption { display: block; margin-bottom: 9px; color: #60768a; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.research-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.research-focus { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 7px; min-width: 0; max-width: 100%; padding: 6px; border: 1px solid #b9cfdf; border-radius: 14px; background: linear-gradient(120deg, #e2edf5e6, #f7fbffe6); box-shadow: 0 3px 12px #315d800b; }
+.research-main { display: inline-flex; align-items: center; gap: 7px; padding: 8px 11px; border: 1px solid #315d80; border-radius: 9px; color: #fff; background: linear-gradient(120deg, #234864, #477b9a); box-shadow: 0 2px 5px #23486420; font-size: 13px; font-weight: 650; line-height: 1.4; white-space: nowrap; }
+.research-tags svg { flex: 0 0 17px; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.research-main circle { fill: #315d80; }
+.page__content .research-subtopics { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; list-style: none; margin: 0; padding: 0 2px; }
+.page__content .research-subtopics li { margin: 0; padding: 5px 8px; border: 1px solid #cfdfeb; border-radius: 7px; color: #365c78; background: #ffffffc9; font-size: 11px; font-weight: 550; line-height: 1.4; white-space: nowrap; }
+.research-topic { display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; border: 1px solid #bfcfdd; border-radius: 11px; color: #365c78; background: linear-gradient(135deg, #ffffffd9, #edf4f9c9); font-size: 13px; font-weight: 550; line-height: 1.4; white-space: nowrap; }
+@media (max-width: 600px) {
+  .research-interests { margin: 20px 0 24px; }
+  .research-focus { width: 100%; gap: 8px; padding: 7px; }
+  .research-topic { padding: 8px 11px; }
+}
+
 .page__content .award-list { list-style: none; margin: 0; padding: 0; }
 .award-list .award-row {
   display: grid;
