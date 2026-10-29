@@ -42,6 +42,7 @@ bundle exec jekyll serve
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
 | 下载版 CV | `images/cv.pdf` |
 | 头像 | `images/wx.jpg` |
+| 主页半透明天空背景 | `images/sky.jpg` |
 | InfRec 经历卡片 Logo（仅鸟形图案） | `images/InfRec.png` |
 | GitHub stars 缓存、Scholar citations | `_data/profile_stats.json` |
 | 独立统计徽章的指定显示值（CV 不显示徽章） | `_data/cv_stats.json` |
@@ -51,6 +52,8 @@ bundle exec jekyll serve
 首页论文卡片与完整列表在 `_pages/about.md` 中维护，保留原版切换按钮和图片轮播。`_data/publications.json` 是重设计版本的数据备份，当前首页不读取它。
 
 照片在首页使用原版圆形头像框；CV 网页和下载版不显示个人照片。原始图片没有被裁剪或修改。
+
+主页背景原样使用用户提供的 `sky.jpg`，由 `classic-home.css` 的固定背景层铺满视口，`--home-background-opacity: .24` 控制图片显示强度。导航和卡片使用半透明底色，文字不设置透明度；打印时隐藏背景。样式仅在主页加载，链接带构建时间参数以更新浏览器缓存。
 
 CV 顶部主页链接显示 `wd7ang.github.io`，GitHub 和 Google Scholar 均使用图标与文字链接，不显示 stars、citations 徽章或手机号。CV 不输出自动统计配置，也不请求统计接口。`_data/cv_stats.json` 保留历史指定值；其中 GitHub stars 52 仍供独立 `/images/github-stars.svg` 使用，CV 不显示该数值。
 
