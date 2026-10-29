@@ -5,7 +5,8 @@
     "artist": "艾拉拉 / Luv4",
     "album": "千年之后",
     "cover": "/images/music/3442664844.jpg",
-    "url": "https://music.163.com/song?id=3442664844"
+    "url": "https://music.163.com/song?id=3442664844",
+    "duration": 134.298
   },
   {
     "id": 2645092300,
@@ -13,7 +14,8 @@
     "artist": "灵魂配乐师",
     "album": "远方传来风笛",
     "cover": "/images/music/2645092300.png",
-    "url": "https://music.163.com/song?id=2645092300"
+    "url": "https://music.163.com/song?id=2645092300",
+    "duration": 188.114
   },
   {
     "id": 2029892284,
@@ -21,7 +23,8 @@
     "artist": "小瀬村晶",
     "album": "Proof of Us (Soundtrack to the FLAT STUDIO Short Film)",
     "cover": "/images/music/2029892284.jpg",
-    "url": "https://music.163.com/song?id=2029892284"
+    "url": "https://music.163.com/song?id=2029892284",
+    "duration": 291.689
   },
   {
     "id": 1930226368,
@@ -29,7 +32,8 @@
     "artist": "小瀬村晶",
     "album": "「サマーゴースト」オリジナルサウンドトラック",
     "cover": "/images/music/1930226368.jpg",
-    "url": "https://music.163.com/song?id=1930226368"
+    "url": "https://music.163.com/song?id=1930226368",
+    "duration": 136.507
   },
   {
     "id": 2710575522,
@@ -37,7 +41,8 @@
     "artist": "Soulloom苏洛牧",
     "album": "雨中舞",
     "cover": "/images/music/2710575522.png",
-    "url": "https://music.163.com/song?id=2710575522"
+    "url": "https://music.163.com/song?id=2710575522",
+    "duration": 151.8
   },
   {
     "id": 2108766934,
@@ -45,6 +50,7 @@
     "artist": "Tony Ann",
     "album": "AWAKENING",
     "cover": "/images/music/2108766934.jpg",
-    "url": "https://music.163.com/song?id=2108766934"
+    "url": "https://music.163.com/song?id=2108766934",
+    "duration": 199.467
   }
 ]
