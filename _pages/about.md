@@ -646,6 +646,13 @@ Awards
 --------
 <ul class="award-list">
   <li class="award-row">
+    <span class="award-date">2026</span>
+    <div class="award-details">
+      <span class="award-title">Second-Class Academic Scholarship</span>
+      <span class="award-meta">Xidian University</span>
+    </div>
+  </li>
+  <li class="award-row">
     <time class="award-date" datetime="2025-09">Sep 2025</time>
     <div class="award-details">
       <span class="award-title">Second-Class Academic Scholarship</span>
