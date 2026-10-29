@@ -437,12 +437,12 @@ I enjoy exploring new research directions and collaborating with researchers acr
 <div class="research-interests" role="group" aria-labelledby="research-interests-label">
   <span class="research-caption" id="research-interests-label">Research interests</span>
   <div class="research-tags">
-    <div class="research-focus" role="group" aria-label="Multimodal LLMs research directions">
-      <span class="research-main"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>Multimodal LLMs</span>
-      <ul class="research-subtopics" role="list"><li>RSI</li><li>Agentic Robot</li><li>HCI</li></ul>
-    </div>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>MLLM</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a8 8 0 1 0 0 10M20 3v5h-5"/></svg>RSI</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h1m6 0h1m-8 4h8"/></svg>Agentic Robot</span>
     <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7L20 9h-7l1-6Z"/></svg>Efficient AI</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-3-13 6 4-3 1-1 3Z"/></svg>HCI</span>
+    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
   </div>
 </div>
 
