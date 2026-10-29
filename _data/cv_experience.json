@@ -12,6 +12,10 @@
       "Spearheading research on <strong>Recursive Self-improvement (RSI)</strong> and <strong>Long-horizon World Interaction</strong>, enabling AI agents to accumulate and use long-term knowledge while autonomously controlling embodied robots.",
       "Driving research initiatives from problem formulation to prototype development, while collaborating with engineering teams for practical deployment.",
       "Contributing to the growth of the lab, which recently secured nearly ten million RMB in funding to advance AI research."
+    ],
+    "highlights": [
+      "Lead research on recursive self-improvement and long-horizon world interaction, enabling AI agents to retain knowledge and control embodied robots.",
+      "Guide projects from problem formulation to prototype development, working with engineering teams on practical deployment."
     ]
   },
   {
@@ -25,6 +29,10 @@
     "details": [
       "Researching scalable <strong>post-training</strong> techniques for multimodal foundation models, injecting e-commerce domain knowledge to improve product retrieval and find-similar-item applications.",
       "Designed and implemented training and evaluation pipelines to improve <strong>product representation learning</strong>, <strong>visual-semantic alignment</strong>, and <strong>retrieval performance</strong> in large-scale e-commerce scenarios."
+    ],
+    "highlights": [
+      "Researched post-training for multimodal foundation models, incorporating e-commerce domain knowledge for product retrieval and similar-item search.",
+      "Developed training and evaluation pipelines for product representation learning, visual-semantic alignment, and retrieval in large-scale e-commerce settings."
     ]
   },
   {
@@ -37,6 +45,9 @@
     "date_end": "03/2026",
     "details": [
       "Worked on <strong>AI infrastructure for LLM training and inference on Huawei Ascend 910B</strong>, including precision alignment."
+    ],
+    "highlights": [
+      "Worked on AI infrastructure for LLM training and inference on Huawei Ascend 910B, including precision alignment."
     ]
   },
   {
@@ -52,6 +63,10 @@
     "details": [
       "Focusing on efficient machine learning and multimodal model evaluation.",
       "Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years."
+    ],
+    "highlights": [
+      "Conducted research on efficient machine learning and the evaluation of multimodal models at the HPC-AI Lab.",
+      "Led projects from initial ideas through publication, resulting in three papers accepted at CVPR and ACL."
     ]
   }
 ]

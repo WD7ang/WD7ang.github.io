@@ -35,7 +35,7 @@ bundle exec jekyll serve
 | 重设计版经历备份 | `_data/experience.json` |
 | 重设计版论文备份 | `_data/publications.json` |
 | 在线 CV | `_pages/cv.html` |
-| CV 经历概览（详细描述留存为数据） | `_data/cv_experience.json` |
+| CV 经历、工作要点与导师（原始详细描述留存为数据） | `_data/cv_experience.json` |
 | CV 教育信息 | `_data/cv_education.json` |
 | CV 论文（完整作者、会议信息与链接） | `_data/cv_publications.json` |
 | CV 英文月份显示 | `_includes/cv-date.html` |
@@ -91,9 +91,9 @@ date: YYYY-MM-DD
 2. 构建后打开 `/cv/`，点击 **Print / Save as PDF**，选择 A4、100% 缩放、关闭浏览器自动页眉页脚。
 3. 将导出的文件保存为 `images/cv.pdf`，再次构建，检查下载按钮。
 
-CV 内容依据用户提供的《汤维栋CV.pdf》及后续补充更新，包含 5 篇 Core Publications、6 篇 Collaborative Publications 和 4 段研究经历。新增的 IndustryBench-MIPU（arXiv:2606.14383）和 EarthVerse（arXiv:2608.23525）由用户提供编号，题名、完整作者顺序及资源链接已由 arXiv 官方页面核对；Scholar 验证码页无法读取，因此未将同名作者检索结果自动导入。IEBench 的正式出版年按 DOI `10.1109/TNSE.2026.3692182` 的注册元数据更正为 2026。网页和两页 A4 下载版均为精简版：教育、经历概览、11 篇论文、项目、奖项与服务；按用户要求移除 Research Details、Biography 和 News。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
+CV 内容依据用户提供的《汤维栋CV.pdf》及后续补充更新，包含 5 篇 Core Publications、6 篇 Collaborative Publications 和 4 段研究经历。新增的 IndustryBench-MIPU（arXiv:2606.14383）和 EarthVerse（arXiv:2608.23525）由用户提供编号，题名、完整作者顺序及资源链接已由 arXiv 官方页面核对；Scholar 验证码页无法读取，因此未将同名作者检索结果自动导入。IEBench 的正式出版年按 DOI `10.1109/TNSE.2026.3692182` 的注册元数据更正为 2026。网页和两页 A4 下载版均为精简版：教育、经历及工作要点、11 篇论文、项目、奖项与服务；按用户要求移除 Research Details、Biography 和 News。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
 
-CV 采用参考 PDF 的 Segoe UI 字体、灰黑正文、浅蓝栏目线、页顶蓝粉渐变条和无照片布局。Education、Experience 使用小 logo 与同行右对齐日期，日期以英文月份显示，底层已确认的日期不变。论文按 01–11 连续编号，保留 Core 和 Collaborative 的数据归类，但不再分段显示；作者姓名用暗红色强调，资源链接以中点分隔。Projects 之后将 Awards、Professional Services 并列，年份与任职日期均放在各条目右侧；两项奖学金按 2026、2025 分开显示。页面内容自然展开，不使用内嵌滚动区域。打印使用 A4、15mm 页边距，页码在右下角。NUS 校徽使用 [NUS Computing 官网](https://www.comp.nus.edu.sg/)提供的[透明 PNG](https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png)，保存为 `images/NUS-crest.png`；主页和 CV 均完整居中显示。NUS 经历下的 `Advised by` 单独由 `_data/cv_experience.json` 的 `advisors_html` 字段维护。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
+CV 采用参考 PDF 的 Segoe UI 字体、灰黑正文、浅蓝栏目线、页顶蓝粉渐变条和无照片布局。Education、Experience 使用小 logo 与同行右对齐日期，日期以英文月份显示，底层已确认的日期不变。论文按 01–11 连续编号，保留 Core 和 Collaborative 的数据归类，但不再分段显示；作者姓名用暗红色强调，资源链接以中点分隔。Projects 之后将 Awards、Professional Services 并列，年份与任职日期均放在各条目右侧；两项奖学金按 2026、2025 分开显示。页面内容自然展开，不使用内嵌滚动区域。打印使用 A4、15mm 页边距，页码在右下角。NUS 校徽使用 [NUS Computing 官网](https://www.comp.nus.edu.sg/)提供的[透明 PNG](https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png)，保存为 `images/NUS-crest.png`；主页和 CV 均完整居中显示。NUS 经历下的 `Advised by` 单独由 `_data/cv_experience.json` 的 `advisors_html` 字段维护。每段经历补充 1–2 条简短工作要点，由同一文件的 `highlights` 字段维护，网页与两页 PDF 均显示。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
 
 ## 部署
 
