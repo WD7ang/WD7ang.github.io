@@ -505,7 +505,7 @@ Experience
               <strong>Xidian University</strong>
               <span class="experience-date">2023.09 - Present</span>
           </div>
-          <div class="experience-role">Undergraduate Student &amp; Research Assistant</div>
+          <div class="experience-role">Undergraduate Student</div>
           <div class="experience-description">B.E. at <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a>; advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao">Xiumei Wang</a></div>
       </div>
   </div>
