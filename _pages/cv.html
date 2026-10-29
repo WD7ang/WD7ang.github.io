@@ -1,7 +1,7 @@
 ---
 layout: cv-reference
 title: Curriculum Vitae
-description: Biography, research, publications, and academic experience of Weidong Tang.
+description: Education, experience, publications, projects, awards, and professional services of Weidong Tang.
 permalink: /cv/
 ---
 {% assign cv_stats = site.data.profile_stats %}{% if site.data.cv_stats.manual %}{% assign cv_stats = site.data.cv_stats %}{% endif %}
@@ -12,18 +12,11 @@ permalink: /cv/
         <p class="cv-headline">Chief Research Officer (Founding Member) <span class="cv-separator">&middot;</span> <span class="cv-affiliation"><img src="{{ '/images/InfRec.png' | relative_url }}" width="20" height="20" alt=""><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></span></p>
         <div class="cv-contact">
           <a class="cv-contact-item" href="mailto:wdtang0705@gmail.com">{% include cv-icon.svg name='mail' %}wdtang0705@gmail.com</a>
-          <span class="cv-contact-item">{% include cv-icon.svg name='globe' %}<span>Homepage: <a href="https://wd7ang.github.io/">https://wd7ang.github.io/</a></span></span>
-          <span class="cv-contact-item"><a href="https://github.com/WD7ang">GitHub</a><a class="cv-stat-link" data-github-badge href="{% if site.data.cv_stats.manual %}https://github.com/WD7ang{% else %}#cv-github-stars{% endif %}" aria-label="GitHub stars: {{ cv_stats.github_stars }}" title="GitHub stars: {{ cv_stats.github_stars }}">{% include stat-badge.svg label='stars' value=cv_stats.github_stars %}</a></span>
+          <a class="cv-contact-item" href="https://wd7ang.github.io/">{% include cv-icon.svg name='globe' %}wd7ang.github.io</a>
+          <a class="cv-contact-item" href="https://github.com/WD7ang">{% include cv-icon.svg name='github' %}GitHub</a>
           <span class="cv-contact-item"><a href="https://scholar.google.com/citations?user=NH9USaYAAAAJ">Google Scholar</a><a class="cv-stat-link" data-scholar-badge data-stats-url="https://raw.githubusercontent.com/WD7ang/wd7ang.github.io/profile-metrics/profile-stats.json" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ" aria-label="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}" title="Google Scholar citations: {{ cv_stats.scholar_citations | default: '—' }}">{% include stat-badge.svg label='citations' value=cv_stats.scholar_citations %}</a></span>
-          <a class="cv-contact-item" href="tel:+8613355168563">{% include cv-icon.svg name='phone' %}+86 13355168563</a>
           <a class="cv-contact-item" href="{{ '/images/vx.jpg' | relative_url }}">{% include cv-icon.svg name='chat' %}WeChat: d7ang0705</a>
         </div>
-        {% unless site.data.cv_stats.manual %}<details class="cv-star-details" id="cv-github-stars">
-          <summary>Star breakdown</summary>
-          <p>My public repositories and coauthored research projects.</p>
-          <ul data-star-repositories>{% for repository in site.data.profile_stats.github_repositories %}<li><a href="{{ repository.url | escape }}">{{ repository.name | escape }}</a> <span>{{ repository.stars }} ★</span></li>{% endfor %}</ul>
-          <p class="cv-stats-updated" data-stars-updated>{% if site.data.profile_stats.github_checked_on %}Updated {{ site.data.profile_stats.github_checked_on }}.{% endif %}</p>
-        </details>{% endunless %}
       </div>
     </header>
 
@@ -93,27 +86,6 @@ permalink: /cv/
     </section>
   </div>
 
-  <section class="cv-supplement" aria-labelledby="cv-experience">
-    <h2 class="cv-section-title" id="cv-experience">Research Details</h2>
-  <ul class="cv-experience-list">{% for experience in site.data.cv_experience %}
-    <li><p class="cv-entry-heading"><span><strong><a href="{{ experience.url }}">{% if experience.affiliation %}{{ experience.affiliation }}, {% endif %}{{ experience.organization }}</a></strong> &mdash; {{ experience.role }}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} - {% include cv-date.html value=experience.date_end %}</span></p>
-      <ul>{% for detail in experience.details %}<li>{{ detail }}</li>{% endfor %}</ul>
-    </li>{% endfor %}
-  </ul>
-
-  </section>
-  <section class="cv-supplement" aria-labelledby="cv-biography">
-    <h2 class="cv-section-title" id="cv-biography">Biography</h2>
-    <div class="cv-biography-text">
-<p>I am the Chief Research Officer and a founding member of <a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a>, leading a research team focused on advancing frontier AI research based on real-world long-horizon trajectory data. My research focuses on recursive self-improvement and long-horizon world interaction, enabling AI agents to accumulate long-term knowledge and autonomously control embodied robots.</p>
-  <p>I am also pursuing a B.E. in the <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a> at <a href="https://www.xidian.edu.cn/">Xidian University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao">Xiumei Wang</a>. Previously, I was a research intern at Alibaba and TeleAI, and a Research Assistant at the <a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab, National University of Singapore</a>.</p>
-    </div>
-  </section>
-  <section class="cv-supplement" aria-labelledby="cv-news">
-    <h2 class="cv-section-title" id="cv-news">News</h2>
-    <div class="cv-news-scroll"><ul>{% for item in site.data.news %}<li>{{ item.date }}: {{ item.text }}</li>{% endfor %}</ul></div>
-  </section>
-
-  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">Homepage</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
+  <footer class="cv-footer">© {{ site.time | date: '%Y' }} Weidong Tang. &nbsp; <a href="{{ '/' | relative_url }}">wd7ang.github.io</a> &nbsp; | &nbsp; <a href="{{ '/images/cv.pdf' | relative_url }}" download="Weidong-Tang-CV.pdf">Download PDF</a> &nbsp; | &nbsp; <button class="print-link" type="button" data-print-cv hidden>Print / Save as PDF</button></footer>
 </article>
 {% unless site.data.cv_stats.manual %}<script type="application/json" id="profile-stats-config">{"projects":{{ site.data.github_projects | jsonify }},"snapshot":{{ site.data.profile_stats | jsonify }}}</script>{% endunless %}

@@ -72,7 +72,7 @@ window.profileStatsReady = (async () => {
   const applyStats = (stats, includeGithub = true) => {
     if (!stats || typeof stats !== 'object') return;
     const olderGithub = typeof stats.github_checked_on === 'string' && typeof current.github_checked_on === 'string' && stats.github_checked_on < current.github_checked_on;
-    if (includeGithub && !olderGithub && validGithubStats(stats)) {
+    if (githubBadge && includeGithub && !olderGithub && validGithubStats(stats)) {
       for (const field of ['github_user', 'github_scope', 'github_stars', 'github_checked_on', 'github_repositories']) current[field] = stats[field];
       updateBadge(githubBadge, 'stars', current.github_stars);
       const list = document.querySelector('[data-star-repositories]');
@@ -143,7 +143,7 @@ window.profileStatsReady = (async () => {
     lastRefresh = Date.now();
     try {
       const [github, feed] = await Promise.allSettled([
-        refreshGithub(),
+        githubBadge ? refreshGithub() : Promise.resolve(null),
         fetchJSON(scholarBadge.dataset.statsUrl)
       ]);
       if (feed.status === 'fulfilled') applyStats(feed.value, github.status !== 'fulfilled');
@@ -158,7 +158,7 @@ window.profileStatsReady = (async () => {
   try { cached = JSON.parse(localStorage.getItem(storageKey)); } catch { /* Use the built snapshot. */ }
   applyStats(snapshot);
   applyStats(cached);
-  githubBadge.addEventListener('click', () => { document.getElementById('cv-github-stars').open = true; });
+  githubBadge?.addEventListener('click', () => { document.getElementById('cv-github-stars').open = true; });
   setInterval(() => { if (!document.hidden) refresh(); }, 15 * 60 * 1000);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden && Date.now() - lastRefresh > 5 * 60 * 1000) refresh();
