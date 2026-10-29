@@ -14,8 +14,8 @@
       "Contributing to the growth of the lab, which recently secured nearly ten million RMB in funding to advance AI research."
     ],
     "highlights": [
-      "Study recursive self-improvement and long-horizon interaction.",
-      "Guide embodied AI projects from research ideas to prototypes."
+      "Lead research on recursive self-improvement and long-horizon interaction, enabling agents to learn and control embodied robots.",
+      "Guide research from problem formulation to prototypes, working with engineering teams on real-world embodied AI applications."
     ]
   },
   {
@@ -31,8 +31,8 @@
       "Designed and implemented training and evaluation pipelines to improve <strong>product representation learning</strong>, <strong>visual-semantic alignment</strong>, and <strong>retrieval performance</strong> in large-scale e-commerce scenarios."
     ],
     "highlights": [
-      "Research: multimodal representations + OPD; post-training/SFT; industrial product benchmarks.",
-      "Business: data pipelines for image-text alignment."
+      "Research: combined multimodal representations with OPD, exploring post-training, SFT, and industrial product benchmarks.",
+      "Business: studied image-text alignment data pipelines for product representations and retrieval in large-scale e-commerce."
     ]
   },
   {
@@ -47,8 +47,8 @@
       "Worked on <strong>AI infrastructure for LLM training and inference on Huawei Ascend 910B</strong>, including precision alignment."
     ],
     "highlights": [
-      "Focused on AI infrastructure for LLMs on Huawei Ascend 910B.",
-      "Worked on precision alignment for training and inference."
+      "Focused on AI infrastructure for LLM training and inference on Huawei Ascend 910B, emphasizing efficient and stable execution.",
+      "Worked on precision alignment for LLM training and inference, addressing precision differences at the AI infrastructure level."
     ]
   },
   {
@@ -66,8 +66,8 @@
       "Led end-to-end research projects from ideation to publication, resulting in three papers accepted by CVPR and ACL conferences. Recognized by Prof. Yang You as <strong>one of the outstanding interns</strong> in recent years."
     ],
     "highlights": [
-      "Focused on efficient AI and model evaluation.",
-      "Learned to lead research teams."
+      "Focused on efficient AI and multimodal model evaluation, studying model efficiency and performance across research tasks.",
+      "Learned to lead research teams through collaborative projects, developing ideas and working toward research publications."
     ]
   }
 ]
