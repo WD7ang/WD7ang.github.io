@@ -434,6 +434,8 @@ My research interests lie at the intersection of natural language processing and
 
 I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
+**Research interests:** Multimodal LLMs {RSI, Agentic Robot, HCI}, BCI, Efficient AI.
+
 News
 ---------------
 <div class="news-box">
