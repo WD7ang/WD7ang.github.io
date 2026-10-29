@@ -646,7 +646,7 @@ Awards
 --------
 <ul class="award-list">
   <li class="award-row">
-    <span class="award-date"><time datetime="2025-09">Sep 2025</time> &amp; <time datetime="2026-09">Sep 2026</time></span>
+    <span class="award-date">2025 &amp; 2026</span>
     <div class="award-details">
       <span class="award-title">Second-Class Academic Scholarship</span>
       <span class="award-meta">Xidian University · Ranked 5/99 (2025)</span>
