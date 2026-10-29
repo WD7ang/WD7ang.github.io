@@ -9,6 +9,7 @@ redirect_from:
 ---
 <style>
     #news,
+    #education,
     #experience,
     #publications,
     #projects,
@@ -443,6 +444,23 @@ News
   </ul>
 </div>
 
+Education
+--------------
+
+<div class="education-container">
+  <div class="experience-card">
+      <img src="images/XDU.png" alt="Xi'dian logo" class="experience-logo">
+      <div class="experience-info">
+          <div class="experience-header">
+              <strong>Xidian University</strong>
+              <span class="experience-date">2023.09 - Present</span>
+          </div>
+          <div class="experience-role">Undergraduate Student</div>
+          <div class="experience-description">B.E. at <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a>; advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao">Xiumei Wang</a></div>
+      </div>
+  </div>
+</div>
+
 Experience
 --------------
 
@@ -496,20 +514,6 @@ Experience
           <div class="experience-description">Advised by <a href="https://www.comp.nus.edu.sg/~youy/">Yang You</a>, <a href="https://wangbo-zhao.github.io/">Wangbo Zhao</a> and <a href="https://lancezpf.github.io/">Pengfei Zhou</a></div>
       </div>
   </div>
-
-
-  <div class="experience-card">
-      <img src="images/XDU.png" alt="Xi'dian logo" class="experience-logo">
-      <div class="experience-info">
-          <div class="experience-header">
-              <strong>Xidian University</strong>
-              <span class="experience-date">2023.09 - Present</span>
-          </div>
-          <div class="experience-role">Undergraduate Student</div>
-          <div class="experience-description">B.E. at <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a>; advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao">Xiumei Wang</a></div>
-      </div>
-  </div>
-
 </div>
 
 
