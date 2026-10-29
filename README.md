@@ -46,7 +46,7 @@ bundle exec jekyll serve
 
 首页论文卡片与完整列表在 `_pages/about.md` 中维护，保留原版切换按钮和图片轮播。`_data/publications.json` 是重设计版本的数据备份，当前首页不读取它。
 
-新照片在首页使用原版圆形头像框，CV 使用竖向照片；通过 CSS 的 `aspect-ratio`、`object-fit` 和 `object-position` 调整显示，原始图片没有被裁剪或修改。
+照片在首页使用原版圆形头像框；CV 网页和下载版不显示个人照片。原始图片没有被裁剪或修改。
 
 CV 联系方式使用与参考页同款的统计徽章。当前按用户要求，在 `_data/cv_stats.json` 中设置 `manual: true`，固定显示 **52 stars / 51 citations**。网页、无 JavaScript 视图和下载 PDF 均使用这些显示值；浏览器缓存与自动抓取不会覆盖它们。手动模式不显示原自动总数的仓库明细，GitHub 徽章直接链接到个人账号。
 
@@ -89,7 +89,7 @@ date: YYYY-MM-DD
 
 本次 CV 内容依据用户于 2026-10-28 提供的《汤维栋CV.pdf》更新，包含 5 篇 Core Publications、4 篇 Collaborative Publications 和 4 段研究经历。下载版按在线 CV 导出为三页 A4。Alibaba 日期为 `05/2026 - 07/2026`；NUS 日期继续采用用户此前明确确认的主页日期 `10/2024 - 10/2025`（提供的 PDF 中为 `12/2024 - 12/2025`）。
 
-CV 桌面版采用 1000px 白色页面、两侧 70px 留白和无衬线字体。开头为大号姓名与中文名、横排联系方式和右侧 160px 照片；Education、Experience 使用浅蓝细分隔线、30px 机构 logo、机构名同行右对齐日期及第二行职位。详细研究经历保留在后文，与开头概览读取同一份数据。NUS logo 使用 CSS 显示原图左侧校徽。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动；打印时展开全部内容。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
+CV 桌面版采用 1000px 白色页面、两侧 70px 留白和无衬线字体。开头为大号姓名与中文名及横排联系方式，使用整行宽度，不设置照片栏；Education、Experience 使用浅蓝细分隔线、30px 机构 logo、机构名同行右对齐日期及第二行职位。详细研究经历保留在后文，与开头概览读取同一份数据。NUS logo 使用 CSS 显示原图左侧校徽。News 和 Publications 随内容自动调整高度，仅在超过 500px / 900px 时滚动；打印时展开全部内容。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
 
 ## 部署
 
