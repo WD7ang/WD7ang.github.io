@@ -7,12 +7,13 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   const status = player.querySelector('[data-music-status]');
   const tracks = [...player.querySelectorAll('[data-music-track]')];
   if (!tracks.length) return;
+  const inSidebar = Boolean(player.closest('.sidebar'));
   let current = 0;
 
   const setPlaylistOpen = (open, restoreFocus = false) => {
     playlist.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
-    if (restoreFocus) toggle.focus({ preventScroll: true });
+    if (restoreFocus) toggle.focus({ preventScroll: !inSidebar });
   };
 
   const selectTrack = (index) => {
@@ -35,7 +36,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   toggle.addEventListener('click', () => {
     const open = playlist.hidden;
     setPlaylistOpen(open);
-    if (open) tracks[current].focus({ preventScroll: true });
+    if (open) tracks[current].focus({ preventScroll: !inSidebar });
   });
   tracks.forEach((button, index) => button.addEventListener('click', () => {
     selectTrack(index);
