@@ -34,7 +34,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   const fail = () => {
     setPlaying(false);
     seek.disabled = true;
-    message('此曲暂无法在网页播放，可在网易云打开。 / Open this track in NetEase Music.', true);
+    message('音频加载失败，请重试或打开歌曲。 / Try again or open the track.', true);
   };
   const updateVolume = () => {
     const silent = audio.muted || audio.volume === 0;
@@ -68,7 +68,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
     });
     find('title').textContent = track.title;
     find('artist').textContent = track.artist;
-    find('link').href = track.url;
+    find('link').href = track.source;
     find('count').textContent = `${String(current + 1).padStart(2, '0')} / ${String(tracks.length).padStart(2, '0')}`;
     find('duration').textContent = clock(Number(track.duration) || NaN);
     stage.setAttribute('aria-label', `${track.title} — ${track.artist}；左右滑动选歌 / Swipe or use arrow keys to choose a song`);
@@ -94,8 +94,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
     setPlaying(false);
     position = next;
     const track = tracks[modulo(position)].dataset;
-    // NetEase's public endpoint enforces its own permissions; no audio is copied or cached here.
-    audio.src = `https://music.163.com/song/media/outer/url?id=${encodeURIComponent(track.id)}.mp3`;
+    audio.src = track.source;
     seek.value = 0;
     seek.disabled = true;
     find('elapsed').textContent = '0:00';
@@ -193,7 +192,8 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   const resize = () => {
     const size = Math.max(88, Math.min(124, Math.floor(stage.clientWidth * .46)));
     player.style.setProperty('--cover-size', `${size}px`);
-    player.style.setProperty('--ring-radius', `${Math.round(size * .88)}px`);
+    const radius = size / (2 * Math.tan(Math.PI / Math.max(3, tracks.length)));
+    player.style.setProperty('--ring-radius', `${Math.round(radius)}px`);
   };
   audio.volume = .8;
   audio.muted = false;

@@ -1,56 +1,110 @@
 [
   {
-    "id": 3442664844,
+    "id": "qian-nian-zhi-hou",
     "title": "千年之后",
-    "artist": "艾拉拉 / Luv4",
+    "artist": "艾拉拉 /  Luv4",
     "album": "千年之后",
-    "cover": "/images/music/3442664844.jpg",
-    "url": "https://music.163.com/song?id=3442664844",
-    "duration": 134.298
+    "cover": "/images/music/qian-nian-zhi-hou.jpg",
+    "source": "/media/music/qian-nian-zhi-hou.m4a",
+    "duration": 134.29333333333332
   },
   {
-    "id": 2645092300,
+    "id": "yuan-fang-chuan-lai-feng-di",
     "title": "远方传来风笛",
     "artist": "灵魂配乐师",
     "album": "远方传来风笛",
-    "cover": "/images/music/2645092300.png",
-    "url": "https://music.163.com/song?id=2645092300",
-    "duration": 188.114
+    "cover": "/images/music/yuan-fang-chuan-lai-feng-di.jpg",
+    "source": "/media/music/yuan-fang-chuan-lai-feng-di.m4a",
+    "duration": 188.13566666666668
   },
   {
-    "id": 2029892284,
+    "id": "ahead-of-us",
     "title": "Ahead of Us",
     "artist": "小瀬村晶",
     "album": "Proof of Us (Soundtrack to the FLAT STUDIO Short Film)",
-    "cover": "/images/music/2029892284.jpg",
-    "url": "https://music.163.com/song?id=2029892284",
-    "duration": 291.689
+    "cover": "/images/music/ahead-of-us.jpg",
+    "source": "/media/music/ahead-of-us.m4a",
+    "duration": 291.6890702947846
   },
   {
-    "id": 1930226368,
+    "id": "summer-ghost",
     "title": "Summer Ghost",
     "artist": "小瀬村晶",
     "album": "「サマーゴースト」オリジナルサウンドトラック",
-    "cover": "/images/music/1930226368.jpg",
-    "url": "https://music.163.com/song?id=1930226368",
-    "duration": 136.507
+    "cover": "/images/music/summer-ghost.jpg",
+    "source": "/media/music/summer-ghost.m4a",
+    "duration": 136.53054421768707
   },
   {
-    "id": 2710575522,
+    "id": "yu-zhong-wu",
     "title": "雨中舞",
     "artist": "Soulloom苏洛牧",
     "album": "雨中舞",
-    "cover": "/images/music/2710575522.png",
-    "url": "https://music.163.com/song?id=2710575522",
-    "duration": 151.8
+    "cover": "/images/music/yu-zhong-wu.jpg",
+    "source": "/media/music/yu-zhong-wu.m4a",
+    "duration": 151.808
   },
   {
-    "id": 2108766934,
+    "id": "icarus",
     "title": "ICARUS",
     "artist": "Tony Ann",
     "album": "AWAKENING",
-    "cover": "/images/music/2108766934.jpg",
-    "url": "https://music.163.com/song?id=2108766934",
-    "duration": 199.467
+    "cover": "/images/music/icarus.jpg",
+    "source": "/media/music/icarus.m4a",
+    "duration": 199.49070294784582
+  },
+  {
+    "id": "feng-chui-wu",
+    "title": "风吹雾",
+    "artist": "Adoreya",
+    "album": "花霧",
+    "cover": "/images/music/feng-chui-wu.jpg",
+    "source": "/media/music/feng-chui-wu.m4a",
+    "duration": 124.28383333333333
+  },
+  {
+    "id": "forest-mixtape",
+    "title": "Forest Mixtape",
+    "artist": "Christina Kuong",
+    "album": "Tsuki's Odyssey (Original Game Soundtrack) Vol. 2",
+    "cover": "/images/music/forest-mixtape.jpg",
+    "source": "/media/music/forest-mixtape.m4a",
+    "duration": 140.02321995464854
+  },
+  {
+    "id": "comfort-chain",
+    "title": "Comfort Chain",
+    "artist": "instupendo",
+    "album": "Comfort Chain",
+    "cover": "/images/music/comfort-chain.jpg",
+    "source": "/media/music/comfort-chain.m4a",
+    "duration": 184.36643990929704
+  },
+  {
+    "id": "born-a-stranger",
+    "title": "Born a Stranger",
+    "artist": "Kan R. Gao",
+    "album": "To the Moon",
+    "cover": "/images/music/born-a-stranger.jpg",
+    "source": "/media/music/born-a-stranger.m4a",
+    "duration": 101.73866666666666
+  },
+  {
+    "id": "magnolia",
+    "title": "magnolia",
+    "artist": "keshi",
+    "album": "magnolia",
+    "cover": "/images/music/magnolia.jpg",
+    "source": "/media/music/magnolia.m4a",
+    "duration": 139.646485260771
+  },
+  {
+    "id": "kai-wang-chun-tian-de-di-tie-09x",
+    "title": "开往春天的地铁 (0.9x)",
+    "artist": "昱",
+    "album": "开往春天的地铁 (0.9x)",
+    "cover": "/images/music/kai-wang-chun-tian-de-di-tie-09x.jpg",
+    "source": "/media/music/kai-wang-chun-tian-de-di-tie-09x.m4a",
+    "duration": 140.52716553287982
   }
 ]

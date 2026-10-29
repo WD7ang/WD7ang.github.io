@@ -1,10 +1,11 @@
 {% assign first_track = site.data.music | first %}
+{% assign card_step = 360.0 | divided_by: site.data.music.size %}
 <section class="home-music" id="music" aria-label="音乐 / Music" data-music-player>
-  <div class="music-heading"><span>Music <span lang="zh-CN">/ 音乐</span></span><span data-music-count>01 / {{ site.data.music.size | prepend: '0' }}</span></div>
+  <div class="music-heading"><span>Music <span lang="zh-CN">/ 音乐</span></span><span data-music-count>01 / {{ site.data.music.size }}</span></div>
   <div class="music-stage" role="region" aria-roledescription="carousel" aria-label="左右滑动选歌 / Swipe to choose a song" tabindex="0" data-music-stage hidden>
     <div class="music-ring" data-music-ring>
       {% for track in site.data.music %}
-      <button class="music-card" type="button" style="--card-angle: {{ forloop.index0 | times: 60 }}deg" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-url="{{ track.url }}" data-duration="{{ track.duration }}" aria-label="{{ track.title | escape }} — {{ track.artist | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
+      <button class="music-card" type="button" style="--card-angle: {{ forloop.index0 | times: card_step }}deg" data-music-track data-id="{{ track.id }}" data-title="{{ track.title | escape }}" data-artist="{{ track.artist | escape }}" data-source="{{ track.source | relative_url }}" data-duration="{{ track.duration }}" aria-label="{{ track.title | escape }} — {{ track.artist | escape }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}">
         <img src="{{ track.cover | relative_url }}" alt="" width="124" height="124" draggable="false" loading="lazy">
       </button>
       {% endfor %}
@@ -12,7 +13,7 @@
   </div>
   <p class="music-gesture-hint" data-music-enhanced hidden>滑动选歌 <span lang="en">/ Swipe to browse</span></p>
   <div class="music-now-playing"><strong data-music-title>{{ first_track.title }}</strong><span data-music-artist>{{ first_track.artist }}</span></div>
-  <audio class="music-audio" controls preload="none" src="https://music.163.com/song/media/outer/url?id={{ first_track.id }}.mp3" data-music-audio></audio>
+  <audio class="music-audio" controls preload="none" src="{{ first_track.source | relative_url }}" data-music-audio></audio>
   <div class="music-transport" data-music-enhanced hidden>
     <button class="music-button" type="button" aria-label="上一首 / Previous track" title="上一首 / Previous" data-music-prev><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 5l-9 7 9 7V5Z"/></svg></button>
     <button class="music-button music-play" type="button" aria-label="播放 / Play" title="播放 / Play" data-music-play><svg viewBox="0 0 24 24" aria-hidden="true"><path class="music-play-symbol" d="m9 5 10 7-10 7V5Z"/><path class="music-pause-symbol" d="M9 5v14M16 5v14"/></svg></button>
@@ -28,7 +29,7 @@
     <output data-music-volume-value>80%</output>
   </div>
   <p class="music-status" role="status" aria-live="polite" data-music-status>点击播放 / Press play</p>
-  <a class="music-source" href="{{ first_track.url }}" target="_blank" rel="noopener noreferrer" data-music-link>在网易云打开 <span lang="en">/ Open in NetEase</span> ↗</a>
-  <noscript><p class="music-noscript">{% for track in site.data.music %}<a href="{{ track.url }}" target="_blank" rel="noopener noreferrer">{{ track.title }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p></noscript>
+  <a class="music-source" href="{{ first_track.source | relative_url }}" target="_blank" rel="noopener noreferrer" data-music-link>打开歌曲 <span lang="en">/ Open track</span> ↗</a>
+  <noscript><p class="music-noscript">{% for track in site.data.music %}<a href="{{ track.source | relative_url }}" target="_blank" rel="noopener noreferrer">{{ track.title }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p></noscript>
 </section>
 <script src="{{ '/assets/js/music-player.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
