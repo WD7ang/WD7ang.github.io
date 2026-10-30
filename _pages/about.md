@@ -730,7 +730,7 @@ Services
 --------
 <ul class="service-list" role="list">
   <li class="service-row">
-    <span class="service-date">2026.10 - Present</span>
+    <span class="service-date">2026.10 – Present</span>
     <div class="service-details">
       <span class="service-title">Coordinator</span>
       <span class="service-meta service-meta--with-avatar">
