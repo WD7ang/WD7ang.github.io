@@ -731,7 +731,7 @@ Services
     <div class="service-details">
       <span class="service-title">Coordinator</span>
       <span class="service-meta service-meta--with-avatar">
-        <img class="service-avatar" src="images/xidian-admissions-group.png" alt="Xidian admissions group avatar" width="14" height="14" loading="lazy" decoding="async">
+        <img class="service-avatar" src="images/xidian-admissions-group.png" alt="Xidian admissions group avatar" width="15" height="15" loading="lazy" decoding="async">
         <span>Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
       </span>
     </div>
