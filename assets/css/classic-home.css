@@ -73,6 +73,9 @@ body::before {
 .award-details, .service-details { min-width: 0; }
 .award-title, .service-title { display: block; color: var(--home-ink); font-size: 16px; font-weight: 500; line-height: 1.45; }
 .award-meta, .service-meta { display: block; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
+.service-meta--with-avatar { display: flex; align-items: flex-start; gap: 6px; }
+.service-meta--with-avatar > span { min-width: 0; }
+.page__content .service-avatar { display: block; flex: 0 0 22px; width: 22px; height: 22px; margin: 0; border-radius: 50%; background: #f7fcf5; object-fit: cover; }
 @media (max-width: 480px) {
   .award-list .award-row, .service-list .service-row { grid-template-columns: 76px minmax(0, 1fr); padding: 8px 10px; }
   .award-date, .service-date { white-space: normal; }

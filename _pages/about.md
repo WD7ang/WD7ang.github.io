@@ -730,7 +730,10 @@ Services
     <span class="service-date">2026.10 - Present</span>
     <div class="service-details">
       <span class="service-title">Coordinator</span>
-      <span class="service-meta">Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
+      <span class="service-meta service-meta--with-avatar">
+        <img class="service-avatar" src="images/xidian-admissions-group.png" alt="Xidian admissions group avatar" width="22" height="22" loading="lazy" decoding="async">
+        <span>Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
+      </span>
     </div>
   </li>
   <li class="service-row">
