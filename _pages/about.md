@@ -435,6 +435,8 @@ My research interests lie at the intersection of natural language processing and
 
 I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
 
+One day, I'll become a chef and open my own restaurant; if you have my contact info, you'll get a discount. 😏
+
 <div class="research-interests" role="group" aria-labelledby="research-interests-label">
   <span class="research-caption" id="research-interests-label">Research interests</span>
   <div class="research-tags">
