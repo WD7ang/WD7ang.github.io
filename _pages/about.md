@@ -741,7 +741,7 @@ Services
     </div>
   </li>
   <li class="service-row">
-    <span class="service-date">2025–2027</span>
+    <span class="service-date">2025-Present</span>
     <div class="service-details">
       <span class="service-title">Reviewer</span>
       <span class="service-meta">ICIC 2026, PRCV (2025, 2026), ICLR 2027</span>
