@@ -699,6 +699,7 @@ Projects
       <br>
       <b><i style="color:#315d80;">Project &nbsp;</i></b>
       <a href="https://github.com/WD7ang/WowPage"><em>[code]</em></a>
+      <a href="https://www.xiaohongshu.com/discovery/item/69feb95d000000003502e8b7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABPOGv4BUnujNdJXL2rltJQVQ8AGjnq0xVWDGPPDKSj6c=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer"><em>[RedNote]</em></a>
     </div>
   </div>
 </div>
