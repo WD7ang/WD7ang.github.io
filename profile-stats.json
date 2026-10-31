@@ -1,42 +1,42 @@
 {
-  "github_stars": 96,
+  "github_stars": 105,
   "github_checked_on": "2026-10-31",
   "github_user": "WD7ang",
   "github_scope": "owned-and-research",
   "github_repositories": [
     {
       "name": "InfRec-Cardinal/The-Trinity",
-      "stars": 34,
+      "stars": 38,
       "url": "https://github.com/InfRec-Cardinal/The-Trinity",
       "kind": "research"
     },
     {
       "name": "WD7ang/The-Trinity",
-      "stars": 0,
+      "stars": 1,
       "url": "https://github.com/WD7ang/The-Trinity",
       "kind": "owned"
     },
     {
       "name": "WD7ang/VAR-Scaling",
-      "stars": 6,
+      "stars": 7,
       "url": "https://github.com/WD7ang/VAR-Scaling",
       "kind": "owned"
     },
     {
       "name": "WD7ang/WD7ang-old.github.io",
-      "stars": 1,
+      "stars": 2,
       "url": "https://github.com/WD7ang/WD7ang-old.github.io",
       "kind": "owned"
     },
     {
       "name": "WD7ang/WD7ang.github.io",
-      "stars": 2,
+      "stars": 3,
       "url": "https://github.com/WD7ang/WD7ang.github.io",
       "kind": "owned"
     },
     {
       "name": "WD7ang/WowPage",
-      "stars": 26,
+      "stars": 27,
       "url": "https://github.com/WD7ang/WowPage",
       "kind": "owned"
     },
