@@ -67,7 +67,10 @@ redirect_from:
         height: 60px;
         flex-shrink: 0;
         margin-right: 20px;
-        border-radius: 8px;
+        border-radius: 0;
+        border: 0;
+        background: transparent;
+        box-shadow: none;
         object-fit: contain;
     }
     .experience-info {
@@ -479,7 +482,7 @@ Experience
 
 <div class="experience-container">
   <div class="experience-card">
-      <img src="images/InfRec.png" alt="InfRec cardinal logo" class="experience-logo">
+      <img src="images/InfRec-transparent.png" alt="InfRec cardinal logo" class="experience-logo">
       <div class="experience-info">
           <div class="experience-header">
               <strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong>
@@ -505,7 +508,7 @@ Experience
 
 
   <div class="experience-card">
-      <img src="images/TeleAI.png" alt="TeleAI logo" class="experience-logo">
+      <img src="images/TeleAI-transparent.png" alt="TeleAI logo" class="experience-logo">
       <div class="experience-info">
           <div class="experience-header">
               <strong>Institute of Artificial Intelligence of China Telecom</strong>
