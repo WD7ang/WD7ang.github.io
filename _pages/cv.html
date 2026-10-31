@@ -27,7 +27,7 @@ permalink: /cv/
       <h2 class="cv-section-title" id="cv-education">Education</h2>
       <ul class="cv-overview-list cv-education-list">{% for education in site.data.cv_education %}
         <li class="cv-overview-entry">
-          <img class="cv-org-logo" src="{{ education.logo | relative_url }}" width="30" height="30" alt="">
+          <span class="cv-org-logo"><img class="cv-org-logo-image" src="{{ education.logo | relative_url }}" width="24" height="24" alt=""></span>
           <div class="cv-overview-content">
             <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{{ education.organization }}</a><span class="cv-date">{% include cv-date.html value=education.date_start %} - {% include cv-date.html value=education.date_end %}{% if education.date_note %}<span class="cv-date-note"> ({{ education.date_note }})</span>{% endif %}</span></div>
             <p class="cv-entry-role">{{ education.degree }}</p>
@@ -41,7 +41,7 @@ permalink: /cv/
       <h2 class="cv-section-title" id="cv-experience-overview">Experience</h2>
       <ul class="cv-overview-list">{% for experience in site.data.cv_experience %}
         <li class="cv-overview-entry">
-          <img class="cv-org-logo cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="30" height="30" alt="">
+          <span class="cv-org-logo"><img class="cv-org-logo-image cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="24" height="24" alt=""></span>
           <div class="cv-overview-content">
             <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} - {% include cv-date.html value=experience.date_end %}</span></div>
             <p class="cv-entry-role">{{ experience.role }}</p>
