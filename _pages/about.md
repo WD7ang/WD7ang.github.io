@@ -73,6 +73,10 @@ redirect_from:
         box-shadow: none;
         object-fit: contain;
     }
+    .experience-logo--teleai {
+        /* Clip the exterior white margin while preserving the original logo pixels. */
+        clip-path: polygon(2.5% 0%, 95.5% 0%, 95.5% 56.75%, 93.5% 70.75%, 91% 75.75%, 91% 77.25%, 85% 84.75%, 80.5% 88.25%, 59.5% 100%, 38.5% 100%, 25% 92.75%, 14% 85.75%, 9% 80.25%, 5% 72.25%, 3.5% 67.25%, 2.5% 57.25%);
+    }
     .experience-info {
         flex: 1;
         min-width: 0;
@@ -508,7 +512,7 @@ Experience
 
 
   <div class="experience-card">
-      <img src="images/TeleAI-transparent.png" alt="TeleAI logo" class="experience-logo">
+      <img src="images/TeleAI.png" alt="TeleAI logo" class="experience-logo experience-logo--teleai">
       <div class="experience-info">
           <div class="experience-header">
               <strong>Institute of Artificial Intelligence of China Telecom</strong>
