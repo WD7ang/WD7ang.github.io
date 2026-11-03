@@ -557,7 +557,7 @@ Publications
       We introduce a capability-driven framework that couples world generation with agent harness evolution, enabling multimodal agents to recursively improve and transfer learned capabilities to unseen tasks.
       <br>
       <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
-      {% for link in trinity.links %}{% unless link.url == 'https://huggingface.co/papers/2610.36077' %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endunless %}{% endfor %}
+      {% for link in trinity.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
     </div>
   </div>
 </div>
@@ -680,7 +680,7 @@ Publications
       <div class="pub-list-details">
         <a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}{% unless link.url == 'https://huggingface.co/papers/2610.36077' %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endunless %}{% endfor %}</span>
+        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</span>
       </div>
     </li>
     {% endfor %}

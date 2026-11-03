@@ -98,7 +98,6 @@ CV 内容依据用户提供的《汤维栋CV.pdf》及后续补充更新，包�
 
 CV 采用参考 PDF 的 Segoe UI 字体、灰黑正文、浅蓝栏目线、页顶蓝粉渐变条和无照片布局。Education、Experience 使用小 logo 与同行右对齐日期，日期以英文月份显示，底层已确认的日期不变。论文按 01–11 连续编号，保留 Core 和 Collaborative 的数据归类，但不再分段显示；作者姓名用暗红色强调，资源链接以中点分隔。Selected Projects 每个项目仅两行：项目名称（链接到仓库）和接近整行长度的简单介绍。Projects 之后将 Awards、Professional Services 并列，年份与任职日期均放在各条目右侧；两项奖学金按 2026、2025 分开显示。页面内容自然展开，不使用内嵌滚动区域。打印使用 A4、15mm 页边距，页码在右下角。NUS 校徽使用 [NUS Computing 官网](https://www.comp.nus.edu.sg/)提供的[透明 PNG](https://www.comp.nus.edu.sg/wp-content/uploads/2023/09/cropped-favicon-192x192.png)，保存为 `images/NUS-crest.png`；主页和 CV 均完整居中显示。NUS 经历下的 `Advised by` 单独由 `_data/cv_experience.json` 的 `advisors_html` 字段维护。每段经历固定 2 条简短工作要点，桌面和打印版每点按实际行宽扩写至接近完整一行，手机端自然换行，由同一文件的 `highlights` 字段维护，网页与两页 PDF 均显示。CV 不加载 `academic.css`，样式和脚本链接携带构建时间，发布后自动获取新版文件。
 
-The Trinity 的资源链接包含 [Hugging Face (#1 Paper of the day)](https://huggingface.co/papers/2610.36077)，该标注已由论文页及 [2026-10-28 日榜](https://huggingface.co/papers/date/2026-10-28)核实。
 
 ## 部署
 
