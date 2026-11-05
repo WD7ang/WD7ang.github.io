@@ -504,7 +504,7 @@ Experience
               <strong>Alibaba Group</strong>
               <span class="experience-date">2026.05 - 2026.07</span>
           </div>
-          <div class="experience-role">MLLM Research Intern</div>
+          <div class="experience-role">MLLM Research Intern (only undergrad in dept.)</div>
           <div class="experience-description">Research on post-training, visual-semantic alignment, and large-scale e-commerce retrieval.</div>
       </div>
   </div>
