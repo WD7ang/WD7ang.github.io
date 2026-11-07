@@ -39,25 +39,31 @@ body::before {
 .greedy-nav .visible-links a::before, .greedy-nav button { background-color: var(--home-accent); }
 .greedy-nav .hidden-links { border-color: var(--home-line); }
 .greedy-nav .hidden-links a:hover { background-color: var(--home-soft); }
-/* Wrap every homepage link instead of moving items into an overflow menu. */
+/* Keep desktop links visible; collapse the mobile list when its toggle is ready. */
 .masthead--all-links { position: sticky; height: auto; }
 .masthead--all-links .masthead__inner-wrap { padding-top: 10px; padding-bottom: 10px; }
-.masthead--all-links .greedy-nav { min-width: 0; }
+.masthead--all-links .greedy-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 16px; min-width: 0; }
 .masthead--all-links .visible-links { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 16px; }
-.masthead--all-links .visible-links li { display: block; }
-.masthead--all-links .visible-links .masthead__menu-item--lg { margin-right: auto; padding-right: 16px; }
+.masthead--all-links .visible-links li,
+.masthead--all-links .visible-links li:first-child { display: block; font-weight: 400; }
+.masthead--all-links .home-nav-brand { margin: 0 auto 0 0; padding: 8px 2px; color: #536071; font-size: 17px; font-weight: 700; line-height: 1.5; }
 .masthead--all-links .visible-links a { margin: 0; padding: 8px 2px; font-size: 15px; line-height: 1.5; }
-.masthead--all-links .masthead__menu-item--lg a { font-size: 17px; }
 .masthead--all-links .visible-links a::before { height: 2px; }
+.masthead--all-links .home-nav-toggle { display: none; position: static; flex: 0 0 40px; width: 40px; height: 40px; padding: 8px; border: 1px solid var(--home-line); border-radius: 6px; color: var(--home-accent); background: rgba(255, 255, 255, .8); }
+.masthead--all-links .home-nav-toggle:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
 @media (max-width: 1280px) {
   :root { --home-nav-offset: 130px; }
-  .masthead--all-links .visible-links .masthead__menu-item--lg { flex-basis: 100%; padding-right: 0; }
+  .masthead--all-links .home-nav-brand { flex-basis: 100%; }
 }
 @media (max-width: 767px) {
   :root { --home-nav-offset: 220px; }
-  .masthead--all-links .visible-links { column-gap: 14px; }
+  .masthead--all-links .greedy-nav { column-gap: 12px; }
+  .masthead--all-links .home-nav-brand { flex: 1; min-width: 0; font-size: 16px; }
+  .masthead--all-links .visible-links { width: 100%; column-gap: 14px; }
   .masthead--all-links .visible-links a { font-size: 14px; min-height: 40px; }
-  .masthead--all-links .masthead__menu-item--lg a { font-size: 16px; }
+  .masthead--all-links .home-nav-toggle:not([hidden]) { display: flex; align-items: center; justify-content: center; }
+  .masthead--all-links.has-mobile-menu .visible-links { display: none; }
+  .masthead--all-links.has-mobile-menu.is-menu-open .visible-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; padding-top: 8px; margin-top: 6px; border-top: 1px solid var(--home-line); max-height: calc(100dvh - 100px); overflow-y: auto; }
 }
 .btn.btn--inverse { color: var(--home-accent) !important; background-color: var(--home-soft); border-color: var(--home-line); }
 .btn.btn--inverse:hover { background-color: #e1e5e9; }
