@@ -777,25 +777,25 @@ Projects
   <ul class="report-list" role="list">
     <li class="report-featured">
       <span class="report-logo-crop">
-        <img class="report-logo" src="images/qilu-evening-news-logo.png" alt="齐鲁晚报 logo" width="108" height="60" loading="lazy" decoding="async">
+        <img class="report-logo" src="images/qilu-evening-news-logo.png" alt="Qilu Evening News logo" width="108" height="60" loading="lazy" decoding="async">
       </span>
       <div class="report-details">
-        <a class="report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
-        <span class="report-meta"><span lang="zh">大众报业·齐鲁壹点</span> · <time datetime="2026-10-25">2026.10.25</time></span>
+        <a class="report-title" lang="en" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">Interview by Qilu Evening News, a Shandong Provincial Media Outlet</a>
+        <span class="report-meta"><span lang="en">Qilu Evening News · Qilu Yidian</span> · <time datetime="2026-10-25">2026.10.25</time></span>
       </div>
     </li>
     <li>
-      <img class="report-logo" src="images/next-star-logo.png" alt="Next Star 创业之星 logo" width="108" height="60" loading="lazy" decoding="async">
+      <img class="report-logo" src="images/next-star-logo.png" alt="Next Star logo" width="108" height="60" loading="lazy" decoding="async">
       <div class="report-details">
-        <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g" target="_blank" rel="noopener noreferrer">2026“创业之星”Next Star 一等奖</a>
-        <span class="report-meta"><span lang="zh">国内行业半决赛 · Next Star创业之星</span> · <time datetime="2026-11-04">2026.11.04</time></span>
+        <a class="report-title" lang="en" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g" target="_blank" rel="noopener noreferrer">InfRec Wins First Prize in Next Star and Advances to the Global Finals</a>
+        <span class="report-meta"><span lang="en">2026 Next Star · Domestic Industry Semifinals</span> · <time datetime="2026-11-04">2026.11.04</time></span>
       </div>
     </li>
     <li>
-      <img class="report-logo" src="images/271-education-logo.png" alt="271教育集团 logo" width="108" height="60" loading="lazy" decoding="async">
+      <img class="report-logo" src="images/271-education-logo.png" alt="271 Education Group logo" width="108" height="60" loading="lazy" decoding="async">
       <div class="report-details">
-        <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ" target="_blank" rel="noopener noreferrer">昌乐二中|271教育  汤维栋：纵有疾风起，人生不言弃</a>
-        <span class="report-meta"><span lang="zh">山东省昌乐二中 · 微信公众号</span> · <time datetime="2026-11-04">2026.11.04</time></span>
+        <a class="report-title" lang="en" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ" target="_blank" rel="noopener noreferrer">Outstanding Alumnus Interview</a>
+        <span class="report-meta"><span lang="en">Changle No. 2 High School · 271 Education Group</span> · <time datetime="2026-11-04">2026.11.04</time></span>
       </div>
     </li>
   </ul>
