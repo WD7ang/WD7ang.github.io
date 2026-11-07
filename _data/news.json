@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026.11",
+    "text": "Our team won <strong>First Prize</strong> in the <a href=\"https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g\">2026 “创业之星” Next Star domestic industry semifinals</a>."
+  },
+  {
     "date": "2026.10",
     "text": "We released <a href=\"https://trinity-rsi.github.io/\">The Trinity</a>. The Trinity reached <strong>#1</strong> on <a href=\"https://huggingface.co/papers/2610.36077\">Hugging Face Daily Papers</a>."
   },

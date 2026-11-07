@@ -1,4 +1,7 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
+{% if page.homepage_palette == 'classic-blue' %}
+<script src="{{ '/assets/js/home-navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% endif %}
 <script>
 (function() {
   function closeAll() {

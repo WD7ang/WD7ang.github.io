@@ -17,7 +17,7 @@ redirect_from:
     #awards,
     #talks,
     #services {
-        scroll-margin-top: 80px;
+        scroll-margin-top: var(--home-nav-offset, 80px);
     }
 
       /* ===== News Scroll Box ===== */
@@ -740,6 +740,13 @@ Awards
       <div class="report-details">
         <a class="report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
         <span class="report-meta"><span lang="zh">大众报业·齐鲁壹点</span> · <time datetime="2026-10-25">2026.10.25</time></span>
+      </div>
+    </li>
+    <li>
+      <img class="report-logo" src="images/next-star-logo.png" alt="Next Star 创业之星 logo" width="108" height="60" loading="lazy" decoding="async">
+      <div class="report-details">
+        <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g" target="_blank" rel="noopener noreferrer">2026“创业之星”Next Star 一等奖</a>
+        <span class="report-meta"><span lang="zh">国内行业半决赛 · Next Star创业之星</span> · <time datetime="2026-11-04">2026.11.04</time></span>
       </div>
     </li>
     <li>
