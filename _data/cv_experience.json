@@ -55,6 +55,7 @@
     "id": "nus",
     "organization": "National University of Singapore",
     "affiliation": "HPC-AI Lab",
+    "affiliation_url": "https://ai.comp.nus.edu.sg/",
     "url": "https://ai.comp.nus.edu.sg/",
     "logo": "/images/NUS-crest.png",
     "role": "Research Assistant",

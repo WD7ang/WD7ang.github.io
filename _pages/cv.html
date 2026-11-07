@@ -43,8 +43,8 @@ permalink: /cv/
         <li class="cv-overview-entry">
           <span class="cv-org-logo"><img class="cv-org-logo-image cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="24" height="24" alt=""></span>
           <div class="cv-overview-content">
-            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a>{% if experience.affiliation %}<span class="cv-entry-affiliation"> &middot; {{ experience.affiliation }}</span>{% endif %}</span><span class="cv-date">{% include cv-date.html value=experience.date_start %} – {% include cv-date.html value=experience.date_end %}</span></div>
-            <p class="cv-entry-role">{{ experience.role }}</p>
+            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{{ experience.organization }}</a></span><span class="cv-date">{% include cv-date.html value=experience.date_start %} – {% include cv-date.html value=experience.date_end %}</span></div>
+            <p class="cv-entry-role">{{ experience.role }}{% if experience.affiliation %} &middot; {% if experience.affiliation_url %}<a href="{{ experience.affiliation_url }}">{{ experience.affiliation }}</a>{% else %}{{ experience.affiliation }}{% endif %}{% endif %}</p>
             {% if experience.advisors_html %}<p class="cv-entry-note">{{ experience.advisors_html }}</p>{% endif %}
             {% if experience.highlights.size > 0 %}<ul class="cv-entry-highlights">{% for highlight in experience.highlights %}
               <li>{{ highlight }}</li>{% endfor %}
