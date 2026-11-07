@@ -14,9 +14,9 @@ redirect_from:
     #publications,
     #projects,
     #blog,
-    #awards,
     #talks,
     #reports,
+    #awards,
     #services {
         scroll-margin-top: var(--home-nav-offset, 80px);
     }
@@ -767,20 +767,6 @@ Projects
 
 {% include blog-bookshelf.html %}
 
-Awards
---------
-<ul class="award-list">
-  <li class="award-row">
-    <span class="award-date">2025 &amp; 2026</span>
-    <div class="award-details">
-      <span class="award-title">Second-Class Academic Scholarship</span>
-      <span class="award-meta">Xidian University · Ranked 5/99 (2025)</span>
-    </div>
-  </li>
-</ul>
-
-
-
 <section class="home-talks" aria-labelledby="talks">
   <h2 id="talks">Talks</h2>
   <p class="section-empty">To be updated.</p>
@@ -814,6 +800,18 @@ Awards
     </li>
   </ul>
 </section>
+
+Awards
+--------
+<ul class="award-list">
+  <li class="award-row">
+    <span class="award-date">2025 &amp; 2026</span>
+    <div class="award-details">
+      <span class="award-title">Second-Class Academic Scholarship</span>
+      <span class="award-meta">Xidian University · Ranked 5/99 (2025)</span>
+    </div>
+  </li>
+</ul>
 
 Services
 --------

@@ -19,14 +19,14 @@ main:
   - title: "Blog"
     url: "/#blog"
 
-  - title: "Awards"
-    url: "/#awards"
-
   - title: "Talks"
     url: "/#talks"
 
   - title: "Reports"
     url: "/#reports"
+
+  - title: "Awards"
+    url: "/#awards"
 
   - title: "Services"
     url: "/#services"
