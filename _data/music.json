@@ -1,14 +1,5 @@
 [
   {
-    "id": "feng-chui-wu",
-    "title": "风吹雾",
-    "artist": "Adoreya",
-    "album": "花霧",
-    "cover": "/images/music/feng-chui-wu.jpg",
-    "source": "/media/music/feng-chui-wu.m4a",
-    "duration": 124.28383333333333
-  },
-  {
     "id": "yuan-fang-chuan-lai-feng-di",
     "title": "远方传来风笛",
     "artist": "灵魂配乐师",
@@ -16,6 +7,15 @@
     "cover": "/images/music/yuan-fang-chuan-lai-feng-di.jpg",
     "source": "/media/music/yuan-fang-chuan-lai-feng-di.m4a",
     "duration": 188.13566666666668
+  },
+  {
+    "id": "feng-chui-wu",
+    "title": "风吹雾",
+    "artist": "Adoreya",
+    "album": "花霧",
+    "cover": "/images/music/feng-chui-wu.jpg",
+    "source": "/media/music/feng-chui-wu.m4a",
+    "duration": 124.28383333333333
   },
   {
     "id": "comfort-chain",
