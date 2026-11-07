@@ -134,14 +134,14 @@ redirect_from:
         margin-bottom: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        color: #697386; /* 正文整体更浅 */
+        color: #4b545c;
     }
     .publication-card > div > strong,
     .publication-card > div > div > strong {
-        color: #273444;
+        color: #2f353a;
     }
     .publication-card i {
-        color: #697386;
+        color: #7b838a;
     }
 
     .pub-badge {
@@ -260,7 +260,7 @@ redirect_from:
         list-style: none;
         margin: 0;
         padding: 0;
-        color: #697386;
+        color: #4b545c;
         font-size: 15px;
         line-height: 1.55;
     }
@@ -277,7 +277,7 @@ redirect_from:
     }
 
     .pub-list-venue {
-        color: #697386;
+        color: #5a7fae;
         font-size: 13px;
         font-weight: 700;
         letter-spacing: .02em;
@@ -290,7 +290,7 @@ redirect_from:
 
     .full-publication-list .pub-list-title {
         display: block;
-        color: #273444;
+        color: #2f353a;
         font-size: 15px;
         font-weight: 700;
         line-height: 1.45;
@@ -299,7 +299,7 @@ redirect_from:
 
       .pub-list-authors {
         display: block;
-        color: #697386;
+        color: #7b838a;
         font-size: 13px;
         font-style: italic;
     }
@@ -315,7 +315,7 @@ redirect_from:
     }
 
     .pub-list-note {
-        color: #315d80;
+        color: #7b838a;
         font-style: italic;
         font-weight: 650;
     }
@@ -332,6 +332,7 @@ redirect_from:
     .pub-resource-links a,
     .pub-list-links a {
         display: inline-block;
+        color: #bf6a70 !important;
     }
 
     .pub-resource-links a + a::before,
@@ -339,7 +340,7 @@ redirect_from:
         content: "\00b7";
         display: inline-block;
         margin: 0 6px;
-        color: #aeb7c3;
+        color: #c2c7cc;
         font-style: normal;
         text-decoration: none;
     }
@@ -358,12 +359,12 @@ redirect_from:
     }
 
     .pub-list-links a {
-        color: #315d80 !important;
         font-weight: 600;
     }
 
-      .pub-list-links a:hover {
-        color: #234864 !important;
+    .publication-card .pub-venue,
+    .project-card .pub-venue {
+        color: #5a7fae;
     }
 
     /* Projects cards: keep styles independent from publications */
@@ -378,16 +379,16 @@ redirect_from:
         margin-bottom: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        color: #697386;
+        color: #4b545c;
     }
 
     .project-card > div > strong,
     .project-card > div > div > strong {
-        color: #273444;
+        color: #2f353a;
     }
 
     .project-card i {
-        color: #697386;
+        color: #7b838a;
     }
 
     .project-card:hover {
@@ -590,7 +591,7 @@ Publications
       <i class="pub-authors" style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
       The Trinity identifies transferable capabilities across diverse tasks and modalities, using capabilities rather than tasks as the fundamental unit of RSI. Through capability abstraction and reuse, it enables environment–Harness co-evolution, reduces task-specific overfitting, and drives continuous self-improvement across tasks and modalities.
       <br>
-      <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
+      <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
       <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
     </div>
   </div>
@@ -607,7 +608,7 @@ Publications
       <i class="pub-authors" style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
       We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.
       <br>
-      <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
+      <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
       <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
     </div>
   </div>
@@ -634,7 +635,7 @@ Publications
       </i><br>
       We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap.
       <br>
-      <b><i style="color:#315d80;">ACL 2026 &nbsp;
+      <b><i class="pub-venue">ACL 2026 &nbsp;
       </i></b>
       <span class="pub-resource-links"><a href="images/GroupToM_poster.pdf"><em>Poster</em></a><a href="https://aclanthology.org/2026.acl-long.1859/"><em>Paper</em></a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>Dataset</em></a></span>
     </div>
@@ -657,7 +658,7 @@ Publications
       </i><br>
       The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive).
       <br>
-      <b><i style="color:#315d80;">ACL 2026 &nbsp;
+      <b><i class="pub-venue">ACL 2026 &nbsp;
       </i></b>
       <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>code</em></a></span>
     </div>
@@ -685,7 +686,7 @@ Publications
       </i><br>
       Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.
       <br>
-      <b><i style="color:#315d80;">CVPR 2026 &nbsp;
+      <b><i class="pub-venue">CVPR 2026 &nbsp;
       </i></b>
       <span class="pub-resource-links"><a href="images/cvpr_poster.pdf"><em>Poster</em></a><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>Paper</em></a></span>
     </div>
@@ -708,7 +709,7 @@ Publications
       </i><br>
       Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
       <br>
-      <b><i style="color:#315d80;">PRCV 2025 &nbsp;
+      <b><i class="pub-venue">PRCV 2025 &nbsp;
       </i></b>
       <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>arXiv</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>code</em></a></span>
     </div>
@@ -751,7 +752,7 @@ Projects
       </i><br>
       In collaboration with Yue Su, I refined and improved his original homepage template. A clean standalone template version is coming soon.
       <br>
-      <b><i style="color:#315d80;">Project &nbsp;</i></b>
+      <b><i class="pub-venue">Project &nbsp;</i></b>
       <span class="pub-resource-links"><a href="https://github.com/WD7ang/WowPage"><em>code</em></a><a href="https://www.xiaohongshu.com/discovery/item/69feb95d000000003502e8b7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABPOGv4BUnujNdJXL2rltJQVQ8AGjnq0xVWDGPPDKSj6c=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer"><em>RedNote</em></a></span>
     </div>
   </div>
