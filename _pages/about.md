@@ -666,7 +666,7 @@ Publications
       <br>
       <b><i class="pub-venue">ACL 2026 &nbsp;
       </i></b>
-      <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>code</em></a></span>
+      <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>GitHub</em></a></span>
     </div>
   </div>
 </div>
@@ -717,7 +717,7 @@ Publications
       <br>
       <b><i class="pub-venue">PRCV 2025 &nbsp;
       </i></b>
-      <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>arXiv</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>code</em></a></span>
+      <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>Paper</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>GitHub</em></a></span>
     </div>
   </div>
 </div>
