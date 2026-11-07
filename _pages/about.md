@@ -304,8 +304,10 @@ redirect_from:
         font-style: italic;
     }
 
+    .pub-authors strong,
     .pub-list-authors > strong {
-        color: #273444;
+        color: #9a4b55;
+        font-weight: 700;
     }
 
       .pub-list-authors a strong {
@@ -553,8 +555,8 @@ Publications
       <img src="images/trinity-intro.png" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="3001" height="1423" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div>
-      <strong><a href="{{ trinity.title_url }}">{{ trinity.title }}</a></strong><br>
-      <i style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
+      <strong>{{ trinity.title }}</strong><br>
+      <i class="pub-authors" style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
       We introduce a capability-driven framework that couples world generation with agent harness evolution, enabling multimodal agents to recursively improve and transfer learned capabilities to unseen tasks.
       <br>
       <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
@@ -570,8 +572,8 @@ Publications
       <img src="images/route-anything-overview.png" alt="Route Anything overview: model and policy routing performance and efficiency" loading="lazy" width="1200" height="630" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div>
-      <strong><a href="{{ route_anything.title_url }}">{{ route_anything.title }}</a></strong><br>
-      <i style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
+      <strong>{{ route_anything.title }}</strong><br>
+      <i class="pub-authors" style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
       A unified framework for routing among models and policies across diverse AI tasks.
       <br>
       <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
@@ -587,7 +589,7 @@ Publications
     </div>
     <div>
       <strong>GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</strong><br>
-      <i style="font-size: 13px;">
+      <i class="pub-authors" style="font-size: 13px;">
         <strong>Weidong Tang</strong>,
         Jierui Li,
         Yueling Hou,
@@ -618,7 +620,7 @@ Publications
     </div>
     <div>
       <strong>MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</strong><br>
-      <i style="font-size: 13px;">
+      <i class="pub-authors" style="font-size: 13px;">
         Tang Da Huang,
         <strong>Weidong Tang&Dagger;</strong>,
         Wen Qi Xu,
@@ -642,7 +644,7 @@ Publications
     </div>
     <div>
       <strong>Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</strong><br>
-      <i style="font-size: 13px;">
+      <i class="pub-authors" style="font-size: 13px;">
         <strong>Weidong Tang</strong>,
         Zhiyuan Liang,
         Xinyan Wan,
@@ -671,7 +673,7 @@ Publications
     </div>
     <div>
       <strong>Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</strong><br>
-      <i style="font-size: 13px;">
+      <i class="pub-authors" style="font-size: 13px;">
         <strong>Weidong Tang</strong>,
         Xinyan Wan,
         Siyu Li,
@@ -696,7 +698,7 @@ Publications
     <li class="pub-list-row">
       <span class="pub-list-venue" title="{{ publication.venue | escape }}">{{ publication.venue | replace: 'arXiv preprint,', 'arXiv' | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
       <div class="pub-list-details">
-        <a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>
+        {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
         <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</span>
       </div>
