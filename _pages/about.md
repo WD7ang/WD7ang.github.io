@@ -595,7 +595,7 @@ Publications
     <div>
       <strong>{{ trinity.title }}</strong><br>
       <i class="pub-authors" style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
-      The Trinity identifies transferable capabilities across diverse tasks and modalities, using capabilities rather than tasks as the fundamental unit of RSI. Through capability abstraction and reuse, it enables environment–Harness co-evolution, reduces task-specific overfitting, and drives continuous self-improvement across tasks and modalities.
+      The Trinity改变 RSI 的基本演化单位，从任务转变为能力，有望从针对具体任务的局部优化，走向跨任务、跨模态的持续演化。
       <br>
       <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
       <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
