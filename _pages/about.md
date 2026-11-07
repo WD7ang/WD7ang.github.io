@@ -574,7 +574,7 @@ Publications
     <div>
       <strong>{{ route_anything.title }}</strong><br>
       <i class="pub-authors" style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
-      A unified framework for routing among models and policies across diverse AI tasks.
+      We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.
       <br>
       <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
       {% for link in route_anything.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
