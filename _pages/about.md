@@ -301,7 +301,13 @@ redirect_from:
         display: block;
         color: #7b838a;
         font-size: 13px;
-        font-style: italic;
+        font-style: normal;
+    }
+
+    .pub-authors,
+    .pub-venue,
+    .pub-resource-links em {
+        font-style: normal;
     }
 
     .pub-authors strong,
@@ -316,7 +322,7 @@ redirect_from:
 
     .pub-list-note {
         color: #7b838a;
-        font-style: italic;
+        font-style: normal;
         font-weight: 650;
     }
 
