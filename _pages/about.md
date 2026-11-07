@@ -563,6 +563,23 @@ Publications
   </div>
 </div>
 
+{% assign route_anything = site.data.cv_publications | where: 'title', 'Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems' | first %}
+<div class="publication-card" data-category="all">
+  <div style="display: flex; align-items: center;">
+    <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
+      <img src="images/route-anything-overview.png" alt="Route Anything overview: model and policy routing performance and efficiency" loading="lazy" width="1200" height="630" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
+    </div>
+    <div>
+      <strong><a href="{{ route_anything.title_url }}">{{ route_anything.title }}</a></strong><br>
+      <i style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
+      A unified framework for routing among models and policies across diverse AI tasks.
+      <br>
+      <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
+      {% for link in route_anything.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
+    </div>
+  </div>
+</div>
+
 <div class="publication-card" data-category="all">
   <div style="display: flex; align-items: center;">
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">

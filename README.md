@@ -49,7 +49,7 @@ bundle exec jekyll serve
 | 纳入 GitHub stars 的论文项目 | `_data/github_projects.json` |
 | 原版首页主题补充 / Blog 排版 / CV 与打印排版 | `assets/css/classic-home.css` / `assets/css/academic.css` / `assets/css/cv.css` |
 
-首页论文卡片与完整列表在 `_pages/about.md` 中维护，保留原版切换按钮和图片轮播。`_data/publications.json` 是重设计版本的数据备份，当前首页不读取它。
+首页论文卡片与完整列表在 `_pages/about.md` 中维护，保留原版切换按钮和图片轮播。两种视图均以 The Trinity、Route Anything 开头；两张卡片的题名、作者与资源链接，以及完整列表的顺序，读取 `_data/cv_publications.json`。Route Anything 概览图保存为 `images/route-anything-overview.png`，来自[官方项目页](https://mikeeeeeeeeeeeeee.github.io/RouteAnything/og-image.png)。`_data/publications.json` 是重设计版本的数据备份，当前首页不读取它。
 
 照片在首页使用原版圆形头像框；CV 网页和下载版不显示个人照片。原始图片没有被裁剪或修改。
 
