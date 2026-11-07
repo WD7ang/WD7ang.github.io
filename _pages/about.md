@@ -730,8 +730,19 @@ Awards
 
 
 
-Talks
---------
+<section class="talks-reports" aria-labelledby="talks">
+  <h2 id="talks">Talks &amp; Reports</h2>
+  <ul class="report-list" role="list">
+    <li>
+      <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ" target="_blank" rel="noopener noreferrer">昌乐二中|271教育  汤维栋：纵有疾风起，人生不言弃</a>
+      <span class="report-meta"><span lang="zh">山东省昌乐二中 · 微信公众号</span> · <time datetime="2026-11-04">2026.11.04</time></span>
+    </li>
+    <li>
+      <a class="report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
+      <span class="report-meta"><span lang="zh">大众报业·齐鲁壹点</span> · <time datetime="2026-10-25">2026.10.25</time></span>
+    </li>
+  </ul>
+</section>
 
 Services
 --------
