@@ -22,6 +22,28 @@
     "group": "Core"
   },
   {
+    "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+    "title_url": "https://arxiv.org/pdf/2611.05275",
+    "authors_html": "P. Zhou, Y. Ma, H. Wang<sup>†</sup>, <strong>W. Tang</strong>, Z. Wan, W. Zhao, &amp; Y. You<sup>†</sup>.",
+    "venue": "arXiv preprint, 2026",
+    "notes": null,
+    "links": [
+      {
+        "label": "Tech Report",
+        "url": "https://arxiv.org/pdf/2611.05275"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/InfRec-Cardinal/route-anything"
+      },
+      {
+        "label": "Project Page",
+        "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything/"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
     "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
     "title_url": "https://aclanthology.org/2026.acl-long.1859/",
     "authors_html": "<strong>W. Tang</strong>, J. Li, Y. Hou, Z. Mei, C. Zhang, X. Wan, Z. Liang, P. Zhou<sup>†</sup>, Y. You, &amp; W. Zhao<sup>†</sup>.",
@@ -157,28 +179,6 @@
       {
         "label": "Project Page",
         "url": "https://pebench.github.io/"
-      }
-    ],
-    "group": "Collaborative"
-  },
-  {
-    "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
-    "title_url": "https://arxiv.org/pdf/2611.05275",
-    "authors_html": "P. Zhou, Y. Ma, H. Wang<sup>†</sup>, <strong>W. Tang</strong>, Z. Wan, W. Zhao, &amp; Y. You<sup>†</sup>.",
-    "venue": "arXiv preprint, 2026",
-    "notes": null,
-    "links": [
-      {
-        "label": "Tech Report",
-        "url": "https://arxiv.org/pdf/2611.05275"
-      },
-      {
-        "label": "GitHub",
-        "url": "https://github.com/InfRec-Cardinal/route-anything"
-      },
-      {
-        "label": "Project Page",
-        "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything/"
       }
     ],
     "group": "Collaborative"
