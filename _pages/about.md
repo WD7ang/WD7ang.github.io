@@ -733,7 +733,7 @@ Awards
 <section class="talks-reports" aria-labelledby="talks">
   <h2 id="talks">Talks &amp; Reports</h2>
   <ul class="report-list" role="list">
-    <li>
+    <li class="report-featured">
       <span class="report-logo-crop">
         <img class="report-logo" src="images/qilu-evening-news-logo.png" alt="齐鲁晚报 logo" width="108" height="60" loading="lazy" decoding="async">
       </span>

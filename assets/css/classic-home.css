@@ -84,6 +84,8 @@ body::before {
 .report-details { min-width: 0; }
 .report-title { color: var(--home-accent); font-size: 16px; font-weight: 500; line-height: 1.6; overflow-wrap: anywhere; }
 .report-meta { display: block; margin-top: 3px; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
+.report-list .report-featured { border: 1px solid #9dbbd5; border-left: 4px solid var(--home-accent); border-radius: 8px; background: linear-gradient(110deg, rgba(219, 234, 249, .96), rgba(239, 246, 252, .88)); box-shadow: 0 3px 12px rgba(49, 93, 128, .08); }
+.report-featured .report-title { color: #234864; font-weight: 700; }
 .page__content .service-avatar { display: block; flex: 0 0 15px; width: 15px; height: 15px; margin: 2.25px 0 0; border-radius: 50%; background: #f7fcf5; object-fit: cover; }
 @media (max-width: 480px) {
   .report-list li { grid-template-columns: 80px minmax(0, 1fr); gap: 10px; }
