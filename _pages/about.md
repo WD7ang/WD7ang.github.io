@@ -798,6 +798,20 @@ Projects
         <span class="report-meta"><span lang="en">Outstanding Alumnus Interview</span> · <time datetime="2026-11-04">04.11.2026</time></span>
       </div>
     </li>
+    <li>
+      <img class="report-logo" src="images/jizhiliu-logo.png" alt="机智流 logo" width="108" height="60" loading="lazy" decoding="async">
+      <div class="report-details">
+        <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/XssV6LWlQMHoM5TbDZUtSA" target="_blank" rel="noopener noreferrer">从任务驱动到能力驱动：未见任务均分+26.2分，新国大尤洋团队联合提出多模态RSI框架The Trinity</a>
+        <span class="report-meta"><span lang="en">The Trinity Featured by 机智流</span> · <time datetime="2026-11-06">06.11.2026</time></span>
+      </div>
+    </li>
+    <li>
+      <img class="report-logo" src="images/zhixingxing-logo.png" alt="智猩猩AI logo" width="108" height="60" loading="lazy" decoding="async">
+      <div class="report-details">
+        <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/_c63MmHy5608Fv18fMnICg" target="_blank" rel="noopener noreferrer">多模态RSI框架开源，让Agent按能力而非任务自进化！</a>
+        <span class="report-meta"><span lang="en">The Trinity Featured by 智猩猩AI</span> · <time datetime="2026-11-07">07.11.2026</time></span>
+      </div>
+    </li>
   </ul>
 </section>
 
