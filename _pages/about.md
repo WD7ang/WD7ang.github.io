@@ -588,16 +588,16 @@ Publications
     <div>
       <strong>GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</strong><br>
       <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
+        <strong>Weidong Tang</strong>,
         Jierui Li,
         Yueling Hou,
         Zihan Mei,
         Can Zhang,
         Xinyan Wan,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou&dagger;</a>,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
+        Zhiyuan Liang,
+        Pengfei Zhou&dagger;,
+        Yang You,
+        Wangbo Zhao&dagger;
       </i><br>
       We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap.
       <br>
@@ -620,7 +620,7 @@ Publications
       <strong>MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</strong><br>
       <i style="font-size: 13px;">
         Tang Da Huang,
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang&Dagger;</strong></a>,
+        <strong>Weidong Tang&Dagger;</strong>,
         Wen Qi Xu,
         Xianpeng Guo&dagger;
       </i><br>
@@ -643,15 +643,15 @@ Publications
     <div>
       <strong>Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</strong><br>
       <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
-        <a href="https://jerryliang24.github.io/" target="_blank">Zhiyuan Liang</a>,
+        <strong>Weidong Tang</strong>,
+        Zhiyuan Liang,
         Xinyan Wan,
-        <a href="https://scholar.google.com.hk/citations?user=W9HbDoYAAAAJ&hl=en" target="_blank">Chen Zhu</a>,
-        <a href="https://scholar.google.com.hk/citations?user=qNWDwOcAAAAJ&hl=en" target="_blank">Zhaopan Xu</a>,
-        <a href="https://lancezpf.github.io/" target="_blank">Pengfei Zhou</a>,
+        Chen Zhu,
+        Zhaopan Xu,
+        Pengfei Zhou,
         Yan Song,
-        <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a>,
-        <a href="https://wangbo-zhao.github.io/" target="_blank">Wangbo Zhao&dagger;</a>
+        Yang You,
+        Wangbo Zhao&dagger;
       </i><br>
       Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.
       <br>
@@ -672,10 +672,10 @@ Publications
     <div>
       <strong>Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</strong><br>
       <i style="font-size: 13px;">
-        <a href="https://wd7ang.github.io" target="_blank"><strong>Weidong Tang</strong></a>,
+        <strong>Weidong Tang</strong>,
         Xinyan Wan,
         Siyu Li,
-        <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao" target="_blank">Xiumei Wang&dagger;</a>
+        Xiumei Wang&dagger;
       </i><br>
       Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
       <br>
