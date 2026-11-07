@@ -344,6 +344,19 @@ redirect_from:
         text-decoration: none;
     }
 
+    .pub-tech-report {
+        display: inline-block;
+        padding: 0 5px;
+        border: 1px solid #ead6d9;
+        border-radius: 3px;
+        background: #f9eff0;
+        color: #9a4b55;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.25;
+        white-space: nowrap;
+    }
+
     .pub-list-links a {
         color: #315d80 !important;
         font-weight: 600;
@@ -578,7 +591,7 @@ Publications
       The Trinity identifies transferable capabilities across diverse tasks and modalities, using capabilities rather than tasks as the fundamental unit of RSI. Through capability abstraction and reuse, it enables environment–Harness co-evolution, reduces task-specific overfitting, and drives continuous self-improvement across tasks and modalities.
       <br>
       <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
-      <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}"><em>{{ link.label }}</em></a>{% endfor %}</span>
+      <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
     </div>
   </div>
 </div>
@@ -595,7 +608,7 @@ Publications
       We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.
       <br>
       <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
-      <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}"><em>{{ link.label }}</em></a>{% endfor %}</span>
+      <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
     </div>
   </div>
 </div>
@@ -712,7 +725,7 @@ Publications
       <div class="pub-list-details">
         {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>
+        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>
       </div>
     </li>
     {% endfor %}
