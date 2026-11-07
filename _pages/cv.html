@@ -63,8 +63,7 @@ permalink: /cv/
         <div class="cv-publication-body">
           {% if publication.title_url %}<a class="cv-paper-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% else %}<span class="cv-paper-title">{{ publication.title }}</span>{% endif %}
           <p class="cv-paper-authors">{{ publication.authors_html }}</p>
-          <div class="cv-paper-meta"><span class="cv-venue">{{ publication.venue }}</span>{% if publication.notes %} <span class="cv-paper-notes">{{ publication.notes }}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="cv-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>{% endif %}</div>
-          {% if publication.media_links.size > 0 %}<span class="cv-paper-links cv-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}
+          <div class="cv-paper-meta"><span class="cv-venue">{{ publication.venue }}</span>{% if publication.notes %} <span class="cv-paper-notes">{{ publication.notes }}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="cv-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}</div>
         </div>
       </li>{% endfor %}
     </ol>
