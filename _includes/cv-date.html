@@ -1,6 +1,6 @@
 {%- if include.value contains '/' -%}
   {%- assign date_parts = include.value | split: '/' -%}
-  {{- date_parts[1] -}}.{{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}
+  {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}.{{- date_parts[1] -}}
 {%- else -%}
   {{- include.value -}}
 {%- endif -%}

@@ -514,7 +514,7 @@ Education
       <div class="experience-info">
           <div class="experience-header">
               <strong>Xidian University</strong>
-              <span class="experience-date">2023.09 - Present</span>
+              <span class="experience-date">09.2023 - Present</span>
           </div>
           <div class="experience-role">Undergraduate Student</div>
           <div class="experience-description">B.E. at <a href="https://ste.xidian.edu.cn/">School of Telecommunication Engineering</a>; advised by <a href="https://scholar.google.com/citations?user=k33uf2RE8nsC&hl=zh-CN&oi=ao">Xiumei Wang</a></div>
@@ -531,7 +531,7 @@ Experience
       <div class="experience-info">
           <div class="experience-header">
               <strong><a href="https://www.cardinal-agi.com/">Cardinal AI Lab, InfRec</a></strong>
-              <span class="experience-date">2026.07 - Present</span>
+              <span class="experience-date">07.2026 - Present</span>
           </div>
           <div class="experience-role">Chief Research Officer (Founding Member)</div>
           <div class="experience-description">Leading research on recursive self-improvement and long-horizon world interaction.</div>
@@ -543,7 +543,7 @@ Experience
       <div class="experience-info">
           <div class="experience-header">
               <strong>Alibaba Group</strong>
-              <span class="experience-date">2026.05 - 2026.07</span>
+              <span class="experience-date">05.2026 - 07.2026</span>
           </div>
           <div class="experience-role">MLLM Research Intern</div>
           <div class="experience-description">Research on post-training, visual-semantic alignment, and large-scale e-commerce retrieval.</div>
@@ -557,7 +557,7 @@ Experience
       <div class="experience-info">
           <div class="experience-header">
               <strong>Institute of Artificial Intelligence of China Telecom</strong>
-              <span class="experience-date">2026.01 - 2026.03</span>
+              <span class="experience-date">01.2026 - 03.2026</span>
           </div>
           <div class="experience-role">LLM Research Intern</div>
           <div class="experience-description">AI infrastructure for LLM training and inference on Huawei Ascend 910B.</div>
@@ -569,7 +569,7 @@ Experience
       <div class="experience-info">
           <div class="experience-header">
               <strong>National University of Singapore</strong>
-              <span class="experience-date">2024.10 - 2025.10</span>
+              <span class="experience-date">10.2024 - 10.2025</span>
           </div>
           <div class="experience-role">Research Assistant · <a href="https://ai.comp.nus.edu.sg/">HPC-AI Lab</a></div>
           <div class="experience-description">Advised by <a href="https://www.comp.nus.edu.sg/~youy/">Yang You</a>, <a href="https://wangbo-zhao.github.io/">Wangbo Zhao</a> and <a href="https://lancezpf.github.io/">Pengfei Zhou</a></div>
@@ -781,21 +781,21 @@ Projects
       </span>
       <div class="report-details">
         <a class="report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
-        <span class="report-meta"><span lang="en">Interview by Qilu Evening News, a Shandong Provincial Media Outlet</span> · <time datetime="2026-10-25">2026.10.25</time></span>
+        <span class="report-meta"><span lang="en">Interview by Qilu Evening News, a Shandong Provincial Media Outlet</span> · <time datetime="2026-10-25">25.10.2026</time></span>
       </div>
     </li>
     <li>
       <img class="report-logo" src="images/next-star-logo.png" alt="Next Star logo" width="108" height="60" loading="lazy" decoding="async">
       <div class="report-details">
         <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g" target="_blank" rel="noopener noreferrer">2026“创业之星”Next Star 一等奖</a>
-        <span class="report-meta"><span lang="en">InfRec Wins First Prize in the Domestic Industry Semifinals and Advances to the Global Finals</span> · <time datetime="2026-11-04">2026.11.04</time></span>
+        <span class="report-meta"><span lang="en">InfRec Wins First Prize in the Domestic Industry Semifinals and Advances to the Global Finals</span> · <time datetime="2026-11-04">04.11.2026</time></span>
       </div>
     </li>
     <li>
       <img class="report-logo" src="images/271-education-logo.png" alt="271 Education Group logo" width="108" height="60" loading="lazy" decoding="async">
       <div class="report-details">
         <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ" target="_blank" rel="noopener noreferrer">昌乐二中|271教育  汤维栋：纵有疾风起，人生不言弃</a>
-        <span class="report-meta"><span lang="en">Outstanding Alumnus Interview</span> · <time datetime="2026-11-04">2026.11.04</time></span>
+        <span class="report-meta"><span lang="en">Outstanding Alumnus Interview</span> · <time datetime="2026-11-04">04.11.2026</time></span>
       </div>
     </li>
   </ul>
@@ -817,7 +817,7 @@ Services
 --------
 <ul class="service-list" role="list">
   <li class="service-row">
-    <span class="service-date">2026.10 – Present</span>
+    <span class="service-date">10.2026 – Present</span>
     <div class="service-details">
       <span class="service-title">Coordinator</span>
       <span class="service-meta service-meta--with-avatar">
@@ -827,7 +827,7 @@ Services
     </div>
   </li>
   <li class="service-row">
-    <span class="service-date">2025.06 – Present</span>
+    <span class="service-date">06.2025 – Present</span>
     <div class="service-details">
       <span class="service-title">AI Team Lead</span>
       <span class="service-meta">🌊Xidian–Inspur Club</span>

@@ -14,7 +14,7 @@
         {% if post.cover %}
         <img src="{{ post.cover | relative_url }}" alt="" loading="lazy">
         {% endif %}
-        <time class="blog-entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+        <time class="blog-entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
         <h4 class="blog-entry-title">{{ post.title | escape }}{% if post.title_en %}<span lang="en">{{ post.title_en | escape }}</span>{% endif %}</h4>
         <p>{{ post.excerpt | strip_html | truncate: 76 }}{% if post.excerpt_en %}<span lang="en">{{ post.excerpt_en | escape }}</span>{% endif %}</p>
         <span class="blog-entry-read">阅读全文 <span lang="en">/ Read more</span> <span aria-hidden="true">↗</span></span>
