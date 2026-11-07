@@ -76,11 +76,15 @@ body::before {
 .service-meta--with-avatar { display: flex; align-items: flex-start; gap: 3px; }
 .service-meta--with-avatar > span { min-width: 0; }
 .page__content .report-list { list-style: none; margin: 0; padding: 0; }
-.report-list li { margin-bottom: 10px; padding: 10px 12px; border-left: 3px solid #234864; background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12)); }
+.report-list li { display: grid; grid-template-columns: 108px minmax(0, 1fr); align-items: center; gap: 14px; margin-bottom: 10px; padding: 10px 12px; border-left: 3px solid #234864; background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12)); }
+.page__content .report-logo { display: block; width: 108px; height: 60px; margin: 0; object-fit: contain; }
+.report-details { min-width: 0; }
 .report-title { color: var(--home-accent); font-size: 16px; font-weight: 500; line-height: 1.6; overflow-wrap: anywhere; }
 .report-meta { display: block; margin-top: 3px; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
 .page__content .service-avatar { display: block; flex: 0 0 15px; width: 15px; height: 15px; margin: 2.25px 0 0; border-radius: 50%; background: #f7fcf5; object-fit: cover; }
 @media (max-width: 480px) {
+  .report-list li { grid-template-columns: 80px minmax(0, 1fr); gap: 10px; }
+  .page__content .report-logo { width: 80px; height: 48px; }
   .award-list .award-row, .service-list .service-row { grid-template-columns: 76px minmax(0, 1fr); padding: 8px 10px; }
   .award-date, .service-date { white-space: normal; }
   .award-title, .service-title { font-size: 15px; }
