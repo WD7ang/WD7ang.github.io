@@ -320,10 +320,28 @@ redirect_from:
         font-weight: 650;
     }
 
+    .pub-resource-links {
+        display: inline-block;
+        max-width: 100%;
+    }
+
     .pub-list-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px 8px;
+        display: block;
+    }
+
+    .pub-resource-links a,
+    .pub-list-links a {
+        display: inline-block;
+    }
+
+    .pub-resource-links a + a::before,
+    .pub-list-links a + a::before {
+        content: "\00b7";
+        display: inline-block;
+        margin: 0 6px;
+        color: #aeb7c3;
+        font-style: normal;
+        text-decoration: none;
     }
 
     .pub-list-links a {
@@ -560,7 +578,7 @@ Publications
       The Trinity identifies transferable capabilities across diverse tasks and modalities, using capabilities rather than tasks as the fundamental unit of RSI. Through capability abstraction and reuse, it enables environment–Harness co-evolution, reduces task-specific overfitting, and drives continuous self-improvement across tasks and modalities.
       <br>
       <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
-      {% for link in trinity.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
+      <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}"><em>{{ link.label }}</em></a>{% endfor %}</span>
     </div>
   </div>
 </div>
@@ -577,7 +595,7 @@ Publications
       We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.
       <br>
       <b><i style="color:#315d80;">{{ route_anything.venue }} &nbsp;</i></b>
-      {% for link in route_anything.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
+      <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}"><em>{{ link.label }}</em></a>{% endfor %}</span>
     </div>
   </div>
 </div>
@@ -605,9 +623,7 @@ Publications
       <br>
       <b><i style="color:#315d80;">ACL 2026 &nbsp;
       </i></b>
-      <a href="images/GroupToM_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://aclanthology.org/2026.acl-long.1859/"><em>[Paper]</em></a>
-      <a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>[Dataset]</em></a>
+      <span class="pub-resource-links"><a href="images/GroupToM_poster.pdf"><em>Poster</em></a><a href="https://aclanthology.org/2026.acl-long.1859/"><em>Paper</em></a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>Dataset</em></a></span>
     </div>
   </div>
 </div>
@@ -630,8 +646,7 @@ Publications
       <br>
       <b><i style="color:#315d80;">ACL 2026 &nbsp;
       </i></b>
-      <a href="https://aclanthology.org/2026.acl-long.1314/"><em>[Paper]</em></a>
-      <a href="https://github.com/Ink-Dawn/MagicBench"><em>[code]</em></a>
+      <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>code</em></a></span>
     </div>
   </div>
 </div>
@@ -659,8 +674,7 @@ Publications
       <br>
       <b><i style="color:#315d80;">CVPR 2026 &nbsp;
       </i></b>
-      <a href="images/cvpr_poster.pdf"><em>[Poster]</em></a>
-      <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>[Paper]</em></a>
+      <span class="pub-resource-links"><a href="images/cvpr_poster.pdf"><em>Poster</em></a><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>Paper</em></a></span>
     </div>
   </div>
 </div>
@@ -683,9 +697,7 @@ Publications
       <br>
       <b><i style="color:#315d80;">PRCV 2025 &nbsp;
       </i></b>
-      <a href="images/var_poster.png"><em>[Poster]</em></a>
-      <a href="https://arxiv.org/pdf/2601.07293"><em>[arXiv]</em></a>
-      <a href="https://github.com/WD7ang/VAR-Scaling"><em>[code]</em></a>
+      <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>arXiv</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>code</em></a></span>
     </div>
   </div>
 </div>
@@ -700,7 +712,7 @@ Publications
       <div class="pub-list-details">
         {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</span>
+        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>
       </div>
     </li>
     {% endfor %}
