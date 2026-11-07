@@ -112,8 +112,8 @@ body::before {
 .report-details { min-width: 0; }
 .report-title { color: var(--home-accent); font-size: 16px; font-weight: 500; line-height: 1.6; overflow-wrap: anywhere; }
 .report-meta { display: block; margin-top: 3px; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
-.report-list .report-featured { border: 1px solid #d5dce2; border-left: 4px solid var(--home-accent); border-radius: 8px; background: rgba(255, 255, 255, .78); box-shadow: 0 2px 8px rgba(39, 52, 68, .04); }
-.report-featured .report-title { color: #234864; font-weight: 700; }
+.report-list .report-featured { border: 1px solid #9a4b55; border-left: 4px solid #9a4b55; border-radius: 8px; background: rgba(255, 255, 255, .78); box-shadow: 0 2px 8px rgba(39, 52, 68, .04); }
+.report-featured .report-title { color: #9a4b55; font-weight: 700; }
 .page__content .service-avatar { display: block; flex: 0 0 15px; width: 15px; height: 15px; margin: 2.25px 0 0; border-radius: 50%; background: #f7fcf5; object-fit: cover; }
 @media (max-width: 480px) {
   .report-list li { grid-template-columns: 80px minmax(0, 1fr); gap: 10px; }
