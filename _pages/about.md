@@ -557,7 +557,7 @@ Publications
     <div>
       <strong>{{ trinity.title }}</strong><br>
       <i class="pub-authors" style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
-      The Trinity extracts transferable foundational capabilities shared across heterogeneous tasks and modalities, using capabilities rather than tasks as the basic unit of evolution in recursive self-improvement (RSI) to co-evolve training environments and the Agent Harness. Capability abstraction and reuse reduce the risk of overfitting to specific tasks and benchmarks, moving agents from local task optimization toward continuous self-improvement across tasks and modalities.
+      The Trinity identifies transferable capabilities across diverse tasks and modalities, using capabilities rather than tasks as the fundamental unit of RSI. Through capability abstraction and reuse, it enables environment–Harness co-evolution, reduces task-specific overfitting, and drives continuous self-improvement across tasks and modalities.
       <br>
       <b><i style="color:#315d80;">{{ trinity.venue }} &nbsp;</i></b>
       {% for link in trinity.links %}<a href="{{ link.url }}"><em>[{{ link.label }}]</em></a> {% endfor %}
