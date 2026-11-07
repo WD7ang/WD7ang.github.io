@@ -87,6 +87,7 @@ sup { font-size: .7em; line-height: 0; }
 .cv-paper-links { color: var(--cv-link); font-size: 13px; }
 .cv-paper-links a { color: inherit; }
 .cv-paper-links a + a::before { content: "\00b7"; display: inline-block; margin: 0 6px; color: #c2c7cc; text-decoration: none; }
+.cv-tech-report { display: inline-block; padding: 0 5px; border: 1px solid #ead6d9; border-radius: 3px; background: #f9eff0; color: var(--cv-accent); font-weight: 600; line-height: 1.25; white-space: nowrap; }
 .cv-project-list { list-style: none; padding: 0 0 0 42px; }
 .cv-project-list > li { margin-bottom: 17px; }
 .cv-project-title { color: var(--cv-ink); font-size: 16px; line-height: 1.4; }
