@@ -64,6 +64,7 @@ sup { font-size: .7em; line-height: 0; }
 .cv-org-logo--teleai { clip-path: polygon(2.5% 0%, 95.5% 0%, 95.5% 56.75%, 93.5% 70.75%, 91% 75.75%, 91% 77.25%, 85% 84.75%, 80.5% 88.25%, 59.5% 100%, 38.5% 100%, 25% 92.75%, 14% 85.75%, 9% 80.25%, 5% 72.25%, 3.5% 67.25%, 2.5% 57.25%); }
 .cv-overview-content { min-width: 0; }
 .cv-entry-heading { display: grid; grid-template-columns: minmax(0, 1fr) max-content; align-items: baseline; gap: 0 18px; }
+.cv-entry-heading--centered { align-items: center; }
 .cv-organization { color: var(--cv-ink); font-size: 16px; font-weight: 600; }
 .cv-entry-affiliation { color: var(--cv-text); font-size: 16px; font-weight: 400; }
 .cv-date { color: var(--cv-muted); text-align: right; white-space: nowrap; font-size: 13px; font-weight: 400; }
