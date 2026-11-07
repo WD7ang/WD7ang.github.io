@@ -162,6 +162,28 @@
     "group": "Collaborative"
   },
   {
+    "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
+    "title_url": "https://arxiv.org/pdf/2611.05275",
+    "authors_html": "P. Zhou, Y. Ma, H. Wang<sup>†</sup>, <strong>W. Tang</strong>, Z. Wan, W. Zhao, &amp; Y. You<sup>†</sup>.",
+    "venue": "arXiv preprint, 2026",
+    "notes": null,
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2611.05275"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/InfRec-Cardinal/route-anything"
+      },
+      {
+        "label": "Project Page",
+        "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything/"
+      }
+    ],
+    "group": "Collaborative"
+  },
+  {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
     "title_url": "https://arxiv.org/abs/2606.14383",
     "authors_html": "H. Qi, J. Cao, Y. Zhang, X. Wang, <strong>W. Tang</strong>, B. Chen, C. Huo, H. Pan, H. You, J. Li, Y. Wang, &amp; L. Ding.",
