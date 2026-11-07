@@ -16,6 +16,7 @@ redirect_from:
     #blog,
     #awards,
     #talks,
+    #reports,
     #services {
         scroll-margin-top: var(--home-nav-offset, 80px);
     }
@@ -730,8 +731,13 @@ Awards
 
 
 
-<section class="talks-reports" aria-labelledby="talks">
-  <h2 id="talks">Talks &amp; Reports</h2>
+<section class="home-talks" aria-labelledby="talks">
+  <h2 id="talks">Talks</h2>
+  <p class="section-empty">To be updated.</p>
+</section>
+
+<section class="home-reports" aria-labelledby="reports">
+  <h2 id="reports">Reports</h2>
   <ul class="report-list" role="list">
     <li class="report-featured">
       <span class="report-logo-crop">

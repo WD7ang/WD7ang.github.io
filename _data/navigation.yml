@@ -22,8 +22,11 @@ main:
   - title: "Awards"
     url: "/#awards"
 
-  - title: "Talks & Reports"
+  - title: "Talks"
     url: "/#talks"
+
+  - title: "Reports"
+    url: "/#reports"
 
   - title: "Services"
     url: "/#services"

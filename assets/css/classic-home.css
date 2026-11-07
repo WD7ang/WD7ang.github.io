@@ -102,6 +102,7 @@ body::before {
 .award-meta, .service-meta { display: block; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
 .service-meta--with-avatar { display: flex; align-items: flex-start; gap: 3px; }
 .service-meta--with-avatar > span { min-width: 0; }
+.page__content .section-empty { color: var(--home-muted); font-size: 14px; }
 .page__content .report-list { list-style: none; margin: 0; padding: 0; }
 .report-list li { display: grid; grid-template-columns: 108px minmax(0, 1fr); align-items: center; gap: 14px; margin-bottom: 10px; padding: 10px 12px; border-left: 3px solid #234864; background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12)); }
 .page__content .report-logo { display: block; width: 108px; height: 60px; margin: 0; object-fit: contain; }
