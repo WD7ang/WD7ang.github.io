@@ -5,6 +5,7 @@ title_en: 'The “Self” as I Understand It'
 date: 2026-10-29 12:00:00 +0000
 permalink: /blog/understanding-the-self/
 category: essays
+cover: /images/blog/essays-cover.png
 lang: zh-CN
 extra_css: /assets/css/books.css
 body_class: essay-page

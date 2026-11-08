@@ -1,31 +1,4 @@
-<section class="blog-category" id="{{ include.kind }}" aria-labelledby="{{ include.kind }}-heading">
-  <header class="blog-category-header">
-    <div>
-      <h3 id="{{ include.kind }}-heading">{{ include.title }} <span>{{ include.title_alt }}</span></h3>
-      <p class="blog-category-subtitle">{{ include.subtitle }}<span lang="en">{{ include.subtitle_en }}</span></p>
-    </div>
-    <span class="blog-count">{{ include.posts.size }} 篇 / <span lang="en">{% if include.kind == 'tech' %}{% if include.posts.size == 1 %}note{% else %}notes{% endif %}{% else %}{% if include.posts.size == 1 %}essay{% else %}essays{% endif %}{% endif %}</span></span>
-  </header>
-  {% if include.posts.size > 0 %}
-  <ul class="blog-entries">
-    {% for post in include.posts %}
-    <li>
-      <a class="blog-entry" href="{{ post.url | relative_url }}">
-        {% if post.cover %}
-        <img src="{{ post.cover | relative_url }}" alt="" loading="lazy">
-        {% endif %}
-        <time class="blog-entry-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
-        <h4 class="blog-entry-title">{{ post.title | escape }}{% if post.title_en %}<span lang="en">{{ post.title_en | escape }}</span>{% endif %}</h4>
-        <p>{{ post.excerpt | strip_html | truncate: 76 }}{% if post.excerpt_en %}<span lang="en">{{ post.excerpt_en | escape }}</span>{% endif %}</p>
-        <span class="blog-entry-read">阅读全文 <span lang="en">/ Read more</span> <span aria-hidden="true">↗</span></span>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <div class="blog-empty">
-    <p class="blog-empty-title">下一页，写给技术。<span lang="en">The next page is for tech.</span></p>
-    <p>研究笔记与技术实践，待续。<span lang="en">Research notes and technical explorations, coming soon.</span></p>
-  </div>
-  {% endif %}
-</section>
+<a class="blog-category" id="{{ include.kind }}" href="{{ include.url | relative_url }}">
+  <img class="blog-category-cover" src="{{ include.cover | relative_url }}" alt="" width="{{ include.cover_width }}" height="{{ include.cover_height }}" loading="lazy" decoding="async">
+  <span class="blog-category-label">{{ include.title }}<span lang="en">{{ include.title_en }}</span></span>
+</a>

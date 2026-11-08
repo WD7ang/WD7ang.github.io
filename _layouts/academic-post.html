@@ -3,7 +3,9 @@ layout: academic
 ---
 <article class="post-article">
   <header class="page-heading">
-    <p class="eyebrow"><a href="{{ '/blog/' | relative_url }}">← Blog</a></p>
+    {% assign post_index_url = '/blog/' %}
+    {% if page.categories contains 'tech' %}{% assign post_index_url = '/blog/tech/' %}{% elsif page.categories contains 'essays' %}{% assign post_index_url = '/blog/essays/' %}{% endif %}
+    <p class="eyebrow"><a href="{{ post_index_url | relative_url }}">← Blog</a></p>
     <h1>{{ page.title | escape }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time> · Weidong Tang</p>
   </header>

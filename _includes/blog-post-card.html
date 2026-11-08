@@ -1,0 +1,20 @@
+{% assign card_post = include.post %}
+{% if card_post.categories contains 'essays' %}
+  {% assign card_category = 'Essays' %}
+  {% assign card_kind = 'essays' %}
+  {% assign card_default_cover = '/images/blog/essays-cover.png' %}
+{% else %}
+  {% assign card_category = 'Tech' %}
+  {% assign card_kind = 'tech' %}
+  {% assign card_default_cover = '/images/blog/tech-cover-soft.png' %}
+{% endif %}
+<article class="blog-post-card">
+  <a class="blog-post-link" href="{{ card_post.url | relative_url }}">
+    <img class="blog-post-cover blog-post-cover--{{ card_kind }}" src="{{ card_post.cover | default: card_default_cover | relative_url }}" alt="" width="1200" height="600" loading="lazy" decoding="async">
+    <div class="blog-post-caption">
+      <time class="blog-post-date" datetime="{{ card_post.date | date_to_xmlschema }}" lang="en">{{ card_post.date | date: '%b %Y' }}</time>
+      <h2 class="blog-post-title">{{ card_post.title | escape }}</h2>
+      <p class="blog-post-subtitle" lang="en">{% if card_post.title_en %}{{ card_post.title_en | escape }} · {% endif %}{{ card_category }}</p>
+    </div>
+  </a>
+</article>

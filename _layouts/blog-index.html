@@ -1,0 +1,27 @@
+---
+layout: academic
+---
+<section class="blog-index" aria-labelledby="blog-index-heading">
+  <header class="blog-index-header">
+    <a class="blog-home-link" href="{{ '/#blog' | relative_url }}">← 主页 <span lang="en">/ Home</span></a>
+    <h1 id="blog-index-heading">{{ page.title | escape }}{% if page.title_en %} <span lang="en">{{ page.title_en | escape }}</span>{% endif %}</h1>
+  </header>
+  <nav class="blog-filter" aria-label="博客分类 / Blog categories">
+    <a href="{{ '/blog/' | relative_url }}"{% unless page.blog_category %} aria-current="page"{% endunless %}>全部<span lang="en">All</span></a>
+    <a href="{{ '/blog/tech/' | relative_url }}"{% if page.blog_category == 'tech' %} aria-current="page"{% endif %}>技术博客<span lang="en">Tech Blog</span></a>
+    <a href="{{ '/blog/essays/' | relative_url }}"{% if page.blog_category == 'essays' %} aria-current="page"{% endif %}>散文随笔<span lang="en">Essays</span></a>
+  </nav>
+  {% assign blog_posts = site.posts | sort: 'date' | reverse %}
+  {% if page.blog_category %}
+    {% assign blog_posts = blog_posts | where_exp: 'post', 'post.categories contains page.blog_category' %}
+  {% endif %}
+  {% if blog_posts.size > 0 %}
+  <ul class="blog-posts">
+    {% for post in blog_posts %}
+    <li>{% include blog-post-card.html post=post %}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="blog-empty-state">{% if page.blog_category == 'tech' %}技术文章整理中。{% else %}文章整理中。{% endif %}<span lang="en">New posts coming soon.</span></p>
+  {% endif %}
+</section>

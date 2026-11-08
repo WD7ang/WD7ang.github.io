@@ -25,7 +25,15 @@
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>Menu <span aria-hidden="true">☰</span></button>
       <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation">
         {% for item in site.data.navigation.main %}
-        <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}{% if item.title == 'CV' %} class="nav-cv"{% endif %}>{{ item.title }}</a>
+        {% assign navigation_url = item.url %}
+        {% assign navigation_current = false %}
+        {% if item.title == 'Blog' %}
+          {% assign navigation_url = '/blog/' %}
+          {% if page.url contains '/blog/' %}{% assign navigation_current = true %}{% endif %}
+        {% elsif page.url == item.url %}
+          {% assign navigation_current = true %}
+        {% endif %}
+        <a href="{{ navigation_url | relative_url }}"{% if navigation_current %} aria-current="page"{% endif %}{% if item.title == 'CV' %} class="nav-cv"{% endif %}>{{ item.title }}</a>
         {% endfor %}
       </nav>
     </div>

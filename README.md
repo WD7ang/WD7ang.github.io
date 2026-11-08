@@ -78,7 +78,10 @@ python scripts/update-profile-stats.py --output local/profile-stats.json
 ```markdown
 ---
 title: "文章标题"
+title_en: "Article title"
 date: YYYY-MM-DD
+category: tech
+cover: /images/blog/article-cover.png
 ---
 
 摘要段落。
@@ -86,7 +89,9 @@ date: YYYY-MM-DD
 正文。
 ```
 
-博客自动使用 `academic-post` 布局，出现在 `/blog/`，首页展示最新三篇。未添加文章时展示空状态，不生成示例文章。
+博客默认使用 `academic-post` 布局；双语随笔可指定 `layout: essay`。分类使用 `category: tech` 或 `category: essays`，可设置 `cover` 为该文章的封面路径，省略时使用分类封面。
+
+主页只展示“技术博客”和“散文随笔”两张封面入口，分别进入 `/blog/tech/` 和 `/blog/essays/`。`/blog/` 汇总全部文章；列表按日期倒序纵向排列，显示封面、月份、中文标题与英文副标题，点击整张卡片进入正文。未添加文章的分类展示空状态，不生成示例文章。分类入口和文章列表样式位于 `assets/css/books.css`。
 
 ## 更新 PDF
 
