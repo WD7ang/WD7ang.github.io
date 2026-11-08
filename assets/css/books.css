@@ -38,6 +38,7 @@
 .blog-post-link:focus-visible { outline: none; }
 .blog-post-cover { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; object-position: center; background: #edf1f4; }
 .blog-post-cover--essays { object-position: center 45%; }
+.home-blog .blog-category-cover[src$="/tech-flow-cover.png"], .blog-post-cover[src$="/tech-flow-cover.png"] { object-position: center 36%; }
 .blog-post-caption { padding: 13px 15px 17px; overflow-wrap: anywhere; }
 .blog-post-date { display: block; margin-bottom: 4px; color: #7189a7; font: 600 16px/1.4 Georgia, "Times New Roman", serif; letter-spacing: .02em; }
 .blog-post-title { margin: 0 0 3px; color: #303640; font: 650 19px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
