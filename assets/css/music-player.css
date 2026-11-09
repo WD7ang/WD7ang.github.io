@@ -52,7 +52,7 @@
 .home-music button:focus-visible, .home-music a:focus-visible, .home-music input:focus-visible { outline: 2px solid #638baa; outline-offset: -2px; }
 .home-music .music-mobile-play, .home-music .music-toggle { display: none; }
 @media (max-width: 924px) { .sidebar .home-music { max-width: 340px; margin: 20px auto; } .music-layout { grid-template-columns: minmax(90px, .72fr) minmax(0, 1fr); gap: 14px; } .home-music .music-track { font-size: 11px; } }
-@media (max-width: 767px) {
+@media (max-width: 924px) {
   .home-music.is-enhanced .music-heading { padding-right: 28px; }
   .home-music.is-enhanced .music-toggle { display: inline-flex; position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; }
   .music-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
