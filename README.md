@@ -4,7 +4,7 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；两者共享同一份内容数据，PDF 在修改内容后重新导出。
 
-主页将教育与工作、研究经历合并为 **Experience** 时间线。Cardinal 与西电学业是主节点，在校期间的 Alibaba、TeleAI 和 NUS 经历按时间倒序显示在学业节点下；日期使用 `YYYY.MM`。导航仅保留 Experience，旧 `/#education` 链接仍可定位到西电条目。
+主页将教育与工作、研究经历合并为 **Experience** 时间线。西电学业为主节点，在校期间的 Cardinal AI Lab / InfRec、Alibaba、TeleAI 和 NUS 经历按时间倒序显示在学业节点下；日期使用 `YYYY.MM`。导航仅保留 Experience，旧 `/#education` 链接仍可定位到西电条目。
 
 时间线单独使用自托管 Roboto 字体，避免继承主页圆体。字体来自 Google Fonts，文件与 SIL Open Font License 位于 `assets/fonts/roboto-latin-variable.woff2` 和 `assets/fonts/Roboto-OFL.txt`；主轨为与主页强调色一致的渐隐 3px 蓝线，研究分支为无圆点的 2px 蓝灰虚线。日期与说明使用较深的蓝灰色，角色及说明使用常规字重以提高云层背景上的可读性。
 
