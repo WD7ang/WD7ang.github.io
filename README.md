@@ -8,7 +8,7 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 时间线单独使用自托管 Roboto 字体，避免继承主页圆体。字体来自 Google Fonts，文件与 SIL Open Font License 位于 `assets/fonts/roboto-latin-variable.woff2` 和 `assets/fonts/Roboto-OFL.txt`；主轨为渐隐的 3px 深橙红线，研究分支为无圆点的 2px 浅灰虚线。
 
-主页正文、导航和页脚共享流体宽度与边距，在超宽屏保留 2200px 的阅读上限；正文和时间线字号随视口适度放大。侧栏在 925px 以下移至顶部，音乐播放器同步收起。论文卡片根据正文容器宽度在 740px 切换为单列，Blog 封面与时间线在各自可用宽度不足 600px 时切换为窄屏布局，避免按屏幕宽度误判实际内容空间。
+主页正文、导航和页脚共享居中的 1280px 最大宽度，桌面正文约 984px，参考 ziyuguo99.github.io 的阅读宽度；基础字号保持 15px，宽屏保留两侧留白。窗口变窄时容器随可用宽度收缩，侧栏在 925px 以下移至顶部，音乐播放器同步收起。论文卡片根据正文容器宽度在 740px 切换为单列，Blog 封面与时间线在各自可用宽度不足 600px 时切换为窄屏布局。
 
 CV 网页顶部纵向放置 `Print / Save as PDF` 和 `Download PDF`，页脚仅显示版权。顶部操作区和页脚均不出现在打印版中。主页 Services 保留 Reviewer，并列出 2026 年西电升学经验分享群负责人经历（3,000 人）；CV 的 Services 不显示 Reviewer。
 

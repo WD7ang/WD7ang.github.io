@@ -7,9 +7,9 @@
   --home-soft: #f7f9fb;
   --home-background-opacity: .24;
   --home-nav-offset: 90px;
-  --home-gutter: clamp(16px, 4vw, 96px);
-  --home-gap: clamp(24px, 2.5vw, 64px);
-  --home-body-size: clamp(15px, calc(10.5px + .3125vw), 20px);
+  --home-gutter: 16px;
+  --home-gap: clamp(24px, 4vw, 56px);
+  --home-body-size: 15px;
 }
 html body { font-size: var(--home-body-size); }
 body { color: var(--home-ink); background-color: #fff; isolation: isolate; padding-top: 0; }
@@ -196,11 +196,11 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
   .award-title, .service-title { font-size: 15px; }
 }
 
-/* Shared fluid shell; retain a readable canvas on ultrawide displays. */
+/* Center a compact reading canvas while allowing narrower viewports to reflow. */
 #main,
 .masthead__inner-wrap,
 .page__footer footer {
-  max-width: 2200px;
+  max-width: 1280px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -210,13 +210,13 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 #main > .page { float: none; width: auto; min-width: 0; margin: 0; padding: 0; container: home-content / inline-size; }
 .page__content > p { max-width: 100ch; }
 .page__content .publication-card,
-.page__content .project-card { padding: clamp(8px, 1vw, 20px); }
+.page__content .project-card { padding: 12px; }
 .page__content .publication-card > div,
 .page__content .project-card > div {
   display: grid !important;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   width: 100%;
-  gap: clamp(18px, 2vw, 32px);
+  gap: 24px;
 }
 .page__content .publication-card > div > div,
 .page__content .project-card > div > div { min-width: 0; }
@@ -238,7 +238,7 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 @media (min-width: 925px) {
   #main {
     display: grid;
-    grid-template-columns: clamp(208px, 17vw, 300px) minmax(0, 1fr);
+    grid-template-columns: 208px minmax(0, 1fr);
     gap: var(--home-gap);
     align-items: start;
   }
@@ -255,9 +255,9 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
     padding: 0;
     overflow-y: auto;
   }
-  .author__avatar img { width: 100%; max-width: 280px; }
-  .sidebar .author__name { font-size: clamp(18px, 1.2vw, 22px); }
-  .sidebar p, .sidebar li { font-size: clamp(13px, .85vw, 16px); }
+  .author__avatar img { width: 100%; max-width: 208px; }
+  .sidebar .author__name { font-size: 18px; }
+  .sidebar p, .sidebar li { font-size: 13px; }
 }
 @container home-content (max-width: 740px) {
   .page__content .publication-card > div,
