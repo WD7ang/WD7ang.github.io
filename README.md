@@ -2,7 +2,7 @@
 
 Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` 布局和左侧个人资料栏，使用蓝色与蓝灰色配色；Blog 使用 `academic` 布局。CV 使用独立的 `cv-reference` 布局，整体按用户提供的《Yue Su - Curriculum Vitae.pdf》排版。无需前端打包，旧的 AcademicPages 页面继续可用。
 
-主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；两者共享同一份内容数据，PDF 在修改内容后重新导出。
+主页导航和个人介绍中的 **CV** 均打开 `/cv/` 英文网页，顶部可切换至 `/cv/zh/` 中文版。两种语言共享 `_includes/cv-content.html` 和同一组内容数据，中文译文保存在数据的 `_zh` 字段，界面文案在 `_data/cv_i18n.json`。在线 CV 是主要入口，各语言另有对应的 PDF 下载／打印选项；PDF 在修改内容后重新导出。
 
 主页将教育与工作、研究经历合并为 **Experience** 时间线。西电学业为主节点，在校期间的 Cardinal AI Lab / InfRec、Alibaba、TeleAI 和 NUS 经历按时间倒序显示在学业节点下；日期使用 `YYYY.MM`。导航仅保留 Experience，旧 `/#education` 链接仍可定位到西电条目。
 
@@ -10,7 +10,9 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 主页正文、导航和页脚共享居中的 1280px 最大宽度，桌面正文约 984px，参考 ziyuguo99.github.io 的阅读宽度；基础字号保持 15px，宽屏保留两侧留白。窗口变窄时容器随可用宽度收缩，侧栏在 925px 以下移至顶部，音乐播放器同步收起。论文卡片根据正文容器宽度在 740px 切换为单列，Blog 封面与时间线在各自可用宽度不足 600px 时切换为窄屏布局。
 
-CV 网页顶部纵向放置 `Print / Save as PDF` 和 `Download PDF`，页脚仅显示版权。顶部操作区和页脚均不出现在打印版中。主页 Services 保留 Reviewer，并列出 2026 年西电升学经验分享群负责人经历（3,000 人）；CV 的 Services 不显示 Reviewer。
+CV 网页顶部提供 `English / 中文` 切换，其下纵向放置打印和 PDF 下载入口，页脚仅显示版权。顶部操作区和页脚均不出现在打印版中。中文版保留论文英文原题与完整作者列表，便于检索。主页 Services 保留 Reviewer，并列出 2026 年西电升学经验分享群负责人经历（3,000 人）；CV 的 Services 不显示 Reviewer。
+
+音乐播放器默认音量为 20%；脚本中的初始音量和模板中的滑块、百分比显示保持一致，静音后恢复用户最近设置的非零音量。
 
 ## 本地运行
 
@@ -41,13 +43,14 @@ bundle exec jekyll serve
 | 新闻，按新到旧排列 | `_data/news.json` |
 | 重设计版经历备份 | `_data/experience.json` |
 | 重设计版论文备份 | `_data/publications.json` |
-| 在线 CV | `_pages/cv.html` |
+| 在线 CV（英文 / 中文） | `_pages/cv.html` / `_pages/cv-zh.html` |
+| 双语 CV 共用内容模板、字段选择与界面文案 | `_includes/cv-content.html` / `_includes/cv-field.html` / `_data/cv_i18n.json` |
 | CV 经历、工作要点与导师（原始详细描述留存为数据） | `_data/cv_experience.json` |
 | CV 教育信息 | `_data/cv_education.json` |
 | CV 论文（完整作者、会议信息与链接） | `_data/cv_publications.json` |
 | CV 年月格式显示 | `_includes/cv-date.html` |
 | 独立 CV 页面框架 | `_layouts/cv-reference.html` |
-| 下载版 CV | `images/cv.pdf` |
+| 下载版 CV（英文 / 中文） | `images/cv.pdf` / `images/cv-zh.pdf` |
 | 头像 | `images/wx.jpg` |
 | 主页半透明天空背景 | `images/sky.jpg` |
 | InfRec 经历卡片 Logo（仅鸟形图案） | `images/InfRec.png` |

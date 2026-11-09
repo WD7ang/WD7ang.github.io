@@ -1,0 +1,6 @@
+{%- assign translated_key = include.key | append: '_zh' -%}
+{%- if page.cv_language == 'zh' -%}
+  {{- include.record[translated_key] | default: include.record[include.key] -}}
+{%- else -%}
+  {{- include.record[include.key] -}}
+{%- endif -%}

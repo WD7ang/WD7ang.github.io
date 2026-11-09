@@ -17,7 +17,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   const clock = (seconds) => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}` : '--:--';
   let position = 0;
   let revision = 0;
-  let lastVolume = .8;
+  let lastVolume = .2;
   let mobileExpanded = false;
 
   const setPlaying = (value) => {
@@ -178,7 +178,7 @@ document.querySelectorAll('[data-music-player]').forEach((player) => {
   audio.addEventListener('timeupdate', updateProgress);
   audio.addEventListener('loadedmetadata', updateProgress);
   audio.addEventListener('ended', () => select(position + 1));
-  audio.volume = .8;
+  audio.volume = .2;
   audio.muted = false;
   audio.controls = false;
   audio.hidden = true;

@@ -1,0 +1,142 @@
+{% assign cv_language = page.cv_language | default: 'en' %}
+{% assign cv = site.data.cv_i18n[cv_language] %}
+<nav class="cv-actions" aria-label="{{ cv.actions }}">
+  <div class="cv-language-switch" role="group" aria-label="{{ cv.language }}">
+    <a href="{{ '/cv/' | relative_url }}" lang="en" hreflang="en"{% if cv_language == 'en' %} aria-current="page"{% endif %}>English</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ '/cv/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if cv_language == 'zh' %} aria-current="page"{% endif %}>中文</a>
+  </div>
+  <button class="print-link" type="button" data-print-cv hidden>{{ cv.print }}</button>
+  <a href="{{ cv.pdf | relative_url }}" download="{{ cv.filename }}">{{ cv.download }}</a>
+</nav>
+<article class="cv-document" aria-labelledby="cv-name">
+    <header class="cv-profile">
+      <div class="profile-information">
+        <h1 id="cv-name">{{ cv.name }} <span lang="{{ cv.secondary_lang }}">{{ cv.secondary_name }}</span></h1>
+        <p class="cv-headline">{{ cv.incoming }} <span class="cv-separator">&middot;</span> <span class="cv-affiliation"><img src="{{ '/images/InfRec-transparent.png' | relative_url }}" width="20" height="20" alt=""><a href="https://www.cardinal-agi.com/">{{ cv.headline_role }}</a></span></p>
+        <div class="cv-contact">
+          <a class="cv-contact-item" href="mailto:wdtang0705@gmail.com">{% include cv-icon.svg name='mail' %}wdtang0705@gmail.com</a>
+          <a class="cv-contact-item" href="https://wd7ang.github.io/">{% include cv-icon.svg name='globe' %}wd7ang.github.io</a>
+          <a class="cv-contact-item" href="https://github.com/WD7ang">{% include cv-icon.svg name='github' %}GitHub</a>
+          <a class="cv-contact-item" href="https://scholar.google.com/citations?user=NH9USaYAAAAJ">{% include cv-icon.svg name='scholar' %}Google Scholar</a>
+          <a class="cv-contact-item" href="{{ '/images/vx.jpg' | relative_url }}">{% include cv-icon.svg name='chat' %}{{ cv.wechat }}: d7ang0705</a>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="cv-education">
+      <h2 class="cv-section-title" id="cv-education">{{ cv.education }}</h2>
+      <ul class="cv-overview-list cv-education-list">{% for education in site.data.cv_education %}
+        <li class="cv-overview-entry">
+          <span class="cv-org-logo"><img class="cv-org-logo-image" src="{{ education.logo | relative_url }}" width="24" height="24" alt=""></span>
+          <div class="cv-overview-content">
+            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{% include cv-field.html record=education key='organization' %}</a><span class="cv-date">{% include cv-date.html value=education.date_start %} – {% include cv-date.html value=education.date_end %}{% if education.date_note %}<span class="cv-date-note"> ({% include cv-field.html record=education key='date_note' %})</span>{% endif %}</span></div>
+            <p class="cv-entry-role">{% include cv-field.html record=education key='degree' %}</p>
+            <p class="cv-entry-note">{% include cv-field.html record=education key='details_html' %}</p>
+          </div>
+        </li>{% endfor %}
+      </ul>
+    </section>
+
+    <section aria-labelledby="cv-experience-overview">
+      <h2 class="cv-section-title" id="cv-experience-overview">{{ cv.experience }}</h2>
+      <ul class="cv-overview-list">{% for experience in site.data.cv_experience %}
+        <li class="cv-overview-entry">
+          <span class="cv-org-logo"><img class="cv-org-logo-image cv-org-logo--{{ experience.id }}" src="{{ experience.logo | relative_url }}" width="24" height="24" alt=""></span>
+          <div class="cv-overview-content">
+            <div class="cv-entry-heading"><span><a class="cv-organization" href="{{ experience.url }}">{% include cv-field.html record=experience key='organization' %}</a></span><span class="cv-date">{% include cv-date.html value=experience.date_start %} – {% include cv-date.html value=experience.date_end %}</span></div>
+            <p class="cv-entry-role">{% include cv-field.html record=experience key='role' %}{% if experience.affiliation %} &middot; {% if experience.affiliation_url %}<a href="{{ experience.affiliation_url }}">{% include cv-field.html record=experience key='affiliation' %}</a>{% else %}{% include cv-field.html record=experience key='affiliation' %}{% endif %}{% endif %}</p>
+            {% if experience.advisors_html %}<p class="cv-entry-note">{% include cv-field.html record=experience key='advisors_html' %}</p>{% endif %}
+            {% assign highlights = experience.highlights %}{% if cv_language == 'zh' %}{% assign highlights = experience.highlights_zh | default: experience.highlights %}{% endif %}
+            {% if highlights.size > 0 %}<ul class="cv-entry-highlights">{% for highlight in highlights %}
+              <li>{{ highlight }}</li>{% endfor %}
+            </ul>{% endif %}
+          </div>
+        </li>{% endfor %}
+      </ul>
+    </section>
+
+  <section aria-labelledby="cv-publications">
+    <h2 class="cv-section-title" id="cv-publications">{{ cv.publications }}</h2>
+    <p class="cv-publication-legend">{{ cv.legend }}</p>
+    <ol class="cv-publications">{% for publication in site.data.cv_publications %}
+      <li class="cv-publication">
+        <span class="cv-publication-number" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+        <div class="cv-publication-body">
+          {% if publication.title_url %}<a class="cv-paper-title" href="{{ publication.title_url }}">{% include cv-field.html record=publication key='title' %}</a>{% else %}<span class="cv-paper-title">{% include cv-field.html record=publication key='title' %}</span>{% endif %}
+          {% if cv_language == 'zh' and publication.title_zh %}<p class="cv-paper-title-original" lang="en">{{ publication.title }}</p>{% endif %}
+          <p class="cv-paper-authors" lang="en">{{ publication.authors_html }}</p>
+          <div class="cv-paper-meta"><span class="cv-venue">{% if cv_language == 'zh' %}{{ publication.venue | replace: 'arXiv preprint', 'arXiv 预印本' }}{% else %}{{ publication.venue }}{% endif %}</span>{% if publication.notes %} <span class="cv-paper-notes">{% include cv-field.html record=publication key='notes' %}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="cv-tech-report">{{ cv.link_labels[link.label] | default: link.label }}</span>{% else %}{{ cv.link_labels[link.label] | default: link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}">{{ cv.link_labels[link.label] | default: link.label }}</a>{% endfor %}</span>{% endif %}</div>
+        </div>
+      </li>{% endfor %}
+    </ol>
+  </section>
+
+  <section aria-labelledby="cv-projects">
+    <h2 class="cv-section-title" id="cv-projects">{{ cv.projects }}</h2>
+    <ul class="cv-project-list"><li>
+      <h3 class="cv-project-title"><a href="https://github.com/WD7ang/WowPage">WowPage</a></h3>
+      <p class="cv-project-description">{{ cv.project_description }}</p>
+    </li></ul>
+  </section>
+
+  <section aria-labelledby="cv-talks">
+    <h2 class="cv-section-title" id="cv-talks">{{ cv.talks }}</h2>
+    <p class="cv-section-empty">{{ cv.pending }}</p>
+  </section>
+
+  <section aria-labelledby="cv-reports">
+    <h2 class="cv-section-title" id="cv-reports">{{ cv.reports }}</h2>
+    <ul class="cv-report-list">
+      <li class="cv-report-entry cv-report-entry--featured">
+        <span class="cv-report-logo cv-report-logo--qilu"><img src="{{ '/images/qilu-evening-news-logo.png' | relative_url }}" alt="{{ cv.qilu_logo }}" width="80" height="48"></span>
+        <div class="cv-entry-heading cv-entry-heading--centered">
+          <div>
+            <a class="cv-report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
+            <p class="cv-report-source" lang="{{ page.lang | default: 'en' }}">{{ cv.qilu_source }}</p>
+          </div>
+          <time class="cv-date" datetime="2026-10-25">{% include cv-date.html value='10/2026' %}</time>
+        </div>
+      </li>
+      <li class="cv-report-entry">
+        <span class="cv-report-logo"><img src="{{ '/images/next-star-logo.png' | relative_url }}" alt="{{ cv.nextstar_logo }}" width="80" height="48"></span>
+        <div class="cv-entry-heading cv-entry-heading--centered">
+          <div>
+            <a class="cv-report-title" lang="zh" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g">2026“创业之星”Next Star 一等奖</a>
+            <p class="cv-report-source" lang="{{ page.lang | default: 'en' }}">{{ cv.nextstar_source }}</p>
+          </div>
+          <time class="cv-date" datetime="2026-11-04">{% include cv-date.html value='11/2026' %}</time>
+        </div>
+      </li>
+      <li class="cv-report-entry">
+        <span class="cv-report-logo"><img src="{{ '/images/271-education-logo.png' | relative_url }}" alt="{{ cv.alumnus_logo }}" width="80" height="48"></span>
+        <div class="cv-entry-heading cv-entry-heading--centered">
+          <div>
+            <a class="cv-report-title" lang="zh" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ">昌乐二中|271教育  汤维栋：纵有疾风起，人生不言弃</a>
+            <p class="cv-report-source" lang="{{ page.lang | default: 'en' }}">{{ cv.alumnus_source }}</p>
+          </div>
+          <time class="cv-date" datetime="2026-11-04">{% include cv-date.html value='11/2026' %}</time>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <div class="cv-bottom-grid">
+    <section aria-labelledby="cv-awards">
+      <h2 class="cv-section-title" id="cv-awards">{{ cv.awards }}</h2>
+      <ul class="cv-compact-list">
+        <li class="cv-entry-heading"><span>{{ cv.scholarship }} <span class="cv-muted">{{ cv.scholarship_rank }}</span></span><span class="cv-date">2026</span></li>
+        <li class="cv-entry-heading"><span>{{ cv.scholarship }} <span class="cv-muted">{{ cv.scholarship_rank }}</span></span><span class="cv-date">2025</span></li>
+      </ul>
+    </section>
+    <section aria-labelledby="cv-services">
+      <h2 class="cv-section-title" id="cv-services">{{ cv.services }}</h2>
+      <ul class="cv-compact-list">
+        <li class="cv-entry-heading"><span>{{ cv.team_lead }}</span><span class="cv-date">{% include cv-date.html value='06/2025' %} – {{ cv.present }}</span></li>
+        <li class="cv-entry-heading cv-entry-heading--centered"><span>{{ cv.coordinator }} <span class="cv-muted">{{ cv.members }}</span></span><span class="cv-date">{% include cv-date.html value='10/2026' %} – {{ cv.present }}</span></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer class="cv-footer">© {{ site.time | date: '%Y' }} {{ cv.name }}.</footer>
+</article>

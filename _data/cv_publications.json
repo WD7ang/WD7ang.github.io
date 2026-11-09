@@ -29,7 +29,8 @@
         "url": "https://mp.weixin.qq.com/s/_c63MmHy5608Fv18fMnICg"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "title_zh": "The Trinity：能力驱动的多模态智能体递归自我改进"
   },
   {
     "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
@@ -51,7 +52,8 @@
         "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "Route Anything：面向通用 AI 系统的模型与策略路由研究"
   },
   {
     "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
@@ -69,7 +71,9 @@
         "url": "https://huggingface.co/datasets/Twwwd/GroupToM-Bench"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "title_zh": "GroupToM-Bench：多模态大语言模型的群体心智理论与非线性社会涌现评测",
+    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）"
   },
   {
     "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
@@ -87,7 +91,9 @@
         "url": "https://github.com/Ink-Dawn/MagicBench"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "title_zh": "MagicBench：诊断多模态大语言模型的视觉能动性丧失与语义依赖",
+    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）"
   },
   {
     "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
@@ -101,7 +107,9 @@
         "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "title_zh": "基于循环动态子模型的高效视频目标分割与跟踪",
+    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）"
   },
   {
     "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples",
@@ -119,7 +127,9 @@
         "url": "https://github.com/WD7ang/VAR-Scaling"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "title_zh": "通过代表性样本搜索实现视觉自回归建模的推理时扩展",
+    "notes_zh": "（录用率 29%，CCF-C）"
   },
   {
     "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
@@ -137,7 +147,9 @@
         "url": "https://github.com/zcxcf/EA-ViT"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "EA-ViT：弹性视觉 Transformer 的高效适配",
+    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）"
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -155,7 +167,9 @@
         "url": "https://github.com/LanceZPF/MDK12"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "MDK12-Bench：评估多模态大语言模型推理能力的多学科基准",
+    "notes_zh": "（录用率 17%，CCF-A）"
   },
   {
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
@@ -169,7 +183,9 @@
         "url": "https://ieeexplore.ieee.org/abstract/document/11515063"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "IEBench：面向智能体边缘网络中多模态大语言模型系统的身份—事件纠缠概念遗忘评测",
+    "notes_zh": "（影响因子 7.9，JCR 一区）"
   },
   {
     "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
@@ -191,7 +207,8 @@
         "url": "https://pebench.github.io/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "Pebench：用于评测多模态大语言模型机器遗忘的虚构数据集"
   },
   {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
@@ -213,7 +230,8 @@
         "url": "https://huggingface.co/datasets/alibaba-multimodal-industrial-ai/IndustryBench-MIPU"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "IndustryBench-MIPU：工业产品多图像属性值提取评测"
   },
   {
     "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
@@ -239,6 +257,7 @@
         "url": "https://cuizhiq.github.io/EarthVerse/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "title_zh": "EarthVerse：面向动态地球系统与自然灾害的科学智能体评测"
   }
 ]

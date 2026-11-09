@@ -1,6 +1,12 @@
 {%- if include.value contains '/' -%}
   {%- assign date_parts = include.value | split: '/' -%}
-  {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}.{{- date_parts[1] -}}
+  {%- if page.cv_language == 'zh' -%}
+    {{- date_parts[1] -}}.{{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}
+  {%- else -%}
+    {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}.{{- date_parts[1] -}}
+  {%- endif -%}
+{%- elsif include.value == 'Present' and page.cv_language == 'zh' -%}
+  至今
 {%- else -%}
   {{- include.value -}}
 {%- endif -%}

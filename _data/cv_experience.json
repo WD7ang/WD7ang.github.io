@@ -16,6 +16,12 @@
     "highlights": [
       "Lead research on recursive self-improvement and long-horizon interaction, enabling agents to learn and control embodied robots.",
       "Guide research from problem formulation to prototypes, working with engineering teams on real-world embodied AI applications."
+    ],
+    "organization_zh": "Cardinal AI 实验室，InfRec",
+    "role_zh": "首席研究官（创始成员）",
+    "highlights_zh": [
+      "主导递归自我改进与长时程交互研究，使智能体能够学习并控制具身机器人。",
+      "推动研究从问题定义走向原型实现，与工程团队合作开展面向真实场景的具身 AI 应用。"
     ]
   },
   {
@@ -33,6 +39,12 @@
     "highlights": [
       "Research: combined multimodal representations with OPD, exploring post-training, SFT, and industrial product benchmarks.",
       "Business: studied image-text alignment data pipelines for product representations and retrieval in large-scale e-commerce."
+    ],
+    "organization_zh": "阿里巴巴",
+    "role_zh": "多模态大语言模型研究实习生",
+    "highlights_zh": [
+      "科研：结合多模态表征与 OPD，探索后训练、监督微调（SFT）及工业产品评测基准。",
+      "业务：研究面向大规模电商商品表征与检索的图文对齐数据流水线。"
     ]
   },
   {
@@ -49,6 +61,12 @@
     "highlights": [
       "Focused on AI infrastructure for LLM training and inference on Huawei Ascend 910B, emphasizing efficient and stable execution.",
       "Worked on precision alignment for LLM training and inference, addressing precision differences at the AI infrastructure level."
+    ],
+    "organization_zh": "中国电信人工智能研究院（TeleAI）",
+    "role_zh": "大语言模型研究实习生",
+    "highlights_zh": [
+      "专注于华为昇腾 910B 平台上的大语言模型训练与推理基础设施，注重高效、稳定运行。",
+      "开展大语言模型训练与推理的精度对齐工作，处理 AI 基础设施层面的精度差异。"
     ]
   },
   {
@@ -69,6 +87,14 @@
     "highlights": [
       "Focused on efficient AI and multimodal model evaluation, studying model efficiency and performance across research tasks.",
       "Learned to lead research teams through collaborative projects, developing ideas and working toward research publications."
-    ]
+    ],
+    "organization_zh": "新加坡国立大学",
+    "role_zh": "科研助理",
+    "affiliation_zh": "HPC-AI 实验室",
+    "highlights_zh": [
+      "专注于高效 AI 与多模态模型评估，研究不同科研任务中的模型效率和性能。",
+      "在协作项目中学习带领研究团队，发展研究思路并推进研究成果发表。"
+    ],
+    "advisors_html_zh": "导师：<a href=\"https://www.comp.nus.edu.sg/~youy/\">Yang You</a> 教授、<a href=\"https://wangbo-zhao.github.io/\">Wangbo Zhao</a> 教授和<a href=\"https://lancezpf.github.io/\">Pengfei Zhou</a> 博士。"
   }
 ]

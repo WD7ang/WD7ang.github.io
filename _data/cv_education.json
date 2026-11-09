@@ -7,6 +7,10 @@
     "date_end": "07/2027",
     "date_note": "expected",
     "degree": "B.E., School of Telecommunication Engineering &middot; GPA: 3.8/4.0",
-    "details_html": "Advised by Prof. <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei Wang</a>."
+    "details_html": "Advised by Prof. <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei Wang</a>.",
+    "organization_zh": "西安电子科技大学",
+    "degree_zh": "工学学士，通信工程学院 &middot; GPA：3.8/4.0",
+    "details_html_zh": "导师：<a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei Wang</a> 教授。",
+    "date_note_zh": "预计"
   }
 ]
