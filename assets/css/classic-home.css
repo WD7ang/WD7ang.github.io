@@ -101,6 +101,7 @@ body::before {
   --timeline-accent: var(--home-accent);
   color: #1a1a1a;
   font-family: "Timeline Roboto", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
   font-weight: 300;
 }
 .home-experience #experience { font-family: inherit; }
@@ -277,7 +278,7 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
   .experience-timeline > .timeline-stage { padding-bottom: 28px; }
   .page__content .timeline-placements { gap: 22px; margin-top: 22px; }
   .timeline-placement .timeline-entry { padding-left: 18px; }
-  .timeline-placement .timeline-date { margin-left: 18px; margin-bottom: 5px; font-size: 11px; }
+  .timeline-placement .timeline-date { margin-left: 18px; margin-bottom: 5px; font-size: .733333em; }
 }
 @media (max-width: 767px) {
   .page__content .publication-card > div,
