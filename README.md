@@ -6,7 +6,7 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 主页将教育与工作、研究经历合并为 **Experience** 时间线。Cardinal 与西电学业是主节点，在校期间的 Alibaba、TeleAI 和 NUS 经历按时间倒序显示在学业节点下；日期使用 `YYYY.MM`。导航仅保留 Experience，旧 `/#education` 链接仍可定位到西电条目。
 
-时间线单独使用自托管 Roboto 字体，避免继承主页圆体。字体来自 Google Fonts，文件与 SIL Open Font License 位于 `assets/fonts/roboto-latin-variable.woff2` 和 `assets/fonts/Roboto-OFL.txt`；主轨为渐隐的 3px 深橙红线，研究分支为无圆点的 2px 浅灰虚线。
+时间线单独使用自托管 Roboto 字体，避免继承主页圆体。字体来自 Google Fonts，文件与 SIL Open Font License 位于 `assets/fonts/roboto-latin-variable.woff2` 和 `assets/fonts/Roboto-OFL.txt`；主轨为与主页强调色一致的渐隐 3px 蓝线，研究分支为无圆点的 2px 蓝灰虚线。日期与说明使用较深的蓝灰色，角色及说明使用常规字重以提高云层背景上的可读性。
 
 主页正文、导航和页脚共享居中的 1280px 最大宽度，桌面正文约 984px，参考 ziyuguo99.github.io 的阅读宽度；基础字号保持 15px，宽屏保留两侧留白。窗口变窄时容器随可用宽度收缩，侧栏在 925px 以下移至顶部，音乐播放器同步收起。论文卡片根据正文容器宽度在 740px 切换为单列，Blog 封面与时间线在各自可用宽度不足 600px 时切换为窄屏布局。
 

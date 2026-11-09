@@ -98,7 +98,7 @@ body::before {
   --timeline-rail-width: 44px;
   --timeline-axis: calc(var(--timeline-year-width) + var(--timeline-date-width) + var(--timeline-rail-width) / 2);
   --timeline-branch-axis: calc(var(--timeline-axis) + 24px);
-  --timeline-rust: #b23a0e;
+  --timeline-accent: var(--home-accent);
   color: #1a1a1a;
   font-family: "Timeline Roboto", "Segoe UI", Arial, sans-serif;
   font-weight: 300;
@@ -106,16 +106,16 @@ body::before {
 .home-experience #experience { font-family: inherit; }
 .page__content .experience-timeline,
 .page__content .timeline-placements { position: relative; list-style: none; margin: 0; padding: 0; }
-.experience-timeline::before { content: ""; position: absolute; top: -6px; bottom: 0; left: calc(var(--timeline-axis) - 1.5px); width: 3px; background: linear-gradient(to bottom, transparent, var(--timeline-rust) 24px, var(--timeline-rust) calc(100% - 24px), transparent); }
+.experience-timeline::before { content: ""; position: absolute; top: -6px; bottom: 0; left: calc(var(--timeline-axis) - 1.5px); width: 3px; background: linear-gradient(to bottom, transparent, var(--timeline-accent) 24px, var(--timeline-accent) calc(100% - 24px), transparent); }
 .experience-timeline > .timeline-stage { position: relative; margin: 0; padding: 0 0 34px; }
 .experience-timeline > .timeline-stage:last-child { padding-bottom: 0; }
 .timeline-stage-summary,
 .timeline-placement { position: relative; display: grid; grid-template-columns: var(--timeline-year-width) var(--timeline-date-width) var(--timeline-rail-width) minmax(0, 1fr); align-items: start; }
-.timeline-stage-summary::after { content: ""; position: absolute; top: 14px; left: var(--timeline-axis); width: 13px; height: 13px; border: 3px solid var(--timeline-rust); border-radius: 50%; background: #fff; transform: translate(-50%, -50%); box-sizing: border-box; }
-.timeline-stage--current > .timeline-stage-summary::after { background: #fed90f; }
-.timeline-year { position: relative; grid-column: 1; grid-row: 1; align-self: start; padding-top: 4px; color: #a1a1aa; font-size: .666667em; font-weight: 600; line-height: 20px; font-variant-numeric: tabular-nums; }
-.timeline-year::after { content: ""; position: absolute; top: 14px; right: 2px; width: 14px; border-top: 1px dashed #e4e4e7; }
-.home-experience .timeline-date { grid-column: 2; grid-row: 1; margin: 0; padding-top: 4px; color: var(--timeline-rust); font-size: .8em; font-weight: 700; line-height: 20px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.timeline-stage-summary::after { content: ""; position: absolute; top: 14px; left: var(--timeline-axis); width: 13px; height: 13px; border: 3px solid var(--timeline-accent); border-radius: 50%; background: #fff; transform: translate(-50%, -50%); box-sizing: border-box; }
+.timeline-stage--current > .timeline-stage-summary::after { background: #b9d1e3; }
+.timeline-year { position: relative; grid-column: 1; grid-row: 1; align-self: start; padding-top: 4px; color: #536579; font-size: .666667em; font-weight: 600; line-height: 20px; font-variant-numeric: tabular-nums; }
+.timeline-year::after { content: ""; position: absolute; top: 14px; right: 2px; width: 14px; border-top: 1px dashed #afbfcc; }
+.home-experience .timeline-date { grid-column: 2; grid-row: 1; margin: 0; padding-top: 4px; color: var(--timeline-accent); font-size: .8em; font-weight: 700; line-height: 20px; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .timeline-entry { grid-column: 4; grid-row: 1; min-width: 0; }
 .page__content .timeline-org { margin: 0; font: inherit; line-height: 1.35; }
 .timeline-org-badge { display: inline-flex; max-width: 100%; align-items: center; gap: 8px; padding: 6px 10px; border: 1px solid #ededee; border-radius: 6px; box-sizing: border-box; background: #f8f8f8; box-shadow: 0 1px 1px rgba(0, 0, 0, .12); color: #1a1a1a; font-size: .933333em; font-weight: 700; line-height: 1.35; text-decoration: none; }
@@ -124,14 +124,14 @@ a.timeline-org-badge:hover { border-color: #bbcbd8; color: var(--home-accent); t
 a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
 .page__content .timeline-logo { display: block; flex: 0 0 24px; width: 24px; height: 24px; margin: 0; object-fit: contain; border: 0; border-radius: 0; }
 .timeline-logo--teleai { clip-path: polygon(2.5% 0%, 95.5% 0%, 95.5% 56.75%, 93.5% 70.75%, 91% 75.75%, 91% 77.25%, 85% 84.75%, 80.5% 88.25%, 59.5% 100%, 38.5% 100%, 25% 92.75%, 14% 85.75%, 9% 80.25%, 5% 72.25%, 3.5% 67.25%, 2.5% 57.25%); }
-.home-experience .timeline-role { margin: 7px 0 0; color: #52525b; font-size: .933333em; font-weight: 300; line-height: 1.55; }
-.home-experience .timeline-description { margin: 4px 0 0; color: #71717a; font-size: .866667em; font-weight: 300; line-height: 1.6; overflow-wrap: anywhere; }
+.home-experience .timeline-role { margin: 7px 0 0; color: var(--home-ink); font-size: .933333em; font-weight: 400; line-height: 1.55; }
+.home-experience .timeline-description { margin: 4px 0 0; color: #46586a; font-size: .866667em; font-weight: 400; line-height: 1.6; overflow-wrap: anywhere; }
 .home-experience .timeline-description a, .home-experience .timeline-role a { color: inherit; }
 .page__content .timeline-placements { display: grid; gap: 24px; margin-top: 24px; }
-.timeline-placements::before { content: ""; position: absolute; top: 0; bottom: 0; left: var(--timeline-branch-axis); border-left: 2px dashed #c7c9cf; }
+.timeline-placements::before { content: ""; position: absolute; top: 0; bottom: 0; left: var(--timeline-branch-axis); border-left: 2px dashed #9aafbf; }
 .timeline-placements > .timeline-placement { margin: 0; padding: 0; }
 .timeline-placement .timeline-entry { padding-left: 22px; }
-.timeline-placement .timeline-date { padding-top: 6px; color: #52525b; font-size: .8em; font-weight: 300; }
+.timeline-placement .timeline-date { padding-top: 6px; color: #46586a; font-size: .8em; font-weight: 400; }
 .timeline-placement .timeline-org-badge { gap: 7px; padding: 5px 8px; font-size: .866667em; font-weight: 600; }
 .page__content .timeline-placement .timeline-logo { flex-basis: 20px; width: 20px; height: 20px; }
 .timeline-placement .timeline-role { margin-top: 6px; font-size: .866667em; }
