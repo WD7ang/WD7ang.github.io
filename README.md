@@ -4,6 +4,8 @@ Jekyll / GitHub Pages 个人主页。首页恢复原有 AcademicPages `single` �
 
 主页导航和个人介绍中的 **CV** 均打开 `/cv/` 独立网页。在线 CV 是主要入口，PDF 是额外的下载／打印选项；两者共享同一份内容数据，PDF 在修改内容后重新导出。
 
+主页将教育与工作、研究经历合并为 **Experience** 时间线。Cardinal 与西电学业是主节点，在校期间的 Alibaba、TeleAI 和 NUS 经历按时间倒序显示在学业节点下；日期使用 `YYYY.MM`。导航仅保留 Experience，旧 `/#education` 链接仍可定位到西电条目。
+
 CV 网页顶部纵向放置 `Print / Save as PDF` 和 `Download PDF`，页脚仅显示版权。顶部操作区和页脚均不出现在打印版中。主页 Services 保留 Reviewer，并列出 2026 年西电升学经验分享群负责人经历（3,000 人）；CV 的 Services 不显示 Reviewer。
 
 ## 本地运行
@@ -29,7 +31,8 @@ bundle exec jekyll serve
 
 | 内容 | 文件 |
 | --- | --- |
-| 首页简介、原版经历和论文卡片、项目、奖项、服务 | `_pages/about.md` |
+| 首页简介、论文卡片、项目、奖项、服务 | `_pages/about.md` |
+| 首页 Experience 时间线（教育、工作与研究经历） | `_includes/experience-timeline.html` |
 | 导航 | `_data/navigation.yml` |
 | 新闻，按新到旧排列 | `_data/news.json` |
 | 重设计版经历备份 | `_data/experience.json` |
