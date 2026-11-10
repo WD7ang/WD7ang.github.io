@@ -266,6 +266,32 @@ redirect_from:
         margin-top: 2px;
     }
 
+    .pub-media-links a {
+        white-space: nowrap;
+    }
+
+    .pub-media-link-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        vertical-align: middle;
+    }
+
+    .page__content .pub-media-link-logo {
+        display: block;
+        flex: 0 0 16px;
+        width: 16px;
+        height: 16px;
+        margin: 0;
+        border: 0;
+        border-radius: 3px;
+        object-fit: contain;
+    }
+
+    .page__content .pub-media-links a:hover .pub-media-link-logo {
+        box-shadow: none;
+    }
+
     .pub-resource-links a,
     .pub-list-links a {
         display: inline-block;
@@ -459,7 +485,7 @@ Publications
       <br>
       <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
       <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-      {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}
+      {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
     </div>
   </div>
 </div>
@@ -477,7 +503,7 @@ Publications
       <br>
       <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
       <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-      {% if route_anything.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in route_anything.media_links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}
+      {% if route_anything.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in route_anything.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
     </div>
   </div>
 </div>
@@ -595,7 +621,7 @@ Publications
         {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
         <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>
-        {% if publication.media_links.size > 0 %}<span class="pub-list-links pub-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</span>{% endif %}
+        {% if publication.media_links.size > 0 %}<span class="pub-list-links pub-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
       </div>
     </li>
     {% endfor %}

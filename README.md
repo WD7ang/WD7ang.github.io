@@ -14,6 +14,8 @@ CV 网页顶部提供 `English / 中文` 切换，其下纵向放置打印和 PD
 
 音乐播放器默认音量为 20%；脚本中的初始音量和模板中的滑块、百分比显示保持一致，静音后恢复用户最近设置的非零音量。
 
+论文媒体链接通过 `_data/cv_publications.json` 中的 `media_links[].logo` 指定图标，首页、中英文 CV 和 PDF 均显示在链接文字前。机智流与智猩猩使用对应公众号的头像原图，保存为 `images/jizhiliu-logo.png`、`images/zhixingxing-logo.png`。
+
 ## 本地运行
 
 安装 Ruby 和 Bundler 后：
