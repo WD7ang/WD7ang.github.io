@@ -723,7 +723,7 @@ Services
     <img class="service-logo" src="{{ '/images/xidian-inspur-club.png' | relative_url }}" alt="Xidian–Inspur Club logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="service-details">
       <span class="service-title">AI Team Lead</span>
-      <span class="service-meta">Xidian–Inspur Club · <span class="service-date">06.2025 – Present</span></span>
+      <span class="service-meta">Xidian–Inspur Club · <span class="service-date">06.2025 – 05.2026</span></span>
     </div>
   </li>
   <li class="service-row">
