@@ -16,6 +16,8 @@ CV 网页顶部提供 `English / 中文` 切换，其下纵向放置打印和 PD
 
 论文媒体链接通过 `_data/cv_publications.json` 中的 `media_links[].logo` 指定图标，首页、中英文 CV 和 PDF 均显示在链接文字前。机智流与智猩猩使用对应公众号的头像原图，保存为 `images/jizhiliu-logo.png`、`images/zhixingxing-logo.png`。
 
+首页 Awards 的 BYD Logo 使用[比亚迪集团官网原图](https://www.bydglobal.com/material/group-official-website/common/logo.png)，保存为 `images/byd-logo.png`，放在奖项名称右侧，保留两条奖项正文的对齐。
+
 ## 本地运行
 
 安装 Ruby 和 Bundler 后：
