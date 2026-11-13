@@ -16,7 +16,7 @@ CV 网页顶部提供 `English / 中文` 切换，其下纵向放置打印和 PD
 
 论文媒体链接通过 `_data/cv_publications.json` 中的 `media_links[].logo` 指定图标，首页、中英文 CV 和 PDF 均显示在链接文字前。机智流与智猩猩使用对应公众号的头像原图，保存为 `images/jizhiliu-logo.png`、`images/zhixingxing-logo.png`。
 
-首页 Awards 的 BYD Logo 使用[比亚迪集团官网原图](https://www.bydglobal.com/material/group-official-website/common/logo.png)，保存为 `images/byd-logo.png`，放在奖项名称右侧，保留两条奖项正文的对齐。
+首页 Reports、Awards、Services 使用统一的左侧图标列，标题与说明起点对齐；日期位于正文说明后，窄屏自然换行。Awards 的 BYD Logo 使用[比亚迪集团官网原图](https://www.bydglobal.com/material/group-official-website/common/logo.png)，保存为 `images/byd-logo.png`；学业奖学金使用西电校徽 `images/XDU.png`。Services 使用群头像 `images/xidian-admissions-group.png`、用户提供的浪潮俱乐部图标 `images/xidian-inspur-club.png`，以及内置图像生成工具制作的 `images/reviewer-accept-cloud.png`。Reviewer 云图以 ACCEPT 为中心，点击缩略图可查看原图；审稿记录由其下方正文单独维护。
 
 ## 本地运行
 

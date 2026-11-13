@@ -694,17 +694,17 @@ Awards
 --------
 <ul class="award-list">
   <li class="award-row">
-    <span class="award-date">2026</span>
+    <img class="award-logo" src="{{ '/images/byd-logo.png' | relative_url }}" alt="BYD logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="award-details">
-      <span class="award-title">BYD Scholarship<img class="award-brand-logo" src="{{ '/images/byd-logo.png' | relative_url }}" alt="" width="36" height="22" loading="lazy" decoding="async"></span>
-      <span class="award-meta">Xidian University · Sponsored by BYD</span>
+      <span class="award-title">BYD Scholarship</span>
+      <span class="award-meta">Xidian University · Sponsored by BYD · <span class="award-date">2026</span></span>
     </div>
   </li>
   <li class="award-row">
-    <span class="award-date">2025 &amp; 2026</span>
+    <img class="award-logo" src="{{ '/images/XDU.png' | relative_url }}" alt="Xidian University logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="award-details">
       <span class="award-title">Second-Class Academic Scholarship</span>
-      <span class="award-meta">Xidian University · Ranked 5/99 (2025)</span>
+      <span class="award-meta">Xidian University · Ranked 5/99 (2025) · <span class="award-date">2025 &amp; 2026</span></span>
     </div>
   </li>
 </ul>
@@ -713,27 +713,26 @@ Services
 --------
 <ul class="service-list" role="list">
   <li class="service-row">
-    <span class="service-date">10.2026 – Present</span>
+    <img class="service-logo" src="{{ '/images/xidian-admissions-group.png' | relative_url }}" alt="Xidian admissions group logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="service-details">
       <span class="service-title">Coordinator</span>
-      <span class="service-meta service-meta--with-avatar">
-        <img class="service-avatar" src="images/xidian-admissions-group.png" alt="Xidian admissions group avatar" width="15" height="15" loading="lazy" decoding="async">
-        <span>Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
-      </span>
+      <span class="service-meta">Xidian Graduate Admissions Experience-Sharing Group (3,000 members) · <span class="service-date">10.2026 – Present</span></span>
     </div>
   </li>
   <li class="service-row">
-    <span class="service-date">06.2025 – Present</span>
+    <img class="service-logo" src="{{ '/images/xidian-inspur-club.png' | relative_url }}" alt="Xidian–Inspur Club logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="service-details">
       <span class="service-title">AI Team Lead</span>
-      <span class="service-meta">🌊Xidian–Inspur Club</span>
+      <span class="service-meta">Xidian–Inspur Club · <span class="service-date">06.2025 – Present</span></span>
     </div>
   </li>
   <li class="service-row">
-    <span class="service-date">Present</span>
+    <a class="service-logo-link" href="{{ '/images/reviewer-accept-cloud.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size ACCEPT word cloud">
+      <img class="service-logo" src="{{ '/images/reviewer-accept-cloud.png' | relative_url }}" alt="Conference and journal word cloud centered on ACCEPT" width="108" height="60" loading="lazy" decoding="async">
+    </a>
     <div class="service-details">
       <span class="service-title">Reviewer</span>
-      <span class="service-meta">ICIC 2026, PRCV (2025, 2026), ICLR 2027</span>
+      <span class="service-meta">ICIC 2026, PRCV (2025, 2026), ICLR 2027 · <span class="service-date">Present</span></span>
     </div>
   </li>
 </ul>

@@ -159,28 +159,26 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 .page__content .award-list, .page__content .service-list { list-style: none; margin: 0; padding: 0; }
 .award-list .award-row, .service-list .service-row {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-columns: 108px minmax(0, 1fr);
   align-items: center;
-  gap: 12px;
-  margin-bottom: 5px;
-  padding: 7px 12px;
+  gap: 14px;
+  margin-bottom: 10px;
+  padding: 10px 12px;
   border-left: 3px solid #234864;
   background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
 }
-.award-list .award-row { grid-template-columns: 108px minmax(0, 1fr); }
-.service-list .service-row { grid-template-columns: 146px minmax(0, 1fr); }
 .award-date, .service-date { color: var(--home-muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
 .award-date time { white-space: nowrap; }
 .award-details, .service-details { min-width: 0; }
 .award-title, .service-title { display: block; color: var(--home-ink); font-size: 16px; font-weight: 500; line-height: 1.45; }
-.page__content .award-brand-logo { display: inline-block; width: 36px; height: 22px; margin: 0 0 0 6px; border: 0; border-radius: 0; object-fit: contain; vertical-align: middle; }
 .award-meta, .service-meta { display: block; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
-.service-meta--with-avatar { display: flex; align-items: flex-start; gap: 3px; }
-.service-meta--with-avatar > span { min-width: 0; }
 .page__content .section-empty { color: var(--home-muted); font-size: 14px; }
 .page__content .report-list { list-style: none; margin: 0; padding: 0; }
 .report-list li { display: grid; grid-template-columns: 108px minmax(0, 1fr); align-items: center; gap: 14px; margin-bottom: 10px; padding: 10px 12px; border-left: 3px solid #234864; background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12)); }
-.page__content .report-logo { display: block; width: 108px; height: 60px; margin: 0; object-fit: contain; }
+.page__content .report-logo, .page__content .award-logo, .page__content .service-logo { display: block; width: 108px; height: 60px; margin: 0; object-fit: contain; }
+.page__content .service-logo-link { display: block; width: 108px; height: 60px; }
+.service-logo-link:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
+.mfp-img[src$="/images/reviewer-accept-cloud.png"] { background-color: #e4e9ef; background-clip: content-box; }
 .report-logo-crop { display: block; width: 100%; height: 60px; overflow: hidden; }
 /* Keep the original logo pixels; display the left 2090px, before the blue badge. */
 .page__content .report-logo-crop .report-logo { width: 125.933%; max-width: none; height: 100%; }
@@ -189,12 +187,10 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 .report-meta { display: block; margin-top: 3px; color: var(--home-muted); font-size: 13px; line-height: 1.5; }
 .report-list .report-featured { border-left-color: #9a4b55; }
 .report-featured .report-title { color: #9a4b55; font-weight: 700; }
-.page__content .service-avatar { display: block; flex: 0 0 15px; width: 15px; height: 15px; margin: 2.25px 0 0; border-radius: 50%; background: #f7fcf5; object-fit: cover; }
 @media (max-width: 480px) {
-  .report-list li { grid-template-columns: 80px minmax(0, 1fr); gap: 10px; }
-  .page__content .report-logo { width: 80px; height: 48px; }
+  .report-list li, .award-list .award-row, .service-list .service-row { grid-template-columns: 80px minmax(0, 1fr); gap: 10px; }
+  .page__content .report-logo, .page__content .award-logo, .page__content .service-logo, .page__content .service-logo-link { width: 80px; height: 48px; }
   .report-logo-crop { height: 48px; }
-  .award-list .award-row, .service-list .service-row { grid-template-columns: 76px minmax(0, 1fr); padding: 8px 10px; }
   .award-date, .service-date { white-space: normal; }
   .award-title, .service-title { font-size: 15px; }
 }
