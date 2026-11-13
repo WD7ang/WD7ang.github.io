@@ -704,7 +704,7 @@ Awards
     <img class="award-logo" src="{{ '/images/XDU.png' | relative_url }}" alt="Xidian University logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="award-details">
       <span class="award-title">Second-Class Academic Scholarship</span>
-      <span class="award-meta">Xidian University · Ranked 5/99 (2025) · <span class="award-date">2025 &amp; 2026</span></span>
+      <span class="award-meta">Xidian University · <span class="award-date">2025 &amp; 2026</span></span>
     </div>
   </li>
 </ul>
