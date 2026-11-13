@@ -694,6 +694,13 @@ Awards
 --------
 <ul class="award-list">
   <li class="award-row">
+    <span class="award-date">2026</span>
+    <div class="award-details">
+      <span class="award-title">BYD Scholarship</span>
+      <span class="award-meta" lang="zh-CN">比亚迪奖学金</span>
+    </div>
+  </li>
+  <li class="award-row">
     <span class="award-date">2025 &amp; 2026</span>
     <div class="award-details">
       <span class="award-title">Second-Class Academic Scholarship</span>
