@@ -697,7 +697,7 @@ Awards
     <span class="award-date">2026</span>
     <div class="award-details">
       <span class="award-title">BYD Scholarship</span>
-      <span class="award-meta" lang="zh-CN">比亚迪奖学金</span>
+      <span class="award-meta">Xidian University · Sponsored by BYD</span>
     </div>
   </li>
   <li class="award-row">

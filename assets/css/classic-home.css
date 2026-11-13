@@ -167,6 +167,7 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
   border-left: 3px solid #234864;
   background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
 }
+.award-list .award-row { grid-template-columns: 108px minmax(0, 1fr); }
 .service-list .service-row { grid-template-columns: 146px minmax(0, 1fr); }
 .award-date, .service-date { color: var(--home-muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
 .award-date time { white-space: nowrap; }
