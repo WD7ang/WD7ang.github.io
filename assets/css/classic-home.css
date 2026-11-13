@@ -176,6 +176,7 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 .page__content .report-list { list-style: none; margin: 0; padding: 0; }
 .report-list li { display: grid; grid-template-columns: 108px minmax(0, 1fr); align-items: center; gap: 14px; margin-bottom: 10px; padding: 10px 12px; border-left: 3px solid #234864; background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12)); }
 .page__content .report-logo, .page__content .award-logo, .page__content .service-logo { display: block; width: 108px; height: 60px; margin: 0; object-fit: contain; }
+.page__content .award-logo--byd { transform: scale(.75); }
 .page__content .service-logo-link { display: block; width: 108px; height: 60px; }
 .service-logo-link:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
 .mfp-img[src$="/images/reviewer-accept-cloud.png"] { background-color: #e4e9ef; background-clip: content-box; }

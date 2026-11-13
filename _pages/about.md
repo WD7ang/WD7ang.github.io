@@ -694,7 +694,7 @@ Awards
 --------
 <ul class="award-list">
   <li class="award-row">
-    <img class="award-logo" src="{{ '/images/byd-logo.png' | relative_url }}" alt="BYD logo" width="108" height="60" loading="lazy" decoding="async">
+    <img class="award-logo award-logo--byd" src="{{ '/images/byd-logo.png' | relative_url }}" alt="BYD logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="award-details">
       <span class="award-title">BYD Scholarship</span>
       <span class="award-meta">Xidian University · Sponsored by BYD · <span class="award-date">2026</span></span>
