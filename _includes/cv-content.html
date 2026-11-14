@@ -30,7 +30,7 @@
         <li class="cv-overview-entry">
           <span class="cv-org-logo"><img class="cv-org-logo-image" src="{{ education.logo | relative_url }}" width="24" height="24" alt=""></span>
           <div class="cv-overview-content">
-            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{% include cv-field.html record=education key='organization' %}</a><span class="cv-date">{% include cv-date.html value=education.date_start %} – {% include cv-date.html value=education.date_end %}{% if education.date_note %}<span class="cv-date-note"> ({% include cv-field.html record=education key='date_note' %})</span>{% endif %}</span></div>
+            <div class="cv-entry-heading"><a class="cv-organization" href="{{ education.url }}">{% include cv-field.html record=education key='organization' %}</a><span class="cv-date">{% if education.date_label %}{% include cv-field.html record=education key='date_label' %}{% else %}{% include cv-date.html value=education.date_start %} – {% include cv-date.html value=education.date_end %}{% if education.date_note %}<span class="cv-date-note"> ({% include cv-field.html record=education key='date_note' %})</span>{% endif %}{% endif %}</span></div>
             <p class="cv-entry-role">{% include cv-field.html record=education key='degree' %}</p>
             <p class="cv-entry-note">{% include cv-field.html record=education key='details_html' %}</p>
           </div>

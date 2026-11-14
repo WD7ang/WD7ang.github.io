@@ -1,5 +1,17 @@
 [
   {
+    "organization": "Hong Kong University of Science and Technology (HKUST)",
+    "url": "https://hkust.edu.hk/",
+    "logo": "/images/HKUST.png",
+    "date_label": "Incoming",
+    "degree": "PhD, Department of Electronic and Computer Engineering (ECE)",
+    "details_html": "Advised by Prof. <a href=\"https://ece.hkust.edu.hk/songguo\">Song GUO</a>.",
+    "organization_zh": "香港科技大学（HKUST）",
+    "date_label_zh": "即将入学",
+    "degree_zh": "博士，电子及计算机工程学系（ECE）",
+    "details_html_zh": "导师：<a href=\"https://ece.hkust.edu.hk/songguo\">郭嵩</a>教授。"
+  },
+  {
     "organization": "Xidian University",
     "url": "https://www.xidian.edu.cn/",
     "logo": "/images/XDU.png",
@@ -7,7 +19,7 @@
     "date_end": "07/2027",
     "date_note": "expected",
     "degree": "B.E., School of Telecommunication Engineering &middot; GPA: 3.8/4.0",
-    "details_html": "Advised by Prof. <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei Wang</a>.",
+    "details_html": "Advised by Prof. <a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">Xiumei WANG</a>.",
     "organization_zh": "西安电子科技大学",
     "degree_zh": "工学学士，通信工程学院 &middot; GPA：3.8/4.0",
     "details_html_zh": "导师：<a href=\"https://scholar.google.com/citations?user=k33uf2RE8nsC&amp;hl=zh-CN&amp;oi=ao\">王秀美</a>教授。",

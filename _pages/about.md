@@ -642,10 +642,10 @@ Projects
     <div>
       <strong>WowPage</strong><br>
       <i class="pub-authors" style="font-size: 13px;">
-        <strong>Weidong Tang</strong>,
-        Yue Su.
+        <strong>Weidong TANG</strong>,
+        Yue SU.
       </i><br>
-      In collaboration with Yue Su, I refined and improved his original homepage template. A clean standalone template version is coming soon.
+      In collaboration with Yue SU, I refined and improved his original homepage template. A clean standalone template version is coming soon.
       <br>
       <b><i class="pub-venue">Project &nbsp;</i></b>
       <span class="pub-resource-links"><a href="https://github.com/WD7ang/WowPage"><em>GitHub</em></a><a href="https://www.xiaohongshu.com/discovery/item/69feb95d000000003502e8b7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABPOGv4BUnujNdJXL2rltJQVQ8AGjnq0xVWDGPPDKSj6c=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer"><em>RedNote</em></a></span>
