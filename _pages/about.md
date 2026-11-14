@@ -298,8 +298,8 @@ redirect_from:
         color: #bf6a70 !important;
     }
 
-    .pub-repository-link { white-space: nowrap; }
-    .pub-repository-link > svg { width: auto; height: 20px; vertical-align: middle; font-weight: 400; }
+    .publication-stars { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #eef1f5; color: #17212f; font-size: 13px; font-weight: 500; line-height: 1.5; vertical-align: middle; white-space: nowrap; }
+    .publication-stars > svg { flex: 0 0 14px; width: 14px; height: 14px; fill: #dda500; }
 
     .pub-resource-links a + a::before,
     .pub-list-links a + a::before {
@@ -487,8 +487,8 @@ Publications
       The Trinity shifts the fundamental unit of RSI from tasks to capabilities, offering a path from task-specific local optimization to continuous evolution across tasks and modalities.
       <br>
       <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
-      <span class="pub-resource-links">{% for link in trinity.links %}<a{% if link.stars != nil %} class="pub-repository-link" aria-label="GitHub: {{ link.stars }} stars"{% endif %} href="{{ link.url }}">{% if link.stars != nil %}{% include stat-badge.svg label='stars' value=link.stars id='core-trinity-stars' %}{% elsif link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-      {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
+      <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
+      {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=trinity %}</span>{% else %}{% include publication-stars.html publication=trinity %}{% endif %}
     </div>
   </div>
 </div>
@@ -618,14 +618,13 @@ Publications
 <div id="full-publications" class="publication-view" data-publication-view="list" hidden>
   <ul class="full-publication-list" role="list">
     {% for publication in site.data.cv_publications %}
-    {% assign repository_badge_id = 'list-stars-' | append: forloop.index %}
     <li class="pub-list-row">
       <span class="pub-list-venue" title="{{ publication.venue | escape }}">{{ publication.venue | replace: 'arXiv preprint,', 'arXiv' | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
       <div class="pub-list-details">
         {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}<a{% if link.stars != nil %} class="pub-repository-link" aria-label="GitHub: {{ link.stars }} stars"{% endif %} href="{{ link.url }}">{% if link.stars != nil %}{% include stat-badge.svg label='stars' value=link.stars id=repository_badge_id %}{% elsif link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>
-        {% if publication.media_links.size > 0 %}<span class="pub-list-links pub-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
+        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>
+        {% if publication.media_links.size > 0 %}<span class="pub-list-links pub-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=publication %}</span>{% else %}{% include publication-stars.html publication=publication %}{% endif %}
       </div>
     </li>
     {% endfor %}

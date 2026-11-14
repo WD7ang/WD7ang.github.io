@@ -1,0 +1,5 @@
+{%- for link in include.publication.links -%}
+{%- if link.stars != nil -%}
+<span class="publication-stars" role="img" aria-label="{{ link.stars }} GitHub stars"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2.25 3.01 6.1 6.73.98-4.87 4.75 1.15 6.7L12 17.62l-6.02 3.16 1.15-6.7-4.87-4.75 6.73-.98Z"/></svg><span>{{ link.stars }}</span></span>
+{%- endif -%}
+{%- endfor -%}

@@ -88,8 +88,8 @@ sup { font-size: .7em; line-height: 0; }
 .cv-paper-links { color: var(--cv-link); font-size: 13px; }
 .cv-paper-links a { color: inherit; }
 .cv-paper-links a + a::before { content: "\00b7"; display: inline-block; margin: 0 6px; color: #c2c7cc; text-decoration: none; }
-.cv-repository-link { display: inline-block; white-space: nowrap; }
-.cv-repository-link > svg { width: auto; height: 20px; vertical-align: middle; font-weight: 400; }
+.publication-stars { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #eef1f5; color: #17212f; font-size: 13px; font-weight: 500; line-height: 1.5; vertical-align: middle; white-space: nowrap; }
+.publication-stars > svg { flex: 0 0 14px; width: 14px; height: 14px; fill: #dda500; }
 .cv-media-link { display: inline-block; white-space: nowrap; }
 .cv-media-logo { display: inline-block; width: 1.2em; height: 1.2em; margin-right: 4px; border-radius: 3px; object-fit: contain; vertical-align: -.2em; }
 .cv-tech-report { display: inline-block; padding: 0 5px; border: 1px solid #ead6d9; border-radius: 3px; background: #f9eff0; color: var(--cv-accent); font-weight: 600; line-height: 1.25; white-space: nowrap; }
@@ -193,7 +193,8 @@ sup { font-size: .7em; line-height: 0; }
   .cv-paper-meta { margin-top: 3px; column-gap: 12px; font-size: 11px; line-height: 1.4; }
   .cv-paper-links { font-size: 11px; }
   .cv-paper-links a + a::before { margin: 0 5px; }
-  .cv-repository-link > svg { height: 16px; }
+  .publication-stars { gap: 4px; margin-left: 6px; padding: 0 6px; font-size: 11px; }
+  .publication-stars > svg { flex-basis: 12px; width: 12px; height: 12px; }
   .cv-project-list { padding-left: 34px; }
   .cv-project-list > li { margin-bottom: 12px; }
   .cv-project-title { font-size: 12.8px; line-height: 1.4; }
