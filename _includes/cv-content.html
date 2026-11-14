@@ -124,15 +124,15 @@
     <section aria-labelledby="cv-awards">
       <h2 class="cv-section-title" id="cv-awards">{{ cv.awards }}</h2>
       <ul class="cv-compact-list">
-        <li class="cv-entry-heading"><span>{{ cv.byd_scholarship }}</span><span class="cv-date">2026</span></li>
-        <li class="cv-entry-heading"><span>{{ cv.scholarship }}</span><span class="cv-date">2024 &amp; 2025 &amp; 2026</span></li>
+        <li class="cv-compact-row"><img class="cv-compact-logo" src="{{ '/images/byd-logo.png' | relative_url }}" alt="" width="20" height="20"><span class="cv-compact-label">{{ cv.byd_scholarship }}</span><span class="cv-date">2026</span></li>
+        <li class="cv-compact-row"><img class="cv-compact-logo" src="{{ '/images/XDU.png' | relative_url }}" alt="" width="20" height="20"><span class="cv-compact-label" title="{{ cv.scholarship_full }}">{{ cv.scholarship }}</span><span class="cv-date">2024 &amp; 2025 &amp; 2026</span></li>
       </ul>
     </section>
     <section aria-labelledby="cv-services">
       <h2 class="cv-section-title" id="cv-services">{{ cv.services }}</h2>
       <ul class="cv-compact-list">
-        <li class="cv-entry-heading"><span>{{ cv.team_lead }}</span><span class="cv-date">{% include cv-date.html value='06/2025' %} – {% include cv-date.html value='05/2026' %}</span></li>
-        <li class="cv-entry-heading cv-entry-heading--centered"><span>{{ cv.coordinator }} <span class="cv-muted">{{ cv.members }}</span></span><span class="cv-date">{% include cv-date.html value='10/2026' %} – {{ cv.present }}</span></li>
+        <li class="cv-compact-row"><img class="cv-compact-logo" src="{{ '/images/xidian-inspur-club.png' | relative_url }}" alt="" width="20" height="20"><span class="cv-compact-label" title="{{ cv.team_lead_full }}">{{ cv.team_lead }}</span><span class="cv-date">{% include cv-date.html value='06/2025' %} – {% include cv-date.html value='05/2026' %}</span></li>
+        <li class="cv-compact-row"><img class="cv-compact-logo" src="{{ '/images/xidian-admissions-group.png' | relative_url }}" alt="" width="20" height="20"><span class="cv-compact-label" title="{{ cv.leader_full }}">{{ cv.leader }}</span><span class="cv-date">{% include cv-date.html value='10/2026' %} – {{ cv.present }}</span></li>
       </ul>
     </section>
   </div>

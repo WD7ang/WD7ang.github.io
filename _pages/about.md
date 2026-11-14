@@ -715,7 +715,7 @@ Services
   <li class="service-row">
     <img class="service-logo" src="{{ '/images/xidian-admissions-group.png' | relative_url }}" alt="Xidian admissions group logo" width="108" height="60" loading="lazy" decoding="async">
     <div class="service-details">
-      <span class="service-title">Coordinator</span>
+      <span class="service-title">Leader</span>
       <span class="service-meta">Xidian Graduate Admissions Experience-Sharing Group (3,000 members) · <span class="service-date">10.2026 – Present</span></span>
     </div>
   </li>
