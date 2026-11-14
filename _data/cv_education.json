@@ -5,11 +5,11 @@
     "logo": "/images/HKUST.png",
     "date_label": "Incoming",
     "degree": "PhD, Department of Electronic and Computer Engineering",
-    "details_html": "Advised by Prof. <a href=\"https://cse.hkust.edu.hk/~songguo/\">Song GUO</a>.",
+    "details_html": "Advised by Prof. <a href=\"https://cse.hkust.edu.hk/~songguo/\">Song GUO</a>, MAE, FCAE, FIEEE.",
     "organization_zh": "香港科技大学",
     "date_label_zh": "即将入学",
     "degree_zh": "博士，电子及计算机工程学系",
-    "details_html_zh": "导师：<a href=\"https://cse.hkust.edu.hk/~songguo/\">郭嵩</a>教授。"
+    "details_html_zh": "导师：<a href=\"https://cse.hkust.edu.hk/~songguo/\">郭嵩</a>教授（MAE、FCAE、FIEEE）。"
   },
   {
     "organization": "Xidian University",
