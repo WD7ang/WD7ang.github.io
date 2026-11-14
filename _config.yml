@@ -23,6 +23,7 @@ author:
   # Biographic information
   avatar           : "wx.jpg"
   name             : "Weidong TANG 汤维栋"
+  name_lines       : ["Weidong TANG", "汤维栋"]
   pronouns         : "He/Him"  
   bio              : "人间万象皆有数，唯此风骨世无双"
   location         : "Edinburgh, UK"
