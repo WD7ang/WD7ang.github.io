@@ -1,15 +1,15 @@
 [
   {
-    "organization": "Hong Kong University of Science and Technology (HKUST)",
+    "organization": "Hong Kong University of Science and Technology",
     "url": "https://hkust.edu.hk/",
     "logo": "/images/HKUST.png",
     "date_label": "Incoming",
-    "degree": "PhD, Department of Electronic and Computer Engineering (ECE)",
-    "details_html": "Advised by Prof. <a href=\"https://ece.hkust.edu.hk/songguo\">Song GUO</a>.",
-    "organization_zh": "香港科技大学（HKUST）",
+    "degree": "PhD, Department of Electronic and Computer Engineering",
+    "details_html": "Advised by Prof. <a href=\"https://cse.hkust.edu.hk/~songguo/\">Song GUO</a>.",
+    "organization_zh": "香港科技大学",
     "date_label_zh": "即将入学",
-    "degree_zh": "博士，电子及计算机工程学系（ECE）",
-    "details_html_zh": "导师：<a href=\"https://ece.hkust.edu.hk/songguo\">郭嵩</a>教授。"
+    "degree_zh": "博士，电子及计算机工程学系",
+    "details_html_zh": "导师：<a href=\"https://cse.hkust.edu.hk/~songguo/\">郭嵩</a>教授。"
   },
   {
     "organization": "Xidian University",
