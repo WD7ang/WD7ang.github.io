@@ -434,7 +434,7 @@ redirect_from:
 
 
 
-Hi! I am a senior (4th-year) undergraduate student at Xidian University and an **incoming PhD student at the Hong Kong University of Science and Technology (HKUST)**.
+Hi! I am a senior (4th-year) undergraduate student at Xidian University.
 
 My research interests lie at the intersection of natural language processing and computer vision, with a particular focus on **multimodal representation learning**. My long-term goal is to understand how human-like intelligence can emerge and to develop unified models that connect the physical world with human cognition.
 
