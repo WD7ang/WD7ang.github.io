@@ -30,6 +30,11 @@
         "label": "智猩猩",
         "url": "https://mp.weixin.qq.com/s/_c63MmHy5608Fv18fMnICg",
         "logo": "/images/zhixingxing-logo.png"
+      },
+      {
+        "label": "机器之心",
+        "url": "https://mp.weixin.qq.com/s/pLWDaTjnnV-fgbZHorFgMg",
+        "logo": "/images/jiqizhixin-logo.png"
       }
     ],
     "group": "Core"
