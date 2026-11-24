@@ -108,9 +108,9 @@ body::before {
 .research-tags svg { flex: 0 0 17px; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .research-topic { display: inline-flex; align-items: center; gap: 7px; padding: 9px 12px; border: 1px solid #bfcfdd; border-radius: 11px; color: #365c78; background: linear-gradient(135deg, #ffffffd9, #edf4f9c9); font-size: 13px; font-weight: 550; line-height: 1.4; white-space: nowrap; }
 
-/* Experience follows a horizontal rail, from most recent to earliest. */
+/* Group education and placements, with compact cards and a scrollable research row. */
 .home-experience {
-  --timeline-card-width: clamp(240px, 76vw, 340px);
+  --timeline-card-width: 300px;
   color: #1a1a1a;
   font-family: var(--home-font);
   font-size: 15px;
@@ -131,13 +131,16 @@ body::before {
   border: 0;
   font-family: inherit;
 }
+.experience-group + .experience-group { margin-top: 24px; }
+.experience-group-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 32px; margin-bottom: 10px; }
+.page__content .experience-group-title { margin: 0; color: #526b80; font-size: 14px; font-weight: 500; line-height: 1.4; letter-spacing: .02em; }
 .experience-controls { display: flex; gap: 8px; }
 .experience-controls[hidden] { display: none; }
 .experience-controls button {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 0;
   border: 1px solid #bdcdd9;
   border-radius: 7px;
@@ -166,89 +169,80 @@ body::before {
 .page__content .experience-timeline {
   display: flex;
   width: max-content;
+  gap: 16px;
   list-style: none;
   margin: 0;
-  padding: 8px 2px 20px;
+  padding: 0 0 12px;
 }
+.page__content .experience-timeline--education { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; padding-bottom: 0; }
 .experience-timeline > .timeline-stage {
   position: relative;
   flex: 0 0 var(--timeline-card-width);
   width: var(--timeline-card-width);
   margin: 0;
-  padding: 0 28px 0 0;
+  padding: 16px;
+  border: 1px solid #dce5ec;
+  border-top: 3px solid #aec2d2;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .84);
   scroll-snap-align: start;
 }
-.timeline-stage::before {
-  content: "";
-  position: absolute;
-  top: 39px;
-  left: 8px;
-  right: -8px;
-  height: 2px;
-  background: #a6bbc9;
-}
-.timeline-stage:last-child::before { right: 28px; }
-.timeline-stage::after {
-  content: "";
-  position: absolute;
-  top: 34px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  box-sizing: border-box;
-  border: 2px solid var(--home-accent);
-  border-radius: 50%;
-  background: #fff;
-}
-.timeline-stage--current::after { background: #8cabc2; }
+.experience-timeline--education > .timeline-stage { width: auto; }
+.experience-timeline > .timeline-stage--current { border-top-color: #527d9d; }
 .home-experience .timeline-date {
-  margin: 0 0 40px;
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #f0f4f7;
   color: var(--home-accent);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 18px;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
 }
+.home-experience .timeline-stage--current .timeline-date { background: #e6eff5; }
 .timeline-entry { min-width: 0; }
 .page__content .timeline-org {
   display: flex;
-  align-items: flex-start;
-  min-height: 84px;
+  align-items: center;
+  min-height: 61px;
   margin: 0;
   font: inherit;
   line-height: 1.35;
 }
 .timeline-org-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   max-width: 100%;
-  gap: 8px;
-  padding: 6px 10px;
-  border: 1px solid #e1e5e9;
-  border-radius: 5px;
-  background: #ffffffb8;
-  color: #1a1a1a;
-  font-size: 17px;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--home-ink);
+  font-size: 15px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.35;
   text-decoration: none;
 }
 .timeline-org-badge > span { min-width: 0; overflow-wrap: anywhere; }
-a.timeline-org-badge:hover { border-color: #9db6c8; color: var(--home-accent); }
+a.timeline-org-badge:hover { color: var(--home-accent); }
+.experience-timeline--education .timeline-org { min-height: 41px; }
 .page__content .timeline-logo {
   display: block;
-  flex: 0 0 48px;
-  width: 48px;
-  height: 48px;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
   margin: 0;
   object-fit: contain;
   border: 0;
   border-radius: 0;
 }
 .timeline-logo--teleai { clip-path: polygon(2.5% 0%, 95.5% 0%, 95.5% 56.75%, 93.5% 70.75%, 91% 75.75%, 91% 77.25%, 85% 84.75%, 80.5% 88.25%, 59.5% 100%, 38.5% 100%, 25% 92.75%, 14% 85.75%, 9% 80.25%, 5% 72.25%, 3.5% 67.25%, 2.5% 57.25%); }
-.home-experience .timeline-role { margin: 8px 0 0; color: var(--home-ink); font-size: 13.5px; font-weight: 400; line-height: 1.5; }
-.home-experience .timeline-description { margin: 8px 0 0; color: #46586a; font-size: 13px; font-weight: 400; line-height: 1.65; overflow-wrap: anywhere; }
+.home-experience .timeline-role { min-height: 39px; margin: 8px 0 0; color: var(--home-ink); font-size: 13px; font-weight: 500; line-height: 1.5; }
+.home-experience .experience-timeline--education .timeline-role { min-height: 0; }
+.home-experience .timeline-description { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid #e8edf1; color: #647488; font-size: 12.5px; font-weight: 400; line-height: 1.55; overflow-wrap: anywhere; }
 .home-experience .timeline-description a, .home-experience .timeline-role a { color: inherit; }
 @media screen and (max-width: 767px) {
   .experience-controls { display: none; }
@@ -264,22 +258,29 @@ a.timeline-org-badge:hover { border-color: #9db6c8; color: var(--home-accent); }
   }
   .experience-timeline > .timeline-stage {
     width: auto;
-    padding: 0 0 28px 32px;
+    margin: 0 0 12px 24px;
+    padding: 12px;
     scroll-snap-align: none;
   }
+  .experience-timeline > .timeline-stage:last-child { margin-bottom: 0; }
   .timeline-stage::before {
+    content: "";
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 8px;
-    right: auto;
-    width: 2px;
-    height: auto;
+    bottom: -16px;
+    left: -18px;
+    width: 1px;
+    background: #b7c9d6;
   }
-  .timeline-stage:first-child::before { top: 39px; }
-  .timeline-stage:last-child::before { right: auto; }
-  .timeline-stage::after { top: 33px; left: 3px; }
-  .home-experience .timeline-date { margin-bottom: 8px; }
+  .timeline-stage:first-child::before { top: 24px; }
+  .timeline-stage:last-child::before { bottom: calc(100% - 24px); }
+  .timeline-stage::after { content: ""; position: absolute; top: 20px; left: -22px; width: 9px; height: 9px; box-sizing: border-box; border: 2px solid var(--home-accent); border-radius: 50%; background: #fff; }
+  .timeline-stage--current::after { background: #8cabc2; }
+  .home-experience .timeline-date { margin-bottom: 10px; }
   .page__content .timeline-org { min-height: 0; }
+  .home-experience .timeline-role { min-height: 0; }
+  .timeline-org-badge { font-size: 14px; }
+  .page__content .timeline-logo { flex-basis: 32px; width: 32px; height: 32px; }
 }
 @media (max-width: 600px) {
   .research-interests { margin: 20px 0 24px; }
@@ -526,8 +527,6 @@ a.timeline-org-badge:hover { border-color: #9db6c8; color: var(--home-accent); }
   .profile-details > summary { display: flex; justify-content: center; }
   .profile-bio { font-size: 13.5px; }
   .profile-bio .profile-personal { font-size: 12px; }
-  .page__content .timeline-logo { flex-basis: 40px; width: 40px; height: 40px; }
-  .timeline-org-badge { font-size: 15.5px; }
   .report-list li, .award-list .award-row, .service-list .service-row {
     grid-template-columns: var(--home-row-logo-width) minmax(0, 1fr);
     row-gap: 6px;
@@ -556,7 +555,7 @@ a.timeline-org-badge:hover { border-color: #9db6c8; color: var(--home-accent); }
   .experience-controls { display: none; }
   .experience-scroll { overflow: visible; }
   .page__content .experience-timeline { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 24px; }
-  .experience-timeline > .timeline-stage { width: auto; break-inside: avoid; }
+  .experience-timeline > .timeline-stage { width: auto; margin: 0; break-inside: avoid; }
   .timeline-org-badge { background: none; }
   .timeline-stage::before, .timeline-stage::after { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 }

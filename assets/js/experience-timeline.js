@@ -6,7 +6,7 @@
   const controls = section.querySelector('.experience-controls');
   const previous = section.querySelector('[data-experience-prev]');
   const next = section.querySelector('[data-experience-next]');
-  const firstItem = section.querySelector('.timeline-stage');
+  const firstItem = scroller && scroller.querySelector('.timeline-stage');
   if (!scroller || !controls || !previous || !next || !firstItem) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
