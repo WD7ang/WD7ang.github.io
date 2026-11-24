@@ -596,7 +596,7 @@ Publications
   </ul>
 </div>
 
-<script src="assets/js/show_publications.js"></script>
+<script src="{{ '/assets/js/show_publications.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="assets/js/pub_media_rotator.js"></script>
 
 
