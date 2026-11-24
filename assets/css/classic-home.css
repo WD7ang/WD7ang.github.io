@@ -114,7 +114,8 @@ body::before {
 .home-experience #experience { margin: 0; padding: 0; border: 0; font-family: inherit; }
 .experience-tabs { display: flex; gap: 6px; }
 .experience-tab { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 1px solid transparent; border-radius: 6px; color: var(--home-muted); background: transparent; font-family: inherit; font-size: 13px; font-weight: 500; line-height: 1.4; white-space: nowrap; cursor: pointer; }
-.experience-tab > span:first-child { font-size: 12px; font-variant-numeric: tabular-nums; }
+.page__content .experience-tab-logo { display: block; flex: 0 0 20px; width: 20px; height: 20px; margin: 0; border: 0; border-radius: 0; object-fit: contain; }
+.experience-tab-date { font-size: 12px; font-variant-numeric: tabular-nums; }
 .experience-tab--undergraduate { --tab-color: #a34553; --tab-line: #dfb6bd; --tab-soft: #f8eef0; }
 .experience-tab--phd { --tab-color: #315d80; --tab-line: #b6cbdc; --tab-soft: #edf3f8; color: var(--tab-color); border-color: var(--tab-line); }
 .experience-tab:hover { color: var(--tab-color); background: var(--tab-soft); }
@@ -139,6 +140,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .home-experience .timeline-date { margin: 0 0 6px; color: var(--period-color); font-size: 11.5px; font-weight: 500; line-height: 18px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .home-experience .timeline-school .timeline-date { margin: 6px 0 0; font-size: 12px; }
 .home-experience .timeline-school .timeline-description { max-width: 580px; margin: 6px auto 0; }
+.home-experience .timeline-school .timeline-description--emphasis { color: var(--home-ink); font-weight: 600; }
 .timeline-axis { position: relative; height: 4px; margin-bottom: 18px; border-radius: 2px; background: var(--period-line); }
 .timeline-axis::before { content: ""; position: absolute; top: -5px; left: calc(50% - 7px); width: 14px; height: 14px; box-sizing: border-box; border: 3px solid var(--period-line); border-radius: 50%; background: #fff; }
 .timeline-period--hkust .timeline-axis::after { content: ""; position: absolute; right: -1px; top: -4px; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 8px solid var(--period-line); }
@@ -161,7 +163,10 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 }
 @media screen and (max-width: 767px) {
   .experience-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
-  .experience-tab { flex-direction: column; gap: 2px; min-height: 48px; padding: 6px 8px; }
+  .experience-tab { display: grid; grid-template-columns: auto auto; gap: 2px 6px; min-height: 48px; padding: 6px 8px; }
+  .page__content .experience-tab-logo { width: 18px; height: 18px; justify-self: end; }
+  .experience-tab-date { justify-self: start; }
+  .experience-tab-label { grid-column: 1 / -1; }
   .experience-panels { padding-left: 8px; }
   .timeline-period { position: relative; padding: 0 0 0 22px; border-left: 3px solid var(--period-line); }
   .timeline-axis { display: none; }
