@@ -151,8 +151,6 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .timeline-stage--current::after { background: var(--period-line); }
 .timeline-placements .timeline-org { display: flex; align-items: center; }
 .home-experience .timeline-placements .timeline-description { padding-top: 6px; border-top: 1px solid #eee5e7; }
-.timeline-next { max-width: 640px; margin: 0 auto; padding: 10px 12px; border-left: 2px solid var(--period-line); background: var(--period-soft); }
-.home-experience .timeline-next .timeline-description { margin: 0; }
 .timeline-logo--teleai { clip-path: polygon(2.5% 0%, 95.5% 0%, 95.5% 56.75%, 93.5% 70.75%, 91% 75.75%, 91% 77.25%, 85% 84.75%, 80.5% 88.25%, 59.5% 100%, 38.5% 100%, 25% 92.75%, 14% 85.75%, 9% 80.25%, 5% 72.25%, 3.5% 67.25%, 2.5% 57.25%); }
 @media screen and (min-width: 768px) {
   .timeline-org-badge > span, .home-experience .timeline-role { white-space: nowrap; overflow-wrap: normal; }
@@ -181,7 +179,6 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   .timeline-stage::before { top: 22px; left: -24px; width: 23px; height: 1px; }
   .timeline-stage::after { top: 18px; left: -29px; width: 9px; height: 9px; }
   .timeline-org-badge { font-size: 14px; }
-  .timeline-next { margin: 0; padding: 12px; }
 }
 @media (max-width: 600px) {
   .research-interests { margin: 20px 0 24px; }
