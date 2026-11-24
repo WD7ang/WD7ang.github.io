@@ -162,7 +162,7 @@
     "group": "Core",
     "notes_zh": "（录用率 25%，CCF-A 类顶级会议）",
     "id": "recurrent-dynamic-submodel",
-    "short_title": "Recurrent Dynamic Submodel",
+    "short_title": "RDS",
     "research_category": "computer-vision",
     "accepted_venue": "CVPR",
     "thumbnail": "/images/RDS.png",
