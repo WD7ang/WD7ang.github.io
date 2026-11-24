@@ -449,7 +449,6 @@ Publications
     <div class="pub-card-body">
       <p class="pub-card-title">{{ trinity.title }}</p>
       <p class="pub-authors">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
-      <p class="pub-description">The Trinity shifts the fundamental unit of RSI from tasks to capabilities, offering a path from task-specific local optimization to continuous evolution across tasks and modalities.</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
         <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
@@ -468,7 +467,6 @@ Publications
     <div class="pub-card-body">
       <p class="pub-card-title">{{ route_anything.title }}</p>
       <p class="pub-authors">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
-      <p class="pub-description">We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
         <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
@@ -497,7 +495,6 @@ Publications
         Yang You,
         Wangbo Zhao&dagger;
       </p>
-      <p class="pub-description">We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap.</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">ACL 2026 &nbsp;
         </i></b>
@@ -521,7 +518,6 @@ Publications
         Wen Qi Xu,
         Xianpeng Guo&dagger;
       </p>
-      <p class="pub-description">The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive).</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">ACL 2026 &nbsp;
         </i></b>
@@ -550,7 +546,6 @@ Publications
         Yang You,
         Wangbo Zhao&dagger;
       </p>
-      <p class="pub-description">Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">CVPR 2026 &nbsp;
         </i></b>
@@ -574,7 +569,6 @@ Publications
         Siyu Li,
         Xiumei Wang&dagger;
       </p>
-      <p class="pub-description">Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">PRCV 2025 &nbsp;
         </i></b>
