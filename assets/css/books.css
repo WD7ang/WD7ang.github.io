@@ -1,21 +1,68 @@
-/* Homepage category covers, with labels kept inside the image. */
-.home-blog { container-type: inline-size; container-name: home-blog; margin-top: 38px; color: var(--home-ink, #273444); font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+/* Compact illustrated links to the two homepage blog categories. */
+.home-blog {
+  container-type: inline-size;
+  container-name: home-blog;
+  margin-top: 38px;
+  color: var(--home-ink, #273444);
+  font: 400 15px/1.65 var(--home-font, sans-serif);
+}
 .home-blog #blog-heading { margin-top: 0; }
-.home-blog .blog-categories { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.home-blog .blog-category { position: relative; display: block; min-width: 0; overflow: hidden; border: 1px solid var(--home-line, #e1e5e9); border-radius: 10px; background: #edf1f4; color: var(--home-ink, #273444); text-decoration: none; box-shadow: 0 3px 10px rgba(39, 52, 68, .035); scroll-margin-top: var(--home-nav-offset, 100px); transition: box-shadow .2s ease, border-color .2s ease; }
-.home-blog .blog-category-cover { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; margin: 0; }
-.home-blog .blog-category-label { position: absolute; right: 16px; bottom: 16px; padding: 7px 13px; border: 1px solid rgba(255, 255, 255, .65); border-radius: 5px; background: rgba(255, 255, 255, .9); color: #315d80; box-shadow: 0 2px 10px rgba(39, 52, 68, .08); font-size: 16px; font-weight: 600; line-height: 1.5; }
-.home-blog .blog-category-label > span { display: block; margin-top: 2px; color: #697386; font-size: 12px; font-weight: 400; line-height: 1.4; text-align: right; }
-.home-blog .blog-category:hover { border-color: #bbcbd8; box-shadow: 0 6px 18px rgba(39, 52, 68, .1); text-decoration: none; }
-.home-blog .blog-category:focus-visible { outline: 3px solid var(--home-accent, #315d80); outline-offset: 4px; }
-@media (max-width: 600px) {
-  .home-blog .blog-categories { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.home-blog .blog-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
 }
-@container home-blog (max-width: 600px) {
-  .home-blog .blog-categories { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.home-blog .blog-category {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--home-line, #e1e5e9);
+  color: var(--home-ink, #273444);
+  text-decoration: none;
+  scroll-margin-top: var(--home-nav-offset, 100px);
 }
-@media (max-width: 600px) {
-  .home-blog .blog-category-label { right: 12px; bottom: 12px; font-size: 15px; }
+.home-blog .blog-category-cover {
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+  width: 140px;
+  height: 180px;
+  margin: 0;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.home-blog .blog-category-label {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--home-accent, #315d80);
+  font-size: clamp(20px, 2.1vw, 25px);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.home-blog .blog-category-label > span {
+  display: block;
+  margin-top: 6px;
+  color: var(--home-muted, #697386);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.home-blog .blog-category:hover .blog-category-label { text-decoration: underline; text-underline-offset: 3px; }
+.home-blog .blog-category:focus-visible { outline: 2px solid var(--home-accent, #315d80); outline-offset: 4px; }
+@media (max-width: 960px) {
+  .home-blog .blog-categories { gap: 28px; }
+  .home-blog .blog-category { grid-template-columns: minmax(0, 1fr) 100px; gap: 12px; }
+  .home-blog .blog-category-cover { width: 100px; height: 150px; }
+}
+@media (max-width: 680px) {
+  .home-blog { margin-top: 28px; }
+  .home-blog .blog-categories { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .home-blog .blog-category { padding: 16px 0; }
+  .home-blog .blog-category-label { font-size: 20px; }
 }
 
 /* Blog archives use a single column of illustrated article cards. */

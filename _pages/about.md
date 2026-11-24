@@ -408,11 +408,6 @@ redirect_from:
 
 
 <style>
-        body {
-            background-color:	 #FFFFFF;
-            font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
-            font-size: 15px;
-        }
         div.markdown-body a,a {
             text-decoration: none !important;
             color: #315d80;
@@ -451,14 +446,15 @@ Publications
     <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/trinity-intro.png" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="3001" height="1423" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>{{ trinity.title }}</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
-      The Trinity shifts the fundamental unit of RSI from tasks to capabilities, offering a path from task-specific local optimization to continuous evolution across tasks and modalities.
-      <br>
-      <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
-      <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-      {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=trinity %}</span>{% else %}{% include publication-stars.html publication=trinity %}{% endif %}
+    <div class="pub-card-body">
+      <p class="pub-card-title">{{ trinity.title }}</p>
+      <p class="pub-authors">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
+      <p class="pub-description">The Trinity shifts the fundamental unit of RSI from tasks to capabilities, offering a path from task-specific local optimization to continuous evolution across tasks and modalities.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
+        <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
+        {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=trinity %}</span>{% else %}{% include publication-stars.html publication=trinity %}{% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -469,14 +465,15 @@ Publications
     <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/route-anything-overview.png" alt="Route Anything overview: model and policy routing performance and efficiency" loading="lazy" width="1200" height="630" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>{{ route_anything.title }}</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</i><br>
-      We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.
-      <br>
-      <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
-      <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-      {% if route_anything.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in route_anything.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
+    <div class="pub-card-body">
+      <p class="pub-card-title">{{ route_anything.title }}</p>
+      <p class="pub-authors">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
+      <p class="pub-description">We present a unified framework for model and policy routing across diverse AI tasks, outlining a vision for AGI through the coordination of specialized models, tools, and policies.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
+        <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
+        {% if route_anything.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in route_anything.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
+      </div>
     </div>
   </div>
 </div>
@@ -486,9 +483,9 @@ Publications
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/GroupToM.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">
+    <div class="pub-card-body">
+      <p class="pub-card-title">GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</p>
+      <p class="pub-authors">
         <strong>Weidong Tang</strong>,
         Jierui Li,
         Yueling Hou,
@@ -499,12 +496,13 @@ Publications
         Pengfei Zhou&dagger;,
         Yang You,
         Wangbo Zhao&dagger;
-      </i><br>
-      We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap.
-      <br>
-      <b><i class="pub-venue">ACL 2026 &nbsp;
-      </i></b>
-      <span class="pub-resource-links"><a href="images/GroupToM_poster.pdf"><em>Poster</em></a><a href="https://aclanthology.org/2026.acl-long.1859/"><em>Paper</em></a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>Dataset</em></a></span>
+      </p>
+      <p class="pub-description">We propose GroupToM-Bench and show that current models fail at nonlinear group reasoning despite strong individual-level ToM, exposing a clear group cognitive gap.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">ACL 2026 &nbsp;
+        </i></b>
+        <span class="pub-resource-links"><a href="images/GroupToM_poster.pdf"><em>Poster</em></a><a href="https://aclanthology.org/2026.acl-long.1859/"><em>Paper</em></a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>Dataset</em></a></span>
+      </div>
     </div>
   </div>
 </div>
@@ -515,19 +513,20 @@ Publications
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/MagicBench.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">
+    <div class="pub-card-body">
+      <p class="pub-card-title">MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</p>
+      <p class="pub-authors">
         Tang Da Huang,
         <strong>Weidong Tang&Dagger;</strong>,
         Wen Qi Xu,
         Xianpeng Guo&dagger;
-      </i><br>
-      The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive).
-      <br>
-      <b><i class="pub-venue">ACL 2026 &nbsp;
-      </i></b>
-      <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>GitHub</em></a></span>
+      </p>
+      <p class="pub-description">The authors introduce MagicBench, a video dataset of magic tricks, to test if Multimodal LLMs actually rely on visual physics or if they are overly dependent on language narratives (which, in magic tricks, are deliberately deceptive).</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">ACL 2026 &nbsp;
+        </i></b>
+        <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>GitHub</em></a></span>
+      </div>
     </div>
   </div>
 </div>
@@ -538,9 +537,9 @@ Publications
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/RDS.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">
+    <div class="pub-card-body">
+      <p class="pub-card-title">Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</p>
+      <p class="pub-authors">
         <strong>Weidong Tang</strong>,
         Zhiyuan Liang,
         Xinyan Wan,
@@ -550,12 +549,13 @@ Publications
         Yan Song,
         Yang You,
         Wangbo Zhao&dagger;
-      </i><br>
-      Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.
-      <br>
-      <b><i class="pub-venue">CVPR 2026 &nbsp;
-      </i></b>
-      <span class="pub-resource-links"><a href="images/cvpr_poster.pdf"><em>Poster</em></a><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>Paper</em></a></span>
+      </p>
+      <p class="pub-description">Proposed a Recurrent Dynamic Submodel for efficient Video Object Segmentation and Tracking. By integrating temporal-prior-guided global dynamic routing and Importance-aware LoRA, it achieves an optimal trade-off between performance and speed using minimal trainable parameters and training data.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">CVPR 2026 &nbsp;
+        </i></b>
+        <span class="pub-resource-links"><a href="images/cvpr_poster.pdf"><em>Poster</em></a><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>Paper</em></a></span>
+      </div>
     </div>
   </div>
 </div>
@@ -566,19 +566,20 @@ Publications
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/var-scaling.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">
+    <div class="pub-card-body">
+      <p class="pub-card-title">Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</p>
+      <p class="pub-authors">
         <strong>Weidong Tang</strong>,
         Xinyan Wan,
         Siyu Li,
         Xiumei Wang&dagger;
-      </i><br>
-      Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.
-      <br>
-      <b><i class="pub-venue">PRCV 2025 &nbsp;
-      </i></b>
-      <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>Paper</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>GitHub</em></a></span>
+      </p>
+      <p class="pub-description">Explored inference-time scaling in discrete spaces by mapping them to continuous spaces to obtain density distributions, thereby optimizing the sampling of early coarse-scale features.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">PRCV 2025 &nbsp;
+        </i></b>
+        <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>Paper</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>GitHub</em></a></span>
+      </div>
     </div>
   </div>
 </div>
@@ -612,16 +613,17 @@ Projects
     <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
       <img src="images/wowpage-clouds.jpg" alt="WowPage — clouds over a green field" style="width: 320px; height: 180px; object-fit: cover; object-position: center 60%; display: block; margin: 0 auto;">
     </div>
-    <div>
-      <strong>WowPage</strong><br>
-      <i class="pub-authors" style="font-size: 13px;">
+    <div class="pub-card-body">
+      <p class="pub-card-title">WowPage</p>
+      <p class="pub-authors">
         <strong>Weidong TANG</strong>,
         Yue SU.
-      </i><br>
-      In collaboration with Yue SU, I refined and improved his original homepage template. A clean standalone template version is coming soon.
-      <br>
-      <b><i class="pub-venue">Project &nbsp;</i></b>
-      <span class="pub-resource-links"><a href="https://github.com/WD7ang/WowPage"><em>GitHub</em></a><a href="https://www.xiaohongshu.com/discovery/item/69feb95d000000003502e8b7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABPOGv4BUnujNdJXL2rltJQVQ8AGjnq0xVWDGPPDKSj6c=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer"><em>RedNote</em></a></span>
+      </p>
+      <p class="pub-description">In collaboration with Yue SU, I refined and improved his original homepage template. A clean standalone template version is coming soon.</p>
+      <div class="pub-card-meta">
+        <b><i class="pub-venue">Project &nbsp;</i></b>
+        <span class="pub-resource-links"><a href="https://github.com/WD7ang/WowPage"><em>GitHub</em></a><a href="https://www.xiaohongshu.com/discovery/item/69feb95d000000003502e8b7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABPOGv4BUnujNdJXL2rltJQVQ8AGjnq0xVWDGPPDKSj6c=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer"><em>RedNote</em></a></span>
+      </div>
     </div>
   </div>
 </div>
