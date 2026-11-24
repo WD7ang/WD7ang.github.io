@@ -227,6 +227,37 @@ a.timeline-org-badge:hover { border-color: #9db6c8; color: var(--home-accent); }
 .home-experience .timeline-role { margin: 8px 0 0; color: var(--home-ink); font-size: 15px; font-weight: 500; line-height: 1.5; }
 .home-experience .timeline-description { margin: 8px 0 0; color: #46586a; font-size: 14px; font-weight: 400; line-height: 1.65; overflow-wrap: anywhere; }
 .home-experience .timeline-description a, .home-experience .timeline-role a { color: inherit; }
+@media screen and (max-width: 767px) {
+  .experience-controls { display: none; }
+  .experience-scroll {
+    overflow: visible;
+    overscroll-behavior-x: auto;
+    scroll-snap-type: none;
+  }
+  .page__content .experience-timeline {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .experience-timeline > .timeline-stage {
+    width: auto;
+    padding: 0 0 28px 32px;
+    scroll-snap-align: none;
+  }
+  .timeline-stage::before {
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+  .timeline-stage:first-child::before { top: 39px; }
+  .timeline-stage:last-child::before { right: auto; }
+  .timeline-stage::after { top: 33px; left: 3px; }
+  .home-experience .timeline-date { margin-bottom: 8px; }
+  .page__content .timeline-org { min-height: 0; }
+}
 @media (max-width: 600px) {
   .research-interests { margin: 20px 0 24px; }
   .research-tags { gap: 8px; }

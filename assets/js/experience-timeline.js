@@ -10,10 +10,12 @@
   if (!scroller || !controls || !previous || !next || !firstItem) return;
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mobile = window.matchMedia('(max-width: 767px)');
 
   function updateControls() {
     const maximum = scroller.scrollWidth - scroller.clientWidth;
-    controls.hidden = maximum <= 1;
+    controls.hidden = mobile.matches || maximum <= 1;
+    scroller.tabIndex = mobile.matches ? -1 : 0;
     previous.disabled = scroller.scrollLeft <= 1;
     next.disabled = scroller.scrollLeft >= maximum - 1;
   }
@@ -37,7 +39,7 @@
   next.addEventListener('click', function () { moveByItem(1); });
   scroller.addEventListener('scroll', updateControls, { passive: true });
   scroller.addEventListener('keydown', function (event) {
-    if (event.target !== scroller || event.altKey || event.ctrlKey || event.metaKey) return;
+    if (mobile.matches || event.target !== scroller || event.altKey || event.ctrlKey || event.metaKey) return;
 
     switch (event.key) {
       case 'ArrowLeft': moveByItem(-1); break;
@@ -49,6 +51,10 @@
     event.preventDefault();
   });
 
+  mobile.addEventListener('change', function () {
+    scroller.scrollTo({ left: 0, behavior: 'instant' });
+    updateControls();
+  });
   if ('ResizeObserver' in window) {
     new ResizeObserver(updateControls).observe(scroller);
   } else {
