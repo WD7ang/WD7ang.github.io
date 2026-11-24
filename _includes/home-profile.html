@@ -8,41 +8,38 @@
     </div>
     <p class="profile-intro">My research focuses on <strong>multimodal foundation models and agents</strong>. I study how training data, model architectures, and representation learning shape what models learn and how well their capabilities generalize across language, vision, and embodied tasks.</p>
     <nav class="profile-links" aria-label="Contact and social profiles">
-      {% if profile.email %}<a href="mailto:{{ profile.email }}"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>{% endif %}
-      {% if profile.googlescholar %}<a href="{{ profile.googlescholar }}"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>{% endif %}
-      {% if profile.github %}<a href="https://github.com/{{ profile.github }}"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>{% endif %}
-      {% if profile.twitter %}<a href="https://x.com/{{ profile.twitter }}"><i class="fab fa-x-twitter" aria-hidden="true"></i>X</a>{% endif %}
-      {% if profile.XiaoHongShu %}<a href="{{ profile.XiaoHongShu }}"><i class="fas fa-book" aria-hidden="true"></i>RedNote</a>{% endif %}
-      {% if profile.WeChat %}<a href="{{ profile.WeChat | prepend: '/images/' | relative_url }}"><i class="fab fa-weixin" aria-hidden="true"></i>WeChat</a>{% endif %}
+      {% if profile.email %}<a href="mailto:{{ profile.email }}"><i class="profile-icon fas fa-envelope" aria-hidden="true"></i>Email</a>{% endif %}
+      {% if profile.googlescholar %}<a href="{{ profile.googlescholar }}"><i class="profile-icon fab fa-google-scholar" aria-hidden="true"></i>Google Scholar</a>{% endif %}
+      {% if profile.github %}<a href="https://github.com/{{ profile.github }}"><i class="profile-icon fab fa-github" aria-hidden="true"></i>GitHub</a>{% endif %}
+      {% if profile.twitter %}<a href="https://x.com/{{ profile.twitter }}"><i class="profile-icon fab fa-x-twitter" aria-hidden="true"></i>X</a>{% endif %}
+      {% if profile.XiaoHongShu %}<a href="{{ profile.XiaoHongShu }}"><img class="profile-icon profile-icon--rednote" src="{{ '/images/rednote.svg' | relative_url }}" alt="" width="32" height="32">RedNote</a>{% endif %}
+      {% if profile.WeChat %}<a href="{{ profile.WeChat | prepend: '/images/' | relative_url }}"><i class="profile-icon fab fa-weixin" aria-hidden="true"></i>WeChat</a>{% endif %}
     </nav>
     <img class="profile-portrait" src="{{ profile.avatar | prepend: '/images/' | relative_url }}" width="1440" height="2160" alt="Weidong Tang in Edinburgh" fetchpriority="high">
   </div>
   <details class="profile-details">
     <summary>Detailed profile <span lang="zh-CN">（详细个人介绍）</span></summary>
-    <div class="profile-detail-grid">
-      <div class="profile-bio">
-        <p>Hi! I’m an incoming PhD student at the Hong Kong University of Science and Technology (HKUST). Looking ahead, I’d like to explore three directions.</p>
-        <ul>
-          <li><strong>Agents for everyday tasks.</strong> Build assistants that help people with tasks such as coding.</li>
-          <li><strong>Agents for humanities research.</strong> Explore AI companionship, social simulation, and digital humans.</li>
-          <li><strong>AI for brain–computer interfaces.</strong> Use AI to accelerate BCI research and explore the idea of braindance.</li>
-        </ul>
-        <p>I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.</p>
-        <p>One day, I’ll become a chef and open my own restaurant. If you have my contact info, you’ll get a discount. 😏</p>
-        <div class="research-interests" role="group" aria-labelledby="research-interests-label">
-          <span class="research-caption" id="research-interests-label">Research interests</span>
-          <div class="research-tags">
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>MLLM</span>
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a8 8 0 1 0 0 10M20 3v5h-5"/></svg>RSI</span>
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h1m6 0h1m-8 4h8"/></svg>Agentic Robot</span>
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7L20 9h-7l1-6Z"/></svg>Efficient AI</span>
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-3-13 6 4-3 1-1 3Z"/></svg>HCI</span>
-            <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
-          </div>
+    <div class="profile-bio">
+      <p>Hi! I’m an incoming PhD student at the Hong Kong University of Science and Technology (HKUST). Looking ahead, I’d like to explore three directions.</p>
+      <ul>
+        <li><strong>Agents for everyday tasks.</strong> Build assistants that help people with tasks such as coding.</li>
+        <li><strong>Agents for humanities research.</strong> Explore AI companionship, social simulation, and digital humans.</li>
+        <li><strong>AI for brain–computer interfaces.</strong> Use AI to accelerate BCI research and explore the idea of braindance.</li>
+      </ul>
+      <p>I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.</p>
+      <p>One day, I’ll become a chef and open my own restaurant. If you have my contact info, you’ll get a discount. 😏</p>
+      <div class="research-interests" role="group" aria-labelledby="research-interests-label">
+        <span class="research-caption" id="research-interests-label">Research interests</span>
+        <div class="research-tags">
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>MLLM</span>
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a8 8 0 1 0 0 10M20 3v5h-5"/></svg>RSI</span>
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h1m6 0h1m-8 4h8"/></svg>Agentic Robot</span>
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7L20 9h-7l1-6Z"/></svg>Efficient AI</span>
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-3-13 6 4-3 1-1 3Z"/></svg>HCI</span>
+          <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
         </div>
-        <p class="profile-personal">{{ profile.pronouns }} · <a href="https://www.google.com/maps/place/{{ profile.location | uri_escape }}">{{ profile.location }}</a> · <span lang="zh-CN">{{ profile.bio }}</span></p>
       </div>
-      {% include music-player.html %}
+      <p class="profile-personal">{{ profile.pronouns }} · <a href="https://www.google.com/maps/place/{{ profile.location | uri_escape }}">{{ profile.location }}</a> · <span lang="zh-CN">{{ profile.bio }}</span></p>
     </div>
   </details>
 </section>
