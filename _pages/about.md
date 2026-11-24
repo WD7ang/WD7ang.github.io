@@ -124,150 +124,20 @@ redirect_from:
         /*display: flex;  默认隐藏非精选出版物 */
     /*}*/
 
-    .pub-button-container {
-        display: flex;
-        gap: 10px;
-        margin: 20px 0;
-        flex-wrap: wrap;
-    }
-
-    .pub-button {
-        background-color: #f7f9fb;
-        border: 1px solid #cbd5df;
-        border-radius: 20px;
-        padding: 8px 16px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .pub-button:hover {
-        background-color: #e1e5e9;
-    }
-
-    .pub-button.active {
-        background-color: #315d80;
-        color: white;
-        border-color: #315d80;
-    }
-
-      .publication-view[hidden] {
-        display: none !important;
-    }
-
-      #full-publications {
-        max-height: 380px;
-        overflow-y: auto;
-        padding-right: 8px;
-        margin-bottom: 24px;
-        scroll-behavior: smooth;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(49, 93, 128, 0.45) rgba(247, 249, 251, 0.7);
-    }
-
-    #full-publications::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    #full-publications::-webkit-scrollbar-track {
-        background: rgba(247, 249, 251, 0.7);
-        border-radius: 999px;
-    }
-
-    #full-publications::-webkit-scrollbar-thumb {
-        background: rgba(49, 93, 128, 0.45);
-        border-radius: 999px;
-    }
-
-    #full-publications::-webkit-scrollbar-thumb:hover {
-        background: rgba(49, 93, 128, 0.65);
-    }
-
-    .full-publication-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        color: #4b545c;
-        font-size: 15px;
-        line-height: 1.55;
-    }
-
-    .full-publication-list .pub-list-row {
-        display: grid;
-        grid-template-columns: 106px minmax(0, 1fr);
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 5px;
-        padding: 7px 12px;
-        border-left: 3px solid #234864;
-        background: linear-gradient(90deg, rgba(255, 255, 255, .64), rgba(255, 255, 255, .12));
-    }
-
-    .pub-list-venue {
-        color: #5a7fae;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: .02em;
-    }
-
-    .pub-list-details {
-        min-width: 0;
-        overflow-wrap: anywhere;
-    }
-
-    .full-publication-list .pub-list-title {
-        display: block;
-        color: #2f353a;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 1.45;
-        text-decoration: none !important;
-    }
-
-      .pub-list-authors {
-        display: block;
-        color: #7b838a;
-        font-size: 13px;
-        font-style: normal;
-    }
-
     .pub-authors,
     .pub-venue,
     .pub-resource-links em {
         font-style: normal;
     }
 
-    .pub-authors strong,
-    .pub-list-authors > strong {
+    .pub-authors strong {
         color: #9a4b55;
         font-weight: 700;
-    }
-
-      .pub-list-authors a strong {
-        color: inherit;
-    }
-
-    .pub-list-note {
-        color: #7b838a;
-        font-style: normal;
-        font-weight: 650;
     }
 
     .pub-resource-links {
         display: inline-block;
         max-width: 100%;
-    }
-
-    .pub-list-links {
-        display: block;
-    }
-
-    .pub-media-links {
-        display: block;
-        margin-top: 2px;
-    }
-
-    .pub-media-links a {
-        white-space: nowrap;
     }
 
     .pub-media-link-label {
@@ -293,16 +163,14 @@ redirect_from:
         box-shadow: none;
     }
 
-    .pub-resource-links a,
-    .pub-list-links a {
+    .pub-resource-links a {
         display: inline-block;
         color: #bf6a70 !important;
     }
 
     .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
 
-    .pub-resource-links a + a::before,
-    .pub-list-links a + a::before {
+    .pub-resource-links a + a::before {
         content: "\00b7";
         display: inline-block;
         margin: 0 6px;
@@ -322,10 +190,6 @@ redirect_from:
         font-style: normal;
         line-height: 1.25;
         white-space: nowrap;
-    }
-
-    .pub-list-links a {
-        font-weight: 600;
     }
 
     .publication-card .pub-venue,
@@ -395,12 +259,6 @@ redirect_from:
         .project-card strong {
             line-height: 1.35;
         }
-
-        .full-publication-list .pub-list-row {
-            grid-template-columns: 76px minmax(0, 1fr);
-            gap: 10px;
-            padding: 8px 10px;
-        }
     }
 
 
@@ -432,169 +290,7 @@ News
 
 {% include experience-timeline.html %}
 
-Publications
---------------
-<button class="pub-button active" onclick="filterPublications(event, 'all')">Core Publications</button>
-<button class="pub-button" onclick="filterPublications(event, 'list')">Full Publications List</button>
-
-(* equal contribution · &dagger; corresponding author · &Dagger; project leader)
-
-<div id="core-publications" class="publication-view" data-publication-view="core">
-{% assign trinity = site.data.cv_publications | where: 'title', 'The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents' | first %}
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/trinity-intro.png" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="3001" height="1423" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">{% include publication-title-marker.html publication=trinity %}{{ trinity.title }}</p>
-      <p class="pub-authors">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
-        <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% assign route_anything = site.data.cv_publications | where: 'title', 'Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems' | first %}
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/route-anything-overview.png" alt="Route Anything overview: model and policy routing performance and efficiency" loading="lazy" width="1200" height="630" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">{{ route_anything.title }}</p>
-      <p class="pub-authors">{{ route_anything.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">{{ route_anything.venue }} &nbsp;</i></b>
-        <span class="pub-resource-links">{% for link in route_anything.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-        {% if route_anything.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in route_anything.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>{% endif %}
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/GroupToM.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs</p>
-      <p class="pub-authors">
-        <strong>Weidong Tang</strong>,
-        Jierui Li,
-        Yueling Hou,
-        Zihan Mei,
-        Can Zhang,
-        Xinyan Wan,
-        Zhiyuan Liang,
-        Pengfei Zhou&dagger;,
-        Yang You,
-        Wangbo Zhao&dagger;
-      </p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">ACL 2026 &nbsp;
-        </i></b>
-        <span class="pub-resource-links"><a href="images/GroupToM_poster.pdf"><em>Poster</em></a><a href="https://aclanthology.org/2026.acl-long.1859/"><em>Paper</em></a><a href="https://huggingface.co/datasets/Twwwd/GroupToM-Bench"><em>Dataset</em></a></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/MagicBench.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs</p>
-      <p class="pub-authors">
-        Tang Da Huang,
-        <strong>Weidong Tang&Dagger;</strong>,
-        Wen Qi Xu,
-        Xianpeng Guo&dagger;
-      </p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">ACL 2026 &nbsp;
-        </i></b>
-        <span class="pub-resource-links"><a href="https://aclanthology.org/2026.acl-long.1314/"><em>Paper</em></a><a href="https://github.com/Ink-Dawn/MagicBench"><em>GitHub</em></a></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/RDS.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel</p>
-      <p class="pub-authors">
-        <strong>Weidong Tang</strong>,
-        Zhiyuan Liang,
-        Xinyan Wan,
-        Chen Zhu,
-        Zhaopan Xu,
-        Pengfei Zhou,
-        Yan Song,
-        Yang You,
-        Wangbo Zhao&dagger;
-      </p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">CVPR 2026 &nbsp;
-        </i></b>
-        <span class="pub-resource-links"><a href="images/cvpr_poster.pdf"><em>Poster</em></a><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"><em>Paper</em></a></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="publication-card" data-category="all">
-  <div style="display: flex; align-items: center;">
-    <div class="pub-media-rotator" data-interval="4000" style="position: relative; width: 320px; height: 180px; margin-right: 20px; border-radius: 8px; overflow: hidden; flex: 0 0 auto;">
-      <img src="images/var-scaling.png" alt="wog" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
-    </div>
-    <div class="pub-card-body">
-      <p class="pub-card-title">Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples</p>
-      <p class="pub-authors">
-        <strong>Weidong Tang</strong>,
-        Xinyan Wan,
-        Siyu Li,
-        Xiumei Wang&dagger;
-      </p>
-      <div class="pub-card-meta">
-        <b><i class="pub-venue">PRCV 2025 &nbsp;
-        </i></b>
-        <span class="pub-resource-links"><a href="images/var_poster.png"><em>Poster</em></a><a href="https://arxiv.org/pdf/2601.07293"><em>Paper</em></a><a href="https://github.com/WD7ang/VAR-Scaling"><em>GitHub</em></a></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
-<div id="full-publications" class="publication-view" data-publication-view="list" hidden>
-  <ul class="full-publication-list" role="list">
-    {% for publication in site.data.cv_publications %}
-    <li class="pub-list-row">
-      <span class="pub-list-venue" title="{{ publication.venue | escape }}">{{ publication.venue | replace: 'arXiv preprint,', 'arXiv' | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
-      <div class="pub-list-details">
-        {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</a>{% endif %}
-        <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<script src="{{ '/assets/js/show_publications.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{% include home-publications.html %}
 <script src="assets/js/pub_media_rotator.js"></script>
 
 

@@ -1,0 +1,19 @@
+{% assign publication = include.publication %}
+{% assign resource_links = publication.homepage_links | default: publication.links %}
+<article class="publication-card publication-row{% unless publication.thumbnail %} publication-row--text{% endunless %}" id="paper-{{ publication.id }}" aria-labelledby="paper-title-{{ publication.id }}">
+  <div>
+    {% if publication.thumbnail %}
+    <div class="pub-media-rotator">
+      <img src="{{ publication.thumbnail | relative_url }}" alt="{{ publication.thumbnail_alt | escape }}" width="{{ publication.thumbnail_width }}" height="{{ publication.thumbnail_height }}" loading="lazy" decoding="async">
+    </div>
+    {% endif %}
+    <div class="pub-card-body">
+      <h4 class="pub-card-title" id="paper-title-{{ publication.id }}"><a href="{{ publication.title_url }}">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</a></h4>
+      <p class="pub-authors">{{ publication.homepage_authors_html | default: publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
+      <div class="pub-card-meta">
+        <span class="pub-venue">{{ publication.venue | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
+        <span class="pub-resource-links">{% for link in resource_links %}{% assign first_character = link.url | slice: 0 %}<a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endif %}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
+      </div>
+    </div>
+  </div>
+</article>

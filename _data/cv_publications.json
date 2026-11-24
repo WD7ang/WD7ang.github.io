@@ -37,7 +37,15 @@
         "logo": "/images/jiqizhixin-logo.png"
       }
     ],
-    "group": "Core"
+    "group": "Core",
+    "id": "trinity",
+    "short_title": "The Trinity",
+    "research_category": "rsi",
+    "thumbnail": "/images/trinity-intro.png",
+    "thumbnail_alt": "The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities",
+    "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
+    "thumbnail_width": 3001,
+    "thumbnail_height": 1423
   },
   {
     "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
@@ -59,7 +67,15 @@
         "url": "https://mikeeeeeeeeeeeeee.github.io/RouteAnything/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "id": "route-anything",
+    "short_title": "Route Anything",
+    "research_category": "rsi",
+    "thumbnail": "/images/route-anything-overview.png",
+    "thumbnail_alt": "Route Anything overview: model and policy routing performance and efficiency",
+    "homepage_authors_html": "P. Zhou, Y. Ma, H. Wang<sup>†</sup>, <strong>Weidong Tang</strong>, Z. Wan, W. Zhao, &amp; Y. You<sup>†</sup>.",
+    "thumbnail_width": 1200,
+    "thumbnail_height": 630
   },
   {
     "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
@@ -78,7 +94,30 @@
       }
     ],
     "group": "Core",
-    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）"
+    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）",
+    "id": "grouptom-bench",
+    "short_title": "GroupToM-Bench",
+    "research_category": "evaluation",
+    "accepted_venue": "ACL",
+    "thumbnail": "/images/GroupToM.png",
+    "thumbnail_alt": "GroupToM-Bench overview",
+    "homepage_authors_html": "<strong>Weidong Tang</strong>, Jierui Li, Yueling Hou, Zihan Mei, Can Zhang, Xinyan Wan, Zhiyuan Liang, Pengfei Zhou†, Yang You, Wangbo Zhao†",
+    "homepage_links": [
+      {
+        "label": "Poster",
+        "url": "/images/GroupToM_poster.pdf"
+      },
+      {
+        "label": "Paper",
+        "url": "https://aclanthology.org/2026.acl-long.1859/"
+      },
+      {
+        "label": "Dataset",
+        "url": "https://huggingface.co/datasets/Twwwd/GroupToM-Bench"
+      }
+    ],
+    "thumbnail_width": 2115,
+    "thumbnail_height": 1006
   },
   {
     "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
@@ -97,7 +136,16 @@
       }
     ],
     "group": "Core",
-    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）"
+    "notes_zh": "（录用率 19%，CCF-A 类顶级会议）",
+    "id": "magicbench",
+    "short_title": "MagicBench",
+    "research_category": "evaluation",
+    "accepted_venue": "ACL",
+    "thumbnail": "/images/MagicBench.png",
+    "thumbnail_alt": "MagicBench overview",
+    "homepage_authors_html": "Tang Da Huang, <strong>Weidong Tang‡</strong>, Wen Qi Xu, Xianpeng Guo†",
+    "thumbnail_width": 859,
+    "thumbnail_height": 333
   },
   {
     "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
@@ -112,7 +160,26 @@
       }
     ],
     "group": "Core",
-    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）"
+    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）",
+    "id": "recurrent-dynamic-submodel",
+    "short_title": "Recurrent Dynamic Submodel",
+    "research_category": "computer-vision",
+    "accepted_venue": "CVPR",
+    "thumbnail": "/images/RDS.png",
+    "thumbnail_alt": "Recurrent Dynamic Submodel overview",
+    "homepage_authors_html": "<strong>Weidong Tang</strong>, Zhiyuan Liang, Xinyan Wan, Chen Zhu, Zhaopan Xu, Pengfei Zhou, Yan Song, Yang You, Wangbo Zhao†",
+    "homepage_links": [
+      {
+        "label": "Poster",
+        "url": "/images/cvpr_poster.pdf"
+      },
+      {
+        "label": "Paper",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Tang_Efficient_Video_Object_Segmentation_and_Tracking_with_Recurrent_Dynamic_Submodel_CVPR_2026_paper.html"
+      }
+    ],
+    "thumbnail_width": 997,
+    "thumbnail_height": 468
   },
   {
     "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples",
@@ -131,7 +198,30 @@
       }
     ],
     "group": "Core",
-    "notes_zh": "（录用率 29%，CCF-C）"
+    "notes_zh": "（录用率 29%，CCF-C）",
+    "id": "var-scaling",
+    "short_title": "VAR-Scaling",
+    "research_category": "computer-vision",
+    "accepted_venue": "PRCV",
+    "thumbnail": "/images/var-scaling.png",
+    "thumbnail_alt": "VAR-Scaling overview",
+    "homepage_authors_html": "<strong>Weidong Tang</strong>, Xinyan Wan, Siyu Li, Xiumei Wang†",
+    "homepage_links": [
+      {
+        "label": "Poster",
+        "url": "/images/var_poster.png"
+      },
+      {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2601.07293"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/WD7ang/VAR-Scaling"
+      }
+    ],
+    "thumbnail_width": 693,
+    "thumbnail_height": 370
   },
   {
     "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
@@ -150,7 +240,15 @@
       }
     ],
     "group": "Collaborative",
-    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）"
+    "notes_zh": "（录用率 25%，CCF-A 类顶级会议）",
+    "id": "ea-vit",
+    "short_title": "EA-ViT",
+    "research_category": "computer-vision",
+    "accepted_venue": "ICCV",
+    "thumbnail": "/images/EA-ViT.png",
+    "thumbnail_alt": "EA-ViT overview",
+    "thumbnail_width": 1613,
+    "thumbnail_height": 538
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -169,7 +267,11 @@
       }
     ],
     "group": "Collaborative",
-    "notes_zh": "（录用率 17%，CCF-A）"
+    "notes_zh": "（录用率 17%，CCF-A）",
+    "id": "mdk12-bench",
+    "short_title": "MDK12-Bench",
+    "research_category": "evaluation",
+    "accepted_venue": "AAAI"
   },
   {
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
@@ -184,7 +286,11 @@
       }
     ],
     "group": "Collaborative",
-    "notes_zh": "（影响因子 7.9，JCR 一区）"
+    "notes_zh": "（影响因子 7.9，JCR 一区）",
+    "id": "iebench",
+    "short_title": "IEBench",
+    "research_category": "evaluation",
+    "accepted_venue": "IEEE TNSE"
   },
   {
     "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
@@ -206,7 +312,10 @@
         "url": "https://pebench.github.io/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "id": "pebench",
+    "short_title": "PEBench",
+    "research_category": "evaluation"
   },
   {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
@@ -228,7 +337,10 @@
         "url": "https://huggingface.co/datasets/alibaba-multimodal-industrial-ai/IndustryBench-MIPU"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "id": "industrybench-mipu",
+    "short_title": "IndustryBench-MIPU",
+    "research_category": "evaluation"
   },
   {
     "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
@@ -254,6 +366,9 @@
         "url": "https://cuizhiq.github.io/EarthVerse/"
       }
     ],
-    "group": "Collaborative"
+    "group": "Collaborative",
+    "id": "earthverse",
+    "short_title": "EarthVerse",
+    "research_category": "evaluation"
   }
 ]

@@ -1,0 +1,37 @@
+<section class="home-publications" aria-labelledby="publications">
+  <h2 id="publications">Publications</h2>
+  <a class="publication-scholar-link" href="{{ site.author.googlescholar }}">Google Scholar</a>
+
+  {% assign accepted_papers = site.data.cv_publications | where_exp: 'paper', 'paper.accepted_venue' %}
+  <section class="accepted-papers" aria-labelledby="accepted-papers-heading">
+    <div class="accepted-papers-heading">
+      <h3 id="accepted-papers-heading">Accepted Papers</h3>
+      <span>{{ accepted_papers.size }} papers</span>
+    </div>
+    <dl class="accepted-papers-grid">
+      {% assign venues = 'ACL|CVPR|ICCV|AAAI|PRCV|IEEE TNSE' | split: '|' %}
+      {% for venue in venues %}
+      {% assign papers = accepted_papers | where: 'accepted_venue', venue %}
+      {% if papers.size > 0 %}
+      <div class="accepted-venue">
+        <dt>{{ venue }} × {{ papers.size }}</dt>
+        <dd>{% for paper in papers %}<a href="#paper-{{ paper.id }}" title="{{ paper.title | escape }}">{{ paper.short_title }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </dl>
+  </section>
+
+  <p class="publication-author-key">* Equal contribution · † Corresponding author · ‡ Project leader</p>
+  {% assign categories = 'rsi|evaluation|computer-vision' | split: '|' %}
+  {% for category in categories %}
+  <section class="publication-category" aria-labelledby="publications-{{ category }}">
+    <h3 class="publication-category-heading" id="publications-{{ category }}">{% case category %}{% when 'rsi' %}RSI <span>(training data, model architecture, and representation learning)</span>{% when 'evaluation' %}Evaluation{% when 'computer-vision' %}Computer Vision{% endcase %}</h3>
+    {% assign papers = site.data.cv_publications | where: 'research_category', category %}
+    {% for paper in papers %}
+    {% include home-publication.html publication=paper %}
+    {% endfor %}
+  </section>
+  {% endfor %}
+</section>
+<script src="{{ '/assets/js/show_publications.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
