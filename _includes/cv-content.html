@@ -7,7 +7,7 @@
     <a href="{{ '/cv/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if cv_language == 'zh' %} aria-current="page"{% endif %}>中文</a>
   </div>
   <button class="print-link" type="button" data-print-cv hidden>{{ cv.print }}</button>
-  <a href="{{ cv.pdf | relative_url }}" download="{{ cv.filename }}">{{ cv.download }}</a>
+  <a href="{{ cv.pdf | relative_url }}?v={{ site.time | date: '%s' }}" download="{{ cv.filename }}">{{ cv.download }}</a>
 </nav>
 <article class="cv-document" aria-labelledby="cv-name">
     <header class="cv-profile">
@@ -63,9 +63,9 @@
       <li class="cv-publication">
         <span class="cv-publication-number" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
         <div class="cv-publication-body">
-          {% if publication.title_url %}<a class="cv-paper-title" lang="en" href="{{ publication.title_url }}">{{ publication.title }}</a>{% else %}<span class="cv-paper-title" lang="en">{{ publication.title }}</span>{% endif %}
+          {% if publication.title_url %}<a class="cv-paper-title" lang="en" href="{{ publication.title_url }}">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</a>{% else %}<span class="cv-paper-title" lang="en">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</span>{% endif %}
           <p class="cv-paper-authors" lang="en">{{ publication.authors_html }}</p>
-          <div class="cv-paper-meta"><span class="cv-venue">{% if cv_language == 'zh' %}{{ publication.venue | replace: 'arXiv preprint', 'arXiv 预印本' }}{% else %}{{ publication.venue }}{% endif %}</span>{% if publication.notes %} <span class="cv-paper-notes">{% include cv-field.html record=publication key='notes' %}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="cv-tech-report">{{ cv.link_labels[link.label] | default: link.label }}</span>{% else %}{{ cv.link_labels[link.label] | default: link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a class="cv-media-link" href="{{ link.url }}">{% if link.logo %}<img class="cv-media-logo" src="{{ link.logo | relative_url }}" alt="" width="16" height="16">{% endif %}{{ cv.link_labels[link.label] | default: link.label }}</a>{% endfor %}{% include publication-stars.html publication=publication %}</span>{% endif %}</div>
+          <div class="cv-paper-meta"><span class="cv-venue">{% if cv_language == 'zh' %}{{ publication.venue | replace: 'arXiv preprint', 'arXiv 预印本' }}{% else %}{{ publication.venue }}{% endif %}</span>{% if publication.notes %} <span class="cv-paper-notes">{% include cv-field.html record=publication key='notes' %}</span>{% endif %}{% if publication.links.size > 0 %} <span class="cv-paper-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="cv-tech-report">{{ cv.link_labels[link.label] | default: link.label }}</span>{% else %}{{ cv.link_labels[link.label] | default: link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a class="cv-media-link" href="{{ link.url }}">{% if link.logo %}<img class="cv-media-logo" src="{{ link.logo | relative_url }}" alt="" width="16" height="16">{% endif %}{{ cv.link_labels[link.label] | default: link.label }}</a>{% endfor %}</span>{% endif %}</div>
         </div>
       </li>{% endfor %}
     </ol>

@@ -275,6 +275,7 @@ redirect_from:
         align-items: center;
         gap: 4px;
         vertical-align: middle;
+        white-space: nowrap;
     }
 
     .page__content .pub-media-link-logo {
@@ -288,7 +289,7 @@ redirect_from:
         object-fit: contain;
     }
 
-    .page__content .pub-media-links a:hover .pub-media-link-logo {
+    .page__content a:hover .pub-media-link-logo {
         box-shadow: none;
     }
 
@@ -298,8 +299,7 @@ redirect_from:
         color: #bf6a70 !important;
     }
 
-    .publication-stars { display: inline-flex; align-items: center; gap: 5px; margin-left: 8px; padding: 1px 8px; border-radius: 999px; background: #eef1f5; color: #17212f; font-size: 13px; font-weight: 500; line-height: 1.5; vertical-align: middle; white-space: nowrap; }
-    .publication-stars > svg { flex: 0 0 14px; width: 14px; height: 14px; fill: #dda500; }
+    .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
 
     .pub-resource-links a + a::before,
     .pub-list-links a + a::before {
@@ -447,12 +447,11 @@ Publications
       <img src="images/trinity-intro.png" alt="The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities" loading="lazy" width="3001" height="1423" style="width: 320px; height: 180px; object-fit: contain; display: block; margin: 0 auto;">
     </div>
     <div class="pub-card-body">
-      <p class="pub-card-title">{{ trinity.title }}</p>
+      <p class="pub-card-title">{% include publication-title-marker.html publication=trinity %}{{ trinity.title }}</p>
       <p class="pub-authors">{{ trinity.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</p>
       <div class="pub-card-meta">
         <b><i class="pub-venue">{{ trinity.venue }} &nbsp;</i></b>
-        <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}</span>
-        {% if trinity.media_links.size > 0 %}<span class="pub-resource-links pub-media-links">{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=trinity %}</span>{% else %}{% include publication-stars.html publication=trinity %}{% endif %}
+        <span class="pub-resource-links">{% for link in trinity.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}<em>{{ link.label }}</em>{% endif %}</a>{% endfor %}{% for link in trinity.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
       </div>
     </div>
   </div>
@@ -586,10 +585,9 @@ Publications
     <li class="pub-list-row">
       <span class="pub-list-venue" title="{{ publication.venue | escape }}">{{ publication.venue | replace: 'arXiv preprint,', 'arXiv' | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
       <div class="pub-list-details">
-        {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{{ publication.title }}</a>{% endif %}
+        {% if publication.title == trinity.title or publication.title == route_anything.title %}<span class="pub-list-title">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</span>{% else %}<a class="pub-list-title" href="{{ publication.title_url }}">{% include publication-title-marker.html publication=publication %}{{ publication.title }}</a>{% endif %}
         <span class="pub-list-authors">{{ publication.authors_html | replace: 'W. Tang', 'Weidong Tang' }}</span>
-        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}</span>
-        {% if publication.media_links.size > 0 %}<span class="pub-list-links pub-media-links">{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}{% include publication-stars.html publication=publication %}</span>{% else %}{% include publication-stars.html publication=publication %}{% endif %}
+        <span class="pub-list-links">{% for link in publication.links %}<a href="{{ link.url }}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
       </div>
     </li>
     {% endfor %}
