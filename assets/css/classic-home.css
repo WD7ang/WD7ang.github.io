@@ -385,8 +385,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .page__content .news-date em { font-style: normal; }
 
 /* Accepted venues and papers grouped by research direction. */
-.home-publications #publications { margin-bottom: 8px; }
-.publication-scholar-link { display: inline-block; margin-bottom: 18px; color: var(--home-accent); font-size: 13px; font-weight: 500; }
+.home-publications #publications { margin-bottom: 18px; }
 .accepted-papers { padding: 14px 16px 8px; border: 1px solid #d9e2ea; border-radius: 18px; background: rgba(255, 255, 255, .88); }
 .accepted-papers-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 7px; border-bottom: 1px solid #dfe6ec; }
 .page__content .accepted-papers-heading h3 { margin: 0; color: #607184; font-size: 11.5px; font-weight: 500; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
@@ -412,7 +411,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .home-publications .pub-card-meta { line-height: 1.65; }
 .home-publications .pub-venue { display: inline; margin-right: 10px; }
 .home-publications .pub-resource-links { display: inline; }
-.home-publications :is(.publication-scholar-link, .accepted-venue a, .pub-card-title a, .pub-resource-links a):focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
+.home-publications :is(.accepted-venue a, .pub-card-title a, .pub-resource-links a):focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
 @media (max-width: 960px) {
   .page__content .accepted-papers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .accepted-venue:nth-last-child(-n+3) { border-bottom: 1px solid #edf1f5; }
