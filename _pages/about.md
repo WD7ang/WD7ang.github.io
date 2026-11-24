@@ -445,7 +445,7 @@ Looking ahead, I’d like to explore three directions.
 
 - **Agents for everyday tasks.** Build assistants that help people with tasks such as coding.
 - **Agents for humanities research.** Explore AI companionship, social simulation, and digital humans.
-- **AI for brain–computer interfaces.** Use AI to accelerate BCI research and explore the idea of “超萌”.
+- **AI for brain–computer interfaces.** Use AI to accelerate BCI research and explore the idea of “超梦”.
 
 I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.
 
