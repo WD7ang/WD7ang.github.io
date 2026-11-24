@@ -116,7 +116,7 @@ body::before {
 .experience-tab { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 1px solid transparent; border-radius: 6px; color: var(--home-muted); background: transparent; font-family: inherit; font-size: 13px; font-weight: 500; line-height: 1.4; white-space: nowrap; cursor: pointer; }
 .experience-tab > span:first-child { font-size: 12px; font-variant-numeric: tabular-nums; }
 .experience-tab--undergraduate { --tab-color: #a34553; --tab-line: #dfb6bd; --tab-soft: #f8eef0; }
-.experience-tab--phd { --tab-color: #315d80; --tab-line: #b6cbdc; --tab-soft: #edf3f8; }
+.experience-tab--phd { --tab-color: #315d80; --tab-line: #b6cbdc; --tab-soft: #edf3f8; color: var(--tab-color); border-color: var(--tab-line); }
 .experience-tab:hover { color: var(--tab-color); background: var(--tab-soft); }
 .experience-tab[aria-selected="true"] { color: var(--tab-color); border-color: var(--tab-line); background: var(--tab-soft); }
 .experience-tab:focus-visible, .timeline-org-badge:focus-visible, .timeline-period:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
