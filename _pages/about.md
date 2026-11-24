@@ -2,7 +2,7 @@
 permalink: /
 layout: single
 homepage_palette: classic-blue
-author_profile: true
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
@@ -408,18 +408,10 @@ redirect_from:
 
 
 <style>
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
         body {
             background-color:	 #FFFFFF;
             font-family: 'Arial Rounded MT Bold', 'Verdana', sans-serif;
             font-size: 15px;
-        }
-        .main-heading {
-            font-family: 'Permanent Marker', cursive;
-            text-align: center;
-            color: #315d80;
         }
         div.markdown-body a,a {
             text-decoration: none !important;
@@ -433,35 +425,7 @@ redirect_from:
 </style>
 
 
-<h1 class="main-heading">Hi there <img src="images/Hi.gif" width="40px"> Welcome to my Homepage!</h1>
-
-
-
-Hi! I’m an incoming PhD student at the Hong Kong University of Science and Technology (HKUST).
-
-My research focuses on **multimodal foundation models and agents**. I study how training data, model architectures, and representation learning shape what models learn and how well their capabilities generalize across language, vision, and embodied tasks.
-
-Looking ahead, I’d like to explore three directions.
-
-- **Agents for everyday tasks.** Build assistants that help people with tasks such as coding.
-- **Agents for humanities research.** Explore AI companionship, social simulation, and digital humans.
-- **AI for brain–computer interfaces.** Use AI to accelerate BCI research and explore the idea of braindance.
-
-I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.
-
-One day, I’ll become a chef and open my own restaurant. If you have my contact info, you’ll get a discount. 😏
-
-<div class="research-interests" role="group" aria-labelledby="research-interests-label">
-  <span class="research-caption" id="research-interests-label">Research interests</span>
-  <div class="research-tags">
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 7 10 1M7 7l4 11m6-10-6 10"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="11" cy="18" r="3"/></svg>MLLM</span>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a8 8 0 1 0 0 10M20 3v5h-5"/></svg>RSI</span>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="13" rx="3"/><path d="M12 3v4M8 12h1m6 0h1m-8 4h8"/></svg>Agentic Robot</span>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7L20 9h-7l1-6Z"/></svg>Efficient AI</span>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-3-13 6 4-3 1-1 3Z"/></svg>HCI</span>
-    <span class="research-topic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-10 2 3h4"/></svg>BCI</span>
-  </div>
-</div>
+{% include home-profile.html %}
 
 News
 ---------------
