@@ -244,11 +244,7 @@
     "id": "ea-vit",
     "short_title": "EA-ViT",
     "research_category": "computer-vision",
-    "accepted_venue": "ICCV",
-    "thumbnail": "/images/EA-ViT.png",
-    "thumbnail_alt": "EA-ViT overview",
-    "thumbnail_width": 1613,
-    "thumbnail_height": 538
+    "accepted_venue": "ICCV"
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -271,7 +267,8 @@
     "id": "mdk12-bench",
     "short_title": "MDK12-Bench",
     "research_category": "evaluation",
-    "accepted_venue": "AAAI"
+    "accepted_venue": "AAAI",
+    "author_position": 10
   },
   {
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
@@ -290,7 +287,8 @@
     "id": "iebench",
     "short_title": "IEBench",
     "research_category": "evaluation",
-    "accepted_venue": "IEEE TNSE"
+    "accepted_venue": "IEEE TNSE",
+    "author_position": 3
   },
   {
     "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
@@ -315,7 +313,8 @@
     "group": "Collaborative",
     "id": "pebench",
     "short_title": "PEBench",
-    "research_category": "evaluation"
+    "research_category": "evaluation",
+    "author_position": 3
   },
   {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
@@ -340,7 +339,8 @@
     "group": "Collaborative",
     "id": "industrybench-mipu",
     "short_title": "IndustryBench-MIPU",
-    "research_category": "evaluation"
+    "research_category": "evaluation",
+    "author_position": 5
   },
   {
     "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
@@ -369,6 +369,7 @@
     "group": "Collaborative",
     "id": "earthverse",
     "short_title": "EarthVerse",
-    "research_category": "evaluation"
+    "research_category": "evaluation",
+    "author_position": 7
   }
 ]

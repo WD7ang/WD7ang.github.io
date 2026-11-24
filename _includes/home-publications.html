@@ -28,6 +28,11 @@
   <section class="publication-category" aria-labelledby="publications-{{ category }}">
     <h3 class="publication-category-heading" id="publications-{{ category }}">{% case category %}{% when 'rsi' %}RSI <span>(training data, model architecture, and representation learning)</span>{% when 'evaluation' %}Evaluation{% when 'computer-vision' %}Computer Vision{% endcase %}</h3>
     {% assign papers = site.data.cv_publications | where: 'research_category', category %}
+    {% if category == 'evaluation' %}
+    {% assign illustrated_papers = papers | where_exp: 'paper', 'paper.thumbnail' %}
+    {% assign text_papers = papers | where_exp: 'paper', 'paper.thumbnail == nil' | sort: 'author_position' %}
+    {% assign papers = illustrated_papers | concat: text_papers %}
+    {% endif %}
     {% for paper in papers %}
     {% include home-publication.html publication=paper %}
     {% endfor %}
