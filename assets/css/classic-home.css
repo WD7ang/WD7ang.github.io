@@ -277,20 +277,20 @@ a.timeline-org-badge:focus-visible { outline: 2px solid var(--home-accent); outl
 .profile-links .profile-icon {
   display: inline-grid;
   place-items: center;
-  flex: 0 0 32px;
-  width: 32px;
-  height: 32px;
+  flex: none;
+  width: 22px;
+  height: 22px;
   margin: 0;
-  border-radius: 9px;
+  border-radius: 6px;
   color: #fff;
-  font-size: 21px;
+  font-size: 15px;
   line-height: 1;
 }
 .profile-icon.fa-envelope { background: #0075a9; }
 .profile-icon.fa-google-scholar { background: #386cdb; }
 .profile-icon.fa-github { background: #654493; }
 .profile-icon.fa-x-twitter { background: #233c51; }
-.profile-icon--rednote { padding: 3px; background: #e72749; }
+.profile-icon--rednote { padding: 2px; background: #e72749; }
 .profile-icon.fa-weixin { background: #11834c; }
 .home-profile a:hover { text-decoration: underline !important; text-underline-offset: .18em; }
 .profile-details { margin-top: 8px; }

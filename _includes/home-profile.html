@@ -12,7 +12,7 @@
       {% if profile.googlescholar %}<a href="{{ profile.googlescholar }}"><i class="profile-icon fab fa-google-scholar" aria-hidden="true"></i>Google Scholar</a>{% endif %}
       {% if profile.github %}<a href="https://github.com/{{ profile.github }}"><i class="profile-icon fab fa-github" aria-hidden="true"></i>GitHub</a>{% endif %}
       {% if profile.twitter %}<a href="https://x.com/{{ profile.twitter }}"><i class="profile-icon fab fa-x-twitter" aria-hidden="true"></i>X</a>{% endif %}
-      {% if profile.XiaoHongShu %}<a href="{{ profile.XiaoHongShu }}"><img class="profile-icon profile-icon--rednote" src="{{ '/images/rednote.svg' | relative_url }}" alt="" width="32" height="32">RedNote</a>{% endif %}
+      {% if profile.XiaoHongShu %}<a href="{{ profile.XiaoHongShu }}"><img class="profile-icon profile-icon--rednote" src="{{ '/images/rednote.svg' | relative_url }}" alt="" width="22" height="22">RedNote</a>{% endif %}
       {% if profile.WeChat %}<a href="{{ profile.WeChat | prepend: '/images/' | relative_url }}"><i class="profile-icon fab fa-weixin" aria-hidden="true"></i>WeChat</a>{% endif %}
     </nav>
     <img class="profile-portrait" src="{{ profile.avatar | prepend: '/images/' | relative_url }}" width="1440" height="2160" alt="Weidong Tang in Edinburgh" fetchpriority="high">
