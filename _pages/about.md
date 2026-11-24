@@ -437,13 +437,19 @@ redirect_from:
 
 
 
-Hi! I am an incoming PhD student at HKUST.
+Hi! I’m an incoming PhD student at the Hong Kong University of Science and Technology (HKUST).
 
-My research interests lie at the intersection of natural language processing and computer vision, with a particular focus on **multimodal representation learning**. My long-term goal is to understand how human-like intelligence can emerge and to develop unified models that connect the physical world with human cognition.
+My research focuses on **multimodal foundation models and agents**. I study how training data, model architectures, and representation learning shape what models learn and how well their capabilities generalize across language, vision, and embodied tasks.
 
-I enjoy exploring new research directions and collaborating with researchers across disciplines. In my spare time, I also enjoy exploring Buddhist philosophy. Feel free to reach out if you are interested in research collaborations or other opportunities.
+Looking ahead, I’d like to explore three directions.
 
-One day, I'll become a chef and open my own restaurant; if you have my contact info, you'll get a discount. 😏
+- **Agents for everyday tasks.** Build assistants that help people with tasks such as coding.
+- **Agents for humanities research.** Explore AI companionship, social simulation, and digital humans.
+- **AI for brain–computer interfaces.** Use AI to accelerate BCI research and explore the idea of a “superbrain.”
+
+I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.
+
+One day, I’ll become a chef and open my own restaurant. If you have my contact info, you’ll get a discount. 😏
 
 <div class="research-interests" role="group" aria-labelledby="research-interests-label">
   <span class="research-caption" id="research-interests-label">Research interests</span>
