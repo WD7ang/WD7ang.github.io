@@ -23,14 +23,29 @@
   <details class="profile-details">
     <summary>Detailed profile <span lang="zh-CN">（详细个人介绍）</span></summary>
     <div class="profile-bio">
-      <p>Hi! I’m an incoming Ph.D. student at the Hong Kong University of Science and Technology (HKUST). Looking ahead, I’d like to explore three directions.</p>
-      <ul>
-        <li><strong>Agents for everyday tasks.</strong> Build assistants that help people with tasks such as coding.</li>
-        <li><strong>Agents for humanities research.</strong> Explore AI companionship, social simulation, and digital humans.</li>
-        <li><strong>AI for brain–computer interfaces.</strong> Use AI to accelerate BCI research and explore the idea of braindance.</li>
-      </ul>
-      <p>I enjoy exploring new research questions and collaborating across disciplines. Outside research, I’m interested in philosophy. If you’d like to collaborate or share an idea, feel free to reach out.</p>
-      <p>One day, I’ll become a chef and open my own restaurant. If you have my contact info, you’ll get a discount. 😏</p>
+      <div class="profile-language-tabs" role="tablist" aria-label="Profile language / 介绍语言" hidden>
+        <button class="profile-language-tab" id="profile-language-en" type="button" role="tab" aria-selected="true" aria-controls="profile-bio-en" tabindex="0" lang="en">English</button>
+        <button class="profile-language-tab" id="profile-language-zh" type="button" role="tab" aria-selected="false" aria-controls="profile-bio-zh" tabindex="-1" lang="zh-CN">中文</button>
+      </div>
+      <section class="profile-language-panel" id="profile-bio-en" role="tabpanel" aria-labelledby="profile-language-en" tabindex="0" lang="en">
+        <h4 class="profile-language-heading">English</h4>
+        <p>Hello! I’m Weidong Tang, an incoming Ph.D. student at <a href="https://www.hkpeilab.com/">PEILab at the Hong Kong University of Science and Technology (PEILab@HKUST)</a>, where I will be supervised by <a href="https://cse.hkust.edu.hk/~songguo/">Prof. Song Guo</a>. I have published several first-author papers at leading international conferences, including CVPR and ACL. I am also a founding member and Chief Research Officer (CRO) of <a href="https://www.cardinal-agi.com/">InfRec</a>.</p>
+        <p>My long-term research interests center on the emergence, application, and integration of intelligence. At this stage, I hope to explore three progressively connected research directions:</p>
+        <p><strong>General AI:</strong> I believe in the potential of scaling revealed by scaling laws. By studying training data, model architectures, and capability evaluation, I hope to understand how models learn, what they have learned, and how they can move beyond their current capabilities. My aim is to improve the general intelligence and generalization of large models and enable more advanced intelligence to emerge.</p>
+        <p><strong>Human-Centric AI:</strong> I want to explore how intelligence can better serve people, so that AI can be both an effective productivity tool and a system that understands human emotions, cognition, and social behavior. In particular, I am interested in AI companionship, social simulation, personalized digital humans, and digital doubles.</p>
+        <p><strong>AI for BCI:</strong> I hope to use AI to accelerate brain–computer interface research and explore deeper connections between the human brain and machine intelligence. My long-term vision is to explore digital representations of human perception, memory, and subjective experience, ultimately bringing Braindance from science fiction into reality.</p>
+        <p>I enjoy exploring the unknown and welcome open dialogue and collaboration across disciplines. Outside research, I like reflecting on philosophical questions about life, and I love cooking. Whether you have an interesting idea, a potential collaboration, or simply want to try my cooking, feel free to <a href="mailto:{{ profile.email }}">get in touch</a>!</p>
+      </section>
+      <section class="profile-language-panel" id="profile-bio-zh" role="tabpanel" aria-labelledby="profile-language-zh" tabindex="0" lang="zh-CN">
+        <h4 class="profile-language-heading">中文</h4>
+        <p>大家好！我是汤维栋，即将加入香港科技大学 PEILab（<a href="https://www.hkpeilab.com/">PEILab@HKUST</a>）攻读博士学位，师从<a href="https://cse.hkust.edu.hk/~songguo/">郭嵩教授</a>。我曾以第一作者身份在 CVPR、ACL 等国际顶级学术会议发表多篇论文。目前，我也是 <a href="https://www.cardinal-agi.com/">InfRec</a> 的创始成员，兼任首席研究官（CRO）。</p>
+        <p>我的长期研究兴趣围绕智能的涌现、应用与融合展开。现阶段，我希望探索三个具有递进关系的研究方向：</p>
+        <p><strong>通用人工智能（General AI）：</strong> 我相信 Scaling Law 所揭示的规模化潜力，希望从训练数据、模型架构与能力评估三个维度出发，探索模型如何学习、学到了什么，以及如何突破现有的能力边界，进一步提升大模型的通用智能与泛化能力，推动更高层次智能的涌现。</p>
+        <p><strong>以人为中心的人工智能（Human-Centric AI）：</strong> 我希望探索如何让智能更好地服务于人类，使 AI 不仅是高效的生产力工具，也能够理解人类的情感、认知与社会行为。具体而言，我对 AI 情感陪伴、社会模拟、个性化数字人及数字分身等方向感兴趣。</p>
+        <p><strong>人工智能赋能脑机接口（AI for BCI）：</strong> 利用 AI 加速脑机接口研究，探索人类大脑与机器智能之间更深层次的连接。我的长期愿景是探索人类感知、记忆与主观体验的数字化表达，并最终让 Braindance（超梦）从科幻想象走向现实。</p>
+        <p>我享受探索未知的过程，也乐于开展开放的跨学科交流与合作。科研之外，我喜欢思考关于人生的哲学问题，也热衷于烹饪。如果你有有趣的想法、潜在的合作机会，或者只是单纯想尝尝我的厨艺，都欢迎随时<a href="mailto:{{ profile.email }}">联系我</a>！</p>
+      </section>
     </div>
   </details>
 </section>
+<script src="{{ '/assets/js/profile-languages.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

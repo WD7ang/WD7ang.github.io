@@ -348,8 +348,16 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .profile-details[open] > summary::before { transform: rotate(45deg); }
 .profile-details > summary span { font-size: inherit; font-weight: 400; }
 .profile-details > summary:hover { text-decoration: underline; text-underline-offset: .2em; }
-.home-profile :is(summary, a):focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
-.profile-bio { max-width: 76ch; padding-top: 12px; font-size: 13px; line-height: 1.7; }
+.home-profile :is(summary, a, button):focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
+.profile-bio { max-width: 88ch; padding-top: 12px; font-size: 14px; line-height: 1.8; }
+.profile-language-tabs { display: flex; gap: 20px; width: fit-content; margin-bottom: 18px; border-bottom: 1px solid #cad5de; }
+.profile-language-tab { min-height: 40px; margin: 0 0 -1px; padding: 7px 2px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; color: var(--home-muted); background: transparent; font: inherit; cursor: pointer; }
+.profile-language-tab[aria-selected="true"] { color: var(--home-accent); border-bottom-color: currentColor; font-weight: 600; }
+.profile-language-tab:hover { color: var(--home-accent); }
+.profile-language-tabs[hidden], .profile-language-panel[hidden], .profile-details[data-language-ready="true"] .profile-language-heading { display: none; }
+.profile-language-panel:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 4px; }
+.profile-language-panel > p:last-child { margin-bottom: 0; }
+.profile-language-panel[lang="zh-CN"] { line-height: 1.95; }
 .profile-bio ul { padding-left: 1.25em; }
 .profile-bio .profile-personal { margin: 0; color: #526877; font-size: 14px; }
 .page__content .pub-card-title {
