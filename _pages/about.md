@@ -174,6 +174,17 @@ redirect_from:
         text-decoration-color: #aab9c7 !important;
         text-decoration-thickness: 1px !important;
         text-underline-offset: 2px;
+        transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .pub-resource-links a:is(:hover, :focus-visible) {
+        color: #006cce !important;
+    }
+
+    .pub-resource-links a:is(:hover, :focus-visible),
+    .pub-resource-links a:is(:hover, :focus-visible) .pub-media-link-label {
+        text-decoration-color: #006cce !important;
+        text-decoration-thickness: 2px !important;
     }
 
     .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
