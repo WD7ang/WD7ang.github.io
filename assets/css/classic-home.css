@@ -12,7 +12,7 @@
   --home-gutter: 28px;
   --home-font: "Outfit", "Helvetica Neue", Arial, sans-serif;
   --home-thumb-width: 124px;
-  --home-portrait-size: 260px;
+  --home-portrait-size: 240px;
   --home-row-logo-width: 72px;
   --home-row-logo-height: 58px;
   --home-body-size: 16px;
@@ -409,6 +409,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .page__content .news-date em { font-style: normal; }
 
 /* Core papers and publications grouped by research direction. */
+.home-publications { --home-thumb-width: 136px; }
 .home-publications #publications { margin-bottom: 18px; }
 .accepted-papers { padding: 14px 16px 8px; border: 1px solid #d9e2ea; border-radius: 18px; background: rgba(255, 255, 255, .88); }
 .accepted-papers-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 7px; border-bottom: 1px solid #dfe6ec; }
@@ -442,10 +443,12 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   .page__content .home-publications .pub-card-title { white-space: nowrap; }
 }
 @media (max-width: 960px) {
+  .home-publications { --home-thumb-width: 130px; }
   .page__content .accepted-papers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .accepted-venue:nth-child(n+3) { border-top: 1px solid #edf1f5; }
 }
 @media (max-width: 680px) {
+  .home-publications { --home-thumb-width: 104px; }
   .page__content .publication-category-heading { font-size: 21px; gap: 5px; }
   .publication-category-heading > span { flex-basis: 100%; font-size: 13.5px; line-height: 1.5; }
   .home-publications .pub-card-meta { padding-right: 0; }
@@ -459,7 +462,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 960px) {
   :root {
     --home-gutter: 22px;
-    --home-portrait-size: 216px;
+    --home-portrait-size: 200px;
     --home-thumb-width: 120px;
   }
   .profile-overview { column-gap: 28px; }
@@ -468,7 +471,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 680px) {
   :root {
     --home-gutter: 16px;
-    --home-portrait-size: 152px;
+    --home-portrait-size: 140px;
     --home-thumb-width: 96px;
     --home-row-logo-width: 64px;
     --home-row-logo-height: 48px;
@@ -511,6 +514,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   .research-topic { max-width: 100%; white-space: normal; }
 }
 @media (max-width: 420px) {
+  .home-publications { --home-thumb-width: 88px; }
   :root { --home-thumb-width: 80px; --home-row-logo-width: 56px; --home-row-logo-height: 40px; }
 }
 @media print {
