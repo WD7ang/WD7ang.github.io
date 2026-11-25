@@ -42,11 +42,11 @@
     "core_venue": "arXiv",
     "short_title": "The Trinity",
     "research_category": "rsi",
-    "thumbnail": "/images/trinity-intro.png",
+    "thumbnail": "/images/trinity-intro-cvpr.png",
     "thumbnail_alt": "The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities",
     "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
-    "thumbnail_width": 3001,
-    "thumbnail_height": 1423,
+    "thumbnail_width": 8001,
+    "thumbnail_height": 3794,
     "keyword": "Omni-modal RSI"
   },
   {
