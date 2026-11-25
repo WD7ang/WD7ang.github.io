@@ -24,7 +24,7 @@
   {% assign categories = 'rsi|evaluation|efficient-ai|representation-learning' | split: '|' %}
   {% for category in categories %}
   <section class="publication-category" aria-labelledby="publications-{{ category }}">
-    <h3 class="publication-category-heading" id="publications-{{ category }}">{% case category %}{% when 'rsi' %}Agent <span>(training data, model architecture, and representation learning)</span>{% when 'evaluation' %}Evaluation{% when 'efficient-ai' %}Efficient AI{% when 'representation-learning' %}Representation Learning{% endcase %}</h3>
+    <h3 class="publication-category-heading" id="publications-{{ category }}">{% case category %}{% when 'rsi' %}Agent{% when 'evaluation' %}Evaluation{% when 'efficient-ai' %}Efficient AI{% when 'representation-learning' %}Representation Learning{% endcase %}</h3>
     {% assign papers = site.data.cv_publications | where: 'research_category', category %}
     {% if category == 'evaluation' %}
     {% assign illustrated_papers = papers | where_exp: 'paper', 'paper.thumbnail' %}
