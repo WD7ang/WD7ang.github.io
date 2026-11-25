@@ -1,12 +1,13 @@
 /* CV typography and spacing measured from the supplied Yue Su reference PDF. */
 :root {
-  --cv-ink: #2f353a;
-  --cv-text: #4b545c;
-  --cv-muted: #7b838a;
-  --cv-blue: #5a7fae;
-  --cv-pale-blue: #9bbddd;
-  --cv-accent: #9a4b55;
-  --cv-link: #bf6a70;
+  --cv-ink: #1b293a;
+  --cv-text: #3f4d60;
+  --cv-muted: #3f4d60;
+  --cv-blue: #204967;
+  --cv-pale-blue: #aab9c7;
+  --cv-accent: #8a3445;
+  --cv-link: var(--cv-muted);
+  --cv-venue: #006cce;
   --cv-rule: #dce7f1;
 }
 html { background: #f2f0ec; }
@@ -43,7 +44,7 @@ img { border: 0; }
 sup { font-size: .7em; line-height: 0; }
 .cv-profile { margin-bottom: 29px; }
 #cv-name { color: var(--cv-ink); font-size: 42px; line-height: 1.2; letter-spacing: -.65px; margin: 0 0 4px; }
-#cv-name span { display: inline-block; margin-left: 12px; color: #4d5359; font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 28px; font-weight: 300; letter-spacing: 1.4px; vertical-align: 2px; }
+#cv-name span { display: inline-block; margin-left: 12px; color: var(--cv-muted); font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; font-size: 28px; font-weight: 300; letter-spacing: 1.4px; vertical-align: 2px; }
 .cv-headline { font-size: 16px; line-height: 1.5; margin-bottom: 12px; }
 .cv-separator { color: #c2c7cc; }
 .cv-muted { color: var(--cv-muted); }
@@ -83,15 +84,16 @@ sup { font-size: .7em; line-height: 0; }
 .cv-paper-authors { margin-top: 3px; color: var(--cv-muted); font-size: 14px; line-height: 1.35; }
 .cv-paper-authors strong { color: var(--cv-accent); }
 .cv-paper-meta { margin-top: 4px; font-size: 13px; line-height: 1.4; }
-.cv-venue { color: var(--cv-blue); font-style: normal; font-weight: 600; }
+.cv-venue { color: var(--cv-venue); font-style: normal; font-weight: 600; }
 .cv-paper-notes { color: var(--cv-muted); font-size: .95em; }
 .cv-paper-links { margin-left: 8px; color: var(--cv-link); font-size: 13px; }
-.cv-paper-links a { display: inline-block; color: inherit; white-space: nowrap; }
-.cv-paper-links a + a::before { content: "\00b7"; display: inline-block; margin: 0 6px; color: #c2c7cc; text-decoration: none; }
+.cv-paper-links a { display: inline-block; color: inherit; white-space: nowrap; text-decoration: underline; text-decoration-color: #aab9c7; text-decoration-thickness: 1px; text-underline-offset: 2px; transition: color 160ms ease, text-decoration-color 160ms ease; }
+.cv-paper-links a:is(:hover, :focus-visible) { color: var(--cv-venue); text-decoration-color: var(--cv-venue); text-decoration-thickness: 2px; }
+.cv-paper-links a + a::before { content: "\00b7"; display: inline-block; margin: 0 6px; color: var(--cv-muted); text-decoration: none; }
 .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; vertical-align: -.04em; fill: #dda500; }
 .cv-media-link { display: inline-block; white-space: nowrap; }
 .cv-media-logo { display: inline-block; width: 1.2em; height: 1.2em; margin-right: 4px; border-radius: 3px; object-fit: contain; vertical-align: -.2em; }
-.cv-tech-report { display: inline-block; padding: 0 5px; border: 1px solid #ead6d9; border-radius: 3px; background: #f9eff0; color: var(--cv-accent); font-weight: 600; line-height: 1.25; white-space: nowrap; }
+.cv-tech-report { font-weight: 600; white-space: nowrap; }
 .cv-project-list { list-style: none; padding: 0 0 0 42px; }
 .cv-project-list > li { margin-bottom: 17px; }
 .cv-project-title { color: var(--cv-ink); font-size: 16px; line-height: 1.4; }
