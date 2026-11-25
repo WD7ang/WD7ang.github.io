@@ -12,7 +12,15 @@
       {% endfor %}
     </ul>
     {% else %}
-    <p class="home-blog-empty">{% if kind == 'tech' %}技术文章整理中。{% else %}文章整理中。{% endif %}<span lang="en">New posts coming soon.</span></p>
+    <div class="blog-post-card blog-post-card--empty">
+      <div class="blog-post-link">
+        <img class="blog-post-cover blog-post-cover--{{ kind }}" src="{% if kind == 'tech' %}{{ '/images/blog/tech-fluid-essays-cover.png' | relative_url }}{% else %}{{ '/images/blog/essays-cover.png' | relative_url }}{% endif %}" alt="" width="1200" height="675" loading="lazy" decoding="async">
+        <div class="blog-post-caption">
+          <p class="blog-empty-title">{% if kind == 'tech' %}技术文章整理中。{% else %}文章整理中。{% endif %}</p>
+          <p class="blog-post-subtitle" lang="en">New posts coming soon.</p>
+        </div>
+      </div>
+    </div>
     {% endif %}
   </section>
   {% endfor %}

@@ -112,7 +112,7 @@ body::before {
 .home-experience { color: var(--home-ink); font-family: var(--home-font); font-size: 15px; font-weight: 400; }
 .experience-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 2em 0 12px; padding-bottom: 10px; border-bottom: 1px solid var(--home-line); }
 .home-experience #experience { margin: 0; padding: 0; border: 0; font-family: inherit; }
-.experience-tabs { display: flex; gap: 6px; }
+.experience-tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
 .experience-tab { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 1px solid transparent; border-radius: 6px; color: var(--home-muted); background: transparent; font-family: inherit; font-size: 13px; font-weight: 500; line-height: 1.4; white-space: nowrap; cursor: pointer; }
 .page__content .experience-tab-logo { display: block; flex: 0 0 20px; width: 20px; height: 20px; margin: 0; border: 0; border-radius: 0; object-fit: contain; }
 .experience-tab-date { font-size: 12px; font-variant-numeric: tabular-nums; }
