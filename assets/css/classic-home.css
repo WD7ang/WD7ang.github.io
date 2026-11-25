@@ -285,8 +285,13 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   letter-spacing: .02em;
   white-space: nowrap;
 }
-.home-profile .profile-portrait {
+.home-profile .profile-photo {
   grid-area: photo;
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+.home-profile .profile-portrait {
   display: block;
   width: 100%;
   height: auto;
@@ -296,6 +301,8 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   margin: 0;
   border-radius: 22px;
 }
+.home-profile .profile-motto { margin: 10px 0 0; color: var(--home-accent); font-family: "Kaiti SC", STKaiti, KaiTi, serif; font-size: 15px; line-height: 1.65; letter-spacing: .02em; text-align: center; }
+.profile-motto span { display: inline-block; white-space: nowrap; }
 .profile-roles { grid-area: roles; display: flex; flex-wrap: wrap; gap: 12px 24px; }
 .profile-roles > div { display: grid; gap: 3px; }
 .profile-roles > div + div { border-left: 1px solid #c7d2da; padding-left: 24px; }
@@ -454,7 +461,8 @@ a.timeline-org-badge:hover { color: var(--period-color); }
     gap: 18px;
   }
   .home-profile h1 { font-size: clamp(30px, 9vw, 38px); text-align: center; }
-  .home-profile .profile-portrait { width: var(--home-portrait-size); justify-self: center; border-radius: 14px; }
+  .home-profile .profile-photo { width: var(--home-portrait-size); justify-self: center; }
+  .home-profile .profile-portrait { border-radius: 14px; }
   .profile-roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; text-align: center; }
   .profile-roles > div { padding: 0 8px; }
   .profile-roles > div + div { padding-left: 8px; }
