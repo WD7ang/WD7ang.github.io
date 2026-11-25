@@ -1,7 +1,19 @@
 <section class="home-blog" id="blog" aria-labelledby="blog-heading" lang="zh-CN">
   <h2 id="blog-heading">Blog</h2>
-  <div class="blog-categories">
-    {% include blog-book.html kind='tech' title='技术博客' title_en='Tech Blog' url='/blog/tech/' cover='/images/blog/tech-fluid-essays-cover.png' cover_width=957 cover_height=1644 %}
-    {% include blog-book.html kind='essays' title='散文随笔' title_en='Essays' url='/blog/essays/' cover='/images/blog/essays-cover.png' cover_width=1320 cover_height=2268 %}
-  </div>
+  {% assign blog_kinds = 'tech|essays' | split: '|' %}
+  {% for kind in blog_kinds %}
+  <section class="home-blog-group" id="{{ kind }}" aria-labelledby="blog-{{ kind }}-heading">
+    <h3 class="home-blog-group-heading" id="blog-{{ kind }}-heading"><a href="{{ '/blog/' | append: kind | append: '/' | relative_url }}" lang="en">{% if kind == 'tech' %}Tech Blog{% else %}Essays{% endif %}</a></h3>
+    {% assign category_posts = site.posts | where_exp: 'post', 'post.categories contains kind' | sort: 'date' | reverse %}
+    {% if category_posts.size > 0 %}
+    <ul class="blog-posts" role="list">
+      {% for post in category_posts %}
+      <li>{% include blog-post-card.html post=post heading_level=4 compact=true %}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="home-blog-empty">{% if kind == 'tech' %}技术文章整理中。{% else %}文章整理中。{% endif %}<span lang="en">New posts coming soon.</span></p>
+    {% endif %}
+  </section>
+  {% endfor %}
 </section>

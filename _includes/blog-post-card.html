@@ -1,4 +1,5 @@
 {% assign card_post = include.post %}
+{% assign card_heading_level = include.heading_level | default: 2 %}
 {% if card_post.categories contains 'essays' %}
   {% assign card_category = 'Essays' %}
   {% assign card_kind = 'essays' %}
@@ -13,8 +14,12 @@
     <img class="blog-post-cover blog-post-cover--{{ card_kind }}" src="{{ card_post.cover | default: card_default_cover | relative_url }}" alt="" width="1200" height="600" loading="lazy" decoding="async">
     <div class="blog-post-caption">
       <time class="blog-post-date" datetime="{{ card_post.date | date_to_xmlschema }}" lang="en">{{ card_post.date | date: '%b %Y' }}</time>
-      <h2 class="blog-post-title">{{ card_post.title | escape }}</h2>
+      <h{{ card_heading_level }} class="blog-post-title">{{ card_post.title | escape }}</h{{ card_heading_level }}>
+      {% if include.compact %}
+      {% if card_post.title_en %}<p class="blog-post-subtitle" lang="en">{{ card_post.title_en | escape }}</p>{% endif %}
+      {% else %}
       <p class="blog-post-subtitle" lang="en">{% if card_post.title_en %}{{ card_post.title_en | escape }} · {% endif %}{{ card_category }}</p>
+      {% endif %}
     </div>
   </a>
 </article>
