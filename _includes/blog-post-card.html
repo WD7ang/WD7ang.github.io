@@ -13,7 +13,7 @@
   <a class="blog-post-link" href="{{ card_post.url | relative_url }}">
     <img class="blog-post-cover blog-post-cover--{{ card_kind }}" src="{{ card_post.cover | default: card_default_cover | relative_url }}" alt="" width="1200" height="600" loading="lazy" decoding="async">
     <div class="blog-post-caption">
-      <time class="blog-post-date" datetime="{{ card_post.date | date_to_xmlschema }}" lang="en">{{ card_post.date | date: '%b %Y' }}</time>
+      <time class="blog-post-date" datetime="{{ card_post.date | date_to_xmlschema }}" lang="en">{{ card_post.date | date: '%d/%m/%Y' }}</time>
       <h{{ card_heading_level }} class="blog-post-title">{{ card_post.title | escape }}</h{{ card_heading_level }}>
       {% if include.compact %}
       {% if card_post.title_en %}<p class="blog-post-subtitle" lang="en">{{ card_post.title_en | escape }}</p>{% endif %}

@@ -46,7 +46,8 @@
     "thumbnail_alt": "The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities",
     "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
     "thumbnail_width": 3001,
-    "thumbnail_height": 1423
+    "thumbnail_height": 1423,
+    "keyword": "全模态 RSI"
   },
   {
     "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
@@ -77,7 +78,8 @@
     "thumbnail_alt": "Route Anything overview: model and policy routing performance and efficiency",
     "homepage_authors_html": "P. Zhou, Y. Ma, H. Wang<sup>†</sup>, <strong>Weidong Tang</strong>, Z. Wan, W. Zhao, &amp; Y. You<sup>†</sup>.",
     "thumbnail_width": 1200,
-    "thumbnail_height": 630
+    "thumbnail_height": 630,
+    "keyword": "Routing"
   },
   {
     "title": "GroupToM-Bench: Benchmarking Group Theory of Mind and Nonlinear Social Emergence in MLLMs",
@@ -120,7 +122,8 @@
       }
     ],
     "thumbnail_width": 2115,
-    "thumbnail_height": 1006
+    "thumbnail_height": 1006,
+    "keyword": "心智理论"
   },
   {
     "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
@@ -149,7 +152,8 @@
     "thumbnail_alt": "MagicBench overview",
     "homepage_authors_html": "Tang Da Huang, <strong>Weidong Tang‡</strong>, Wen Qi Xu, Xianpeng Guo†",
     "thumbnail_width": 859,
-    "thumbnail_height": 333
+    "thumbnail_height": 333,
+    "keyword": "语言引导视觉"
   },
   {
     "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
@@ -184,7 +188,8 @@
       }
     ],
     "thumbnail_width": 997,
-    "thumbnail_height": 468
+    "thumbnail_height": 468,
+    "keyword": "动态架构"
   },
   {
     "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples",
@@ -227,7 +232,8 @@
       }
     ],
     "thumbnail_width": 693,
-    "thumbnail_height": 370
+    "thumbnail_height": 370,
+    "keyword": "推理时扩展"
   },
   {
     "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
@@ -250,7 +256,8 @@
     "id": "ea-vit",
     "short_title": "EA-ViT",
     "research_category": "efficient-ai",
-    "accepted_venue": "ICCV"
+    "accepted_venue": "ICCV",
+    "keyword": "动态架构"
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -274,7 +281,8 @@
     "short_title": "MDK12-Bench",
     "research_category": "evaluation",
     "accepted_venue": "AAAI",
-    "author_position": 10
+    "author_position": 10,
+    "keyword": "多学科推理"
   },
   {
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
@@ -294,7 +302,8 @@
     "short_title": "IEBench",
     "research_category": "evaluation",
     "accepted_venue": "IEEE TNSE",
-    "author_position": 3
+    "author_position": 3,
+    "keyword": "机器遗忘"
   },
   {
     "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
@@ -320,7 +329,8 @@
     "id": "pebench",
     "short_title": "PEBench",
     "research_category": "evaluation",
-    "author_position": 3
+    "author_position": 3,
+    "keyword": "机器不学习"
   },
   {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
@@ -346,7 +356,8 @@
     "id": "industrybench-mipu",
     "short_title": "IndustryBench-MIPU",
     "research_category": "evaluation",
-    "author_position": 5
+    "author_position": 5,
+    "keyword": "工业品数据"
   },
   {
     "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
@@ -376,6 +387,7 @@
     "id": "earthverse",
     "short_title": "EarthVerse",
     "research_category": "evaluation",
-    "author_position": 7
+    "author_position": 7,
+    "keyword": "AI4地理"
   }
 ]

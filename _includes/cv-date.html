@@ -1,9 +1,18 @@
-{%- if include.value contains '/' -%}
-  {%- assign date_parts = include.value | split: '/' -%}
-  {%- if page.cv_language == 'zh' -%}
-    {{- date_parts[1] -}}.{{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}
+{%- if include.value contains '-' -%}
+  {%- assign date_parts = include.value | split: '-' -%}
+  {%- if date_parts.size == 3 -%}
+    {{- date_parts[2] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[1] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[0] -}}
+  {%- elsif date_parts.size == 2 -%}
+    {{- date_parts[1] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[0] -}}
   {%- else -%}
-    {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}.{{- date_parts[1] -}}
+    {{- include.value -}}
+  {%- endif -%}
+{%- elsif include.value contains '/' -%}
+  {%- assign date_parts = include.value | split: '/' -%}
+  {%- if date_parts.size == 3 -%}
+    {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[1] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[2] -}}
+  {%- else -%}
+    {{- date_parts[0] | prepend: '0' | slice: -2, 2 -}}/{{- date_parts[1] -}}
   {%- endif -%}
 {%- elsif include.value == 'Present' and page.cv_language == 'zh' -%}
   至今

@@ -6,7 +6,7 @@ layout: academic
     <a class="essay-back" href="{{ '/blog/essays/' | relative_url }}">← 回到随笔 <span lang="en">/ Back to essays</span></a>
     <p class="eyebrow">随笔 · <span lang="en">Essays</span></p>
     <h1>{{ page.title | escape }}{% if page.title_en %}<span class="essay-title-en" lang="en">{{ page.title_en | escape }}</span>{% endif %}</h1>
-    <p class="essay-meta">汤维栋 <span lang="en">Weidong Tang</span> <span aria-hidden="true">/</span> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time></p>
+    <p class="essay-meta">汤维栋 <span lang="en">Weidong Tang</span> <span aria-hidden="true">/</span> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time></p>
     <nav class="essay-language-nav" aria-label="正文语言 / Reading language"><a href="#essay-zh" lang="zh-CN">中文</a><a href="#essay-en" lang="en">English</a></nav>
   </header>
   <div class="essay-content">{{ content }}</div>

@@ -1,14 +1,15 @@
 const publicationAuthorRows = [];
-const maximumVisibleAuthors = 6;
 
 function fitPublicationAuthors() {
-  publicationAuthorRows.forEach(({ row, visible, authors }) => {
+  publicationAuthorRows.forEach(({ row, visible, authors, titleRange }) => {
     if (!row.getClientRects().length || !row.clientWidth) return;
 
     row.style.removeProperty('font-size');
-    const availableWidth = row.getBoundingClientRect().width;
+    // A wrapped title sets the limit with its widest line of actual text.
+    const titleWidth = Math.max(0, ...Array.from(titleRange.getClientRects(), rect => rect.width));
+    const availableWidth = Math.min(row.getBoundingClientRect().width, titleWidth);
+    if (!availableWidth) return;
     const included = authors.map(() => true);
-    let visibleCount = authors.length;
 
     function render() {
       const parts = [];
@@ -23,7 +24,6 @@ function fitPublicationAuthors() {
     }
 
     // Keep the first/last author, the highlighted author and every † author.
-    // Keep long lists compact even when the row has room for more names.
     // Remove complete names from the middle, never clip a corresponding name.
     const middle = (authors.length - 1) / 2;
     const removable = authors.map((author, index) => ({ author, index }))
@@ -32,9 +32,8 @@ function fitPublicationAuthors() {
 
     render();
     for (const { index } of removable) {
-      if (visibleCount <= maximumVisibleAuthors && visible.getBoundingClientRect().width <= availableWidth) break;
+      if (visible.getBoundingClientRect().width <= availableWidth) break;
       included[index] = false;
-      visibleCount -= 1;
       render();
     }
 
@@ -50,6 +49,13 @@ function fitPublicationAuthors() {
 
 function initializePublicationAuthors() {
   document.querySelectorAll('.publication-card .pub-authors').forEach((row) => {
+    const title = row.closest('.publication-card').querySelector('.pub-card-title');
+    if (!title) return;
+    const titleRange = document.createRange();
+    titleRange.selectNodeContents(title.querySelector('a') || title);
+    const star = title.querySelector('.publication-title-star');
+    if (star) titleRange.setStartAfter(star);
+
     const fullAuthors = document.createElement('span');
     fullAuthors.innerHTML = row.dataset.authorsFull || row.innerHTML;
     const fullText = fullAuthors.textContent.replace(/\s+/g, ' ').trim();
@@ -67,7 +73,7 @@ function initializePublicationAuthors() {
     row.replaceChildren(visible, complete);
     row.classList.add('pub-author-line');
     row.title = fullText;
-    publicationAuthorRows.push({ row, visible, authors });
+    publicationAuthorRows.push({ row, visible, authors, title, titleRange });
   });
 
   let frame;
@@ -76,7 +82,10 @@ function initializePublicationAuthors() {
     frame = requestAnimationFrame(fitPublicationAuthors);
   };
   const observer = new ResizeObserver(scheduleFit);
-  publicationAuthorRows.forEach(({ row }) => observer.observe(row));
+  publicationAuthorRows.forEach(({ row, title }) => {
+    observer.observe(row);
+    observer.observe(title);
+  });
   document.fonts.ready.then(scheduleFit);
 }
 

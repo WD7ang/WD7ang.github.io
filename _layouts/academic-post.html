@@ -7,7 +7,7 @@ layout: academic
     {% if page.categories contains 'tech' %}{% assign post_index_url = '/blog/tech/' %}{% elsif page.categories contains 'essays' %}{% assign post_index_url = '/blog/essays/' %}{% endif %}
     <p class="eyebrow"><a href="{{ post_index_url | relative_url }}">← Blog</a></p>
     <h1>{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time> · Weidong Tang</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time> · Weidong Tang</p>
   </header>
   <div class="post-content">{{ content }}</div>
 </article>

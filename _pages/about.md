@@ -335,7 +335,7 @@ Projects
         <a class="report-title" lang="zh" href="https://m.ql1d.com/new/general/28245962" target="_blank" rel="noopener noreferrer">从科研博主到AI公司首席科学家：一名西电00后人工智能逐梦路</a>
         <span class="report-meta" lang="en">Interview by Qilu Evening News, a Shandong Provincial Media Outlet</span>
       </div>
-      <time class="report-date" datetime="2026-10-25">25.10.2026</time>
+      <time class="report-date" datetime="2026-10-25">25/10/2026</time>
     </li>
     <li>
       <img class="report-logo" src="images/next-star-logo.png" alt="Next Star logo" width="108" height="60" loading="lazy" decoding="async">
@@ -343,7 +343,7 @@ Projects
         <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/K679PCKWRSvY5e1kvBp9_g" target="_blank" rel="noopener noreferrer">2026“创业之星”Next Star 一等奖</a>
         <span class="report-meta" lang="en">InfRec Wins First Prize in the Domestic Industry Semifinals and Advances to the Global Finals</span>
       </div>
-      <time class="report-date" datetime="2026-11-04">04.11.2026</time>
+      <time class="report-date" datetime="2026-11-04">04/11/2026</time>
     </li>
     <li>
       <img class="report-logo" src="images/271-education-logo.png" alt="271 Education Group logo" width="108" height="60" loading="lazy" decoding="async">
@@ -351,7 +351,7 @@ Projects
         <a class="report-title" lang="zh" href="https://mp.weixin.qq.com/s/brsPcjyKhElxAOQiW70RpQ" target="_blank" rel="noopener noreferrer">昌乐二中|271教育  汤维栋：纵有疾风起，人生不言弃</a>
         <span class="report-meta" lang="en">Outstanding Alumnus Interview</span>
       </div>
-      <time class="report-date" datetime="2026-11-04">04.11.2026</time>
+      <time class="report-date" datetime="2026-11-04">04/11/2026</time>
     </li>
   </ul>
 </section>
@@ -386,7 +386,7 @@ Services
       <span class="service-title">Leader</span>
       <span class="service-meta">Xidian Graduate Admissions Experience-Sharing Group (3,000 members)</span>
     </div>
-    <span class="service-date">10.2026 – Present</span>
+    <span class="service-date">10/2026 – Present</span>
   </li>
   <li class="service-row">
     <img class="service-logo" src="{{ '/images/xidian-inspur-club.png' | relative_url }}" alt="Xidian–Inspur Club logo" width="108" height="60" loading="lazy" decoding="async">
@@ -394,7 +394,7 @@ Services
       <span class="service-title">AI Team Lead</span>
       <span class="service-meta">Xidian–Inspur Club</span>
     </div>
-    <span class="service-date">06.2025 – 05.2026</span>
+    <span class="service-date">06/2025 – 05/2026</span>
   </li>
   <li class="service-row">
     <a class="service-logo-link" href="{{ '/images/reviewer-accept-cloud.png' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size ACCEPT word cloud">
