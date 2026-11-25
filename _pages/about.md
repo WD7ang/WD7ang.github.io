@@ -187,7 +187,7 @@ redirect_from:
         text-decoration-thickness: 2px !important;
     }
 
-    .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
+    .publication-title-star { display: inline-block; width: 1.1em; height: 1.1em; margin-right: .35em; fill: #dda500; vertical-align: -.14em; }
 
     .pub-resource-links a + a::before {
         content: "\00b7";
