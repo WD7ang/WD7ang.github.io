@@ -12,7 +12,7 @@
   --home-gutter: 28px;
   --home-font: "Outfit", "Helvetica Neue", Arial, sans-serif;
   --home-thumb-width: 124px;
-  --home-portrait-size: 240px;
+  --home-portrait-size: 250px;
   --home-row-logo-width: 72px;
   --home-row-logo-height: 58px;
   --home-body-size: 16px;
@@ -459,7 +459,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 960px) {
   :root {
     --home-gutter: 22px;
-    --home-portrait-size: 200px;
+    --home-portrait-size: 208px;
     --home-thumb-width: 120px;
   }
   .profile-overview { column-gap: 28px; }
@@ -468,7 +468,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 680px) {
   :root {
     --home-gutter: 16px;
-    --home-portrait-size: 140px;
+    --home-portrait-size: 146px;
     --home-thumb-width: 96px;
     --home-row-logo-width: 64px;
     --home-row-logo-height: 48px;
