@@ -1,6 +1,5 @@
 /* Homepage article rows, grouped to match the research sections. */
 .home-blog {
-  --home-blog-card-height: 96px;
   margin-top: 38px;
   color: var(--home-ink, #273444);
   font: 400 15px/1.65 var(--home-font, sans-serif);
@@ -22,8 +21,8 @@
 .home-blog .home-blog-group-heading a:hover { color: var(--home-accent, #315d80); }
 .home-blog .blog-posts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; list-style: none; margin: 0; padding: 0; }
 .home-blog .blog-posts > li { min-width: 0; margin: 0; padding: 0; }
-.home-blog .blog-post-card { box-sizing: border-box; width: 100%; min-height: var(--home-blog-card-height); border: 1px solid var(--home-line, #e1e5e9); border-radius: 8px; background: rgba(255, 255, 255, .82); }
-.home-blog .blog-post-link { display: grid; box-sizing: border-box; min-height: calc(var(--home-blog-card-height) - 2px); grid-template-columns: var(--home-thumb-width, 124px) minmax(0, 1fr); align-items: center; gap: 14px; padding: 9px 8px; color: inherit; }
+.home-blog .blog-post-card { box-sizing: border-box; width: fit-content; max-width: 100%; border: 1px solid var(--home-line, #e1e5e9); border-radius: 8px; background: rgba(255, 255, 255, .82); }
+.home-blog .blog-post-link { display: grid; box-sizing: border-box; grid-template-columns: var(--home-thumb-width, 124px) minmax(0, 1fr); align-items: center; gap: 14px; padding: 9px 8px; color: inherit; }
 .home-blog .blog-post-cover { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; margin: 0; border: 0; border-radius: 6px; object-fit: cover; }
 .home-blog .blog-post-caption { min-width: 0; padding: 0; }
 .home-blog .blog-post-date { margin: 0 0 3px; color: var(--home-muted, #697386); font: 400 11.5px/1.4 var(--home-font, sans-serif); letter-spacing: 0; }
@@ -33,7 +32,7 @@
 .home-blog .blog-post-card--empty:hover { border-color: var(--home-line, #e1e5e9); box-shadow: none; }
 .home-blog .home-blog-group-heading a:focus-visible { outline: 2px solid var(--home-accent, #315d80); outline-offset: 4px; }
 @media (max-width: 680px) {
-  .home-blog { --home-blog-card-height: 104px; margin-top: 28px; }
+  .home-blog { margin-top: 28px; }
   .home-blog .home-blog-group-heading { font-size: 20px; }
   .home-blog .blog-post-link { gap: 12px; padding: 10px 8px; }
   .home-blog .blog-post-title { font-size: 15.5px; }

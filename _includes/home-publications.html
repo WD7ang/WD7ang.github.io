@@ -1,15 +1,15 @@
 <section class="home-publications" aria-labelledby="publications">
   <h2 id="publications">Publications</h2>
-  {% assign accepted_papers = site.data.cv_publications | where_exp: 'paper', 'paper.accepted_venue' | where: 'group', 'Core' %}
-  <section class="accepted-papers" aria-labelledby="accepted-papers-heading">
+  {% assign core_papers = site.data.cv_publications | where_exp: 'paper', 'paper.core_venue' %}
+  <section class="accepted-papers" aria-labelledby="core-papers-heading">
     <div class="accepted-papers-heading">
-      <h3 id="accepted-papers-heading">Accepted Papers</h3>
-      <span>{{ accepted_papers.size }} papers</span>
+      <h3 id="core-papers-heading">Core Papers</h3>
+      <span>{{ core_papers.size }} papers</span>
     </div>
     <dl class="accepted-papers-grid">
-      {% assign venues = 'ACL|CVPR|PRCV' | split: '|' %}
+      {% assign venues = 'arXiv|ACL|CVPR|PRCV' | split: '|' %}
       {% for venue in venues %}
-      {% assign papers = accepted_papers | where: 'accepted_venue', venue %}
+      {% assign papers = core_papers | where: 'core_venue', venue %}
       {% if papers.size > 0 %}
       <div class="accepted-venue">
         <dt>{{ venue }} × {{ papers.size }}</dt>
