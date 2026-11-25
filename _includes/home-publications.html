@@ -12,7 +12,7 @@
       {% assign papers = core_papers | where: 'core_venue', venue %}
       {% if papers.size > 0 %}
       <div class="accepted-venue">
-        <dt>{{ venue }} × {{ papers.size }}</dt>
+        <dt>{% if venue == 'arXiv' %}Under Review{% else %}{{ venue }}{% endif %} × {{ papers.size }}</dt>
         <dd>{% for paper in papers %}<a href="#paper-{{ paper.id }}" title="{{ paper.title | escape }}">{{ paper.short_title }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</dd>
       </div>
       {% endif %}

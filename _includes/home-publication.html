@@ -12,7 +12,7 @@
       <p class="pub-authors" data-authors-full="{{ publication.homepage_authors_html | default: publication.authors_html | replace: 'W. Tang', 'Weidong Tang' | escape }}">{{ publication.authors_html }}</p>
       <div class="pub-card-meta">
         {% if publication.keyword %}<span class="pub-keyword" lang="en">{{ publication.keyword }}</span>{% endif %}
-        <span class="pub-venue">{{ publication.venue | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}</span>
+        <span class="pub-venue">{% if publication.venue contains 'arXiv' %}Under Review{% else %}{{ publication.venue | replace: 'IEEE Transactions on Network Science and Engineering,', 'IEEE TNSE' }}{% endif %}</span>
         <span class="pub-resource-links">{% for link in resource_links %}{% assign first_character = link.url | slice: 0 %}<a href="{% if first_character == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endif %}">{% if link.label == 'Tech Report' %}<span class="pub-tech-report">{{ link.label }}</span>{% else %}{{ link.label }}{% endif %}</a>{% endfor %}{% for link in publication.media_links %}<a href="{{ link.url }}"><span class="pub-media-link-label">{% if link.logo %}<img class="pub-media-link-logo" src="{{ link.logo | relative_url }}" width="16" height="16" alt="" loading="lazy" decoding="async">{% endif %}{{ link.label }}</span></a>{% endfor %}</span>
       </div>
     </div>
