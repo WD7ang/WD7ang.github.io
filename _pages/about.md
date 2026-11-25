@@ -168,6 +168,14 @@ redirect_from:
         color: var(--home-muted) !important;
     }
 
+    .pub-resource-links a,
+    .pub-resource-links .pub-media-link-label {
+        text-decoration: underline !important;
+        text-decoration-color: #aab9c7 !important;
+        text-decoration-thickness: 1px !important;
+        text-underline-offset: 2px;
+    }
+
     .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
 
     .pub-resource-links a + a::before {
