@@ -165,7 +165,7 @@ redirect_from:
 
     .pub-resource-links a {
         display: inline-block;
-        color: #000 !important;
+        color: var(--home-muted) !important;
     }
 
     .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
@@ -180,15 +180,8 @@ redirect_from:
     }
 
     .pub-tech-report {
-        display: inline-block;
-        padding: 0 5px;
-        border: 1px solid #ead6d9;
-        border-radius: 3px;
-        background: #f9eff0;
-        color: #000;
         font-weight: 600;
         font-style: normal;
-        line-height: 1.25;
         white-space: nowrap;
     }
 
