@@ -1,4 +1,5 @@
 const publicationAuthorRows = [];
+const maximumVisibleAuthors = 6;
 
 function fitPublicationAuthors() {
   publicationAuthorRows.forEach(({ row, visible, authors }) => {
@@ -7,6 +8,7 @@ function fitPublicationAuthors() {
     row.style.removeProperty('font-size');
     const availableWidth = row.getBoundingClientRect().width;
     const included = authors.map(() => true);
+    let visibleCount = authors.length;
 
     function render() {
       const parts = [];
@@ -21,6 +23,7 @@ function fitPublicationAuthors() {
     }
 
     // Keep the first/last author, the highlighted author and every † author.
+    // Keep long lists compact even when the row has room for more names.
     // Remove complete names from the middle, never clip a corresponding name.
     const middle = (authors.length - 1) / 2;
     const removable = authors.map((author, index) => ({ author, index }))
@@ -29,8 +32,9 @@ function fitPublicationAuthors() {
 
     render();
     for (const { index } of removable) {
-      if (visible.getBoundingClientRect().width <= availableWidth) break;
+      if (visibleCount <= maximumVisibleAuthors && visible.getBoundingClientRect().width <= availableWidth) break;
       included[index] = false;
+      visibleCount -= 1;
       render();
     }
 
@@ -46,7 +50,9 @@ function fitPublicationAuthors() {
 
 function initializePublicationAuthors() {
   document.querySelectorAll('.publication-card .pub-authors').forEach((row) => {
-    const fullText = row.textContent.replace(/\s+/g, ' ').trim();
+    const fullAuthors = document.createElement('span');
+    fullAuthors.innerHTML = row.dataset.authorsFull || row.innerHTML;
+    const fullText = fullAuthors.textContent.replace(/\s+/g, ' ').trim();
     const authors = row.innerHTML.trim().split(/\s*,\s*/).map((html) => {
       const author = document.createElement('span');
       author.innerHTML = html;
