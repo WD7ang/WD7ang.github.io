@@ -27,6 +27,7 @@
 .home-blog .blog-post-caption { min-width: 0; padding: 0; }
 .home-blog .blog-post-date { margin: 0 0 3px; color: var(--home-muted, #697386); font: 400 11.5px/1.4 var(--home-font, sans-serif); letter-spacing: 0; }
 .home-blog .blog-post-title { margin: 0 0 3px; color: var(--home-ink, #273444); font: 500 15px/1.4 var(--home-font, sans-serif); }
+.home-blog .blog-post-link:hover .blog-post-title { color: var(--home-accent, #204967); }
 .home-blog .blog-post-subtitle { margin: 0; color: var(--home-muted, #697386); font-size: 12.5px; line-height: 1.4; }
 .home-blog .blog-empty-title { margin: 0 0 3px; color: var(--home-muted, #697386); font-size: 13px; line-height: 1.5; }
 .home-blog .blog-post-card--empty:hover { border-color: var(--home-line, #e1e5e9); box-shadow: none; }

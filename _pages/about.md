@@ -46,7 +46,7 @@ redirect_from:
       display: inline-block;
       min-width: 70px;
       font-weight: 400;        /* 不加粗 */
-      color: #315d80;          /* 蓝色强调 */
+      color: var(--home-accent);          /* 蓝色强调 */
     }
 
     .publication-card {
@@ -60,14 +60,14 @@ redirect_from:
         margin-bottom: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        color: #4b545c;
+        color: var(--home-muted);
     }
     .publication-card > div > strong,
     .publication-card > div > div > strong {
-        color: #2f353a;
+        color: var(--home-ink);
     }
     .publication-card i {
-        color: #7b838a;
+        color: var(--home-muted);
     }
 
     .pub-badge {
@@ -85,7 +85,7 @@ redirect_from:
         white-space: nowrap;
         border: 1px solid transparent;
         background: rgba(105, 115, 134, 0.08);
-        color: #697386;
+        color: var(--home-muted);
     }
 
     .pub-badge::before {
@@ -100,7 +100,7 @@ redirect_from:
     .pub-badge--oral {
         margin-left: 4px;
         vertical-align: 2px;
-        color: #315d80;
+        color: var(--home-accent);
         background: rgba(49, 93, 128, 0.08);
         border-color: rgba(49, 93, 128, 0.25);
     }
@@ -131,7 +131,7 @@ redirect_from:
     }
 
     .pub-authors strong {
-        color: #9a4b55;
+        color: var(--home-highlight);
         font-weight: 700;
     }
 
@@ -165,7 +165,7 @@ redirect_from:
 
     .pub-resource-links a {
         display: inline-block;
-        color: #bf6a70 !important;
+        color: var(--home-highlight) !important;
     }
 
     .publication-title-star { display: inline-block; width: .9em; height: .9em; margin-right: .35em; fill: #dda500; vertical-align: -.04em; }
@@ -174,7 +174,7 @@ redirect_from:
         content: "\00b7";
         display: inline-block;
         margin: 0 6px;
-        color: #c2c7cc;
+        color: var(--home-muted);
         font-style: normal;
         text-decoration: none;
     }
@@ -185,7 +185,7 @@ redirect_from:
         border: 1px solid #ead6d9;
         border-radius: 3px;
         background: #f9eff0;
-        color: #9a4b55;
+        color: var(--home-highlight);
         font-weight: 600;
         font-style: normal;
         line-height: 1.25;
@@ -194,7 +194,7 @@ redirect_from:
 
     .publication-card .pub-venue,
     .project-card .pub-venue {
-        color: #5a7fae;
+        color: var(--home-accent);
     }
 
     /* Projects cards: keep styles independent from publications */
@@ -209,16 +209,16 @@ redirect_from:
         margin-bottom: 20px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        color: #4b545c;
+        color: var(--home-muted);
     }
 
     .project-card > div > strong,
     .project-card > div > div > strong {
-        color: #2f353a;
+        color: var(--home-ink);
     }
 
     .project-card i {
-        color: #7b838a;
+        color: var(--home-muted);
     }
 
     .project-card:hover {
@@ -268,11 +268,11 @@ redirect_from:
 <style>
         div.markdown-body a,a {
             text-decoration: none !important;
-            color: #315d80;
+            color: var(--home-accent);
             transition: all 0.3s ease; /* 平滑过渡效果 */
         }
         div.markdown-body a:hover, a:hover {
-            color: #234864;            /* 悬浮时变深一点的颜色 */
+            color: var(--home-accent-hover);            /* 悬浮时变深一点的颜色 */
             text-decoration: underline; /* 加上悬浮时的下划线 */
         }
 </style>
