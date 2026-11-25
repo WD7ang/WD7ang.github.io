@@ -405,7 +405,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .page__content .home-publications .publication-row:last-child { border-bottom: 0; }
 .page__content .home-publications .publication-row--text > div { grid-template-columns: minmax(0, 1fr); }
 .home-publications .pub-media-rotator { overflow: hidden; border-radius: 6px; }
-.home-publications .pub-card-body { position: relative; padding-right: 112px; }
+.home-publications .pub-card-body { position: relative; padding-right: 190px; }
 .home-publications .pub-keyword { position: absolute; top: 50%; right: 0; transform: translateY(-50%); padding: 3px 7px; border: 1px solid #d9e5ef; border-radius: 4px; color: var(--home-accent); background: #edf3f8; font-size: 12px; font-weight: 500; line-height: 1.4; white-space: nowrap; }
 .page__content .home-publications .pub-card-title { color: var(--home-ink); }
 .home-publications .pub-card-title a { color: inherit; }

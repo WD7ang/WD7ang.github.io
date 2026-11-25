@@ -1,14 +1,20 @@
 const publicationAuthorRows = [];
 
 function fitPublicationAuthors() {
-  publicationAuthorRows.forEach(({ row, visible, authors, titleRange }) => {
+  // All author lines share the width of the longest rendered line in any title.
+  let longestTitleLine = 0;
+  for (const { titleRange } of publicationAuthorRows) {
+    for (const line of titleRange.getClientRects()) {
+      longestTitleLine = Math.max(longestTitleLine, line.width);
+    }
+  }
+  if (!longestTitleLine) return;
+
+  publicationAuthorRows.forEach(({ row, visible, authors }) => {
     if (!row.getClientRects().length || !row.clientWidth) return;
 
     row.style.removeProperty('font-size');
-    // A wrapped title sets the limit with its widest line of actual text.
-    const titleWidth = Math.max(0, ...Array.from(titleRange.getClientRects(), rect => rect.width));
-    const availableWidth = Math.min(row.getBoundingClientRect().width, titleWidth);
-    if (!availableWidth) return;
+    const availableWidth = Math.min(row.getBoundingClientRect().width, longestTitleLine);
     const included = authors.map(() => true);
 
     function render() {

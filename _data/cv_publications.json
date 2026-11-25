@@ -47,7 +47,7 @@
     "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
     "thumbnail_width": 3001,
     "thumbnail_height": 1423,
-    "keyword": "全模态 RSI"
+    "keyword": "Omni-modal RSI"
   },
   {
     "title": "Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems",
@@ -123,7 +123,7 @@
     ],
     "thumbnail_width": 2115,
     "thumbnail_height": 1006,
-    "keyword": "心智理论"
+    "keyword": "Theory of Mind"
   },
   {
     "title": "MagicBench: Diagnosing Visual Agency Loss and Semantic Dependency in Multimodal LLMs",
@@ -153,7 +153,7 @@
     "homepage_authors_html": "Tang Da Huang, <strong>Weidong Tang‡</strong>, Wen Qi Xu, Xianpeng Guo†",
     "thumbnail_width": 859,
     "thumbnail_height": 333,
-    "keyword": "语言引导视觉"
+    "keyword": "Language-Guided Vision"
   },
   {
     "title": "Efficient Video Object Segmentation and Tracking with Recurrent Dynamic Submodel",
@@ -189,7 +189,7 @@
     ],
     "thumbnail_width": 997,
     "thumbnail_height": 468,
-    "keyword": "动态架构"
+    "keyword": "Dynamic Architecture"
   },
   {
     "title": "Inference-Time Scaling for Visual AutoRegressive Modeling by Searching Representative Samples",
@@ -233,7 +233,7 @@
     ],
     "thumbnail_width": 693,
     "thumbnail_height": 370,
-    "keyword": "推理时扩展"
+    "keyword": "Inference-Time Scaling"
   },
   {
     "title": "EA-ViT: Efficient Adaptation for Elastic Vision Transformer",
@@ -257,7 +257,7 @@
     "short_title": "EA-ViT",
     "research_category": "efficient-ai",
     "accepted_venue": "ICCV",
-    "keyword": "动态架构"
+    "keyword": "Dynamic Architecture"
   },
   {
     "title": "MDK12-Bench: A Multi-Discipline Benchmark for Evaluating Reasoning in Multimodal Large Language Models",
@@ -282,7 +282,7 @@
     "research_category": "evaluation",
     "accepted_venue": "AAAI",
     "author_position": 10,
-    "keyword": "多学科推理"
+    "keyword": "Multidisciplinary Reasoning"
   },
   {
     "title": "IEBench: Benchmarking Unlearning Identity-Event Entangled Concepts for MLLM-Based Systems in Agentic Edge Networks",
@@ -303,7 +303,7 @@
     "research_category": "evaluation",
     "accepted_venue": "IEEE TNSE",
     "author_position": 3,
-    "keyword": "机器遗忘"
+    "keyword": "Machine Unlearning"
   },
   {
     "title": "Pebench: A Fictitious Dataset to Benchmark Machine Unlearning for Multimodal Large Language Models",
@@ -330,7 +330,7 @@
     "short_title": "PEBench",
     "research_category": "evaluation",
     "author_position": 3,
-    "keyword": "机器不学习"
+    "keyword": "Machine Unlearning"
   },
   {
     "title": "IndustryBench-MIPU: Benchmarking Multi-Image Attribute Value Extraction for Industrial Products",
@@ -357,7 +357,7 @@
     "short_title": "IndustryBench-MIPU",
     "research_category": "evaluation",
     "author_position": 5,
-    "keyword": "工业品数据"
+    "keyword": "Industrial Product Data"
   },
   {
     "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
@@ -388,6 +388,6 @@
     "short_title": "EarthVerse",
     "research_category": "evaluation",
     "author_position": 7,
-    "keyword": "AI4地理"
+    "keyword": "AI for Geoscience"
   }
 ]
