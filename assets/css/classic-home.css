@@ -12,7 +12,7 @@
   --home-gutter: 28px;
   --home-font: "Outfit", "Helvetica Neue", Arial, sans-serif;
   --home-thumb-width: 124px;
-  --home-portrait-size: 240px;
+  --home-portrait-size: 260px;
   --home-row-logo-width: 72px;
   --home-row-logo-height: 58px;
   --home-body-size: 16px;
@@ -296,15 +296,22 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   width: 100%;
   margin: 0;
 }
+.home-profile .profile-portrait-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 22px;
+}
 .home-profile .profile-portrait {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 75%;
   margin: 0;
-  border-radius: 22px;
+  transform: scale(1.4);
+  transform-origin: 70% 50%;
 }
 .home-profile .profile-motto { margin: 10px 0 0; color: var(--home-accent); font-family: "Kaiti SC", STKaiti, KaiTi, serif; font-size: 15.5px; line-height: 1.65; letter-spacing: .02em; text-align: center; }
 .profile-motto span { display: inline-block; white-space: nowrap; }
@@ -462,7 +469,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 960px) {
   :root {
     --home-gutter: 22px;
-    --home-portrait-size: 200px;
+    --home-portrait-size: 216px;
     --home-thumb-width: 120px;
   }
   .profile-overview { column-gap: 28px; }
@@ -471,7 +478,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 @media (max-width: 680px) {
   :root {
     --home-gutter: 16px;
-    --home-portrait-size: 140px;
+    --home-portrait-size: 152px;
     --home-thumb-width: 96px;
     --home-row-logo-width: 64px;
     --home-row-logo-height: 48px;
@@ -485,7 +492,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
   }
   .home-profile h1 { font-size: clamp(30px, 9vw, 38px); text-align: center; }
   .home-profile .profile-photo { width: var(--home-portrait-size); justify-self: center; }
-  .home-profile .profile-portrait { border-radius: 14px; }
+  .home-profile .profile-portrait-frame { border-radius: 14px; }
   .profile-roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; text-align: center; }
   .profile-roles > div { padding: 0 8px; }
   .profile-roles > div + div { padding-left: 8px; }

@@ -16,7 +16,9 @@
       {% if profile.WeChat %}<a href="{{ profile.WeChat | prepend: '/images/' | relative_url }}"><i class="profile-icon fab fa-weixin" aria-hidden="true"></i>WeChat</a>{% endif %}
     </nav>
     <figure class="profile-photo">
-      <img class="profile-portrait" src="{{ profile.avatar | prepend: '/images/' | relative_url }}" width="1440" height="2160" alt="Weidong Tang in Edinburgh" fetchpriority="high">
+      <span class="profile-portrait-frame">
+        <img class="profile-portrait" src="{{ profile.avatar | prepend: '/images/' | relative_url }}" width="1440" height="2160" alt="Weidong Tang in Edinburgh" fetchpriority="high">
+      </span>
       <figcaption class="profile-motto" lang="zh-CN"><span>人间万象皆有数，</span><span>唯此风骨世无双</span></figcaption>
     </figure>
   </div>
@@ -38,7 +40,7 @@
       </section>
       <section class="profile-language-panel" id="profile-bio-zh" role="tabpanel" aria-labelledby="profile-language-zh" tabindex="0" lang="zh-CN">
         <h4 class="profile-language-heading">中文</h4>
-        <p>大家好！我是<strong>汤维栋</strong>，即将加入香港科技大学 PEILab（<a href="https://www.hkpeilab.com/">PEILab@HKUST</a>）攻读博士学位，师从<a href="https://cse.hkust.edu.hk/~songguo/">郭嵩教授</a>。我曾以<strong>第一作者</strong>身份在 <strong>CVPR、ACL</strong> 等国际顶级学术会议发表多篇论文。目前，我也是 <a href="https://www.cardinal-agi.com/">InfRec</a> 的<strong>创始成员</strong>，兼任<strong>首席研究官（CRO）</strong>。</p>
+        <p>大家好！我是<strong>汤维栋</strong>，即将加入 <a href="https://www.hkpeilab.com/">PEILab@HKUST</a> 攻读博士学位，师从<a href="https://cse.hkust.edu.hk/~songguo/">郭嵩教授</a>。我曾以<strong>第一作者</strong>身份在 <strong>CVPR、ACL</strong> 等国际顶级学术会议发表多篇论文。目前，我也是 <a href="https://www.cardinal-agi.com/">InfRec</a> 的<strong>创始成员</strong>，兼任<strong>首席研究官（CRO）</strong>。</p>
         <p>我的长期研究兴趣围绕<strong>智能的涌现、应用与融合</strong>展开。现阶段，我希望探索三个具有递进关系的研究方向：</p>
         <p><strong>通用人工智能（General AI）：</strong> 我相信 Scaling Law 所揭示的规模化潜力，希望从<strong>训练数据、模型架构与能力评估</strong>三个维度出发，探索模型如何学习、学到了什么，以及如何突破现有的能力边界，进一步提升大模型的通用智能与泛化能力，推动更高层次智能的涌现。</p>
         <p><strong>以人为中心的人工智能（Human-Centric AI）：</strong> 我希望探索如何让智能更好地服务于人类，使 AI 不仅是高效的生产力工具，也能够理解人类的情感、认知与社会行为。具体而言，我对 <strong>AI 情感陪伴、社会模拟、个性化数字人及数字分身</strong>等方向感兴趣。</p>
