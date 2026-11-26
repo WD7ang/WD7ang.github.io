@@ -438,7 +438,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .page__content .home-publications .publication-row--text > div { grid-template-columns: minmax(0, 1fr); }
 .home-publications .pub-media-rotator { overflow: hidden; border-radius: 6px; }
 .home-publications .pub-card-body { position: relative; }
-.home-publications .pub-keyword { position: absolute; top: 0; right: 0; color: var(--home-accent); font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-style: italic; font-weight: 400; line-height: 1.35; letter-spacing: .01em; white-space: nowrap; }
+.home-publications .pub-keyword { position: absolute; top: 0; right: 0; color: #006cce; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-style: italic; font-weight: 400; line-height: 1.35; letter-spacing: .01em; white-space: nowrap; }
 .page__content .home-publications .pub-card-title { color: var(--home-ink); }
 .home-publications .pub-card-title a { color: inherit; }
 .home-publications .pub-card-title a:hover { color: var(--home-accent); }

@@ -98,6 +98,7 @@ sup { font-size: .7em; line-height: 0; }
 .cv-project-list > li { margin-bottom: 17px; }
 .cv-project-title { color: var(--cv-ink); font-size: 16px; line-height: 1.4; }
 .cv-project-description { margin-top: 3px; color: var(--cv-muted); font-size: 14px; line-height: 1.4; }
+.cv-project-links { margin: 4px 0 0; line-height: 1.4; }
 .cv-bottom-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 34px; }
 .cv-bottom-grid > section { min-width: 0; }
 .cv-compact-list { list-style: none; padding: 0; font-size: 14px; }
