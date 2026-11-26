@@ -444,6 +444,7 @@ a.timeline-org-badge:hover { color: var(--period-color); }
 .home-publications .pub-card-title a:hover { color: var(--home-accent); }
 .home-publications .pub-card-meta { position: relative; padding-right: 216px; line-height: 1.65; }
 .page__content .home-publications .pub-venue { display: inline; margin-right: 10px; color: #006cce; font-size: 14px; font-weight: 600; }
+.home-publications .pub-venue-note { white-space: nowrap; }
 .home-publications .pub-resource-links { display: inline; }
 .home-publications :is(.accepted-venue a, .pub-card-title a, .pub-resource-links a):focus-visible { outline: 2px solid var(--home-accent); outline-offset: 3px; }
 @media (min-width: 900px) {
