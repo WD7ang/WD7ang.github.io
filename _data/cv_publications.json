@@ -3,7 +3,7 @@
     "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
     "featured": true,
     "title_url": "https://arxiv.org/pdf/2610.36077",
-    "authors_html": "<strong>W. Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
+    "authors_html": "<strong>W. Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang<sup>*</sup>, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
     "venue": "arXiv preprint, 2026",
     "notes": null,
     "links": [
@@ -44,7 +44,7 @@
     "research_category": "rsi",
     "thumbnail": "/images/trinity-intro-cvpr.png",
     "thumbnail_alt": "The Trinity overview: Creator, Explorer, and Evolver co-evolve worlds and agent capabilities",
-    "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
+    "homepage_authors_html": "<strong>Weidong Tang<sup>*</sup></strong>, R. Wang<sup>*</sup>, J. Zhang<sup>*</sup>, H. Wang<sup>*</sup>, H. Chen, Z. Zhang, Y. Ma, Z. Jiang, Z. Guo, H. Li, Z. Jiao, Z. Cui, X. Yin, S. Liang, Z. Wan, H. Lin, W. Zhao, K. Zhang, P. Zhou<sup>†</sup>, O. Zhang<sup>†</sup>, &amp; Y. You<sup>†</sup>.",
     "thumbnail_width": 8001,
     "thumbnail_height": 3794,
     "keyword": "Omni-modal RSI"
